@@ -1,16 +1,16 @@
 {
   "schema": 2,
   "status": "ready",
-  "created_at": "2026-10-09T10:48:05.970319+08:00",
+  "created_at": "2026-10-10T22:17:31.803836+08:00",
   "source_commit": "8664e8b318a3ed651fe62dfcfddfb1f1d633d5be",
-  "starter_sha256": "eccc5389b0014dea70688455251fc22216621d8ed212216359cdf19b9429b49a",
+  "starter_sha256": "51eb307b959303890f084c514b14d8792a2bfe22e0caa984b539c2a5af0efed0",
   "index_identity": {
-    "text_model": "deepseek-flash",
-    "text_url": "https://api.deepseek.com",
-    "vision_model": "deepseek-flash",
-    "vision_url": "https://api.deepseek.com",
+    "text_model": "benchmark-312-qwen25-7b-ctx16k",
+    "text_url": "http://127.0.0.1:11434/v1",
+    "vision_model": "benchmark-312-qwen38-27b-ctx16k",
+    "vision_url": "http://127.0.0.1:11434/v1",
     "embedding_model": "qwen3-embedding:latest",
-    "embedding_url": "http://localhost:11434/v1",
+    "embedding_url": "http://127.0.0.1:11434/v1",
     "embedding_dim": 4096,
     "send_dimensions": false,
     "chunk_size": 1200,
@@ -18,11 +18,11 @@
     "summary_language": "English"
   },
   "settings": {
-    "text_url": "https://api.deepseek.com",
-    "text_model": "deepseek-flash",
-    "vision_url": "https://api.deepseek.com",
-    "vision_model": "deepseek-flash",
-    "embedding_url": "http://localhost:11434/v1",
+    "text_url": "http://127.0.0.1:11434/v1",
+    "text_model": "benchmark-312-qwen25-7b-ctx16k",
+    "vision_url": "http://127.0.0.1:11434/v1",
+    "vision_model": "benchmark-312-qwen38-27b-ctx16k",
+    "embedding_url": "http://127.0.0.1:11434/v1",
     "embedding_model": "qwen3-embedding:latest",
     "embedding_dim": 4096,
     "send_dimensions": false,
@@ -34,7 +34,12 @@
     "max_relation_tokens": 4000,
     "max_total_tokens": 12000,
     "concurrency": 2,
-    "summary_language": "English"
+    "summary_language": "English",
+    "enable_rerank": false,
+    "rerank_model_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/models/bge-reranker-v2-m3",
+    "rerank_device": "auto",
+    "rerank_max_length": 8192,
+    "rerank_batch_size": 1
   },
   "packages": {
     "raganything": "1.4.2",
@@ -188,5 +193,5 @@
       "index_doc_id": "doc-rag-anything-handson-v1"
     }
   ],
-  "completed_at": "2026-10-09T10:55:40.564030+08:00"
+  "completed_at": "2026-10-10T22:47:17.743340+08:00"
 }
