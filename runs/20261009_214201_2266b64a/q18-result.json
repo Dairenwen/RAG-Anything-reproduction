@@ -1,0 +1,1162 @@
+{
+  "status": "success",
+  "question": "How do entity alignment and belongs_to edges serve different purposes when combining text and multimodal knowledge?",
+  "mode": "mix",
+  "context_only": false,
+  "vlm_requested": false,
+  "images_in_generation_adapter": 0,
+  "retrieval": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "Multimodal Entity Node v_j^{mm}",
+          "entity_type": "concept",
+          "description": "The multimodal entity node v_j^{mm} anchors the extracted entities and relations via belongs_to edges, grounding non-textual content within its textual context.",
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514448
+        },
+        {
+          "entity_name": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "entity_type": "equation",
+          "description": "Defines the edge set $\\tilde{E}$ of the cross-modal knowledge graph as the union of intra-chunk relations $\\mathcal{E}_j$ and 'belongs_to' edges linking each intra-chunk entity to its multimodal anchor node $v_j^{\\mathrm{mm}}$. This preserves modality-specific grounding and contextualizes non-textual content within its textual neighborhood, supporting cross-modal retrieval and reasoning in RAG-Anything.",
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514315
+        },
+        {
+          "entity_name": "Intra-Chunk Entities $\\mathcal{V}_j$",
+          "entity_type": "data",
+          "description": "The set of entities extracted from a non-text atomic unit's textual description, which are linked to the multimodal entity node via 'belongs_to' edges.",
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514433
+        },
+        {
+          "entity_name": "Entity Alignment",
+          "entity_type": "method",
+          "description": "A process that merges the multimodal knowledge graph and text-based knowledge graph using entity names as primary matching keys to identify semantically equivalent entities across both structures.<SEP>Entity Alignment is the process through which complementary cross-modal and text-based knowledge graphs are merged.<SEP>Entity alignment is the process through which the cross-modal knowledge graph is fused with the text-based knowledge graph to form a unified knowledge representation.<SEP>Entity alignment is the process by which the cross-modal knowledge graph is merged with a text-based knowledge graph.<SEP>The process by which the edge set $\\tilde{E}$ is merged with the text-based knowledge graph to form the unified graph.<SEP>The process by which the cross-modal knowledge graph and the text-based knowledge graph are fused to form the unified knowledge graph G.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-885744df4898cd552f1960ba1b518cb4<SEP>chunk-0238e7dae37f77eecdb2fe491a026dc0<SEP>chunk-808bf767f815e787e09b6b3e8a122b71<SEP>chunk-960c77c28320f020a2006dba07f70f59<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514428
+        },
+        {
+          "entity_name": "Belongs_To Edges",
+          "entity_type": "concept",
+          "description": "Explicit edges that associate intra-chunk entities with their corresponding multimodal entity node anchor.<SEP>Belongs_to edges are the connections that anchor extracted entities and relations to the multimodal entity node v_j^{mm}.<SEP>Explicit edges that anchor each intra-chunk entity to the multimodal entity node associated with the same non-text unit, preserving modality-specific grounding.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-0238e7dae37f77eecdb2fe491a026dc0<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514433
+        },
+        {
+          "entity_name": "Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "entity_type": "equation",
+          "description": "Defines the vertex set \\tilde{V} of the cross-modal knowledge graph as the union of multimodal anchor nodes v_j^{mm} and intra-chunk entities \\mathcal{V}_j extracted from non-text unit descriptions. This set-theoretic construction grounds non-textual content in a graph structure, enabling cross-modal retrieval and reasoning within the RAG-Anything framework.",
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514315
+        },
+        {
+          "entity_name": "Multimodal Entity Node $v_j^{\\mathrm{mm}}$",
+          "entity_type": "data",
+          "description": "An anchor node representing non-textual content, to which all entities extracted from a unit's textual description are explicitly linked.",
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514433
+        },
+        {
+          "entity_name": "Multimodal Entity Nodes",
+          "entity_type": "concept",
+          "description": "Multimodal entity nodes, denoted as {v_j^{mm}}_j, are anchor nodes each associated with a non-text atomic unit c_j such as an image, table, or equation.",
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514446
+        },
+        {
+          "entity_name": "Relations ℰ_j",
+          "entity_type": "concept",
+          "description": "Relations ℰ_j are the set of relations among entities extracted from a non-text content unit's description.",
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514448
+        },
+        {
+          "entity_name": "Text-Based Knowledge Graph",
+          "entity_type": "concept",
+          "description": "A traditional knowledge graph constructed from text modality chunks using named entity recognition and relation extraction techniques, similar to LightRAG and GraphRAG methodologies.<SEP>The Text-Based Knowledge Graph is constructed using established text-centric extraction pipelines and contains entities such as Bce, Beecher, and Chemistry.<SEP>The text-based knowledge graph is fused with the cross-modal knowledge graph through entity alignment to form a unified knowledge representation.<SEP>The text-based knowledge graph is a graph that is merged with the cross-modal knowledge graph through entity alignment.<SEP>A knowledge graph that is merged with the edge set $\\tilde{E}$ through entity alignment to form the unified graph.<SEP>A knowledge graph that is fused with the cross-modal knowledge graph via entity alignment to form the unified knowledge graph G.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-885744df4898cd552f1960ba1b518cb4<SEP>chunk-0238e7dae37f77eecdb2fe491a026dc0<SEP>chunk-808bf767f815e787e09b6b3e8a122b71<SEP>chunk-960c77c28320f020a2006dba07f70f59<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514428
+        },
+        {
+          "entity_name": "Cross-Modal Graph Extraction Equation (equation)",
+          "entity_type": "equation",
+          "description": "Defines the extraction of intra-chunk entities and relations from the detailed description of a non-text atomic unit, enabling the construction of a cross-modal knowledge graph in the RAG-Anything framework.",
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514315
+        },
+        {
+          "entity_name": "RAG-Anything",
+          "entity_type": "method",
+          "description": "RAG-Anything is a unified, all-in-one retrieval-augmented generation (RAG) framework designed to reimagine multimodal knowledge representation and retrieval. It treats text, images, tables, and equations as first-class entities, reconceptualizing multimodal content as interconnected knowledge entities. The framework extends GraphRAG to all modalities and unifies heterogeneous multimodal knowledge by decomposing content into atomic content units.\n\nAt its core, RAG-Anything employs a dual-graph construction strategy, building both cross-modal and text-based knowledge graphs that are merged via entity alignment. This produces modality-aware graphs that preserve essential relationships within multimodal documents, enabling precise reasoning over complex layouts. Complementing this is a cross-modal hybrid retrieval mechanism, which together with the dual-graph approach forms the framework's central architecture for cross-modal retrieval and reasoning. The framework also includes a dense representation generation step in its indexing pipeline and constructs a cross-modal knowledge graph (as described by Equation 4). Additional features include context-aware multimodal prompting.\n\nRAG-Anything demonstrates superior performance on long documents and complex multimodal layouts, particularly where relevant evidence is dispersed across multiple modalities and sections. It has been evaluated using the DocBench and MMLongBench benchmarks, including an ablation study on DocBench. On MMLongBench, it achieves the best results in information-dense domains such as Research Reports and Financial Reports, with consistent improvements across all document length categories: accuracy gains of 3.4 points for 11–50 pages, 9.3 points for 51–100 pages, and 7.9 points for 101–200 pages. It outperforms MM-GraphRAG on long-document reasoning tasks.\n\nThe framework excels at complex visual reasoning and tabular navigation by constructing structured graph representations of visual elements (such as bar plots) and tabular data, enabling precise alignment between visual and textual information. However, in documented failure cases, RAG-Anything produced an incorrect answer regarding the NER label generation sequence and failed to correctly interpret an irregular table in a cross-modal noise scenario. The framework's documentation also addresses challenges and future directions for multimodal RAG.",
+          "source_id": "chunk-de93d4b6f02e5ae737b9b9e8142401cd<SEP>chunk-7aefd567d430c404aab77872282400eb<SEP>chunk-2d4727f37ea1b30518f13dc89ffc7ea1<SEP>chunk-a43d425aea6f4b6c0edc38f28595f400<SEP>chunk-dded67fd8182de2201aa35ccbb4c8cd9<SEP>chunk-f5f0a5a74b5a4eac43772c74649ca651<SEP>chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-7eea2cc84733111d4a7fedb10d7083b8<SEP>chunk-885744df4898cd552f1960ba1b518cb4<SEP>chunk-840e794a234c66ff0680c138d02d19ef<SEP>chunk-8cb795e1c89d1938a0fcb44cbec5be74<SEP>chunk-306f65a0f4295fa49788ecf8659d4b81<SEP>chunk-0238e7dae37f77eecdb2fe491a026dc0<SEP>chunk-b4b25ee421d57dc99861b0d26ac02b54<SEP>chunk-9d556fb722f8eac5fc92376e70d34e60<SEP>chunk-17a576920c675eca791231767d46477b<SEP>chunk-5eb0987c79c221cedef1a930b87f821f<SEP>chunk-37ff528cd8f38cd79fa57c96fab4a7c2<SEP>chunk-808bf767f815e787e09b6b3e8a122b71<SEP>chunk-a908e853be8da852064e031c68c78242<SEP>chunk-d1f82685779db44d104d20c4e16fe8b7<SEP>chunk-162b82c942fb3baf527c7b1adf1ed920<SEP>chunk-89ff37f1683bc8edc5276effd3646dee<SEP>chunk-960c77c28320f020a2006dba07f70f59<SEP>chunk-301da515d50a3a0d178c0683bee24465<SEP>chunk-a3ef854a849174a61602e3f9d4a8eac1<SEP>chunk-21f9c375189978b339552ff8ff4ba819",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514429
+        },
+        {
+          "entity_name": "Unified Knowledge Graph G",
+          "entity_type": "data",
+          "description": "The unified knowledge graph G = (V, E) is formed by fusing the cross-modal knowledge graph and the text-based knowledge graph via entity alignment.",
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514428
+        },
+        {
+          "entity_name": "Cross-Modal Knowledge Graph",
+          "entity_type": "concept",
+          "description": "A knowledge graph constructed by RAG-Anything where non-text atomic units such as images, tables, and equations are transformed into structured graph entities to preserve modality-specific semantic information.<SEP>The Cross-Modal Knowledge Graph grounds non-textual modalities within their contextual environment, containing parent and child nodes for multimodal instances.<SEP>The cross-modal knowledge graph is built from the extracted entities and relations and is later fused with a text-based knowledge graph through entity alignment.<SEP>The cross-modal knowledge graph is a unified graph structure representing multimodal knowledge, constructed by RAG-Anything and later merged with a text-based knowledge graph through entity alignment.<SEP>A knowledge graph constructed by RAG-Anything that preserves modality-specific grounding by linking entities extracted from textual descriptions to anchor nodes representing non-textual content.<SEP>A knowledge graph that is fused with the text-based knowledge graph via entity alignment to form the unified knowledge graph G.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-885744df4898cd552f1960ba1b518cb4<SEP>chunk-0238e7dae37f77eecdb2fe491a026dc0<SEP>chunk-808bf767f815e787e09b6b3e8a122b71<SEP>chunk-960c77c28320f020a2006dba07f70f59<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514428
+        },
+        {
+          "entity_name": "Accuracy Evaluation Prompt Template",
+          "entity_type": "content",
+          "description": "The Accuracy Evaluation Prompt Template is a prompt template titled 'Accuracy Evaluation Prompt' containing a numbered list of instructions and criteria for evaluating the accuracy of answers generated by a RAG system, structured with an introductory role definition, task description, input fields for question, expected answer, and generated answer, evaluation criteria with a binary scoring system, instructions for handling partial matches, numerical answers, list answers, and unanswerable questions, and an output format specification.",
+          "source_id": "chunk-b4b25ee421d57dc99861b0d26ac02b54",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514434
+        },
+        {
+          "entity_name": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "entity_type": "image",
+          "description": "The image illustrates a failure case in multimodal RAG systems where all evaluated models (GPT-4o-mini, LightRAG, MMGraphRAG, RAG-Anything) incorrectly answer a question about a neural network sequence. The expected answer requires reading a figure from bottom to top, but models exhibit text-centric bias and rigid spatial processing, producing incorrect sequences. This demonstrates fundamental challenges in cross-modal information integration and structural reasoning, as discussed in the surrounding text on challenges and future directions for multimodal RAG.",
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514315
+        },
+        {
+          "entity_name": "Scalable Fine-Grained Semantic Search",
+          "entity_type": "concept",
+          "description": "A practical capability enabled by the equation, allowing semantic search over heterogeneous multimodal knowledge.",
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514429
+        },
+        {
+          "entity_name": "GPT-4o-mini",
+          "entity_type": "method",
+          "description": "GPT-4o-mini is a powerful multimodal language model with native text and image understanding capabilities and a 128K token context window. It serves as a backbone LLM and baseline in experimental frameworks, and is used to conduct all accuracy evaluations throughout these frameworks, ensuring consistent, reliable, and consistent assessment standards.\n\nAs a method, GPT-4o-mini was evaluated on the DocBench dataset, achieving an overall accuracy of 51.2%, and on MMLongBench, achieving an overall accuracy of 33.5%. As a baseline model, it demonstrated several incorrect responses across various tasks: it incorrectly identified VAE as having clearer separation in a multi-panel figure interpretation case; it incorrectly answered DKK 32,928 million for Novo Nordisk's wages and salaries in 2020; it provided an incorrect answer regarding the lowest accuracy GCAN configuration for Twitter15; and it incorrectly identified the BERT-to-BERT model with an AUPRC of 0.455 as the highest performer for the Evidence Inference dataset. Additionally, GPT-4o-mini was evaluated in a multimodal RAG failure case, producing an incorrect answer about the NER label generation sequence, and in a cross-modal noise case, providing an incorrect answer regarding joint goal accuracy improvements in the Train domain.",
+          "source_id": "chunk-7aefd567d430c404aab77872282400eb<SEP>chunk-2d4727f37ea1b30518f13dc89ffc7ea1<SEP>chunk-49961962320a3499cad5000e71cf7f3e<SEP>chunk-7eea2cc84733111d4a7fedb10d7083b8<SEP>chunk-306f65a0f4295fa49788ecf8659d4b81<SEP>chunk-b4b25ee421d57dc99861b0d26ac02b54<SEP>chunk-9d556fb722f8eac5fc92376e70d34e60<SEP>chunk-17a576920c675eca791231767d46477b<SEP>chunk-37ff528cd8f38cd79fa57c96fab4a7c2<SEP>chunk-a908e853be8da852064e031c68c78242<SEP>chunk-89ff37f1683bc8edc5276effd3646dee<SEP>chunk-a3ef854a849174a61602e3f9d4a8eac1<SEP>chunk-8b8b33a1f15bc5b31bb493efd3ec933a",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514426
+        },
+        {
+          "entity_name": "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$",
+          "entity_type": "concept",
+          "description": "The unified graph formed by merging the edge set $\\tilde{E}$ with the text-based knowledge graph through entity alignment.",
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514433
+        },
+        {
+          "entity_name": "JSON Schema",
+          "entity_type": "data",
+          "description": "The JSON schema is a structure defined in the prompt with two top-level keys, detailed_description and entity_info, where entity_info contains entity_name, entity_type, and summary.",
+          "source_id": "chunk-840e794a234c66ff0680c138d02d19ef",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514430
+        },
+        {
+          "entity_name": "O",
+          "entity_type": "concept",
+          "description": "O is a node label in the Bi-LSTM-CRF model diagram representing a non-entity token.",
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514440
+        },
+        {
+          "entity_name": "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)",
+          "entity_type": "concept",
+          "description": "The unified knowledge representation 𝒢 = (𝒱, ℰ) is formed by fusing the cross-modal and text-based knowledge graphs through entity alignment.",
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514448
+        },
+        {
+          "entity_name": "Unified Knowledge Graph",
+          "entity_type": "data",
+          "description": "A comprehensive knowledge graph denoted as G = (ν, E) that captures both multimodal contextual relationships and text-based semantic connections after graph fusion.<SEP>The Unified Knowledge Graph, denoted as G, is a structural knowledge representation that encodes explicit relationships and multi-hop reasoning patterns across heterogeneous modalities.",
+          "source_id": "chunk-ea106f7be2831088c0a1118ecb40eee8<SEP>chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514159
+        },
+        {
+          "entity_name": "Detailed Description",
+          "entity_type": "data",
+          "description": "A textual representation denoted as d_j^chunk derived from each atomic content unit, optimized for cross-modal retrieval.<SEP>Detailed description is a JSON key whose value lists guidelines for analyzing an image, including describing composition, identifying objects, explaining relationships, noting colors and style, describing actions, including technical details, referencing surrounding content, and using specific names instead of pronouns.<SEP>Detailed Description is a JSON key in the Table Analysis Prompt response that lists analytical requirements such as table structure and organization, column headers and their meanings, key data points and patterns, statistical insights and trends, relationships between data elements, significance of the data in relation to surrounding context, and how the table supports or illustrates concepts from the surrounding content.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-7eea2cc84733111d4a7fedb10d7083b8<SEP>chunk-840e794a234c66ff0680c138d02d19ef",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514427
+        },
+        {
+          "entity_name": "Description $d_j^{\\mathrm{chunk}}$",
+          "entity_type": "data",
+          "description": "The textual description of a non-text atomic unit, to which the graph extraction routine is applied to extract intra-chunk relation sets and entities.",
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514433
+        },
+        {
+          "entity_name": "Edge Set $\\tilde{E}$",
+          "entity_type": "data",
+          "description": "The edge set $\\tilde{E}$ is defined by Equation (4) as the union of all intra-chunk relation sets and explicit 'belongs_to' edges anchoring intra-chunk entities to multimodal entity nodes.",
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514433
+        },
+        {
+          "entity_name": "KG over All Documents",
+          "entity_type": "concept",
+          "description": "KG over All Documents is the merged knowledge graph containing interconnected nodes of different modalities from all documents.",
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514441
+        },
+        {
+          "entity_name": "Label",
+          "entity_type": "concept",
+          "description": "Label is the final output of the NER label generation sequence.",
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514440
+        },
+        {
+          "entity_name": "Multimodal Response Generation Equation (equation)",
+          "entity_type": "equation",
+          "description": "Defines the final response as the output of a Vision-Language Model conditioned on the query, structured textual context, and dereferenced visual content, integrating retrieved multimodal knowledge for grounded synthesis.",
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514315
+        },
+        {
+          "entity_name": "Named Entity Recognition",
+          "entity_type": "method",
+          "description": "A technique used in the text-based knowledge graph extraction process to identify entities within textual content.<SEP>Named entity recognition is a text-based pipeline technique that the extraction routine R(·) is analogous to for identifying entities.<SEP>Named Entity Recognition is a task whose final label generation sequence is the subject of the question in the failure case, involving characters, embeddings, LSTM layers, and a CRF layer.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-37ff528cd8f38cd79fa57c96fab4a7c2<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514439
+        },
+        {
+          "entity_name": "Multimodal Entity Node",
+          "entity_type": "concept",
+          "description": "A node associated with each atomic non-text unit that serves as an anchor for its intra-chunk entities through explicit belongs_to edges.",
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514181
+        },
+        {
+          "entity_name": "Multimodal Document",
+          "entity_type": "content",
+          "description": "A multimodal document contains rich structural information within each modality, and understanding intra-modal structures is crucial for accurate reasoning.<SEP>A multimodal document is a document containing rich structural information across multiple modalities, such as text, figures, and tables.<SEP>A multimodal document is a source document containing both visual and textual elements, used as input for visual reasoning tasks.<SEP>The multimodal document is a page from a research paper containing an evidence figure that shows the NER label generation sequence in reverse order from bottom to top.<SEP>The multimodal document is a page containing text and Figure 2, which is referenced in the cross-modal noise case question about model style space separation.",
+          "source_id": "chunk-306f65a0f4295fa49788ecf8659d4b81<SEP>chunk-17a576920c675eca791231767d46477b<SEP>chunk-37ff528cd8f38cd79fa57c96fab4a7c2<SEP>chunk-a908e853be8da852064e031c68c78242<SEP>chunk-a3ef854a849174a61602e3f9d4a8eac1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514432
+        },
+        {
+          "entity_name": "Belongs_to Edges",
+          "entity_type": "concept",
+          "description": "Belongs_to edges connect each anchor node to its associated intra-chunk entities, preserving modality-specific grounding.",
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514447
+        },
+        {
+          "entity_name": "Evidence Figure",
+          "entity_type": "content",
+          "description": "The evidence figure is a diagram within the document containing a vertical list of terms describing the NER label generation sequence, presented from bottom to top.",
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514439
+        },
+        {
+          "entity_name": "Heterogeneous Multimodal Knowledge",
+          "entity_type": "concept",
+          "description": "Knowledge spanning multiple modalities that the equation enables scalable, fine-grained semantic search over.",
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514430
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "RAG-Anything",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "RAG-Anything constructs a text-based knowledge graph using established text-centric extraction pipelines.",
+          "keywords": "system construction,text extraction",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514205
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "Entity Alignment",
+          "description": "Entity Entity Alignment belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514474
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "RAG-Anything",
+          "description": "Entity RAG-Anything belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514473
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "tgt_id": "Entity Alignment",
+          "description": "Entity Entity Alignment belongs to Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514522
+        },
+        {
+          "src_id": "Multimodal Entity Node",
+          "tgt_id": "RAG-Anything",
+          "description": "RAG-Anything associates each atomic non-text unit with a multimodal entity node that serves as an anchor for intra-chunk entities.",
+          "keywords": "anchoring,graph construction",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514206
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "tgt_id": "Multimodal Entity Nodes",
+          "description": "Entity Multimodal Entity Nodes belongs to Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514521
+        },
+        {
+          "src_id": "RAG-Anything Framework Architecture (image)",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Entity Text-Based Knowledge Graph belongs to RAG-Anything Framework Architecture (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514499
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Entity Text-Based Knowledge Graph belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514474
+        },
+        {
+          "src_id": "DocBench",
+          "tgt_id": "Multimodal Response Generation Equation (equation)",
+          "description": "Entity DocBench belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514483
+        },
+        {
+          "src_id": "LightRAG",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The text-based knowledge graph is constructed following established methodologies similar to LightRAG.",
+          "keywords": "extraction pipeline,methodological reference",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514206
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph",
+          "tgt_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "description": "Entity Cross-Modal Knowledge Graph belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514473
+        },
+        {
+          "src_id": "MMLongBench",
+          "tgt_id": "Multimodal Response Generation Equation (equation)",
+          "description": "Entity MMLongBench belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514483
+        },
+        {
+          "src_id": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "tgt_id": "GPT-4o-mini",
+          "description": "Entity GPT-4o-mini belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514492
+        },
+        {
+          "src_id": "Dense Embedding Table Construction (equation)",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Entity Text-Based Knowledge Graph belongs to Dense Embedding Table Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514459
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Entity Text-Based Knowledge Graph belongs to Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514522
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Entity Text-Based Knowledge Graph belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Entity Alignment",
+          "description": "Entity Entity Alignment belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "tgt_id": "O",
+          "description": "Entity O belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514495
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Cross-Modal Knowledge Graph",
+          "description": "Entity Cross-Modal Knowledge Graph belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Entity Alignment",
+          "tgt_id": "Unified Knowledge Graph",
+          "description": "Entity alignment merges the multimodal and text-based knowledge graphs to create a unified knowledge graph capturing both contextual and semantic connections.",
+          "keywords": "graph fusion,knowledge consolidation",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514207
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The cross-modal and text-based knowledge graphs are merged through entity alignment to create a unified representation.<SEP>The Cross-Modal Knowledge Graph and Text-Based Knowledge Graph are merged through entity alignment.<SEP>The cross-modal knowledge graph is fused with the text-based knowledge graph through entity alignment.<SEP>The cross-modal knowledge graph is later merged with a text-based knowledge graph through entity alignment.<SEP>The cross-modal knowledge graph and the text-based knowledge graph are fused via entity alignment.",
+          "keywords": "complementary representation,entity alignment,fusion,graph merging,merging",
+          "weight": 5.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-885744df4898cd552f1960ba1b518cb4<SEP>chunk-808bf767f815e787e09b6b3e8a122b71<SEP>chunk-960c77c28320f020a2006dba07f70f59<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514457
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "Description $d_j^{\\mathrm{chunk}}$",
+          "description": "Entity Description $d_j^{\\mathrm{chunk}}$ belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514474
+        },
+        {
+          "src_id": "KG over All Documents",
+          "tgt_id": "RAG-Anything Framework Architecture (image)",
+          "description": "Entity KG over All Documents belongs to RAG-Anything Framework Architecture (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514501
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph",
+          "tgt_id": "Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "description": "Entity Cross-Modal Knowledge Graph belongs to Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514521
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "Edge Set $\\tilde{E}$",
+          "description": "Entity Edge Set $\\tilde{E}$ belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514473
+        },
+        {
+          "src_id": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "tgt_id": "Label",
+          "description": "Entity Label belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514494
+        },
+        {
+          "src_id": "Dual-Graph Construction",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Dual-Graph Construction builds a Text-Based Knowledge Graph using text-centric extraction pipelines.",
+          "keywords": "graph construction,text extraction",
+          "weight": 1.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514495
+        },
+        {
+          "src_id": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "tgt_id": "Named Entity Recognition",
+          "description": "Entity Named Entity Recognition belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514493
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "RAG-Anything Framework",
+          "description": "Entity RAG-Anything Framework belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "tgt_id": "Multimodal Document",
+          "description": "Entity Multimodal Document belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514493
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "Multimodal Entity Node $v_j^{\\mathrm{mm}}$",
+          "description": "Entity Multimodal Entity Node $v_j^{\\mathrm{mm}}$ belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514474
+        },
+        {
+          "src_id": "Entity Alignment",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Entity alignment merges the text-based knowledge graph with the multimodal knowledge graph using entity names as matching keys.<SEP>The text-based knowledge graph is fused with the cross-modal knowledge graph through entity alignment.",
+          "keywords": "entity matching,fusion process,graph fusion,knowledge integration",
+          "weight": 2.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "tgt_id": "Evidence Figure",
+          "description": "Entity Evidence Figure belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-37ff528cd8f38cd79fa57c96fab4a7c2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514493
+        },
+        {
+          "src_id": "Dense Embedding Table Construction (equation)",
+          "tgt_id": "Unified Knowledge Graph G",
+          "description": "Entity Unified Knowledge Graph G belongs to Dense Embedding Table Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514459
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "tgt_id": "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$",
+          "description": "Entity Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$ belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514474
+        },
+        {
+          "src_id": "Belongs_To Edges",
+          "tgt_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "description": "Entity Belongs_To Edges belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Dense Embedding Table Construction (equation)",
+          "tgt_id": "Scalable Fine-Grained Semantic Search",
+          "description": "Entity Scalable Fine-Grained Semantic Search belongs to Dense Embedding Table Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514461
+        },
+        {
+          "src_id": "Multimodal Response Generation Equation (equation)",
+          "tgt_id": "RAG-Anything Framework",
+          "description": "Entity RAG-Anything Framework belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514482
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Named Entity Recognition",
+          "description": "Entity Named Entity Recognition belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Intra-Chunk Entities",
+          "description": "Entity Intra-Chunk Entities belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Extraction Routine R(·)",
+          "description": "Entity Extraction Routine R(·) belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Text-Based Knowledge Graph",
+          "tgt_id": "Unified Knowledge Graph G",
+          "description": "The unified knowledge graph G is formed by fusing the text-based knowledge graph with the cross-modal knowledge graph.",
+          "keywords": "fusion,knowledge integration",
+          "weight": 1.0,
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514457
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Relations ℰ_j",
+          "description": "Entity Relations ℰ_j belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Dense Vector Space",
+          "description": "Entity Dense Vector Space belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Dense Embedding Table Construction (equation)",
+          "tgt_id": "Heterogeneous Multimodal Knowledge",
+          "description": "Entity Heterogeneous Multimodal Knowledge belongs to Dense Embedding Table Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514461
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph",
+          "tgt_id": "Unified Knowledge Graph G",
+          "description": "The unified knowledge graph G is formed by fusing the cross-modal knowledge graph with the text-based knowledge graph.",
+          "keywords": "fusion,knowledge integration",
+          "weight": 1.0,
+          "source_id": "chunk-885744df4898cd552f1960ba1b518cb4",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514457
+        },
+        {
+          "src_id": "GraphRAG",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The text-based knowledge graph is constructed following established methodologies similar to GraphRAG.",
+          "keywords": "extraction pipeline,methodological reference",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514206
+        },
+        {
+          "src_id": "Dual-Graph Construction Strategy",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The dual-graph construction strategy then constructs a text-based knowledge graph using established text-centric extraction pipelines.",
+          "keywords": "graph construction,text extraction",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514207
+        },
+        {
+          "src_id": "Named Entity Recognition",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The text-based knowledge graph leverages named entity recognition to identify entities within textual content.",
+          "keywords": "entity identification,extraction technique",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514206
+        },
+        {
+          "src_id": "Knowledge Graph",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The Text-Based Knowledge Graph is merged into the unified Knowledge Graph.",
+          "keywords": "graph integration,knowledge representation",
+          "weight": 1.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514495
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Description d_j^{chunk}",
+          "description": "Entity Description d_j^{chunk} belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "Belongs_to Edges",
+          "tgt_id": "Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "description": "Entity Belongs_to Edges belongs to Cross-Modal Knowledge Graph Vertex Set (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-960c77c28320f020a2006dba07f70f59",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514522
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Multimodal Entity Node v_j^{mm}",
+          "description": "Entity Multimodal Entity Node v_j^{mm} belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Relation Extraction",
+          "description": "Entity Relation Extraction belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Graph Extraction Operation",
+          "description": "Entity Graph Extraction Operation belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)",
+          "description": "Entity Unified Knowledge Representation 𝒢 = (𝒱, ℰ) belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Multi-Signal Fusion Scoring",
+          "tgt_id": "Multimodal Response Generation Equation (equation)",
+          "description": "Entity Multi-Signal Fusion Scoring belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514483
+        },
+        {
+          "src_id": "Hybrid Retrieval Architecture",
+          "tgt_id": "Multimodal Response Generation Equation (equation)",
+          "description": "Entity Hybrid Retrieval Architecture belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514482
+        },
+        {
+          "src_id": "Text-Based Knowledge Graph",
+          "tgt_id": "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$",
+          "description": "The text-based knowledge graph is merged with the edge set $\\tilde{E}$ through entity alignment to form the unified graph.",
+          "keywords": "integration,merging",
+          "weight": 1.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514472
+        },
+        {
+          "src_id": "Belongs_To Edges",
+          "tgt_id": "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "description": "Entity Belongs_To Edges belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-0238e7dae37f77eecdb2fe491a026dc0",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514473
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Equation (𝒱_j, ℰ_j) = R(d_j^{chunk})",
+          "description": "Entity Equation (𝒱_j, ℰ_j) = R(d_j^{chunk}) belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Multimodal Large Language Model",
+          "description": "Entity Multimodal Large Language Model belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Local Neighborhood C_j",
+          "description": "Entity Local Neighborhood C_j belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514527
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Text-Only RAG Systems",
+          "description": "Entity Text-Only RAG Systems belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Similarity-Based Retrieval",
+          "description": "Entity Similarity-Based Retrieval belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Atomic Content Chunks",
+          "tgt_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "description": "Entity Atomic Content Chunks belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514528
+        },
+        {
+          "src_id": "Detailed Description",
+          "tgt_id": "Vision Analysis Prompt Template (image)",
+          "description": "Entity Detailed Description belongs to Vision Analysis Prompt Template (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-840e794a234c66ff0680c138d02d19ef",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514462
+        },
+        {
+          "src_id": "Text-Based Knowledge Graph",
+          "tgt_id": "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)",
+          "description": "The text-based knowledge graph is fused with the cross-modal knowledge graph to form the unified knowledge representation.",
+          "keywords": "entity alignment,fusion",
+          "weight": 1.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514525
+        },
+        {
+          "src_id": "Relation Extraction",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "The text-based knowledge graph leverages relation extraction to identify semantic relationships between entities.",
+          "keywords": "extraction technique,relationship identification",
+          "weight": 1.0,
+          "source_id": "chunk-eac0008c777dab7291aec281277e77a1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514206
+        },
+        {
+          "src_id": "Cross-Modal Graph Extraction Equation (equation)",
+          "tgt_id": "Non-Text Atomic Content Unit",
+          "description": "Entity Non-Text Atomic Content Unit belongs to Cross-Modal Graph Extraction Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514526
+        },
+        {
+          "src_id": "JSON Schema",
+          "tgt_id": "Vision Analysis Prompt Template (image)",
+          "description": "Entity JSON Schema belongs to Vision Analysis Prompt Template (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-840e794a234c66ff0680c138d02d19ef",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514462
+        },
+        {
+          "src_id": "Multimodal Response Generation Equation (equation)",
+          "tgt_id": "Vision-Language Model",
+          "description": "Entity Vision-Language Model belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514482
+        },
+        {
+          "src_id": "Cross-Modal Knowledge Graph",
+          "tgt_id": "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)",
+          "description": "The cross-modal knowledge graph is fused to form the unified knowledge representation 𝒢 = (𝒱, ℰ).",
+          "keywords": "fusion,knowledge representation",
+          "weight": 1.0,
+          "source_id": "chunk-93e73b1153bf931b315a02bf890fff6d",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514525
+        },
+        {
+          "src_id": "Bce",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Bce is a node within the Text-Based Knowledge Graph.",
+          "keywords": "entity node,graph membership",
+          "weight": 1.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514497
+        },
+        {
+          "src_id": "Beecher",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Beecher is a node within the Text-Based Knowledge Graph.",
+          "keywords": "entity node,graph membership",
+          "weight": 1.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514497
+        },
+        {
+          "src_id": "Chemistry",
+          "tgt_id": "Text-Based Knowledge Graph",
+          "description": "Chemistry is a node within the Text-Based Knowledge Graph.",
+          "keywords": "entity node,graph membership",
+          "weight": 1.0,
+          "source_id": "chunk-808bf767f815e787e09b6b3e8a122b71",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514498
+        },
+        {
+          "src_id": "Candidate Pool Unification",
+          "tgt_id": "Multimodal Response Generation Equation (equation)",
+          "description": "Entity Candidate Pool Unification belongs to Multimodal Response Generation Equation (equation)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-1e906fa59bd4a41ccc46a928ffee1aa2",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514483
+        },
+        {
+          "src_id": "Detailed Description",
+          "tgt_id": "Table Analysis Prompt Template (image)",
+          "description": "Entity Detailed Description belongs to Table Analysis Prompt Template (image)",
+          "keywords": "belongs_to,contained_in,part_of",
+          "weight": 10.0,
+          "source_id": "chunk-7eea2cc84733111d4a7fedb10d7083b8",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "created_at": 1791514456
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "is segmented into coherent paragraphs or list items. Figures are extracted with associated metadata such as captions and cross-references. Tables are parsed into structured cells with headers and values. Mathematical expressions are converted into symbolic representations. The resulting x<sub>j</sub> preserves both content and structural context within the source. This provides a faithful, modalityconsistent representation. The decomposition abstracts diverse file formats into atomic units while maintaining their hierarchical order and contextual relationships. This canonicalization enables uniform processing, indexing, and retrieval of multimodal content within our framework.\n\n2.2.1 DUAL-GRAPH CONSTRUCTION FOR MULTIMODAL KNOWLEDGE\n\nWhile multimodal knowledge unification provides a uniform abstraction across modalities, directly constructing a single unified graph often risks overlooking modality-specific structural signals. The proposed RAG-Anything addresses this challenge through a dual-graph construction strategy. The system first builds a cross-modal knowledge graph that faithfully grounds non-textual modalities within their contextual environment. It then constructs a text-based knowledge graph using established text-centric extraction pipelines. These complementary graphs are merged through entity alignment. This design ensures accurate cross-modal grounding and comprehensive coverage of textual semantics, enabling richer knowledge representation and robust retrieval.\n\n• Cross-Modal Knowledge Graph: Non-textual content like images, tables, and equations contains rich semantic information that traditional text-only approaches often overlook. To preserve this knowledge, RAG-Anything constructs a multimodal knowledge graph where non-text atomic units are transformed into structured graph entities. RAG-Anything leverages multimodal large language models to derive two complementary textual representations from each atomic content unit. The first is a detailed description $d _ { j } ^ { \\mathrm { c h u n k } }$ optimized for cross-modal retrieval. The second is an entity summary $e _ { i } ^ { \\mathrm { e n t i t y } }$ containing key attributes such as entity name, type, and description for graph construction. The generation process is context-aware, processing each unit with its local neighborhood ${ C } _ { j } = \\{ { c } _ { k } \\ \\bar { | \\kappa - j | } \\leq \\bar { \\delta } \\}$, where δ controls the contextual window size. This ensures representations accurately reflect each unit’s role within the broader document structure.\n\nBuilding on these textual representations, RAG-Anything constructs the graph structure using non text units as anchor points. For each non-text unit $c _ { j }$, the graph extraction routine $R ( \\cdot )$ processes its description $d _ { j } ^ { \\mathrm { c h u n k } }$ to identify fine-grained entities and relations:\n\nwhere $\\nu _ { j }$ and $\\mathcal { E } _ { j }$ denote the sets of intra-chunk entities and their relations, respectively. Each atomic non-text unit is associated with a multimodal entity node $v _ { j } ^ { \\mathrm { m m } }$ that serves as an anchor for\n\nits intra-chunk entities through explicit belongs_to edges:\n\nThis construction preserves modality-specific grounding while ensuring non-textual content is contextualized by its textual neighborhood. This enables reliable cross-modal retrieval and reasoning.\n\n• Text-based Knowledge Graph: For text modality chunks, we construct a traditional text-based knowledge graph following established methodologies similar to LightRAG (Guo et al., 2024) and GraphRAG (Edge et al., 2024). The extraction process operates directly on textual content $x _ { j }$ where $t _ { j } = \\operatorname { t e x t }$, leveraging named entity recognition and relation extraction techniques to identify entities and their semantic relationships. Given the rich semantic information inherent in textual content, multimodal context integration is not required for this component. The resulting text-based knowledge graph captures explicit knowledge and semantic connections present in textual portions of documents, complementing the multimodal graph’s cross-modal grounding capabilities.\n\n2.2.2 GRAPH FUSION AND INDEX CREATION\n\nThe separate cross-modal and text-based knowledge graphs capture complementary aspects of document semantics. Integrating them creates a unified representation leveraging visual-textual associations and fine-grained textual relationships for enhanced retrieval.\n\n• (i) Entity Alignment and Graph Fusion. To create a unified knowledge representation, we merge the multimodal knowledge graph $( \\tilde { V } , \\tilde { E } )$ and text-based knowledge graph through entity alignment. This process uses entity names as primary matching keys to identify semantically equivalent entities across both graph structures. The integration consolidates their representations, creating a comprehensive knowledge graph $\\mathcal { G } = ( \\nu , \\mathcal { E } )$. This graph captures both multimodal contextual relationships and text-based semantic connections. The merged graph provides a holistic view of the document collection. This enables effective retrieval by leveraging visual-textual associations from the multimodal graph and fine-grained textual knowledge relationships from the text-based graph.\n\n• (ii) Dense Representation Generation. To enable efficient similarity-based retrieval, we construct a comprehensive embedding table $\\tau$ that encompasses all components generated during the indexing process. We encode dense representations for all graph entities, relationships, and atomic content chunks across modalities using an appropriate encoder. This creates a unified embedding space where each component $s \\in$ entities, relations, chunks is mapped to its corresponding dense representation:\n\nwhere emb(·) denotes the embedding function tailored for each component type. Together, the unified knowledge graph $\\mathcal { G }$ and the embedding table $\\tau$ constitute the complete retrieval index ${ \\mathcal { T } } = ( { \\mathcal { G } } , { \\mathcal { T } } )$. This provides both structural knowledge representation and dense vector space for efficient cross-modal similarity search during the subsequent retrieval stage.\n\n2.3 CROSS-MODAL HYBRID RET",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "chunk_id": "chunk-eac0008c777dab7291aec281277e77a1"
+        },
+        {
+          "reference_id": "1",
+          "content": "(·) denotes the embedding function tailored for each component type. Together, the unified knowledge graph $\\mathcal { G }$ and the embedding table $\\tau$ constitute the complete retrieval index ${ \\mathcal { T } } = ( { \\mathcal { G } } , { \\mathcal { T } } )$. This provides both structural knowledge representation and dense vector space for efficient cross-modal similarity search during the subsequent retrieval stage.\n\n2.3 CROSS-MODAL HYBRID RETRIEVAL\n\nThe retrieval stage operates on the index $\\mathcal { T } = ( \\mathcal { G } , \\mathcal { T } )$ to identify relevant knowledge components for a given user query. Traditional RAG methods face significant limitations when dealing with multimodal documents. They typically rely on semantic similarity within single modalities and fail to capture the rich interconnections between visual, mathematical, tabular, and textual elements. To address these challenges, our framework introduces a cross-modal hybrid retrieval mechanism. This mechanism leverages structural knowledge and semantic representations across heterogeneous modalities.\n\nModality-Aware Query Encoding. Given a user query $q ,$ we first perform modality-aware query analysis to extract lexical cues and potential modality preferences embedded within the query. For instance, queries containing terms such as \"figure,\" \"chart,\" \"table,\" or \"equation\" provide explicit signals about the expected modality of relevant information. We then compute a unified text embedding ${ \\mathbf { e } _ { q } }$ using the same encoder employed during indexing, ensuring consistency between query and knowledge representations. This embedding-based approach enables cross-modal retrieval capabilities where textual queries can effectively access multimodal content through their shared representations, maintaining retrieval consistency while preserving cross-modal accessibility.\n\nHybrid Knowledge Retrieval Architecture. Recognizing that knowledge relevance manifests through both explicit structural connections and implicit semantic relationships, we design a hybrid retrieval architecture that strategically combines two complementary mechanisms.\n\n• (i) Structural Knowledge Navigation. This mechanism addresses the challenge of capturing explicit relationships and multi-hop reasoning patterns. Traditional keyword-based retrieval often fails to identify knowledge connected through intermediate entities or cross-modal relationships. To overcome this limitation, we exploit the structural properties encoded within our unified knowledge graph G. We employ keyword matching and entity recognition to locate relevant graph components. The retrieval process begins with exact entity matching against query terms.\n\nWe then perform strategic neighborhood expansion to include related entities and relationships within a specified hop distance. This structural approach proves particularly effective at uncovering highlevel semantic connections and entity-relation patterns that span multiple modalities. It capitalizes on the rich cross-modal linkages established in our multimodal knowledge graph. The structural navigation yields candidate set $\\mathsf { \\bar { c } } _ { \\mathrm { s t r u } } ( q )$ containing relevant entities, relationships, and their associated content chunks that provide comprehensive contextual information.\n\n• (ii) Semantic Similarity Matching. This mechanism addresses the challenge of identifying semantically relevant knowledge that lacks explicit structural connections. While structural navigation excels at following explicit relationships, it may miss relevant content that is semantically related but not directly connected in the graph topology. To bridge this gap, we conduct dense vector similarity search between the query embedding $\\mathbf { e } _ { q }$ and all components stored in embedding table T .\n\nThis approach encompasses atomic content chunks across all modalities, graph entities, and relationship representations, enabling fine-grained semantic matching that can surface relevant knowledge even when traditional lexical or structural signals are absent. The learned embedding space captures nuanced semantic relationships and contextual similarities that complement the explicit structural signals from the navigation mechanism. This retrieval pathway returns the top-k most semantically similar chunks $\\mathcal { C } _ { \\mathrm { s e m a n } } ( q )$ ranked by cosine similarity scores, ensuring comprehensive coverage of both structurally and semantically relevant knowledge.\n\nCandidate Pool Unification. Both retrieval pathways may return overlapping candidates with differing relevance signals. This necessitates a principled approach to unify and rank results. Retrieval candidates from both pathways are unified into a comprehensive candidate pool: $\\mathcal { C } ( q ) = \\mathcal { C } _ { \\mathrm { s t r u } } ( q ) \\cup$ J $\\mathcal { C } _ { \\mathrm { s e m a n } } ( q )$. Simply merging candidates would ignore distinct evidence each pathway provides. It would fail to account for redundancy between retrieved content.\n\n• (i) Multi-Signal Fusion Scoring. To address these challenges, we apply a sophisticated fusion scoring mechanism integrating multiple complementary relevance signals. These include structural importance derived from graph topology, semantic similarity scores from embedding space, and queryinferred modality preferences obtained through lexical analysis. This multi-faceted scoring approach ensures that final ranked candidates $\\mathcal { C } ^ { \\star } ( q )$ effectively balance structural knowledge relationships with semantic relevance while appropriately weighting different modalities based on query characteristics.\n\n• (ii) Hybrid Retrieval Integration. The resulting hybrid retrieval mechanism enables our framework to leverage the complementary strengths of both knowledge graphs and dense representations. This provides comprehensive coverage of relevant multimodal knowledge for response generation.\n\n2.4 FROM RETRIEVAL TO SYNTHESIS\n\nEffective multimodal question answering requires preserving rich visual semantics while maintaining coherent grounding across heterogeneous knowledge sources. Simple text-only approaches lose crucial visual information, while naive multimodal methods struggle with coherent cross-modal integration. Our synthesis stage addresses these challenges by systematically combining retrieved multimodal knowledge into comprehensive, evidence-grounded responses.\n\n• (i) Building Textual Context. Given the top-ranked retrieval candidates $\\mathcal { C } ^ { \\star } ( q )$, we construct a structured textual context. We concatenate textual representations of all retrieved components, including entity summaries, relationship descriptions, and chunk contents. The concatenation incorporates appropriate delimiters to indicate modality types and hierarchical origins. This approach ensures the language model can effectively parse and reason over heterogeneous knowledge",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+          "chunk_id": "chunk-ea106f7be2831088c0a1118ecb40eee8"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "mix",
+      "keywords": {
+        "high_level": [
+          "Entity alignment",
+          "Belongs_to edges",
+          "Text and multimodal knowledge combination"
+        ],
+        "low_level": [
+          "Entity alignment",
+          "Belongs_to edges",
+          "Multimodal knowledge graph",
+          "Text knowledge",
+          "Multimodal knowledge"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 35,
+        "total_relations_found": 126,
+        "entities_after_truncation": 35,
+        "relations_after_truncation": 78,
+        "merged_chunks_count": 32,
+        "final_chunks_count": 2
+      }
+    }
+  },
+  "answer": "Entity alignment merges the cross-modal and text-based knowledge graphs into a unified representation by using entity names as primary matching keys to identify semantically equivalent entities across both structures, whereas belongs_to edges serve a distinct purpose by anchoring each intra-chunk entity extracted from a non-text unit's textual description to its corresponding multimodal entity node $v_j^{\\mathrm{mm}}$, thereby preserving modality-specific grounding and contextualizing non-textual content within its textual neighborhood.\n\n### References\n\n- [1] /Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+  "events": [
+    {
+      "kind": "text_request",
+      "model": "deepseek-flash",
+      "status": "success",
+      "prompt": "---Role---\nYou are an expert keyword extractor, specializing in analyzing user queries for a Retrieval-Augmented Generation (RAG) system. Your purpose is to identify both high-level and low-level keywords in the user's query that will be used for effective document retrieval.\n\n---Goal---\nGiven a user query, your task is to extract two distinct types of keywords:\n1. **high_level_keywords**: for overarching concepts or themes, capturing user's core intent, the subject area, or the type of question being asked.\n2. **low_level_keywords**: for specific entities or details, identifying the specific entities, proper nouns, technical jargon, product names, or concrete items.\n\n---Instructions & Constraints---\n1. **Output Format**: Your output MUST be a valid JSON object and nothing else. Do not include any explanatory text, markdown code fences (like ```json), or any other text before or after the JSON. It will be parsed directly by a JSON parser.\n2. **Source of Truth**: All keywords must be explicitly derived from the user query, with both high-level and low-level keyword categories are required to contain content.\n3. **Concise & Meaningful**: Keywords should be concise words or meaningful phrases. Prioritize multi-word phrases when they represent a single concept. For example, from \"latest financial report of Apple Inc.\", you should extract \"latest financial report\" and \"Apple Inc.\" rather than \"latest\", \"financial\", \"report\", and \"Apple\".\n4. **Handle Edge Cases**: For queries that are too simple, vague, or nonsensical (e.g., \"hello\", \"ok\", \"asdfghjkl\"), you must return a JSON object with empty lists for both keyword types.\n5. **Language**: All extracted keywords MUST be in English. Proper nouns (e.g., personal names, place names, organization names) should be kept in their original language.\n\n---Examples---\nExample 1:\n\nQuery: \"How does international trade influence global economic stability?\"\n\nOutput:\n{\n  \"high_level_keywords\": [\"International trade\", \"Global economic stability\", \"Economic impact\"],\n  \"low_level_keywords\": [\"Trade agreements\", \"Tariffs\", \"Currency exchange\", \"Imports\", \"Exports\"]\n}\n\n\nExample 2:\n\nQuery: \"What are the environmental consequences of deforestation on biodiversity?\"\n\nOutput:\n{\n  \"high_level_keywords\": [\"Environmental consequences\", \"Deforestation\", \"Biodiversity loss\"],\n  \"low_level_keywords\": [\"Species extinction\", \"Habitat destruction\", \"Carbon emissions\", \"Rainforest\", \"Ecosystem\"]\n}\n\n\nExample 3:\n\nQuery: \"What is the role of education in reducing poverty?\"\n\nOutput:\n{\n  \"high_level_keywords\": [\"Education\", \"Poverty reduction\", \"Socioeconomic development\"],\n  \"low_level_keywords\": [\"School access\", \"Literacy rates\", \"Job training\", \"Income inequality\"]\n}\n\n\n\n---Real Data---\nUser Query: How do entity alignment and belongs_to edges serve different purposes when combining text and multimodal knowledge?\n\n---Output---\nOutput:",
+      "system_prompt": null,
+      "history_messages": [],
+      "response": "{\n  \"high_level_keywords\": [\"Entity alignment\", \"Belongs_to edges\", \"Text and multimodal knowledge combination\"],\n  \"low_level_keywords\": [\"Entity alignment\", \"Belongs_to edges\", \"Multimodal knowledge graph\", \"Text knowledge\", \"Multimodal knowledge\"]\n}"
+    },
+    {
+      "kind": "text_request",
+      "model": "deepseek-flash",
+      "status": "success",
+      "prompt": "---Role---\nYou are an expert keyword extractor, specializing in analyzing user queries for a Retrieval-Augmented Generation (RAG) system. Your purpose is to identify both high-level and low-level keywords in the user's query that will be used for effective document retrieval.\n\n---Goal---\nGiven a user query, your task is to extract two distinct types of keywords:\n1. **high_level_keywords**: for overarching concepts or themes, capturing user's core intent, the subject area, or the type of question being asked.\n2. **low_level_keywords**: for specific entities or details, identifying the specific entities, proper nouns, technical jargon, product names, or concrete items.\n\n---Instructions & Constraints---\n1. **Output Format**: Your output MUST be a valid JSON object and nothing else. Do not include any explanatory text, markdown code fences (like ```json), or any other text before or after the JSON. It will be parsed directly by a JSON parser.\n2. **Source of Truth**: All keywords must be explicitly derived from the user query, with both high-level and low-level keyword categories are required to contain content.\n3. **Concise & Meaningful**: Keywords should be concise words or meaningful phrases. Prioritize multi-word phrases when they represent a single concept. For example, from \"latest financial report of Apple Inc.\", you should extract \"latest financial report\" and \"Apple Inc.\" rather than \"latest\", \"financial\", \"report\", and \"Apple\".\n4. **Handle Edge Cases**: For queries that are too simple, vague, or nonsensical (e.g., \"hello\", \"ok\", \"asdfghjkl\"), you must return a JSON object with empty lists for both keyword types.\n5. **Language**: All extracted keywords MUST be in English. Proper nouns (e.g., personal names, place names, organization names) should be kept in their original language.\n\n---Examples---\nExample 1:\n\nQuery: \"How does international trade influence global economic stability?\"\n\nOutput:\n{\n  \"high_level_keywords\": [\"International trade\", \"Global economic stability\", \"Economic impact\"],\n  \"low_level_keywords\": [\"Trade agreements\", \"Tariffs\", \"Currency exchange\", \"Imports\", \"Exports\"]\n}\n\n\nExample 2:\n\nQuery: \"What are the environmental consequences of deforestation on biodiversity?\"\n\nOutput:\n{\n  \"high_level_keywords\": [\"Environmental consequences\", \"Deforestation\", \"Biodiversity loss\"],\n  \"low_level_keywords\": [\"Species extinction\", \"Habitat destruction\", \"Carbon emissions\", \"Rainforest\", \"Ecosystem\"]\n}\n\n\nExample 3:\n\nQuery: \"What is the role of education in reducing poverty?\"\n\nOutput:\n{\n  \"high_level_keywords\": [\"Education\", \"Poverty reduction\", \"Socioeconomic development\"],\n  \"low_level_keywords\": [\"School access\", \"Literacy rates\", \"Job training\", \"Income inequality\"]\n}\n\n\n\n---Real Data---\nUser Query: How do entity alignment and belongs_to edges serve different purposes when combining text and multimodal knowledge?\n\n---Output---\nOutput:",
+      "system_prompt": null,
+      "history_messages": [],
+      "response": "{\n  \"high_level_keywords\": [\"Entity alignment\", \"Belongs_to edges\", \"Text and multimodal knowledge\", \"Knowledge combination\"],\n  \"low_level_keywords\": [\"Entity alignment\", \"Belongs_to edges\", \"Multimodal knowledge\", \"Text knowledge\"]\n}"
+    },
+    {
+      "kind": "text_request",
+      "model": "deepseek-flash",
+      "status": "success",
+      "prompt": "How do entity alignment and belongs_to edges serve different purposes when combining text and multimodal knowledge?",
+      "system_prompt": "---Role---\n\nYou are an expert AI assistant specializing in synthesizing information from a provided knowledge base. Your primary function is to answer user queries accurately by ONLY using the information within the provided **Context**.\n\n---Goal---\n\nGenerate a comprehensive, well-structured answer to the user query.\nThe answer must integrate relevant facts from the Knowledge Graph and Document Chunks found in the **Context**.\nConsider the conversation history if provided to maintain conversational flow and avoid repeating information.\n\n---Instructions---\n\n1. Step-by-Step Instruction:\n  - Carefully determine the user's query intent in the context of the conversation history to fully understand the user's information need.\n  - Scrutinize both `Knowledge Graph Data` and `Document Chunks` in the **Context**. Identify and extract all pieces of information that are directly relevant to answering the user query.\n  - Weave the extracted facts into a coherent and logical response. Your own knowledge must ONLY be used to formulate fluent sentences and connect ideas, NOT to introduce any external information.\n  - Track the reference_id of the document chunk which directly support the facts presented in the response. Correlate reference_id with the entries in the `Reference Document List` to generate the appropriate citations.\n  - Generate a references section at the end of the response. Each reference document must directly support the facts presented in the response.\n  - Do not generate anything after the reference section.\n\n2. Content & Grounding:\n  - Strictly adhere to the provided context from the **Context**; DO NOT invent, assume, or infer any information not explicitly stated.\n  - If the answer cannot be found in the **Context**, state that you do not have enough information to answer. Do not attempt to guess.\n\n3. Formatting & Language:\n  - The response MUST be in the same language as the user query.\n  - The response MUST utilize Markdown formatting for enhanced clarity and structure (e.g., headings, bold text, bullet points).\n  - The response should be presented in One Sentence.\n\n4. References Section Format:\n  - The References section should be under heading: `### References`\n  - Reference list entries should adhere to the format: `* [n] Document Title`. Do not include a caret (`^`) after opening square bracket (`[`).\n  - The Document Title in the citation must retain its original language.\n  - Output each citation on an individual line\n  - Provide maximum of 5 most relevant citations.\n  - Do not generate footnotes section or any comment, summary, or explanation after the references.\n\n5. Reference Section Example:\n```\n### References\n\n- [1] Document Title One\n- [2] Document Title Two\n- [3] Document Title Three\n```\n\n6. Additional Instructions: n/a\n\n\n---Context---\n\n\nKnowledge Graph Data (Entity):\n\n```json\n{\"entity\": \"Multimodal Entity Node v_j^{mm}\", \"type\": \"concept\", \"description\": \"The multimodal entity node v_j^{mm} anchors the extracted entities and relations via belongs_to edges, grounding non-textual content within its textual context.\"}\n{\"entity\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"type\": \"equation\", \"description\": \"Defines the edge set $\\\\tilde{E}$ of the cross-modal knowledge graph as the union of intra-chunk relations $\\\\mathcal{E}_j$ and 'belongs_to' edges linking each intra-chunk entity to its multimodal anchor node $v_j^{\\\\mathrm{mm}}$. This preserves modality-specific grounding and contextualizes non-textual content within its textual neighborhood, supporting cross-modal retrieval and reasoning in RAG-Anything.\"}\n{\"entity\": \"Belongs_To Edges\", \"type\": \"concept\", \"description\": \"Explicit edges that associate intra-chunk entities with their corresponding multimodal entity node anchor.<SEP>Belongs_to edges are the connections that anchor extracted entities and relations to the multimodal entity node v_j^{mm}.<SEP>Explicit edges that anchor each intra-chunk entity to the multimodal entity node associated with the same non-text unit, preserving modality-specific grounding.\"}\n{\"entity\": \"Entity Alignment\", \"type\": \"method\", \"description\": \"A process that merges the multimodal knowledge graph and text-based knowledge graph using entity names as primary matching keys to identify semantically equivalent entities across both structures.<SEP>Entity Alignment is the process through which complementary cross-modal and text-based knowledge graphs are merged.<SEP>Entity alignment is the process through which the cross-modal knowledge graph is fused with the text-based knowledge graph to form a unified knowledge representation.<SEP>Entity alignment is the process by which the cross-modal knowledge graph is merged with a text-based knowledge graph.<SEP>The process by which the edge set $\\\\tilde{E}$ is merged with the text-based knowledge graph to form the unified graph.<SEP>The process by which the cross-modal knowledge graph and the text-based knowledge graph are fused to form the unified knowledge graph G.\"}\n{\"entity\": \"Unified Graph $\\\\mathcal{G} = (\\\\mathcal{V}, \\\\mathcal{E})$\", \"type\": \"concept\", \"description\": \"The unified graph formed by merging the edge set $\\\\tilde{E}$ with the text-based knowledge graph through entity alignment.\"}\n{\"entity\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"type\": \"equation\", \"description\": \"Defines the vertex set \\\\tilde{V} of the cross-modal knowledge graph as the union of multimodal anchor nodes v_j^{mm} and intra-chunk entities \\\\mathcal{V}_j extracted from non-text unit descriptions. This set-theoretic construction grounds non-textual content in a graph structure, enabling cross-modal retrieval and reasoning within the RAG-Anything framework.\"}\n{\"entity\": \"Unified Knowledge Graph G\", \"type\": \"data\", \"description\": \"The unified knowledge graph G = (V, E) is formed by fusing the cross-modal knowledge graph and the text-based knowledge graph via entity alignment.\"}\n{\"entity\": \"Unified Knowledge Graph\", \"type\": \"data\", \"description\": \"A comprehensive knowledge graph denoted as G = (ν, E) that captures both multimodal contextual relationships and text-based semantic connections after graph fusion.<SEP>The Unified Knowledge Graph, denoted as G, is a structural knowledge representation that encodes explicit relationships and multi-hop reasoning patterns across heterogeneous modalities.\"}\n{\"entity\": \"Unified Knowledge Representation 𝒢 = (𝒱, ℰ)\", \"type\": \"concept\", \"description\": \"The unified knowledge representation 𝒢 = (𝒱, ℰ) is formed by fusing the cross-modal and text-based knowledge graphs through entity alignment.\"}\n{\"entity\": \"Text-Based Knowledge Graph\", \"type\": \"concept\", \"description\": \"A traditional knowledge graph constructed from text modality chunks using named entity recognition and relation extraction techniques, similar to LightRAG and GraphRAG methodologies.<SEP>The Text-Based Knowledge Graph is constructed using established text-centric extraction pipelines and contains entities such as Bce, Beecher, and Chemistry.<SEP>The text-based knowledge graph is fused with the cross-modal knowledge graph through entity alignment to form a unified knowledge representation.<SEP>The text-based knowledge graph is a graph that is merged with the cross-modal knowledge graph through entity alignment.<SEP>A knowledge graph that is merged with the edge set $\\\\tilde{E}$ through entity alignment to form the unified graph.<SEP>A knowledge graph that is fused with the cross-modal knowledge graph via entity alignment to form the unified knowledge graph G.\"}\n{\"entity\": \"Intra-Chunk Entities $\\\\mathcal{V}_j$\", \"type\": \"data\", \"description\": \"The set of entities extracted from a non-text atomic unit's textual description, which are linked to the multimodal entity node via 'belongs_to' edges.\"}\n{\"entity\": \"RAG-Anything\", \"type\": \"method\", \"description\": \"RAG-Anything is a unified, all-in-one retrieval-augmented generation (RAG) framework designed to reimagine multimodal knowledge representation and retrieval. It treats text, images, tables, and equations as first-class entities, reconceptualizing multimodal content as interconnected knowledge entities. The framework extends GraphRAG to all modalities and unifies heterogeneous multimodal knowledge by decomposing content into atomic content units.\\n\\nAt its core, RAG-Anything employs a dual-graph construction strategy, building both cross-modal and text-based knowledge graphs that are merged via entity alignment. This produces modality-aware graphs that preserve essential relationships within multimodal documents, enabling precise reasoning over complex layouts. Complementing this is a cross-modal hybrid retrieval mechanism, which together with the dual-graph approach forms the framework's central architecture for cross-modal retrieval and reasoning. The framework also includes a dense representation generation step in its indexing pipeline and constructs a cross-modal knowledge graph (as described by Equation 4). Additional features include context-aware multimodal prompting.\\n\\nRAG-Anything demonstrates superior performance on long documents and complex multimodal layouts, particularly where relevant evidence is dispersed across multiple modalities and sections. It has been evaluated using the DocBench and MMLongBench benchmarks, including an ablation study on DocBench. On MMLongBench, it achieves the best results in information-dense domains such as Research Reports and Financial Reports, with consistent improvements across all document length categories: accuracy gains of 3.4 points for 11–50 pages, 9.3 points for 51–100 pages, and 7.9 points for 101–200 pages. It outperforms MM-GraphRAG on long-document reasoning tasks.\\n\\nThe framework excels at complex visual reasoning and tabular navigation by constructing structured graph representations of visual elements (such as bar plots) and tabular data, enabling precise alignment between visual and textual information. However, in documented failure cases, RAG-Anything produced an incorrect answer regarding the NER label generation sequence and failed to correctly interpret an irregular table in a cross-modal noise scenario. The framework's documentation also addresses challenges and future directions for multimodal RAG.\"}\n{\"entity\": \"Multimodal Entity Nodes\", \"type\": \"concept\", \"description\": \"Multimodal entity nodes, denoted as {v_j^{mm}}_j, are anchor nodes each associated with a non-text atomic unit c_j such as an image, table, or equation.\"}\n{\"entity\": \"Cross-Modal Knowledge Graph\", \"type\": \"concept\", \"description\": \"A knowledge graph constructed by RAG-Anything where non-text atomic units such as images, tables, and equations are transformed into structured graph entities to preserve modality-specific semantic information.<SEP>The Cross-Modal Knowledge Graph grounds non-textual modalities within their contextual environment, containing parent and child nodes for multimodal instances.<SEP>The cross-modal knowledge graph is built from the extracted entities and relations and is later fused with a text-based knowledge graph through entity alignment.<SEP>The cross-modal knowledge graph is a unified graph structure representing multimodal knowledge, constructed by RAG-Anything and later merged with a text-based knowledge graph through entity alignment.<SEP>A knowledge graph constructed by RAG-Anything that preserves modality-specific grounding by linking entities extracted from textual descriptions to anchor nodes representing non-textual content.<SEP>A knowledge graph that is fused with the text-based knowledge graph via entity alignment to form the unified knowledge graph G.\"}\n{\"entity\": \"Belongs_to Edges\", \"type\": \"concept\", \"description\": \"Belongs_to edges connect each anchor node to its associated intra-chunk entities, preserving modality-specific grounding.\"}\n{\"entity\": \"Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\", \"type\": \"image\", \"description\": \"The image illustrates a failure case in multimodal RAG systems where all evaluated models (GPT-4o-mini, LightRAG, MMGraphRAG, RAG-Anything) incorrectly answer a question about a neural network sequence. The expected answer requires reading a figure from bottom to top, but models exhibit text-centric bias and rigid spatial processing, producing incorrect sequences. This demonstrates fundamental challenges in cross-modal information integration and structural reasoning, as discussed in the surrounding text on challenges and future directions for multimodal RAG.\"}\n{\"entity\": \"Multimodal Entity Node $v_j^{\\\\mathrm{mm}}$\", \"type\": \"data\", \"description\": \"An anchor node representing non-textual content, to which all entities extracted from a unit's textual description are explicitly linked.\"}\n{\"entity\": \"GPT-4o-mini\", \"type\": \"method\", \"description\": \"GPT-4o-mini is a powerful multimodal language model with native text and image understanding capabilities and a 128K token context window. It serves as a backbone LLM and baseline in experimental frameworks, and is used to conduct all accuracy evaluations throughout these frameworks, ensuring consistent, reliable, and consistent assessment standards.\\n\\nAs a method, GPT-4o-mini was evaluated on the DocBench dataset, achieving an overall accuracy of 51.2%, and on MMLongBench, achieving an overall accuracy of 33.5%. As a baseline model, it demonstrated several incorrect responses across various tasks: it incorrectly identified VAE as having clearer separation in a multi-panel figure interpretation case; it incorrectly answered DKK 32,928 million for Novo Nordisk's wages and salaries in 2020; it provided an incorrect answer regarding the lowest accuracy GCAN configuration for Twitter15; and it incorrectly identified the BERT-to-BERT model with an AUPRC of 0.455 as the highest performer for the Evidence Inference dataset. Additionally, GPT-4o-mini was evaluated in a multimodal RAG failure case, producing an incorrect answer about the NER label generation sequence, and in a cross-modal noise case, providing an incorrect answer regarding joint goal accuracy improvements in the Train domain.\"}\n{\"entity\": \"Cross-Modal Graph Extraction Equation (equation)\", \"type\": \"equation\", \"description\": \"Defines the extraction of intra-chunk entities and relations from the detailed description of a non-text atomic unit, enabling the construction of a cross-modal knowledge graph in the RAG-Anything framework.\"}\n{\"entity\": \"O\", \"type\": \"concept\", \"description\": \"O is a node label in the Bi-LSTM-CRF model diagram representing a non-entity token.\"}\n{\"entity\": \"Relations ℰ_j\", \"type\": \"concept\", \"description\": \"Relations ℰ_j are the set of relations among entities extracted from a non-text content unit's description.\"}\n{\"entity\": \"Description $d_j^{\\\\mathrm{chunk}}$\", \"type\": \"data\", \"description\": \"The textual description of a non-text atomic unit, to which the graph extraction routine is applied to extract intra-chunk relation sets and entities.\"}\n{\"entity\": \"Multimodal Entity Node\", \"type\": \"concept\", \"description\": \"A node associated with each atomic non-text unit that serves as an anchor for its intra-chunk entities through explicit belongs_to edges.\"}\n{\"entity\": \"Named Entity Recognition\", \"type\": \"method\", \"description\": \"A technique used in the text-based knowledge graph extraction process to identify entities within textual content.<SEP>Named entity recognition is a text-based pipeline technique that the extraction routine R(·) is analogous to for identifying entities.<SEP>Named Entity Recognition is a task whose final label generation sequence is the subject of the question in the failure case, involving characters, embeddings, LSTM layers, and a CRF layer.\"}\n{\"entity\": \"Multimodal Knowledge Graph\", \"type\": \"concept\", \"description\": \"A graph structure built using non-text units as anchor points, where each atomic non-text unit is associated with a multimodal entity node serving as an anchor for its intra-chunk entities.\"}\n{\"entity\": \"Edge Set $\\\\tilde{E}$\", \"type\": \"data\", \"description\": \"The edge set $\\\\tilde{E}$ is defined by Equation (4) as the union of all intra-chunk relation sets and explicit 'belongs_to' edges anchoring intra-chunk entities to multimodal entity nodes.\"}\n{\"entity\": \"Scalable Fine-Grained Semantic Search\", \"type\": \"concept\", \"description\": \"A practical capability enabled by the equation, allowing semantic search over heterogeneous multimodal knowledge.\"}\n{\"entity\": \"Knowledge Graph\", \"type\": \"concept\", \"description\": \"The Knowledge Graph is a merged graph over all documents that integrates text-based and cross-modal knowledge graphs through entity alignment.\"}\n{\"entity\": \"Label\", \"type\": \"concept\", \"description\": \"Label is the final output of the NER label generation sequence.\"}\n{\"entity\": \"Heterogeneous Multimodal Knowledge\", \"type\": \"concept\", \"description\": \"Knowledge spanning multiple modalities that the equation enables scalable, fine-grained semantic search over.\"}\n{\"entity\": \"Multimodal Document\", \"type\": \"content\", \"description\": \"A multimodal document contains rich structural information within each modality, and understanding intra-modal structures is crucial for accurate reasoning.<SEP>A multimodal document is a document containing rich structural information across multiple modalities, such as text, figures, and tables.<SEP>A multimodal document is a source document containing both visual and textual elements, used as input for visual reasoning tasks.<SEP>The multimodal document is a page from a research paper containing an evidence figure that shows the NER label generation sequence in reverse order from bottom to top.<SEP>The multimodal document is a page containing text and Figure 2, which is referenced in the cross-modal noise case question about model style space separation.\"}\n{\"entity\": \"Hybrid Retrieval\", \"type\": \"method\", \"description\": \"Hybrid retrieval is a subsequent stage that leverages the unified graph structure for cross-modal retrieval and reasoning.\"}\n{\"entity\": \"Anchor Nodes\", \"type\": \"concept\", \"description\": \"Anchor nodes v_j^{mm} are explicit multimodal entities that ground non-text content and serve as anchors in the cross-modal knowledge graph.\"}\n{\"entity\": \"RAG-Anything Framework Architecture (image)\", \"type\": \"image\", \"description\": \"This diagram illustrates the architecture of the RAG-Anything framework, a universal RAG system for multimodal knowledge. It details the pipeline from input documents through multimodal knowledge unification, dual-graph construction (combining text-based and cross-modal graphs), and vector database creation, culminating in a hybrid retrieval process that feeds into an LLM for response generation. The figure visually supports the paper's description of handling heterogeneous data types like text, images, tables, and equations.\"}\n```\n\nKnowledge Graph Data (Relationship):\n\n```json\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"RAG-Anything\", \"description\": \"Entity RAG-Anything belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"entity2\": \"Entity Alignment\", \"description\": \"Entity Entity Alignment belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"RAG-Anything\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"RAG-Anything constructs a text-based knowledge graph using established text-centric extraction pipelines.\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Entity Alignment\", \"description\": \"Entity Entity Alignment belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"entity2\": \"RAG-Anything\", \"description\": \"Entity RAG-Anything belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"Entity Alignment\", \"entity2\": \"Unified Knowledge Graph\", \"description\": \"Entity alignment merges the multimodal and text-based knowledge graphs to create a unified knowledge graph capturing both contextual and semantic connections.\"}\n{\"entity1\": \"Multimodal Entity Node\", \"entity2\": \"RAG-Anything\", \"description\": \"RAG-Anything associates each atomic non-text unit with a multimodal entity node that serves as an anchor for intra-chunk entities.\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Entity Text-Based Knowledge Graph belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"RAG-Anything Framework Architecture (image)\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Entity Text-Based Knowledge Graph belongs to RAG-Anything Framework Architecture (image)\"}\n{\"entity1\": \"Entity Alignment\", \"entity2\": \"RAG-Anything Framework Architecture (image)\", \"description\": \"Entity Entity Alignment belongs to RAG-Anything Framework Architecture (image)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Multimodal Entity Nodes\", \"description\": \"Entity Multimodal Entity Nodes belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"LightRAG\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"The text-based knowledge graph is constructed following established methodologies similar to LightRAG.\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph\", \"entity2\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"description\": \"Entity Cross-Modal Knowledge Graph belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"Dense Embedding Table Construction (equation)\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Entity Text-Based Knowledge Graph belongs to Dense Embedding Table Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Entity Text-Based Knowledge Graph belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Knowledge Graph\", \"entity2\": \"RAG-Anything Framework Architecture (image)\", \"description\": \"Entity Knowledge Graph belongs to RAG-Anything Framework Architecture (image)\"}\n{\"entity1\": \"Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\", \"entity2\": \"GPT-4o-mini\", \"description\": \"Entity GPT-4o-mini belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Entity Alignment\", \"description\": \"Entity Entity Alignment belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Entity Text-Based Knowledge Graph belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\", \"entity2\": \"O\", \"description\": \"Entity O belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Cross-Modal Knowledge Graph\", \"description\": \"Entity Cross-Modal Knowledge Graph belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph\", \"entity2\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"description\": \"Entity Cross-Modal Knowledge Graph belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"entity2\": \"Description $d_j^{\\\\mathrm{chunk}}$\", \"description\": \"Entity Description $d_j^{\\\\mathrm{chunk}}$ belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"The cross-modal and text-based knowledge graphs are merged through entity alignment to create a unified representation.<SEP>The Cross-Modal Knowledge Graph and Text-Based Knowledge Graph are merged through entity alignment.<SEP>The cross-modal knowledge graph is fused with the text-based knowledge graph through entity alignment.<SEP>The cross-modal knowledge graph is later merged with a text-based knowledge graph through entity alignment.<SEP>The cross-modal knowledge graph and the text-based knowledge graph are fused via entity alignment.\"}\n{\"entity1\": \"Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\", \"entity2\": \"Named Entity Recognition\", \"description\": \"Entity Named Entity Recognition belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\"}\n{\"entity1\": \"Dense Embedding Table Construction (equation)\", \"entity2\": \"Entity Alignment\", \"description\": \"Entity Entity Alignment belongs to Dense Embedding Table Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"entity2\": \"Edge Set $\\\\tilde{E}$\", \"description\": \"Entity Edge Set $\\\\tilde{E}$ belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"Text-Based Knowledge Graph\", \"entity2\": \"Unified Knowledge Representation 𝒢 = (𝒱, ℰ)\", \"description\": \"The text-based knowledge graph is fused with the cross-modal knowledge graph to form the unified knowledge representation.\"}\n{\"entity1\": \"Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\", \"entity2\": \"Label\", \"description\": \"Entity Label belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\"}\n{\"entity1\": \"Dual-Graph Construction\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Dual-Graph Construction builds a Text-Based Knowledge Graph using text-centric extraction pipelines.\"}\n{\"entity1\": \"Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\", \"entity2\": \"Multimodal Document\", \"description\": \"Entity Multimodal Document belongs to Cross-Modal Misalignment Failure Case in Multimodal RAG (image)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"RAG-Anything Framework\", \"description\": \"Entity RAG-Anything Framework belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Hybrid Retrieval\", \"description\": \"Entity Hybrid Retrieval belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Entity Alignment\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"Entity alignment merges the text-based knowledge graph with the multimodal knowledge graph using entity names as matching keys.<SEP>The text-based knowledge graph is fused with the cross-modal knowledge graph through entity alignment.\"}\n{\"entity1\": \"Dense Embedding Table Construction (equation)\", \"entity2\": \"Unified Knowledge Graph G\", \"description\": \"Entity Unified Knowledge Graph G belongs to Dense Embedding Table Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph\", \"entity2\": \"Entity Alignment\", \"description\": \"Entity alignment merges the multimodal knowledge graph with the text-based knowledge graph using entity names as matching keys.<SEP>The cross-modal knowledge graph is fused with the text-based knowledge graph through entity alignment.\"}\n{\"entity1\": \"Belongs_To Edges\", \"entity2\": \"Cross-Modal Graph Extraction Equation (equation)\", \"description\": \"Entity Belongs_To Edges belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Dense Embedding Table Construction (equation)\", \"entity2\": \"Scalable Fine-Grained Semantic Search\", \"description\": \"Entity Scalable Fine-Grained Semantic Search belongs to Dense Embedding Table Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Named Entity Recognition\", \"description\": \"Entity Named Entity Recognition belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Intra-Chunk Entities\", \"description\": \"Entity Intra-Chunk Entities belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Extraction Routine R(·)\", \"description\": \"Entity Extraction Routine R(·) belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Dual-Graph Construction Strategy\", \"description\": \"Entity Dual-Graph Construction Strategy belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Text-Based Knowledge Graph\", \"entity2\": \"Unified Knowledge Graph G\", \"description\": \"The unified knowledge graph G is formed by fusing the text-based knowledge graph with the cross-modal knowledge graph.\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Relations ℰ_j\", \"description\": \"Entity Relations ℰ_j belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Dense Vector Space\", \"description\": \"Entity Dense Vector Space belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Dense Embedding Table Construction (equation)\", \"entity2\": \"Heterogeneous Multimodal Knowledge\", \"description\": \"Entity Heterogeneous Multimodal Knowledge belongs to Dense Embedding Table Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Intra-Chunk Entity Sets\", \"description\": \"Entity Intra-Chunk Entity Sets belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph\", \"entity2\": \"Unified Knowledge Graph G\", \"description\": \"The unified knowledge graph G is formed by fusing the cross-modal knowledge graph with the text-based knowledge graph.\"}\n{\"entity1\": \"GraphRAG\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"The text-based knowledge graph is constructed following established methodologies similar to GraphRAG.\"}\n{\"entity1\": \"Dual-Graph Construction Strategy\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"The dual-graph construction strategy then constructs a text-based knowledge graph using established text-centric extraction pipelines.\"}\n{\"entity1\": \"Named Entity Recognition\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"The text-based knowledge graph leverages named entity recognition to identify entities within textual content.\"}\n{\"entity1\": \"Knowledge Graph\", \"entity2\": \"Text-Based Knowledge Graph\", \"description\": \"The Text-Based Knowledge Graph is merged into the unified Knowledge Graph.\"}\n{\"entity1\": \"Belongs_to Edges\", \"entity2\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"description\": \"Entity Belongs_to Edges belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Description d_j^{chunk}\", \"description\": \"Entity Description d_j^{chunk} belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Vertex Set\", \"description\": \"Entity Vertex Set belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Anchor Nodes\", \"entity2\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"description\": \"Entity Anchor Nodes belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Hybrid Retrieval\", \"entity2\": \"Entity Alignment\", \"description\": \"The cross-modal hybrid retrieval stage follows the graph fusion step involving entity alignment.\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph\", \"entity2\": \"Knowledge Graph\", \"description\": \"The Cross-Modal Knowledge Graph is merged into the unified Knowledge Graph.\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Multimodal Entity Node v_j^{mm}\", \"description\": \"Entity Multimodal Entity Node v_j^{mm} belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Unified Knowledge Representation 𝒢 = (𝒱, ℰ)\", \"description\": \"Entity Unified Knowledge Representation 𝒢 = (𝒱, ℰ) belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Relation Extraction\", \"description\": \"Entity Relation Extraction belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Graph Extraction Operation\", \"description\": \"Entity Graph Extraction Operation belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Graph Fusion\", \"description\": \"Entity Graph Fusion belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Graph Extraction Routine\", \"description\": \"Entity Graph Extraction Routine belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Non-Text Atomic Unit\", \"description\": \"Entity Non-Text Atomic Unit belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Text-Based Knowledge Graph\", \"entity2\": \"Unified Graph $\\\\mathcal{G} = (\\\\mathcal{V}, \\\\mathcal{E})$\", \"description\": \"The text-based knowledge graph is merged with the edge set $\\\\tilde{E}$ through entity alignment to form the unified graph.\"}\n{\"entity1\": \"Belongs_To Edges\", \"entity2\": \"Cross-Modal Knowledge Graph Edge Set Construction (equation)\", \"description\": \"Entity Belongs_To Edges belongs to Cross-Modal Knowledge Graph Edge Set Construction (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Equation (𝒱_j, ℰ_j) = R(d_j^{chunk})\", \"description\": \"Entity Equation (𝒱_j, ℰ_j) = R(d_j^{chunk}) belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Multimodal Large Language Model\", \"description\": \"Entity Multimodal Large Language Model belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Local Neighborhood C_j\", \"description\": \"Entity Local Neighborhood C_j belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Text-Only RAG Systems\", \"description\": \"Entity Text-Only RAG Systems belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Graph Extraction Equation (equation)\", \"entity2\": \"Similarity-Based Retrieval\", \"description\": \"Entity Similarity-Based Retrieval belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Atomic Content Chunks\", \"entity2\": \"Cross-Modal Graph Extraction Equation (equation)\", \"description\": \"Entity Atomic Content Chunks belongs to Cross-Modal Graph Extraction Equation (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Mathematical Equation Analysis\", \"description\": \"Entity Mathematical Equation Analysis belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Equation (3)\", \"description\": \"Entity Equation (3) belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Textual Description\", \"description\": \"Entity Textual Description belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Set-Theoretic Union Operation\", \"description\": \"Entity Set-Theoretic Union Operation belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Indexing\", \"description\": \"Entity Indexing belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n{\"entity1\": \"Cross-Modal Knowledge Graph Vertex Set (equation)\", \"entity2\": \"Document Collection\", \"description\": \"Entity Document Collection belongs to Cross-Modal Knowledge Graph Vertex Set (equation)\"}\n```\n\nDocument Chunks (Each entry has a reference_id refer to the `Reference Document List`):\n\n```json\n{\"reference_id\": \"1\", \"content\": \"is segmented into coherent paragraphs or list items. Figures are extracted with associated metadata such as captions and cross-references. Tables are parsed into structured cells with headers and values. Mathematical expressions are converted into symbolic representations. The resulting x<sub>j</sub> preserves both content and structural context within the source. This provides a faithful, modalityconsistent representation. The decomposition abstracts diverse file formats into atomic units while maintaining their hierarchical order and contextual relationships. This canonicalization enables uniform processing, indexing, and retrieval of multimodal content within our framework.\\n\\n2.2.1 DUAL-GRAPH CONSTRUCTION FOR MULTIMODAL KNOWLEDGE\\n\\nWhile multimodal knowledge unification provides a uniform abstraction across modalities, directly constructing a single unified graph often risks overlooking modality-specific structural signals. The proposed RAG-Anything addresses this challenge through a dual-graph construction strategy. The system first builds a cross-modal knowledge graph that faithfully grounds non-textual modalities within their contextual environment. It then constructs a text-based knowledge graph using established text-centric extraction pipelines. These complementary graphs are merged through entity alignment. This design ensures accurate cross-modal grounding and comprehensive coverage of textual semantics, enabling richer knowledge representation and robust retrieval.\\n\\n• Cross-Modal Knowledge Graph: Non-textual content like images, tables, and equations contains rich semantic information that traditional text-only approaches often overlook. To preserve this knowledge, RAG-Anything constructs a multimodal knowledge graph where non-text atomic units are transformed into structured graph entities. RAG-Anything leverages multimodal large language models to derive two complementary textual representations from each atomic content unit. The first is a detailed description $d _ { j } ^ { \\\\mathrm { c h u n k } }$ optimized for cross-modal retrieval. The second is an entity summary $e _ { i } ^ { \\\\mathrm { e n t i t y } }$ containing key attributes such as entity name, type, and description for graph construction. The generation process is context-aware, processing each unit with its local neighborhood ${ C } _ { j } = \\\\{ { c } _ { k } \\\\ \\\\bar { | \\\\kappa - j | } \\\\leq \\\\bar { \\\\delta } \\\\}$, where δ controls the contextual window size. This ensures representations accurately reflect each unit’s role within the broader document structure.\\n\\nBuilding on these textual representations, RAG-Anything constructs the graph structure using non text units as anchor points. For each non-text unit $c _ { j }$, the graph extraction routine $R ( \\\\cdot )$ processes its description $d _ { j } ^ { \\\\mathrm { c h u n k } }$ to identify fine-grained entities and relations:\\n\\nwhere $\\\\nu _ { j }$ and $\\\\mathcal { E } _ { j }$ denote the sets of intra-chunk entities and their relations, respectively. Each atomic non-text unit is associated with a multimodal entity node $v _ { j } ^ { \\\\mathrm { m m } }$ that serves as an anchor for\\n\\nits intra-chunk entities through explicit belongs_to edges:\\n\\nThis construction preserves modality-specific grounding while ensuring non-textual content is contextualized by its textual neighborhood. This enables reliable cross-modal retrieval and reasoning.\\n\\n• Text-based Knowledge Graph: For text modality chunks, we construct a traditional text-based knowledge graph following established methodologies similar to LightRAG (Guo et al., 2024) and GraphRAG (Edge et al., 2024). The extraction process operates directly on textual content $x _ { j }$ where $t _ { j } = \\\\operatorname { t e x t }$, leveraging named entity recognition and relation extraction techniques to identify entities and their semantic relationships. Given the rich semantic information inherent in textual content, multimodal context integration is not required for this component. The resulting text-based knowledge graph captures explicit knowledge and semantic connections present in textual portions of documents, complementing the multimodal graph’s cross-modal grounding capabilities.\\n\\n2.2.2 GRAPH FUSION AND INDEX CREATION\\n\\nThe separate cross-modal and text-based knowledge graphs capture complementary aspects of document semantics. Integrating them creates a unified representation leveraging visual-textual associations and fine-grained textual relationships for enhanced retrieval.\\n\\n• (i) Entity Alignment and Graph Fusion. To create a unified knowledge representation, we merge the multimodal knowledge graph $( \\\\tilde { V } , \\\\tilde { E } )$ and text-based knowledge graph through entity alignment. This process uses entity names as primary matching keys to identify semantically equivalent entities across both graph structures. The integration consolidates their representations, creating a comprehensive knowledge graph $\\\\mathcal { G } = ( \\\\nu , \\\\mathcal { E } )$. This graph captures both multimodal contextual relationships and text-based semantic connections. The merged graph provides a holistic view of the document collection. This enables effective retrieval by leveraging visual-textual associations from the multimodal graph and fine-grained textual knowledge relationships from the text-based graph.\\n\\n• (ii) Dense Representation Generation. To enable efficient similarity-based retrieval, we construct a comprehensive embedding table $\\\\tau$ that encompasses all components generated during the indexing process. We encode dense representations for all graph entities, relationships, and atomic content chunks across modalities using an appropriate encoder. This creates a unified embedding space where each component $s \\\\in$ entities, relations, chunks is mapped to its corresponding dense representation:\\n\\nwhere emb(·) denotes the embedding function tailored for each component type. Together, the unified knowledge graph $\\\\mathcal { G }$ and the embedding table $\\\\tau$ constitute the complete retrieval index ${ \\\\mathcal { T } } = ( { \\\\mathcal { G } } , { \\\\mathcal { T } } )$. This provides both structural knowledge representation and dense vector space for efficient cross-modal similarity search during the subsequent retrieval stage.\\n\\n2.3 CROSS-MODAL HYBRID RET\"}\n{\"reference_id\": \"1\", \"content\": \"(·) denotes the embedding function tailored for each component type. Together, the unified knowledge graph $\\\\mathcal { G }$ and the embedding table $\\\\tau$ constitute the complete retrieval index ${ \\\\mathcal { T } } = ( { \\\\mathcal { G } } , { \\\\mathcal { T } } )$. This provides both structural knowledge representation and dense vector space for efficient cross-modal similarity search during the subsequent retrieval stage.\\n\\n2.3 CROSS-MODAL HYBRID RETRIEVAL\\n\\nThe retrieval stage operates on the index $\\\\mathcal { T } = ( \\\\mathcal { G } , \\\\mathcal { T } )$ to identify relevant knowledge components for a given user query. Traditional RAG methods face significant limitations when dealing with multimodal documents. They typically rely on semantic similarity within single modalities and fail to capture the rich interconnections between visual, mathematical, tabular, and textual elements. To address these challenges, our framework introduces a cross-modal hybrid retrieval mechanism. This mechanism leverages structural knowledge and semantic representations across heterogeneous modalities.\\n\\nModality-Aware Query Encoding. Given a user query $q ,$ we first perform modality-aware query analysis to extract lexical cues and potential modality preferences embedded within the query. For instance, queries containing terms such as \\\"figure,\\\" \\\"chart,\\\" \\\"table,\\\" or \\\"equation\\\" provide explicit signals about the expected modality of relevant information. We then compute a unified text embedding ${ \\\\mathbf { e } _ { q } }$ using the same encoder employed during indexing, ensuring consistency between query and knowledge representations. This embedding-based approach enables cross-modal retrieval capabilities where textual queries can effectively access multimodal content through their shared representations, maintaining retrieval consistency while preserving cross-modal accessibility.\\n\\nHybrid Knowledge Retrieval Architecture. Recognizing that knowledge relevance manifests through both explicit structural connections and implicit semantic relationships, we design a hybrid retrieval architecture that strategically combines two complementary mechanisms.\\n\\n• (i) Structural Knowledge Navigation. This mechanism addresses the challenge of capturing explicit relationships and multi-hop reasoning patterns. Traditional keyword-based retrieval often fails to identify knowledge connected through intermediate entities or cross-modal relationships. To overcome this limitation, we exploit the structural properties encoded within our unified knowledge graph G. We employ keyword matching and entity recognition to locate relevant graph components. The retrieval process begins with exact entity matching against query terms.\\n\\nWe then perform strategic neighborhood expansion to include related entities and relationships within a specified hop distance. This structural approach proves particularly effective at uncovering highlevel semantic connections and entity-relation patterns that span multiple modalities. It capitalizes on the rich cross-modal linkages established in our multimodal knowledge graph. The structural navigation yields candidate set $\\\\mathsf { \\\\bar { c } } _ { \\\\mathrm { s t r u } } ( q )$ containing relevant entities, relationships, and their associated content chunks that provide comprehensive contextual information.\\n\\n• (ii) Semantic Similarity Matching. This mechanism addresses the challenge of identifying semantically relevant knowledge that lacks explicit structural connections. While structural navigation excels at following explicit relationships, it may miss relevant content that is semantically related but not directly connected in the graph topology. To bridge this gap, we conduct dense vector similarity search between the query embedding $\\\\mathbf { e } _ { q }$ and all components stored in embedding table T .\\n\\nThis approach encompasses atomic content chunks across all modalities, graph entities, and relationship representations, enabling fine-grained semantic matching that can surface relevant knowledge even when traditional lexical or structural signals are absent. The learned embedding space captures nuanced semantic relationships and contextual similarities that complement the explicit structural signals from the navigation mechanism. This retrieval pathway returns the top-k most semantically similar chunks $\\\\mathcal { C } _ { \\\\mathrm { s e m a n } } ( q )$ ranked by cosine similarity scores, ensuring comprehensive coverage of both structurally and semantically relevant knowledge.\\n\\nCandidate Pool Unification. Both retrieval pathways may return overlapping candidates with differing relevance signals. This necessitates a principled approach to unify and rank results. Retrieval candidates from both pathways are unified into a comprehensive candidate pool: $\\\\mathcal { C } ( q ) = \\\\mathcal { C } _ { \\\\mathrm { s t r u } } ( q ) \\\\cup$ J $\\\\mathcal { C } _ { \\\\mathrm { s e m a n } } ( q )$. Simply merging candidates would ignore distinct evidence each pathway provides. It would fail to account for redundancy between retrieved content.\\n\\n• (i) Multi-Signal Fusion Scoring. To address these challenges, we apply a sophisticated fusion scoring mechanism integrating multiple complementary relevance signals. These include structural importance derived from graph topology, semantic similarity scores from embedding space, and queryinferred modality preferences obtained through lexical analysis. This multi-faceted scoring approach ensures that final ranked candidates $\\\\mathcal { C } ^ { \\\\star } ( q )$ effectively balance structural knowledge relationships with semantic relevance while appropriately weighting different modalities based on query characteristics.\\n\\n• (ii) Hybrid Retrieval Integration. The resulting hybrid retrieval mechanism enables our framework to leverage the complementary strengths of both knowledge graphs and dense representations. This provides comprehensive coverage of relevant multimodal knowledge for response generation.\\n\\n2.4 FROM RETRIEVAL TO SYNTHESIS\\n\\nEffective multimodal question answering requires preserving rich visual semantics while maintaining coherent grounding across heterogeneous knowledge sources. Simple text-only approaches lose crucial visual information, while naive multimodal methods struggle with coherent cross-modal integration. Our synthesis stage addresses these challenges by systematically combining retrieved multimodal knowledge into comprehensive, evidence-grounded responses.\\n\\n• (i) Building Textual Context. Given the top-ranked retrieval candidates $\\\\mathcal { C } ^ { \\\\star } ( q )$, we construct a structured textual context. We concatenate textual representations of all retrieved components, including entity summaries, relationship descriptions, and chunk contents. The concatenation incorporates appropriate delimiters to indicate modality types and hierarchical origins. This approach ensures the language model can effectively parse and reason over heterogeneous knowledge\"}\n{\"reference_id\": \"1\", \"content\": \"unified framework that fundamentally reimagines multimodal knowledge representation and retrieval. Our approach employs a dual-graph construction strategy that elegantly bridges the gap between cross-modal understanding and fine-grained textual semantics. Rather than forcing diverse modalities into textcentric pipelines, RAG-Anything constructs complementary knowledge graphs that preserve both multimodal contextual relationships and detailed textual knowledge. This design enables seamless integration of visual elements, structured data, and mathematical expressions within a unified retrieval framework. The system maintains semantic integrity across modalities while ensuring efficient cross-modal reasoning capabilities throughout the process.\\n\\nOur cross-modal hybrid retrieval mechanism strategically combines structural knowledge navigation with semantic similarity matching. This architecture addresses the fundamental limitation of existing approaches that rely solely on embedding-based retrieval or keyword matching. RAG-Anything leverages explicit graph relationships to capture multi-hop reasoning patterns. It simultaneously employs dense vector representations to identify semantically relevant content that lacks direct structural connections. The framework introduces modality-aware query processing and cross-modal alignment systems. These enable textual queries to effectively access visual and structured information. This unified approach eliminates the architectural fragmentation that plagues current multimodal RAG systems. It delivers superior performance particularly on long-context documents where relevant evidence spans multiple modalities and document sections.\\n\\nExperimental Validation. To validate the effectiveness of our proposed approach, we conduct comprehensive experiments on two challenging multimodal benchmarks: DocBench and MMLongBench. Our evaluation demonstrates that RAG-Anything achieves superior performance across diverse domains. The framework represents substantial improvements over state-of-the-art baselines. Notably, our performance gains become increasingly significant as content length increases. We observe particularly pronounced advantages on long-context materials. This validates our core hypothesis that dual-graph construction and cross-modal hybrid retrieval are essential for handling complex multimodal materials. Our ablation studies reveal that graph-based knowledge representation provides the primary performance gains. Traditional chunk-based approaches fail to capture the structural relationships critical for multimodal reasoning. Case studies further demonstrate that our framework excels at precise localization within complex layouts. The system effectively disambiguates simila terminology and navigates multi-panel visualizations through structure-aware retrieval mechanisms.\\n\\n2 THE RAG-ANYTHING FRAMEWORK\\n\\n2.1 PRELIMINARY\\n\\nRetrieval-Augmented Generation (RAG) has emerged as a fundamental paradigm for dynamically expanding the knowledge boundaries of LLMs. While LLMs demonstrate exceptional reasoning capabilities, their knowledge remains static and bounded by training data cutoffs. This creates an ever-widening gap with the rapidly evolving information landscape. RAG systems address this critical limitation by enabling LLMs to retrieve and incorporate external knowledge sources during inference. This transforms them from static repositories into adaptive, knowledge-aware systems.\\n\\nThe Multimodal Reality: Beyond Text-Only RAG. Current RAG systems face a critical limitation that severely restricts their real-world deployment. Existing frameworks operate under the restrictive assumption that knowledge corpus consists exclusively of plain textual documents. This assumption fundamentally misaligns with how information exists in authentic environments. Real-world knowledge repositories are inherently heterogeneous and multimodal, containing rich combinations of textual content, visual elements, structured data, and mathematical expressions. These diverse knowledge sources span multiple document formats and presentation mediums, from research papers and technical slides to web pages and interactive documents.\\n\\n2.1.1 MOTIVATING RAG-ANYTHING\\n\\nThis multimodal reality introduces fundamental technical challenges that expose the inadequacy of current text-only RAG approaches. Effective multimodal RAG requires unified indexing strategies that can handle disparate data types, cross-modal retrieval mechanisms that preserve semantic relationships across modalities, and sophisticated synthesis techniques that can coherently integrate diverse information sources. These challenges demand a fundamentally different architectural approach rather than incremental improvements to existing systems.\\n\\nThe RAG-Anything framework introduces a unified approach for retrieving and processing knowledge from heterogeneous multimodal information sources. Our system addresses the fundamental challenge of handling diverse data modalities and document formats within a retrieval pipeline. The framework comprises three core components: universal indexing for multimodal knowledge, cross-modal adaptive retrieval, and knowledge-enhanced response generation. This integrated design enables effective knowledge utilization across modalities while maintaining computational efficiency.\\n\\n2.2 UNIVERSAL REPRESENTATION FOR HETEROGENEOUS KNOWLEDGE\\n\\nA key requirement for universal knowledge access is the ability to represent heterogeneous multimodal content in a unified, retrieval-oriented abstraction. Unlike existing pipelines that simply parse documents into text segments, RAG-Anything introduces Multimodal Knowledge Unification. This process decomposes raw inputs into atomic knowledge units while preserving their structural context and semantic alignment. For instance, RAG-Anything ensures that figures remain grounded in their captions, equations remain linked to surrounding definitions, and tables stay connected to explanatory narratives. This transforms heterogeneous files into a coherent substrate for cross-modal retrieval.\\n\\nFormally, each knowledge source $k _ { i } \\\\in \\\\mathcal { K } \\\\left( \\\\mathbf { e . g . , a } \\\\right.$ web page) is decomposed into atomic content units:\\n\\nwhere each unit $c _ { j }$ consists of a modality type $t _ { j } ~ \\\\in \\\\mathrm { { \\\\ t e x t } }$, image, table, equation, $\\\\dots$ and its corresponding raw content $x _ { j }$. The content $x _ { j }$ represents the extracted information from the original knowledge source, processed in a modality-aware manner to preserve semantic integrity.\\n\\nTo ensure high-fidelity extraction, RAG-Anything leverages specialized parsers for different content types. Text is segmented into coherent paragraphs or list items. Figures are extracted with associated metadata such as captions and cross-references. Tables are parsed into structured cells with headers and values. Mathematical expressions are converted into symbolic representations. The resulting x<sub>j</sub> preserves both content and structural context within the source. This provides a faithful, modalityconsistent representation. The decomposition abstracts diverse file formats into atomic units while maintaining their hierarchical order and contextual relationships. This canonicalization enables uniform processing, indexing, and retrieval\"}\n```\n\nReference Document List (Each entry starts with a [reference_id] that corresponds to entries in the Document Chunks):\n\n```\n[1] /Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf\n```\n\n\n",
+      "history_messages": [],
+      "response": "Entity alignment merges the cross-modal and text-based knowledge graphs into a unified representation by using entity names as primary matching keys to identify semantically equivalent entities across both structures, whereas belongs_to edges serve a distinct purpose by anchoring each intra-chunk entity extracted from a non-text unit's textual description to its corresponding multimodal entity node $v_j^{\\mathrm{mm}}$, thereby preserving modality-specific grounding and contextualizing non-textual content within its textual neighborhood.\n\n### References\n\n- [1] /Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+    }
+  ],
+  "reported_usage": {
+    "prompt_tokens": 12898,
+    "completion_tokens": 237,
+    "total_tokens": 13135,
+    "call_count": 5
+  },
+  "elapsed_seconds": 2.999675708997529,
+  "diagnostic_retrieval_is_separate_from_generation": true,
+  "question_id": "q18"
+}

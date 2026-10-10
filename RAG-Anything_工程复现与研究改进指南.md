@@ -1,6 +1,6 @@
 # RAG-Anything 工程复现方案与验证记录
 
-**本轮操作入口：** [动手复现步骤](/Users/drw/PycharmProjects/rag-anything-reproduction/动手复现步骤.md)。当前选用 DeepSeek 官方文字/视觉接口与本机 Ollama Qwen3 4096 维向量，已修复迁移后的环境与解析路径；下文保留前一轮方案及历史核验，最新运行证据以本轮核验目录为准。
+**本轮操作入口：** [动手复现步骤](动手复现步骤.md)。当前选用 DeepSeek 官方文字/视觉接口与本机 Ollama Qwen3 4096 维向量，已修复迁移后的环境与解析路径；下文保留前一轮方案及历史核验，最新运行证据以本轮核验目录为准。
 
 本文以论文 Figure 1 为主线，将 RAG-Anything 落地为可检查、可重启、可评测的本地系统。第一轮使用一篇公开 PDF 和 20 道诊断题，先验证解析、建库、检索与视觉回引，再开展研究改进。
 
@@ -96,7 +96,7 @@
 
 必须同时固定 PDF 兼容依赖：MinerU 3.4.1 使用的 `get_pos()` 在 pypdfium2 5.x 被移除，较新 pdftext 又要求 5.x。本次真实运行遇到该错误后，将二者固定到兼容组合，随后 `pip check` 和真实解析通过。[S4][S5]
 
-完整传递依赖保存在 [本机版本快照](/Users/drw/PycharmProjects/rag-anything-reproduction/requirements.lock.macos-arm64-py312.txt)。该快照对应 macOS arm64 / Python 3.12；不能视为跨平台兼容证明。当前 MinerU 4.x 的新命令与本文固定版不同，按本项目依赖和命令执行。
+完整传递依赖保存在 [本机版本快照](requirements.lock.macos-arm64-py312.txt)。该快照对应 macOS arm64 / Python 3.12；不能视为跨平台兼容证明。当前 MinerU 4.x 的新命令与本文固定版不同，按本项目依赖和命令执行。
 
 ### 2.2 与原文设置的差异
 
@@ -115,7 +115,7 @@
 
 ## 3. 工程目录与执行约定
 
-项目：[rag-anything-reproduction](/Users/drw/PycharmProjects/rag-anything-reproduction/README.md)。以下命令均在该目录执行。
+项目：[rag-anything-reproduction](README.md)。以下命令均在该目录执行。
 
 ```text
 rag-anything-reproduction/
@@ -142,7 +142,7 @@ rag-anything-reproduction/
 本机 `.venv` 已建立。继续操作时执行：
 
 ```bash
-cd "/Users/drw/PycharmProjects/rag-anything-reproduction"
+cd "/Users/drw/PycharmProjects/RAG-Anything-reproduction"
 source .venv/bin/activate
 python -m pip check
 python reproduce.py check
@@ -214,7 +214,7 @@ python reproduce.py probe
 
 ```bash
 python reproduce.py parse \
-  --pdf "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf" \
+  --pdf "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/RAG-Anything_arXiv_2025.pdf" \
   --doc-id rag-anything-v1 --device cpu --timeout 1800
 ```
 
@@ -352,7 +352,7 @@ python reproduce.py query --kb pilot-v1 --mode mix --vlm \
 
 ### 8.1 问题及判分协议
 
-[20 题诊断集](/Users/drw/PycharmProjects/rag-anything-reproduction/questions.pilot.jsonl) 包含正文 4、表格 4、图像 4、公式 3、跨模态 3、无答案 2。每题有参考答案、必要证据和 PDF 页序；标注根据原文建立，仍需研究者逐题签认后冻结。
+[20 题诊断集](questions.pilot.jsonl) 包含正文 4、表格 4、图像 4、公式 3、跨模态 3、无答案 2。每题有参考答案、必要证据和 PDF 页序；标注根据原文建立，仍需研究者逐题签认后冻结。
 
 参考答案只用于评测，不传入模型。运行记录保存问题文件哈希。冻结后若修订答案或问题，另存版本并说明原因，保留旧预测。
 
@@ -377,7 +377,7 @@ python reproduce.py batch --kb pilot-v1 --questions questions.visual.jsonl --mod
 | G1           |     20 | 文字生成工程基线     |
 | G2           |      4 | 视觉回引及回答检查   |
 
-批次保存 `run-manifest.json` 与 `qXX-result.json`；错误记录包含失败题 ID。将实际 run_id 和逐题判断填入 [评测模板](/Users/drw/PycharmProjects/rag-anything-reproduction/evaluation.template.csv)。模板的空白分数不代表任何实验结果。
+批次保存 `run-manifest.json` 与 `qXX-result.json`；错误记录包含失败题 ID。将实际 run_id 和逐题判断填入 [评测模板](evaluation.template.csv)。模板的空白分数不代表任何实验结果。
 
 ### 8.3 指标与错误归因
 
@@ -452,13 +452,13 @@ curl -X POST "http://127.0.0.1:8000/query" \
 | 正式知识库及 20 题评测           | 待执行                       | 不存在已验证准确率                                    |
 | 真模型本地服务                   | 待验证                       | ASGI 集成通过不等于实际服务已部署                     |
 
-详细证据及文件哈希见 [工程核验记录](/Users/drw/PycharmProjects/rag-anything-reproduction/verification.json)。框架集成使用替身模型验证工程链路，不能替代真实模型端到端验收，也不能保证其他机器、供应商和文档零错误。
+详细证据及文件哈希见 [现存核验汇总](verification.handson.json)。框架集成使用替身模型验证工程链路，不能替代真实模型端到端验收，也不能保证其他机器、供应商和文档零错误。（早期 `verification.json` 已清理；此链接提供后续核验汇总。）
 
 ### 10.2 当前下一步
 
 继续使用已建立的环境和 `parsed/rag-anything-v1/`：填写本地 `.env` → 文字/embedding 探针 → Figure 1 图片探针 → 逐题复核解析与答案 → 建立 `pilot-v1` → 三模式检索及生成 → 批量评测 → 本地演示。
 
-项目已迁至 `/Users/drw/PycharmProjects/rag-anything-reproduction`。源 PDF 已纳入 `data/`；文档链接、解析图片路径和虚拟环境启动路径已更新，迁移后再次检查依赖、解析哈希及核心导入。历史日志保留原执行位置，迁移记录见 `verification/migration.json`。失败解析、重复测试与研发临时材料集中于 `_待手动清理/`，按使用者禁止批量删除的规则留待手动清理。
+项目已迁至 `/Users/drw/PycharmProjects/RAG-Anything-reproduction`。源 PDF 已纳入 `data/`；文档链接、解析图片路径和虚拟环境启动路径已更新，迁移后再次检查依赖、解析哈希及核心导入。历史日志保留原执行位置，迁移记录见 `verification/migration.json`。失败解析、重复测试与研发临时材料集中于 `_待手动清理/`，按使用者禁止批量删除的规则留待手动清理。
 
 ### 10.3 实验记录模板
 

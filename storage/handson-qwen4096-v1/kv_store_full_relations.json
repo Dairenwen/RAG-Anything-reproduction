@@ -1,0 +1,3965 @@
+{
+  "doc-rag-anything-handson-v1": {
+    "relation_pairs": [
+      [
+        "Figure 4",
+        "GCAN"
+      ],
+      [
+        "Figure 2",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Factual Accuracy Assessment Prompt",
+        "RAG-Anything"
+      ],
+      [
+        "Anchor Nodes",
+        "Non-Text Atomic Unit"
+      ],
+      [
+        "Table Analysis Prompt Template (image)",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "The Device"
+      ],
+      [
+        "Multimodal Response Generation Equation (equation)",
+        "Textual Context P(q)"
+      ],
+      [
+        "Edge Set $\\tilde{E}$",
+        "Intra-Chunk Relation Sets $\\bigcup_j \\mathcal{E}_j$"
+      ],
+      [
+        "Atomic Content Chunks c_j",
+        "Multimodal Documents"
+      ],
+      [
+        "Embedding Table τ",
+        "Mathematical Equation"
+      ],
+      [
+        "Accuracy Evaluation Prompt Image",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Figure 2",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "Multi-Modal RAG"
+      ],
+      [
+        "Multi-Signal Fusion Scoring",
+        "Textual Context P(q)"
+      ],
+      [
+        "Table",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Unified Knowledge Graph G"
+      ],
+      [
+        "Document Structure Processing Challenges",
+        "Multimodal RAG"
+      ],
+      [
+        "DocBench Accuracy",
+        "RAGAnything"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "LightRAG"
+      ],
+      [
+        "Extraction Routine R(·)",
+        "Intra-Chunk Entities"
+      ],
+      [
+        "Query",
+        "Query High-/Low-Level Keys Extraction"
+      ],
+      [
+        "DocBench",
+        "MM-GraphRAG"
+      ],
+      [
+        "Cross-Modal Integration",
+        "Multimodal Document Understanding"
+      ],
+      [
+        "Bce",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Alex",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Architecture",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "DocBench Dataset",
+        "LightRAG"
+      ],
+      [
+        "Evidence Table",
+        "Slot Metric"
+      ],
+      [
+        "Embedding Function Emb(·)",
+        "Vertex Set V"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "W/o Reranker"
+      ],
+      [
+        "Multimodal Knowledge Unification",
+        "Parallel Parser"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Multimodal RAG Systems"
+      ],
+      [
+        "Multimodal Knowledge Unification Decomposition (equation)",
+        "Raw Content"
+      ],
+      [
+        "Long-Document Reasoning Tasks",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Accuracy Evaluation Prompt",
+        "Binary Accuracy Classification"
+      ],
+      [
+        "Figure 7",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Accuracy Evaluation",
+        "Accuracy Evaluation Prompt"
+      ],
+      [
+        "Embedding Function Emb(·)",
+        "Modality-Consistent Representation"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "DocBench"
+      ],
+      [
+        "Structured Content List",
+        "Textual Multi-Modal Info"
+      ],
+      [
+        "Multimodal Document Question Answering",
+        "Statistics of Experimental Datasets (DocBench and MMLongBench) (table)"
+      ],
+      [
+        "LightRAG",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "Atomic Content Unit",
+        "Cross-Modal Retrieval"
+      ],
+      [
+        "Hybrid Retrieval Architecture",
+        "Statistics of Experimental Datasets (DocBench and MMLongBench) (table)"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Modality-Aware Processing"
+      ],
+      [
+        "Detailed Description",
+        "JSON Schema"
+      ],
+      [
+        "Heterogeneous Multimodal Knowledge",
+        "Scalable Fine-Grained Semantic Search"
+      ],
+      [
+        "MMLongBench Domain-Specific Accuracy Comparison (table)",
+        "Table 3"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval",
+        "RAG-Anything"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "Equation Analysis Prompt"
+      ],
+      [
+        "MM-GraphRAG",
+        "RAG-Anything"
+      ],
+      [
+        "Failure Patterns",
+        "Multimodal RAG"
+      ],
+      [
+        "Average Pages",
+        "DocBench Document Type Distribution and Statistics (table)"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Evidence Table"
+      ],
+      [
+        "Multi-Modal VDB",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "VLM"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "LightRAG"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Dense Vector Space"
+      ],
+      [
+        "Number Of Documents",
+        "Table 5"
+      ],
+      [
+        "Hotel Domain",
+        "Joint Goal Accuracy"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Joint Goal Accuracy"
+      ],
+      [
+        "Bi-LSTM-CRF Model",
+        "O"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Indexing"
+      ],
+      [
+        "Figure 6",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Figure 2",
+        "Multimodal Document"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "Figure 9"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Graph Fusion"
+      ],
+      [
+        "Cross-Modal Reranking",
+        "RAG-Anything"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Response"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval",
+        "Embedding Table τ"
+      ],
+      [
+        "GCAN",
+        "RAG-Anything"
+      ],
+      [
+        "RAG-Anything",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "MMLongBench Domain-Specific Accuracy Comparison (table)",
+        "RAGAnything"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Graph Construction"
+      ],
+      [
+        "A.3 Context-Aware Multimodal Prompting",
+        "RAG-Anything"
+      ],
+      [
+        "Intra-Chunk Entity Sets",
+        "Textual Description"
+      ],
+      [
+        "Equation (𝒱_j, ℰ_j) = R(d_j^{chunk})",
+        "Graph Extraction Operation"
+      ],
+      [
+        "Modality-Aware Graph",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Textual Description"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "RAG-Anything"
+      ],
+      [
+        "MMGraphRAG",
+        "RAGAnything"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Equation (3)"
+      ],
+      [
+        "Overall Accuracy",
+        "RAGAnything"
+      ],
+      [
+        "Multimodal Processors",
+        "Textual Multi-Modal Info"
+      ],
+      [
+        "Graph Extraction Routine $R(\\cdot)$",
+        "Non-Text Atomic Unit $c_j$"
+      ],
+      [
+        "Figure 9",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "GPT-4o-mini"
+      ],
+      [
+        "Failure Patterns",
+        "Structural Reasoning"
+      ],
+      [
+        "Input Documents",
+        "Parallel Parser"
+      ],
+      [
+        "Textual Context P(q)",
+        "Vision-Language Model"
+      ],
+      [
+        "DocBench",
+        "Multimodal Document Question Answering"
+      ],
+      [
+        "Government",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Relation Extraction"
+      ],
+      [
+        "Cruz",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Equation (𝒱_j, ℰ_j) = R(d_j^{chunk})"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Hierarchical Text Extraction",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Panel-Caption-Axis Edges"
+      ],
+      [
+        "Multimodal Response Generation Equation (equation)",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Multimodal Chunks",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "-S-A",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "Figure 11"
+      ],
+      [
+        "Bce",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Number Of Questions",
+        "Table 6"
+      ],
+      [
+        "Edge Set $\\tilde{E}$",
+        "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "MMGraphRAG"
+      ],
+      [
+        "Figure 2",
+        "t-SNE Visualization"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "RAGAnything"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "GPT-4o-mini"
+      ],
+      [
+        "Query High-/Low-Level Keys Extraction",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "Footnotes",
+        "Image Details"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Entity Alignment"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Edge Set $\\tilde{E}$"
+      ],
+      [
+        "Figure 5",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Guidebooks",
+        "RAGAnything"
+      ],
+      [
+        "Candidate Pool Unification",
+        "Hybrid Retrieval Architecture"
+      ],
+      [
+        "C*(q)",
+        "Textual Context P(q)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "Row-Of Relationship",
+        "Structured Graph"
+      ],
+      [
+        "Graph Extraction Routine",
+        "Intra-Chunk Entity Sets"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Multimodal Document"
+      ],
+      [
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)",
+        "Number Of Questions"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Intra-Chunk Entities"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Description $d_j^{\\mathrm{chunk}}$"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Relations ℰ_j"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Retrieval Bias Toward Text"
+      ],
+      [
+        "Char LSTM-B",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "Multimodal Knowledge Unification",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "MMGraphRAG"
+      ],
+      [
+        "Taylor",
+        "The Device"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "DocBench Accuracy",
+        "RAG-Anything"
+      ],
+      [
+        "Accuracy Evaluation Prompt Image",
+        "Figure 10"
+      ],
+      [
+        "MMLongBench",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Multimodal Entity Nodes",
+        "Vertex Set"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Structured Content List"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Table 5"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Structural Navigation"
+      ],
+      [
+        "Word CRF",
+        "Word LSTM-F"
+      ],
+      [
+        "Figure 8",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Chunk-Only",
+        "Overall Accuracy"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Text-Based Knowledge Graph",
+        "Unified Knowledge Graph G"
+      ],
+      [
+        "MM-GraphRAG",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Hybrid Retrieval Architecture"
+      ],
+      [
+        "Canonicalization",
+        "Embedding Function Emb(·)"
+      ],
+      [
+        "Multimodal RAG",
+        "RAG-Anything"
+      ],
+      [
+        "Char Embedding",
+        "Char LSTM-F"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Hybrid Retrieval"
+      ],
+      [
+        "Dense Vector Space",
+        "Similarity-Based Retrieval"
+      ],
+      [
+        "GEM Fine-Tuning Strategy",
+        "GPT-4o-mini"
+      ],
+      [
+        "MMLongBench",
+        "Tutorials"
+      ],
+      [
+        "QA Pair Count",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "Equation Analysis Prompt Template (image)"
+      ],
+      [
+        "Multimodal Knowledge Unification",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Entity Info",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "Equation Information"
+      ],
+      [
+        "DocBench",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "DocBench Accuracy",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "Rigid Spatial Processing Patterns"
+      ],
+      [
+        "Accuracy",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "JSON Response Schema"
+      ],
+      [
+        "RAG-Anything",
+        "Table 4"
+      ],
+      [
+        "Figure 9",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Gold Futures"
+      ],
+      [
+        "Long-Document Reasoning",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Candidate Pool Unification",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "Statistics of Experimental Datasets (DocBench and MMLongBench) (table)",
+        "Table 1: Statistics of Experimental Datasets"
+      ],
+      [
+        "Multimodal Document Understanding",
+        "RAGAnything"
+      ],
+      [
+        "Modality-Aware Extraction",
+        "Raw Content"
+      ],
+      [
+        "Anchor Nodes",
+        "Cross-Modal Knowledge Graph Vertex Set (equation)"
+      ],
+      [
+        "Belongs_to Edges",
+        "Intra-Chunk Entity Sets"
+      ],
+      [
+        "Guidebooks",
+        "MMLongBench"
+      ],
+      [
+        "Atomic Content Unit",
+        "Raw Content"
+      ],
+      [
+        "Image Details",
+        "Image Path"
+      ],
+      [
+        "Query High-/Low-Level Keys Extraction",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Belongs_to Edges",
+        "Modality-Specific Grounding"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "Cross-modal Noise Case Failure Analysis (image)"
+      ],
+      [
+        "Dual-Graph Construction",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "Federal Reserve",
+        "Global Tech Index"
+      ],
+      [
+        "MM-GraphRAG",
+        "MMLongBench Accuracy Chart"
+      ],
+      [
+        "A.2 Additional Case Studies",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "MMGraphRAG",
+        "Page Range"
+      ],
+      [
+        "Graph Extraction Operation",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Architecture",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "Carbon-Fiber Spikes",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Share-Based Payments",
+        "Wages And Salaries"
+      ],
+      [
+        "GPT-4o-mini",
+        "Novo Nordisk"
+      ],
+      [
+        "GPT-4o-mini",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Knowledge Graphs",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Hotel Domain"
+      ],
+      [
+        "Embedding Table τ",
+        "Retrieval Index T"
+      ],
+      [
+        "MMLongBench",
+        "Multimodal Document Understanding Tasks"
+      ],
+      [
+        "Multimodal Documents",
+        "RAG Systems"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Binary Accuracy Classification"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Vision Analysis Prompt Image",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Text Type"
+      ],
+      [
+        "-S-A",
+        "LightRAG"
+      ],
+      [
+        "LaTeX Equation Recognition",
+        "Parallel Parser"
+      ],
+      [
+        "Overall Accuracy",
+        "RAG-Anything"
+      ],
+      [
+        "Accuracy",
+        "MMLongBench Accuracy Chart"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "Average Pages",
+        "Table 5"
+      ],
+      [
+        "Figure 10",
+        "GPT-4o-mini"
+      ],
+      [
+        "DocBench",
+        "RAG-Anything"
+      ],
+      [
+        "Academia",
+        "DocBench Accuracy Comparison (table)"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Text-only"
+      ],
+      [
+        "Dual-Graph Construction Strategy",
+        "RAG-Anything"
+      ],
+      [
+        "Code Editor Window",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Child Node",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Structural Reasoning"
+      ],
+      [
+        "A.5 Challenges And Future Directions For Multi-Modal RAG",
+        "RAG-Anything"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "RAG-Anything",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Multimodal Framework"
+      ],
+      [
+        "Multi-Modal Info Processing",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "MMLongBench",
+        "Statistics of Experimental Datasets (DocBench and MMLongBench) (table)"
+      ],
+      [
+        "Belongs_To Edges",
+        "Intra-Chunk Entities $\\mathcal{V}_j$"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Non-Text Atomic Unit"
+      ],
+      [
+        "Figure 10",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Graph-Based Architecture",
+        "W/o Reranker"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Overall Accuracy"
+      ],
+      [
+        "Structural Navigation",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "Entity Info",
+        "Table Analysis Prompt"
+      ],
+      [
+        "News Documents",
+        "Question Density"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "RAG-Anything"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Visual-Layout Graph"
+      ],
+      [
+        "RAG-Anything",
+        "Table Analysis Prompt"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Government Documents"
+      ],
+      [
+        "Decompose",
+        "Knowledge Source"
+      ],
+      [
+        "Text Encoder",
+        "Textual Multi-Modal Info"
+      ],
+      [
+        "DocBench",
+        "MMGraphRAG"
+      ],
+      [
+        "Figure 2",
+        "QA Pair Count"
+      ],
+      [
+        "Multi-Modal RAG",
+        "RAG-Anything"
+      ],
+      [
+        "Factual Accuracy Assessment Prompt",
+        "GPT-4o-mini"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Table Structure & Content Parsing"
+      ],
+      [
+        "Financial Table Navigation",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Embedding Function Emb(·)",
+        "Embedding Table τ"
+      ],
+      [
+        "2020 Column",
+        "Wages And Salaries"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Textual Multi-Modal Info"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "EWC"
+      ],
+      [
+        "Graph Construction",
+        "Multimodal Document Understanding"
+      ],
+      [
+        "Detailed Description",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "AUPRC",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Dual-Graph Construction",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Factual Accuracy Assessment Prompt",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Figure 2",
+        "VAE"
+      ],
+      [
+        "Administration/Industry Files",
+        "RAGAnything"
+      ],
+      [
+        "Knowledge Graph",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "MMGraphRAG"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Financial Reports"
+      ],
+      [
+        "Multimodal Processors",
+        "VLM"
+      ],
+      [
+        "Domains",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "Cross-Modal Reranking",
+        "W/o Reranker"
+      ],
+      [
+        "Multi-Modal VDB",
+        "VDB over All Documents"
+      ],
+      [
+        "Ablation Study",
+        "Ablation Study Results on DocBench (table)"
+      ],
+      [
+        "DocBench Dataset",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval",
+        "Entity Alignment"
+      ],
+      [
+        "DocBench",
+        "News Documents"
+      ],
+      [
+        "Appendix A.1",
+        "News Documents"
+      ],
+      [
+        "Context From Surrounding Content",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Vision Analysis Prompt",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Figure 2",
+        "LightRAG"
+      ],
+      [
+        "Academic Papers",
+        "RAGAnything"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Knowledge Graph",
+        "Text Info Processing"
+      ],
+      [
+        "A.3 Context-Aware Multimodal Prompting",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "LightRAG",
+        "Overall Accuracy"
+      ],
+      [
+        "MMGraphRAG",
+        "MMLongBench"
+      ],
+      [
+        "Child Node",
+        "Parent Node: Multi-Modal Instance"
+      ],
+      [
+        "DocBench",
+        "MMLongBench"
+      ],
+      [
+        "Academic Documents",
+        "Number Of Questions"
+      ],
+      [
+        "Financial Reports",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Multimodal Document Understanding"
+      ],
+      [
+        "Evidence Table",
+        "GEM Fine-Tuning Strategy"
+      ],
+      [
+        "BERT + LSTM - Attention",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "Appendix A.1",
+        "MMLongBench"
+      ],
+      [
+        "Dual-Graph Construction",
+        "Long-Document Reasoning"
+      ],
+      [
+        "Tabular Navigation Case Study for RAG-Anything (image)",
+        "Twitter15"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "LightRAG"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Local Neighborhood C_j"
+      ],
+      [
+        "Figure 5",
+        "RAG-Anything"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Unanswerable Type"
+      ],
+      [
+        "Cross-Domain Generalization",
+        "DocBench Accuracy vs. Page Range Comparison (image)"
+      ],
+      [
+        "Description $d_j^{\\mathrm{chunk}}$",
+        "Graph Extraction Routine $R(\\cdot)$"
+      ],
+      [
+        "2020 Column",
+        "26,778 Million DKK"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "LightRAG"
+      ],
+      [
+        "DocBench",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Multimodal Type",
+        "RAG-Anything"
+      ],
+      [
+        "-S-A",
+        "GPT-4o-mini"
+      ],
+      [
+        "RAG-Anything",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "LaTeX",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Figure 2",
+        "MM-GraphRAG"
+      ],
+      [
+        "Retrieval-to-Synthesis Pipeline",
+        "Vision-Language Model"
+      ],
+      [
+        "Graph Representation",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "MMLongBench Accuracy Comparison by Page Range (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Char LSTM-F",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "MMGraphRAG"
+      ],
+      [
+        "Case 2: Financial Table Navigation",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Multimodal Document"
+      ],
+      [
+        "Parent Node: Multi-Modal Instance",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "RAG-Anything"
+      ],
+      [
+        "Set-Theoretic Union Operation",
+        "Vertex Set"
+      ],
+      [
+        "Captions",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "KG over All Documents",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Image Path",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "GCAN",
+        "Twitter16"
+      ],
+      [
+        "Academic Papers",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Figure 3",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Accuracy",
+        "RAGAnything"
+      ],
+      [
+        "2020 Column",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Number Of Questions",
+        "Table 5"
+      ],
+      [
+        "Accuracy",
+        "GPT-4o-mini"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "RAG-Anything"
+      ],
+      [
+        "Base Model (BM)",
+        "Cross-modal Noise Case Failure Analysis (image)"
+      ],
+      [
+        "Novo Nordisk",
+        "RAG-Anything"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Text Encoder"
+      ],
+      [
+        "Factual Accuracy Assessment Prompt",
+        "Figure 10"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)"
+      ],
+      [
+        "DocBench",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Context From Surrounding Content",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Mechanism",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Union Over All Non-Text Atomic Units $\\bigcup_j$"
+      ],
+      [
+        "Multimodal Framework",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Figure 11"
+      ],
+      [
+        "RAG-Anything Visual Reasoning Case Study (image)",
+        "Visual Reasoning"
+      ],
+      [
+        "Hybrid Retrieval Architecture",
+        "Multimodal Document Question Answering"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Government Domain"
+      ],
+      [
+        "Hierarchical Text Extraction",
+        "Parallel Parser"
+      ],
+      [
+        "Figure 5",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Finance",
+        "RAGAnything"
+      ],
+      [
+        "Entity Alignment",
+        "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "RAGAnything"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Share-Based Payments"
+      ],
+      [
+        "Financial Domain",
+        "RAG-Anything"
+      ],
+      [
+        "MMLongBench Accuracy Chart",
+        "Page Range"
+      ],
+      [
+        "Beecher",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "RAG-Anything",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Unified Knowledge Graph G",
+        "Vertex Set V"
+      ],
+      [
+        "Mathematical Equation",
+        "Scalable Fine-Grained Semantic Search"
+      ],
+      [
+        "Multimodal Processors",
+        "Text Info Processing"
+      ],
+      [
+        "MMLongBench Accuracy Chart",
+        "RAG-Anything"
+      ],
+      [
+        "LightRAG",
+        "Novo Nordisk"
+      ],
+      [
+        "LightRAG",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "Administrative Files",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Accuracy Evaluation Prompt Image",
+        "Accuracy Evaluation Prompt Template"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Figure 2"
+      ],
+      [
+        "Evidence Table",
+        "Native"
+      ],
+      [
+        "Figure 6",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Information Integration",
+        "Failure Patterns"
+      ],
+      [
+        "Extraction Routine R(·)",
+        "Relations ℰ_j"
+      ],
+      [
+        "Academic Documents",
+        "DocBench Document Type Distribution and Statistics (table)"
+      ],
+      [
+        "Bert-To-Bert",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Multi-Signal Fusion Scoring",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "Alex",
+        "Taylor"
+      ],
+      [
+        "Char Embedding",
+        "Characters"
+      ],
+      [
+        "Guidebooks",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Accuracy",
+        "DocBench Accuracy vs. Page Range Comparison (image)"
+      ],
+      [
+        "Hybrid Retrieval Architecture",
+        "Visual Artifacts V*(q)"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "Retrieval Bias Toward Text"
+      ],
+      [
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)",
+        "Number Of Documents"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "GPT-4o-mini"
+      ],
+      [
+        "Overall Accuracy",
+        "W/o Reranker"
+      ],
+      [
+        "Code Editor Window",
+        "Vision Analysis Prompt Image"
+      ],
+      [
+        "DocBench",
+        "W/o Reranker"
+      ],
+      [
+        "Hybrid Retrieval Architecture",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "GPT-4o-mini",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Embedding Table τ",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "B-ORG",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Figure 2"
+      ],
+      [
+        "Bi-LSTM-CRF Model",
+        "Evidence Figure"
+      ],
+      [
+        "Cruz",
+        "Jordan"
+      ],
+      [
+        "A.4 Accuracy Evaluation Prompt Design",
+        "RAG-Anything"
+      ],
+      [
+        "A.5 Challenges And Future Directions For Multi-Modal RAG",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Vertex Set"
+      ],
+      [
+        "Query",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "-S-A",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "O"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "News Documents"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Context-Aware Multimodal Prompting"
+      ],
+      [
+        "Multimodal Processors",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "VDB over All Documents"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Modality-Consistent Representation"
+      ],
+      [
+        "Embedding Table τ",
+        "Hybrid Retrieval Architecture"
+      ],
+      [
+        "Brochures",
+        "RAGAnything"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "MMLongBench"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Document Structure Processing Challenges"
+      ],
+      [
+        "LLM",
+        "Response"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "Equation Analysis Prompt Template (image)"
+      ],
+      [
+        "Beecher",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "GloVe + LSTM - Random",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "MMLongBench",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Decompose",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Accuracy Evaluation Prompt",
+        "JSON Output Format"
+      ],
+      [
+        "DocBench",
+        "Government Documents"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Non-Text Atomic Content Unit"
+      ],
+      [
+        "Hybrid Retrieval Architecture",
+        "RAG-Anything"
+      ],
+      [
+        "-S-A",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Knowledge Graph"
+      ],
+      [
+        "DocBench Accuracy",
+        "DocBench Accuracy vs. Page Range Comparison (image)"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Research Reports"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Page Range"
+      ],
+      [
+        "MMLongBench Accuracy Chart",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Text Encoder",
+        "Text VDB"
+      ],
+      [
+        "A.5 Challenges And Future Directions For Multi-Modal RAG",
+        "Multimodal RAG"
+      ],
+      [
+        "Mathematical Equation",
+        "RAG-Anything"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Table Header-Cell-Unit Edges"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "RAG-Anything: All-In-One RAG Framework"
+      ],
+      [
+        "Multimodal Chunks",
+        "Visual Artifacts V*(q)"
+      ],
+      [
+        "Evidence Figure",
+        "NER Label Generation Sequence"
+      ],
+      [
+        "Dense Representations",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Text VDB"
+      ],
+      [
+        "Description d_j^{chunk}",
+        "Multimodal Large Language Model"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Non-Text Atomic Unit $c_j$"
+      ],
+      [
+        "Academic Papers",
+        "MMLongBench"
+      ],
+      [
+        "Belongs_To Edges",
+        "Multimodal Entity Node $v_j^{\\mathrm{mm}}$"
+      ],
+      [
+        "Global Tech Index",
+        "Gold Futures"
+      ],
+      [
+        "Brochures",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Structured Graph"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Indexing"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Intra-Chunk Entities $\\mathcal{V}_j$"
+      ],
+      [
+        "Multi-Modal Info Processing",
+        "Multimodal Processors"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Graph Fusion"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "Dual-Graph Construction",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Figure 7",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Figure 3"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Graph Extraction Routine $R(\\cdot)$"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Cross-Modal Hybrid Retrieval"
+      ],
+      [
+        "DocBench Dataset",
+        "RAGAnything"
+      ],
+      [
+        "2020 Column",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Figure 3",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "DocBench Dataset",
+        "GPT-4o-mini"
+      ],
+      [
+        "Crude Oil",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Average Pages",
+        "News Documents"
+      ],
+      [
+        "MMGraphRAG",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Wages And Salaries"
+      ],
+      [
+        "MM-GraphRAG",
+        "MMLongBench"
+      ],
+      [
+        "Figure 2",
+        "RAG-Anything"
+      ],
+      [
+        "DocBench",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Appendix A.1",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "C*(q)",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "Tokyo",
+        "World Athletics Championship"
+      ],
+      [
+        "Modality-Aware Graph",
+        "Panel-Caption-Axis Edges"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "RAG Systems"
+      ],
+      [
+        "DocBench",
+        "Financial Documents"
+      ],
+      [
+        "Knowledge Source",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Appendix A.1",
+        "Financial Documents"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Similarity-Based Retrieval"
+      ],
+      [
+        "Equation (1)",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "LightRAG",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Shared Embedding Space"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Embedding Function Emb(·)"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "MM-GraphRAG"
+      ],
+      [
+        "MMLongBench",
+        "Multimodal Document Question Answering"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Graph Extraction Routine"
+      ],
+      [
+        "Entity Info",
+        "Image"
+      ],
+      [
+        "Hybrid Retrieval Architecture",
+        "Retrieval-to-Synthesis Pipeline"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Legal Domain"
+      ],
+      [
+        "RAG-Anything",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "RAG-Anything"
+      ],
+      [
+        "Hybrid Retrieved Info",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Architecture",
+        "RAG-Anything"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Scalable Fine-Grained Semantic Search"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "LightRAG"
+      ],
+      [
+        "Multimodal Document",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Char Embedding",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "Evidence Figure",
+        "Multimodal Document"
+      ],
+      [
+        "Multi-Modal VDB",
+        "Text Encoder"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Figure 12"
+      ],
+      [
+        "Figure 2",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Entity Alignment"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Multi-Panel Figure Interpretation"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "GPT-4o-mini"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Text Info Processing"
+      ],
+      [
+        "DocBench",
+        "DocBench Accuracy vs. Page Range Comparison (image)"
+      ],
+      [
+        "Administrative Files",
+        "MMLongBench"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Number Of Documents"
+      ],
+      [
+        "Figure 7",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "Atomic Content Units",
+        "Multimodal Knowledge Unification"
+      ],
+      [
+        "Equation (1)",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval",
+        "Long-Document Reasoning"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Text-Only RAG Systems"
+      ],
+      [
+        "Cosine Similarity",
+        "Dense Embedding Table Construction (equation)"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "MMGraphRAG"
+      ],
+      [
+        "Share-Based Payments",
+        "Structured Graph"
+      ],
+      [
+        "MMGraphRAG",
+        "Unanswerable Queries"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Named Entity Recognition"
+      ],
+      [
+        "Multimodal Question Answering",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "MMLongBench"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Multimodal Large Language Model"
+      ],
+      [
+        "B-ORG",
+        "Bi-LSTM-CRF Model"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Table 4"
+      ],
+      [
+        "Bi-LSTM-CRF Model",
+        "Named Entity Recognition"
+      ],
+      [
+        "Financial Reports",
+        "RAG-Anything"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Chunk-Only"
+      ],
+      [
+        "A.4 Accuracy Evaluation Prompt Design",
+        "Accuracy Evaluation Prompt"
+      ],
+      [
+        "Carbon-Fiber Spikes",
+        "Noah Carter"
+      ],
+      [
+        "Average Page Count",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "News Articles",
+        "RAGAnything"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Hybrid Retrieval"
+      ],
+      [
+        "EWC",
+        "Evidence Table"
+      ],
+      [
+        "Entity Info",
+        "Table"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Taylor"
+      ],
+      [
+        "Evidence Table",
+        "Joint Goal Accuracy"
+      ],
+      [
+        "AUPRC",
+        "RAG-Anything"
+      ],
+      [
+        "GCAN",
+        "Twitter15"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Noah Carter"
+      ],
+      [
+        "Embedding Table τ",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "Word CRF",
+        "Word LSTM-B"
+      ],
+      [
+        "MMLongBench",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Table 2"
+      ],
+      [
+        "Figure 8",
+        "Table Analysis Prompt"
+      ],
+      [
+        "Appendix A.1",
+        "Table 6"
+      ],
+      [
+        "JSON Schema",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "GPT-4o-mini",
+        "MMLongBench"
+      ],
+      [
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)",
+        "Research Reports"
+      ],
+      [
+        "Modality-Aware Graph",
+        "RAG-Anything"
+      ],
+      [
+        "Bi-LSTM-CRF Model",
+        "I-ORG"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Word LSTM-F"
+      ],
+      [
+        "Case 1: Multi-Panel Figure Interpretation",
+        "Figure 3"
+      ],
+      [
+        "Description d_j^{chunk}",
+        "Local Neighborhood C_j"
+      ],
+      [
+        "Figure 2",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Dual-Graph Construction Strategy",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)",
+        "Table 6"
+      ],
+      [
+        "2020 Column",
+        "Structured Graph"
+      ],
+      [
+        "LLM",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "MMGraphRAG",
+        "Overall Accuracy"
+      ],
+      [
+        "Word Features",
+        "Word Representation"
+      ],
+      [
+        "Case 2: Financial Table Navigation",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Wages And Salaries"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Rigid Spatial Processing Patterns"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "Figure 11"
+      ],
+      [
+        "DocBench",
+        "Statistics of Experimental Datasets (DocBench and MMLongBench) (table)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Multimodal Documents"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "GloVe + LSTM - Gradient"
+      ],
+      [
+        "DocBench",
+        "Table 1: Statistics of Experimental Datasets"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Semantic Retrieval"
+      ],
+      [
+        "DocBench",
+        "Financial Table Navigation"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "RAG-Anything"
+      ],
+      [
+        "Global Tech Index",
+        "Nexon Technologies"
+      ],
+      [
+        "26,778 Million DKK",
+        "RAG-Anything"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "RAG-Anything"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "JSON Output Format"
+      ],
+      [
+        "A.4 Accuracy Evaluation Prompt Design",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "Chunk-Only",
+        "Dual-Graph Construction"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "Equation Information"
+      ],
+      [
+        "Query Q",
+        "Vision-Language Model"
+      ],
+      [
+        "Structured Graph",
+        "Unit-Of Relationship"
+      ],
+      [
+        "MMLongBench",
+        "RAG-Anything"
+      ],
+      [
+        "Char Embedding",
+        "Char LSTM-B"
+      ],
+      [
+        "Document Collection",
+        "Non-Text Atomic Unit"
+      ],
+      [
+        "Code Editor Window",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Multimodal"
+      ],
+      [
+        "Multimodal Response Generation Equation (equation)",
+        "Vision-Language Model"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Multimodal Type"
+      ],
+      [
+        "Brochures",
+        "MMLongBench"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "RAG-Anything"
+      ],
+      [
+        "Guidebooks",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "GloVe + LSTM - Line",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Embedding Table τ"
+      ],
+      [
+        "Chemistry",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Figure 4",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Finance"
+      ],
+      [
+        "Cross-Modal Retrieval",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "RAGAnything",
+        "Tutorials/Workshops"
+      ],
+      [
+        "Header-Applies-To Relationship",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Atomic Content Units",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Corpus",
+        "Knowledge Source"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Modality-Aware Processing"
+      ],
+      [
+        "Number Of Documents",
+        "Table 6"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Word LSTM-B"
+      ],
+      [
+        "Multimodal Knowledge Unification Decomposition (equation)",
+        "Unified Multimodal Representation"
+      ],
+      [
+        "Table Analysis Prompt",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Financial Documents"
+      ],
+      [
+        "DocBench",
+        "Multi-Panel Figure Interpretation"
+      ],
+      [
+        "Belongs_To Edges",
+        "Cross-Modal Graph Extraction Equation (equation)"
+      ],
+      [
+        "MMLongBench Accuracy Comparison by Page Range (image)",
+        "Page Range"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "GPT-4o-mini"
+      ],
+      [
+        "Structured Graph",
+        "Wages And Salaries"
+      ],
+      [
+        "Accuracy",
+        "Table 3"
+      ],
+      [
+        "Ambiguous Table Structure Case",
+        "Cross-modal Noise Case Failure Analysis (image)"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Equation (1)",
+        "LaTeX"
+      ],
+      [
+        "Page Range",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "Text-Centric Retrieval Bias"
+      ],
+      [
+        "DocBench",
+        "DocBench QA Counts by Page Range (image)"
+      ],
+      [
+        "Image Details",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Dual-Graph Construction Strategy"
+      ],
+      [
+        "Equation Analysis Prompt File",
+        "Equation Analysis Prompt Template (image)"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "World Athletics Championship"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "Cross-modal Noise Case Failure Analysis (image)"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Global Tech Index"
+      ],
+      [
+        "Multi-Panel Figure Interpretation",
+        "RAG-Anything"
+      ],
+      [
+        "Document Structure Processing Challenges",
+        "Multimodal RAG Systems"
+      ],
+      [
+        "MMGraphRAG",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "MMGraphRAG",
+        "Novo Nordisk"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Slot Metric"
+      ],
+      [
+        "LightRAG",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Mechanism",
+        "Long-Document Reasoning Tasks"
+      ],
+      [
+        "DocBench",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Detailed Description",
+        "Table Analysis Prompt"
+      ],
+      [
+        "Anchor Nodes",
+        "Belongs_to Edges"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Word Representation"
+      ],
+      [
+        "Dual-Graph Construction",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Joint Goal Accuracy",
+        "Train Domain"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "RAG-Anything"
+      ],
+      [
+        "NER Label Generation Sequence",
+        "Named Entity Recognition"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Dual-Graph Construction"
+      ],
+      [
+        "Alex",
+        "Jordan"
+      ],
+      [
+        "Text VDB",
+        "VDB over All Documents"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Visual-Layout Graph"
+      ],
+      [
+        "Child Node",
+        "Cross-Modal Knowledge Graph"
+      ],
+      [
+        "DocBench QA Counts",
+        "DocBench QA Counts by Page Range (image)"
+      ],
+      [
+        "Style-Space Panel",
+        "Visual-Layout Graph"
+      ],
+      [
+        "Dual-Graph Construction",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Characters",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "MMLongBench",
+        "MMLongBench Accuracy Comparison by Page Range (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Mathematical Equation Analysis"
+      ],
+      [
+        "Average Pages",
+        "Financial Documents"
+      ],
+      [
+        "Document Type Distribution And Statistics",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Word LSTM-B",
+        "Word Representation"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Table 6"
+      ],
+      [
+        "Image Details",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "MM-GraphRAG",
+        "QA Pair Count by Page Range Bar Chart (image)"
+      ],
+      [
+        "Modality Type",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "MMGraphRAG",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Cross-Modal Retrieval And Reasoning"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Unified Knowledge Graph G"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "RAG-Anything"
+      ],
+      [
+        "100m Sprint Record",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "100m Sprint Record",
+        "Noah Carter"
+      ],
+      [
+        "Multimodal Response Generation Equation (equation)",
+        "Visual Artifacts V*(q)"
+      ],
+      [
+        "MMLongBench Domain-Specific Accuracy Comparison (table)",
+        "RAG-Anything's Unified Multimodal Framework"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Set-Theoretic Union Operation"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Query High-/Low-Level Keys Extraction",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "Figure 2",
+        "GPT-4o-mini"
+      ],
+      [
+        "DocBench",
+        "DocBench QA Counts"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "Figure 10"
+      ],
+      [
+        "Case 1: Multi-Panel Figure Interpretation",
+        "RAG-Anything"
+      ],
+      [
+        "Header-Applies-To Relationship",
+        "Structured Graph"
+      ],
+      [
+        "Atomic Content Unit",
+        "Dual-Graph Construction"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "Non-Text Atomic Unit $c_j$",
+        "Union Over All Non-Text Atomic Units $\\bigcup_j$"
+      ],
+      [
+        "MMLongBench Domain-Specific Accuracy Comparison (table)",
+        "Tutorials/Workshops"
+      ],
+      [
+        "KG over All Documents",
+        "Knowledge Graph"
+      ],
+      [
+        "RAG-Anything Framework",
+        "Vision-Language Model"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "GPT-4o-mini"
+      ],
+      [
+        "Chunk-Only",
+        "DocBench"
+      ],
+      [
+        "LaTeX Equation Recognition",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Belongs_To Edges",
+        "Intra-Chunk Entities"
+      ],
+      [
+        "Belongs_To Edges",
+        "Relations ℰ_j"
+      ],
+      [
+        "Atomic Content Unit",
+        "Modality Type"
+      ],
+      [
+        "Noah Carter",
+        "World Athletics Championship"
+      ],
+      [
+        "Figure 4",
+        "Twitter16"
+      ],
+      [
+        "RAG Systems",
+        "Scalable Fine-Grained Semantic Search"
+      ],
+      [
+        "Accuracy Evaluation Prompt",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "MMGraphRAG"
+      ],
+      [
+        "Long-Context Performance",
+        "RAG-Anything"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "Figure 9"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Dual-Graph Construction"
+      ],
+      [
+        "RAG-Anything",
+        "Visual-Layout Graph"
+      ],
+      [
+        "Multimodal Knowledge Unification Decomposition (equation)",
+        "Uniform Indexing And Retrieval"
+      ],
+      [
+        "Candidate Pool Unification",
+        "Multi-Signal Fusion Scoring"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Document Collection"
+      ],
+      [
+        "Ambiguous Table Structure Case",
+        "Figure 12"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Evidence Figure"
+      ],
+      [
+        "Extraction Routine R(·)",
+        "Relation Extraction"
+      ],
+      [
+        "Bar Plot",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Equation Analysis Prompt Template (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Footnotes",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Label",
+        "Word CRF"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Structural Knowledge Navigation"
+      ],
+      [
+        "Intra-Chunk Entity Sets",
+        "Vertex Set"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "LightRAG"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Vertex Set V"
+      ],
+      [
+        "Table Analysis Prompt",
+        "Table Analysis Prompt Image"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "News Domain"
+      ],
+      [
+        "Column-Of Relationship",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Cross-Modal Knowledge Graph Vertex Set (equation)"
+      ],
+      [
+        "Case 2: Financial Table Navigation",
+        "Figure 4"
+      ],
+      [
+        "Graph Extraction Routine $R(\\cdot)$",
+        "Intra-Chunk Relation Sets $\\bigcup_j \\mathcal{E}_j$"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Dense Representation Generation"
+      ],
+      [
+        "Overall",
+        "Table 3"
+      ],
+      [
+        "GPT-4o-mini",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Document Type Distribution And Statistics",
+        "Table 6"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Yelp"
+      ],
+      [
+        "Text Encoder",
+        "Vector Database"
+      ],
+      [
+        "Financial Reports",
+        "RAGAnything"
+      ],
+      [
+        "Captions",
+        "Image Details"
+      ],
+      [
+        "Legal Documents",
+        "LightRAG"
+      ],
+      [
+        "Figure 4",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Intra-Chunk Relation Sets $\\bigcup_j \\mathcal{E}_j$"
+      ],
+      [
+        "Accuracy Evaluation Prompt",
+        "GPT-4o-mini"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Vector Database"
+      ],
+      [
+        "Content-Space Panel",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Evidence Table",
+        "Multimodal Document"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Multimodal Document"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Mechanism",
+        "RAG-Anything"
+      ],
+      [
+        "Academic Domain",
+        "Chunk-Only"
+      ],
+      [
+        "MMGraphRAG",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "GloVe + LSTM - Attention",
+        "RAG-Anything"
+      ],
+      [
+        "Hybrid Retrieved Info",
+        "LLM"
+      ],
+      [
+        "DocBench",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Financial Reports"
+      ],
+      [
+        "Bi-LSTM-CRF Model",
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Question Density"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)"
+      ],
+      [
+        "Knowledge Graphs",
+        "Multimodal Response Generation Equation (equation)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Entity Alignment"
+      ],
+      [
+        "Cross-Modal Integration",
+        "DocBench Accuracy Comparison (table)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Equation (3)"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Entity Alignment"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Train Domain"
+      ],
+      [
+        "Dual-Graph Construction",
+        "Long-Document Reasoning Tasks"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Architecture",
+        "DocBench Accuracy vs. Page Range Comparison (image)"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Financial Domain"
+      ],
+      [
+        "Financial Reports",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Intra-Chunk Entity Sets"
+      ],
+      [
+        "Multimodal Knowledge Unification",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Modality-Specific Grounding"
+      ],
+      [
+        "Equation (1)",
+        "Multimodal Knowledge Unification"
+      ],
+      [
+        "MMLongBench",
+        "Table 3"
+      ],
+      [
+        "Figure 2",
+        "Page Range"
+      ],
+      [
+        "Graph Representation",
+        "RAG-Anything"
+      ],
+      [
+        "GEM Fine-Tuning Strategy",
+        "LightRAG"
+      ],
+      [
+        "LLM",
+        "Multimodal Processors"
+      ],
+      [
+        "Multimodal Response Generation Equation (equation)",
+        "Retrieval-to-Synthesis Pipeline"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Word Features"
+      ],
+      [
+        "Entity Alignment",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Knowledge Graph",
+        "Multi-Modal Info Processing"
+      ],
+      [
+        "GloVe + LSTM - Gradient",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Figure 8",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "VDB over All Documents",
+        "Vector Database"
+      ],
+      [
+        "Corpus",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Modality-Aware Graph",
+        "Table Header-Cell-Unit Edges"
+      ],
+      [
+        "RAGAnything",
+        "Text-only"
+      ],
+      [
+        "RAG-Anything Visual Reasoning Case Study (image)",
+        "Twitter16"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)"
+      ],
+      [
+        "MMLongBench",
+        "RAGAnything"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "JSON Response Schema"
+      ],
+      [
+        "Federal Reserve",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "Anchor Nodes",
+        "Multimodal Entity Nodes"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Parent Node: Multi-Modal Instance"
+      ],
+      [
+        "Entity Info",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "GloVe + LSTM - Attention",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Figure 3",
+        "NER Label Generation Sequence"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Mathematical Equation"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Description d_j^{chunk}"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Jordan"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Dual-Graph Construction Strategy"
+      ],
+      [
+        "Image",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Financial Documents",
+        "Question Density"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Tokyo"
+      ],
+      [
+        "Accuracy Evaluation",
+        "Accuracy Evaluation Prompt Template (image)"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Cross-Modal Information Integration"
+      ],
+      [
+        "Column-Of Relationship",
+        "Structured Graph"
+      ],
+      [
+        "Accuracy Evaluation Prompt",
+        "Figure 10"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Architecture",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "GPT-4o-mini",
+        "Overall Accuracy"
+      ],
+      [
+        "Academia",
+        "MMGraphRAG"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "GloVe + LSTM - Random"
+      ],
+      [
+        "Edge Set $\\tilde{E}$",
+        "Equation (4)"
+      ],
+      [
+        "Administration/Industry Files",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Image Caption & Metadata Extraction",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Vision-Language Model",
+        "Visual Artifacts V*(q)"
+      ],
+      [
+        "Belongs_to Edges",
+        "Cross-Modal Knowledge Graph Vertex Set (equation)"
+      ],
+      [
+        "Embedding Function Emb(·)",
+        "Shared Embedding Space"
+      ],
+      [
+        "MMLongBench",
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)"
+      ],
+      [
+        "Context From Surrounding Content",
+        "Equation Analysis Prompt"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "DocBench Dataset"
+      ],
+      [
+        "Chemistry",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Financial Table Navigation",
+        "RAG-Anything"
+      ],
+      [
+        "Atomic Content Unit",
+        "Knowledge Source"
+      ],
+      [
+        "GCAN",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "News Articles"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Equation (4)"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Row-Of Relationship"
+      ],
+      [
+        "-S-A",
+        "Twitter15"
+      ],
+      [
+        "Belongs_To Edges",
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)"
+      ],
+      [
+        "DocBench",
+        "Table 4"
+      ],
+      [
+        "Figure 4",
+        "Financial Table Navigation"
+      ],
+      [
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)",
+        "Tutorials"
+      ],
+      [
+        "A.3 Context-Aware Multimodal Prompting",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Academic Papers",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "Atomic Content Unit",
+        "Uniform Indexing And Retrieval"
+      ],
+      [
+        "Multimodal RAG Systems",
+        "Text-Centric Retrieval Bias"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Unit-Of Relationship"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Novo Nordisk"
+      ],
+      [
+        "Parallel Parser",
+        "Structured Content List"
+      ],
+      [
+        "Context From Surrounding Content",
+        "Equation Analysis Prompt Template (image)"
+      ],
+      [
+        "Multimodal Response Generation Equation (equation)",
+        "Query Q"
+      ],
+      [
+        "RAG-Anything Framework",
+        "Text-Only RAG Systems"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Unanswerable Queries"
+      ],
+      [
+        "Canonicalization",
+        "Dense Embedding Table Construction (equation)"
+      ],
+      [
+        "Dense Vector Space",
+        "Intra-Chunk Entities"
+      ],
+      [
+        "Description d_j^{chunk}",
+        "Extraction Routine R(·)"
+      ],
+      [
+        "Dense Vector Space",
+        "Relations ℰ_j"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Academic Domain"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Dense Embedding Table Construction (equation)"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "GEM Fine-Tuning Strategy"
+      ],
+      [
+        "Entity Alignment",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "I-ORG"
+      ],
+      [
+        "DocBench",
+        "Legal Documents"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Graph Extraction Operation"
+      ],
+      [
+        "Entity Alignment",
+        "Unified Knowledge Graph G"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Structured Graph"
+      ],
+      [
+        "RAG-Anything Framework Architecture (image)",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "Multimodal Knowledge Unification",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Bar Plot",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "NER Label Generation Sequence"
+      ],
+      [
+        "Char LSTM-B",
+        "Word Features"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Heterogeneous Multimodal Knowledge"
+      ],
+      [
+        "Academic Documents",
+        "DocBench"
+      ],
+      [
+        "Edge Set E",
+        "Unified Knowledge Graph G"
+      ],
+      [
+        "RAG-Anything",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "t-SNE Visualization"
+      ],
+      [
+        "Accuracy",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "DAE",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "MMLongBench Document Type Distribution and Statistics (Table 6) (table)",
+        "Multimodal Document Understanding Tasks"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Legal Documents"
+      ],
+      [
+        "RAG-Anything",
+        "Research Reports"
+      ],
+      [
+        "Dual-Graph Construction",
+        "RAG-Anything"
+      ],
+      [
+        "Detailed Description",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Equation (1)",
+        "Unified Multimodal Representation"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Multimodal RAG"
+      ],
+      [
+        "LightRAG",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "MMLongBench",
+        "Research Reports"
+      ],
+      [
+        "Multimodal Entity Node v_j^{mm}",
+        "Relations ℰ_j"
+      ],
+      [
+        "Atomic Content Chunks",
+        "Cross-Modal Graph Extraction Equation (equation)"
+      ],
+      [
+        "RAGAnything",
+        "Research Reports/Introductions"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "GPT-4o-mini"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Multimodal RAG"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval Architecture",
+        "DocBench QA Counts by Page Range (image)"
+      ],
+      [
+        "Equation Analysis Prompt",
+        "Equation Analysis Prompt File"
+      ],
+      [
+        "RAG-Anything",
+        "Text Type"
+      ],
+      [
+        "26,778 Million",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "MMLongBench",
+        "Table 6"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "GPT-4o-mini"
+      ],
+      [
+        "Semantic Retrieval",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "Word LSTM-F",
+        "Word Representation"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Overall Accuracy"
+      ],
+      [
+        "Dual-Graph Construction",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Cross-Modal Noise Case",
+        "Evidence Table"
+      ],
+      [
+        "Dense Representations",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Financial Reports",
+        "MMLongBench"
+      ],
+      [
+        "RAG-Anything",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Edge Set E"
+      ],
+      [
+        "MMGraphRAG",
+        "RAG-Anything"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "JSON Schema",
+        "Vision Analysis Prompt"
+      ],
+      [
+        "DocBench",
+        "DocBench Document Type Distribution and Statistics (table)"
+      ],
+      [
+        "Evidence Inference Dataset",
+        "GloVe + LSTM - Line"
+      ],
+      [
+        "Appendix A.1",
+        "DocBench Document Type Distribution and Statistics (table)"
+      ],
+      [
+        "Text-Based Knowledge Graph",
+        "Unified Knowledge Representation 𝒢 = (𝒱, ℰ)"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "RAG-Anything"
+      ],
+      [
+        "Retrieval Index T",
+        "Unified Knowledge Graph G"
+      ],
+      [
+        "Average Page Count",
+        "Table 6"
+      ],
+      [
+        "Multimodal Knowledge Unification Decomposition (equation)",
+        "RAG-Anything Framework"
+      ],
+      [
+        "Chunk-Only",
+        "Unanswerable Type"
+      ],
+      [
+        "RAG-Anything",
+        "Statistics of Experimental Datasets (DocBench and MMLongBench) (table)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Multimodal Document"
+      ],
+      [
+        "Content-Space Panel",
+        "Visual-Layout Graph"
+      ],
+      [
+        "RAG-Anything",
+        "Structured Graph"
+      ],
+      [
+        "Figure 3",
+        "Multi-Panel Figure Interpretation"
+      ],
+      [
+        "Atomic Content Chunks",
+        "Dense Vector Space"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Extraction Routine R(·)"
+      ],
+      [
+        "Context-Aware Multimodal Prompting",
+        "Table Analysis Prompt"
+      ],
+      [
+        "Input Documents",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Parallel Parser",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Figure 4",
+        "Twitter15"
+      ],
+      [
+        "MMLongBench",
+        "Table 1: Statistics of Experimental Datasets"
+      ],
+      [
+        "Belongs_To Edges",
+        "Edge Set $\\tilde{E}$"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "LightRAG"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Mathematical Equation Analysis"
+      ],
+      [
+        "26,778 Million DKK",
+        "Wages And Salaries"
+      ],
+      [
+        "LightRAG",
+        "Text-only"
+      ],
+      [
+        "MMLongBench Domain-Specific Accuracy Comparison (table)",
+        "Overall"
+      ],
+      [
+        "Parallel Parser",
+        "Table Structure & Content Parsing"
+      ],
+      [
+        "Modality-Aware Processing",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Misalignment",
+        "MMGraphRAG"
+      ],
+      [
+        "Page Range",
+        "RAGAnything"
+      ],
+      [
+        "GPT-4o-mini",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "Multimodal",
+        "RAGAnything"
+      ],
+      [
+        "Extraction Routine R(·)",
+        "Named Entity Recognition"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Graph-Based Architecture"
+      ],
+      [
+        "Case 1: Multi-Panel Figure Interpretation",
+        "Multi-panel Figure Interpretation Case Study (image)"
+      ],
+      [
+        "Cross-modal Noise Case Failure Analysis (image)",
+        "Native"
+      ],
+      [
+        "-S-A",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Figure 11"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "Long-Context Performance"
+      ],
+      [
+        "Multimodal RAG",
+        "RAG-Anything: All-In-One RAG Framework"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Share-Based Payments"
+      ],
+      [
+        "Cosine Similarity",
+        "Embedding Table τ"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Multimodal Entity Node v_j^{mm}"
+      ],
+      [
+        "Multimodal Entity Node $v_j^{\\mathrm{mm}}$",
+        "Non-Text Atomic Unit $c_j$"
+      ],
+      [
+        "DocBench Accuracy vs. Page Range Comparison (image)",
+        "LightRAG"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Omega Energy"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "Style-Space Panel"
+      ],
+      [
+        "Hybrid Retrieved Info",
+        "Semantic Similarity Matching"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Research Reports"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Number Of Questions"
+      ],
+      [
+        "Atomic Content Chunks c_j",
+        "Dense Embedding Table Construction (equation)"
+      ],
+      [
+        "GCAN",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "RAG-Anything"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Figure 10"
+      ],
+      [
+        "Government Documents",
+        "Number Of Questions"
+      ],
+      [
+        "Atomic Content Chunks c_j",
+        "Embedding Function Emb(·)"
+      ],
+      [
+        "Multimodal Document",
+        "RAG-Anything"
+      ],
+      [
+        "Multimodal Question Answering",
+        "RAG-Anything Framework"
+      ],
+      [
+        "GEM Fine-Tuning Strategy",
+        "RAG-Anything"
+      ],
+      [
+        "Accuracy Evaluation Prompt Template (image)",
+        "Failure Patterns"
+      ],
+      [
+        "QA Pair Count by Page Range Bar Chart (image)",
+        "RAG-Anything"
+      ],
+      [
+        "Dense Embedding Table Construction (equation)",
+        "Retrieval Index T"
+      ],
+      [
+        "Text-Based Knowledge Graph",
+        "Unified Graph $\\mathcal{G} = (\\mathcal{V}, \\mathcal{E})$"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "Structured Context Injection Mechanism"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Text-Based Knowledge Graph"
+      ],
+      [
+        "Brochures",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "MMLongBench Domain-Specific Accuracy Comparison (table)",
+        "Research Reports/Introductions"
+      ],
+      [
+        "BERT-to-BERT",
+        "Tabular Navigation Case Study for RAG-Anything (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Dual-Graph Construction Strategy"
+      ],
+      [
+        "26,778 Million",
+        "Structured Graph"
+      ],
+      [
+        "Intra-Chunk Entities",
+        "Multimodal Entity Node v_j^{mm}"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Label"
+      ],
+      [
+        "Cross-Modal Hybrid Retrieval",
+        "Dense Embedding Table Construction (equation)"
+      ],
+      [
+        "GEM Fine-Tuning Strategy",
+        "MMGraphRAG"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Edge Set Construction (equation)",
+        "Multimodal Entity Node $v_j^{\\mathrm{mm}}$"
+      ],
+      [
+        "DocBench Document Type Distribution and Statistics (table)",
+        "Legal Documents"
+      ],
+      [
+        "26,778 Million DKK",
+        "Financial Table Navigation Case Study (image)"
+      ],
+      [
+        "MMLongBench",
+        "RAG-Anything Framework"
+      ],
+      [
+        "C*(q)",
+        "Multi-Signal Fusion Scoring"
+      ],
+      [
+        "Table Analysis Prompt",
+        "Vision Analysis Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Multimodal Entity Nodes"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Entity Alignment"
+      ],
+      [
+        "Jordan",
+        "Taylor"
+      ],
+      [
+        "RAG-Anything's Unified Multimodal Framework",
+        "RAGAnything"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "Nexon Technologies"
+      ],
+      [
+        "Figure 2",
+        "Yelp"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Text-Centric Retrieval Bias"
+      ],
+      [
+        "Edge Set E",
+        "Embedding Function Emb(·)"
+      ],
+      [
+        "Multi-panel Figure Interpretation Case Study (image)",
+        "VAE"
+      ],
+      [
+        "Financial Documents",
+        "Number Of Questions"
+      ],
+      [
+        "Ablation Study Results on DocBench (table)",
+        "Cross-Modal Reranking"
+      ],
+      [
+        "Entity Info",
+        "JSON Schema"
+      ],
+      [
+        "RAG-Anything",
+        "Twitter15"
+      ],
+      [
+        "RAG-Anything Visual Reasoning Case Study (image)",
+        "Twitter15"
+      ],
+      [
+        "Table Analysis Prompt Image",
+        "Table Analysis Prompt Template (image)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Word CRF"
+      ],
+      [
+        "Hybrid Retrieved Info",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Domains",
+        "Table 3"
+      ],
+      [
+        "Modality-Aware Extraction",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Financial Table Navigation Case Study (image)",
+        "GPT-4o-mini"
+      ],
+      [
+        "GPT-4o-mini",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "LightRAG",
+        "MMLongBench"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Cross-Modal Knowledge Graph"
+      ],
+      [
+        "Base Model (BM)",
+        "Evidence Table"
+      ],
+      [
+        "Cross-Modal Knowledge Graph",
+        "Dual-Graph Construction"
+      ],
+      [
+        "Atomic Content Unit",
+        "Multimodal Knowledge Unification Decomposition (equation)"
+      ],
+      [
+        "Char LSTM-F",
+        "Word Features"
+      ],
+      [
+        "Figure 4",
+        "RAG-Anything Visual Reasoning Case Study (image)"
+      ],
+      [
+        "Cross-Domain Generalization",
+        "RAG-Anything"
+      ],
+      [
+        "Cross-Modal Knowledge Graph Vertex Set (equation)",
+        "Cross-Modal Retrieval And Reasoning"
+      ],
+      [
+        "Knowledge Graph",
+        "RAG-Anything Framework Architecture (image)"
+      ],
+      [
+        "Cross-Modal Misalignment Failure Case in Multimodal RAG (image)",
+        "Document Structure Processing Challenges"
+      ],
+      [
+        "Dense Representation Generation",
+        "Mathematical Equation"
+      ],
+      [
+        "DocBench QA Counts by Page Range (image)",
+        "MMLongBench"
+      ],
+      [
+        "Image Caption & Metadata Extraction",
+        "Parallel Parser"
+      ],
+      [
+        "DAE",
+        "Figure 2"
+      ],
+      [
+        "Cross-Modal Graph Extraction Equation (equation)",
+        "Named Entity Recognition"
+      ],
+      [
+        "MMLongBench",
+        "MMLongBench Domain-Specific Accuracy Comparison (table)"
+      ],
+      [
+        "DocBench",
+        "Table 5"
+      ],
+      [
+        "DocBench Accuracy Comparison (table)",
+        "Government"
+      ]
+    ],
+    "count": 989,
+    "update_time": 1791514540,
+    "_id": "doc-rag-anything-handson-v1"
+  }
+}

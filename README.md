@@ -1,16 +1,16 @@
 # RAG-Anything 复现
 
-[按顺序动手复现](/Users/drw/PycharmProjects/rag-anything-reproduction/动手复现步骤.md) · [前一轮方案与历史核验](/Users/drw/PycharmProjects/rag-anything-reproduction/RAG-Anything_工程复现与研究改进指南.md)
+[按顺序动手复现](动手复现步骤.md) · [前一轮方案与历史核验](RAG-Anything_工程复现与研究改进指南.md)
 
 当前组合：DeepSeek 官方 `deepseek-flash` 处理文字与图片；本机 Ollama `qwen3-embedding:latest` 输出 4096 维向量。原论文实验模型与本轮选型不同。
 
-初始化测试：环境与依赖检查、19 项离线测试及 1 项框架集成测试、真实文字/关键词/向量/图片接口探针、四类真实论文内容的小样本建库与重启查询。小样本视觉问答实际传入 2 张图片。详见 [环境与小样本核验记录](/Users/drw/PycharmProjects/rag-anything-reproduction/verification.handson.json)。
+初始化测试：环境与依赖检查、19 项离线测试及 1 项框架集成测试、真实文字/关键词/向量/图片接口探针、四类真实论文内容的小样本建库与重启查询。小样本视觉问答实际传入 2 张图片。详见 [环境与小样本核验记录](verification.handson.json)。
 
-全文解析（2026-10-09，对应论文 Figure 1 左侧的“多模态知识统一”）：已通过 `reproduce.py parse` 调用 MinerU，在 CPU 上解析 18 页论文，将内容整理为带有类型和页码的结构化列表，共 149 个内容块（正文 122、图片 15、表格 6、公式 6）；提取了正文、图片裁剪及图注、表格结构与内容、公式的 LaTeX 表达，并将图表类对象统一交给图片处理流程。原始解析列表、用于建库的规范化列表、全文 Markdown 和 27 张图片／表格／公式裁剪图保存在 `parsed/rag-anything-handson-v1/`；随后通过 `inspect` 核对源 PDF、内容列表和裁剪图的路径及校验值，检查通过，完成建库前的材料准备。详见 [全文解析记录](/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/manifest.json)。
+全文解析（2026-10-09，对应论文 Figure 1 左侧的“多模态知识统一”）：已通过 `reproduce.py parse` 调用 MinerU，在 CPU 上解析 18 页论文，将内容整理为带有类型和页码的结构化列表，共 149 个内容块（正文 122、图片 15、表格 6、公式 6）；提取了正文、图片裁剪及图注、表格结构与内容、公式的 LaTeX 表达，并将图表类对象统一交给图片处理流程。原始解析列表、用于建库的规范化列表、全文 Markdown 和 27 张图片／表格／公式裁剪图保存在 `parsed/rag-anything-handson-v1/`；随后通过 `inspect` 核对源 PDF、内容列表和裁剪图的路径及校验值，检查通过，完成建库前的材料准备。详见 [全文解析记录](parsed/rag-anything-handson-v1/manifest.json)。
 
-全文建库（2026-10-09，对应 Figure 1 中部的“双图构建”和“向量数据库”）：已通过 `reproduce.py ingest` 读取上述解析列表，使用 DeepSeek `deepseek-flash` 从正文中抽取实体及关系，并对图片、表格和公式生成描述、提取相关知识，将正文知识与跨模态知识按实体对齐合并为同一知识图谱；同时使用本机 Ollama `qwen3-embedding:latest` 将内容块、实体和关系编码为 4096 维向量，保存到 `storage/handson-qwen4096-v1/`。建库后共保存 37 个检索内容块（正文重新分块后 10 个、多模态描述 27 个）、644 个图谱节点和 1271 条边；27 个非文本对象全部入库，无缺失对象或失败模型调用，知识库状态为 `ready`。详见 [建库状态](/Users/drw/PycharmProjects/rag-anything-reproduction/storage/handson-qwen4096-v1/pilot_manifest.json) 和 [入库覆盖检查](/Users/drw/PycharmProjects/rag-anything-reproduction/storage/handson-qwen4096-v1/rag-anything-handson-v1-ingest-audit.json)。
+全文建库（2026-10-09，对应 Figure 1 中部的“双图构建”和“向量数据库”）：已通过 `reproduce.py ingest` 读取上述解析列表，使用 DeepSeek `deepseek-flash` 从正文中抽取实体及关系，并对图片、表格和公式生成描述、提取相关知识，将正文知识与跨模态知识按实体对齐合并为同一知识图谱；同时使用本机 Ollama `qwen3-embedding:latest` 将内容块、实体和关系编码为 4096 维向量，保存到 `storage/handson-qwen4096-v1/`。建库后共保存 37 个检索内容块（正文重新分块后 10 个、多模态描述 27 个）、644 个图谱节点和 1271 条边；27 个非文本对象全部入库，无缺失对象或失败模型调用，知识库状态为 `ready`。详见 [建库状态](storage/handson-qwen4096-v1/pilot_manifest.json) 和 [入库覆盖检查](storage/handson-qwen4096-v1/rag-anything-handson-v1-ingest-audit.json)。
 
-全文检索（2026-10-09，对应 Figure 1 右侧的“结构化知识导航”“语义相似度匹配”及答案生成）：已通过 `reproduce.py query` 重新读取 `handson-qwen4096-v1`，先使用 `--mode mix --context-only` 检查检索证据，最终上下文包含 34 个实体、89 条关系和 3 个内容块；随后去掉 `--context-only`，由 DeepSeek 根据证据生成回答。在“原论文实验使用哪种嵌入模型及维度”的同题对比中，[naive](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_212549_75e63c97/result.json) 仅检索内容块，最终上下文缺少答案，因证据不足拒答；[hybrid](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_212554_53fc1f07/result.json) 和 [mix](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_171042_011bbe28/result.json) 均通过图谱证据正确回答 `text-embedding-3-large`、3072 维，三种模式均正常运行。另通过 `--mode mix --vlm` 对 Figure 1 提问，实际向视觉模型传入 1 张经校验确认的原图，正确识别合并前的“文本知识图”和“跨模态知识图”，详见 [视觉问答结果](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_211747_4fd92f8d/result.json)。
+全文检索（2026-10-09，对应 Figure 1 右侧的“结构化知识导航”“语义相似度匹配”及答案生成）：已通过 `reproduce.py query` 重新读取 `handson-qwen4096-v1`，先使用 `--mode mix --context-only` 检查检索证据，最终上下文包含 34 个实体、89 条关系和 3 个内容块；随后去掉 `--context-only`，由 DeepSeek 根据证据生成回答。在“原论文实验使用哪种嵌入模型及维度”的同题对比中，[naive](runs/20261009_212549_75e63c97/result.json) 仅检索内容块，最终上下文缺少答案，因证据不足拒答；[hybrid](runs/20261009_212554_53fc1f07/result.json) 和 [mix](runs/20261009_171042_011bbe28/result.json) 均通过图谱证据正确回答 `text-embedding-3-large`、3072 维，三种模式均正常运行。另通过 `--mode mix --vlm` 对 Figure 1 提问，实际向视觉模型传入 1 张经校验确认的原图，正确识别合并前的“文本知识图”和“跨模态知识图”，详见 [视觉问答结果](runs/20261009_211747_4fd92f8d/result.json)。
 
 
 全文测试结果（2026-10-09）已完成三种模式各 20 题的文字批量问答、4 道视觉题及两次 q04 检索诊断，均正常结束，没有记录到失败的模型调用。知识库为 `handson-qwen4096-v1`，文档为 `rag-anything-handson-v1`；文字与视觉使用 DeepSeek `deepseek-flash`，向量使用本机 Ollama `qwen3-embedding:latest`、4096 维。
@@ -19,22 +19,22 @@
 
 | 模式与运行记录 | 正常完成 | 初核正确 | 累计耗时 | 平均每题耗时 | 记录的总 tokens | 未答出的可回答题 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [naive](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_215205_261e8f02/run-manifest.json) | 20/20 | 16/20（80%） | 22.51 秒 | 1.13 秒 | 206350 | q01、q03、q04、q10 |
-| [hybrid](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_223219_236062b3/run-manifest.json) | 20/20 | 18/20（90%） | 64.86 秒 | 3.24 秒 | 252807 | q04、q10 |
-| [mix](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_214201_2266b64a/run-manifest.json) | 20/20 | 18/20（90%） | 63.79 秒 | 3.19 秒 | 253821 | q04、q10 |
+| [naive](runs/20261009_215205_261e8f02/run-manifest.json) | 20/20 | 16/20（80%） | 22.51 秒 | 1.13 秒 | 206350 | q01、q03、q04、q10 |
+| [hybrid](runs/20261009_223219_236062b3/run-manifest.json) | 20/20 | 18/20（90%） | 64.86 秒 | 3.24 秒 | 252807 | q04、q10 |
+| [mix](runs/20261009_214201_2266b64a/run-manifest.json) | 20/20 | 18/20（90%） | 63.79 秒 | 3.19 秒 | 253821 | q04、q10 |
 
 在这套问题中，图谱证据帮助 `hybrid` 和 `mix` 多答出了 q01（原论文嵌入模型及维度）和 q03（主模型及重排模型）；`mix` 没有增加正确题数。共同遗漏的是 q04 的实验设置正文和 q10 的 Figure 1 节点图例。q19、q20 询问论文未给出的具体参数，拒答符合参考答案。
 
 **视觉问答：4 道 Figure 1 问题**
 
-[视觉批量运行记录](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_214919_8b48a998/run-manifest.json)：使用 `mix --vlm`，4/4 正常完成，无失败模型调用；累计耗时 17.79 秒，平均每题 4.45 秒，记录的总 tokens 为 53042。
+[视觉批量运行记录](runs/20261009_214919_8b48a998/run-manifest.json)：使用 `mix --vlm`，4/4 正常完成，无失败模型调用；累计耗时 17.79 秒，平均每题 4.45 秒，记录的总 tokens 为 53042。
 
 | 题目与逐题结果 | 图片输入数 | 实际传入图片 | 初核答案 | 证据情况 |
 | --- | --- | --- | --- | --- |
-| [q09：合并前的两个知识图](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_214919_8b48a998/q09-result.json) | 1 | Figure 1 | 正确 | 目标图片命中 |
-| [q10：ParentNode、ChildNode、MergedNode](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_214919_8b48a998/q10-result.json) | 2 | Figure 3、Figure 4 | 证据不足，拒答 | 未选中 Figure 1，未改善文字问答中的失败 |
-| [q11：两种检索机制](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_214919_8b48a998/q11-result.json) | 1 | 第 17 页的失败案例图 | 正确 | 文字证据已包含答案，目标图片未命中 |
-| [q12：合并前的两个向量库](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_214919_8b48a998/q12-result.json) | 1 | Figure 1 | 正确 | 目标图片命中 |
+| [q09：合并前的两个知识图](runs/20261009_214919_8b48a998/q09-result.json) | 1 | Figure 1 | 正确 | 目标图片命中 |
+| [q10：ParentNode、ChildNode、MergedNode](runs/20261009_214919_8b48a998/q10-result.json) | 2 | Figure 3、Figure 4 | 证据不足，拒答 | 未选中 Figure 1，未改善文字问答中的失败 |
+| [q11：两种检索机制](runs/20261009_214919_8b48a998/q11-result.json) | 1 | 第 17 页的失败案例图 | 正确 | 文字证据已包含答案，目标图片未命中 |
+| [q12：合并前的两个向量库](runs/20261009_214919_8b48a998/q12-result.json) | 1 | Figure 1 | 正确 | 目标图片命中 |
 
 答案初核为 3/4（75%）；按题目计算，目标图片命中为 2/4（50%）。`--vlm` 会发送检索选中的可用图片
 
@@ -44,8 +44,8 @@
 
 | 检索记录 | 候选内容块数 | 总 token 上限 | 实体／关系各自 token 上限 | 最终内容块数 | 答案证据 |
 | --- | --- | --- | --- | --- | --- |
-| [扩大候选与上下文](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_223704_b870b941/result.json) | 20 | 24000 | 4000／4000 | 13 | 未保留答案正文 |
-| [缩减图谱占用](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261009_224310_b8e7e9ba/result.json) | 20 | 24000 | 1000／1000 | 19 | 第 16 个内容块包含完整答案 |
+| [扩大候选与上下文](runs/20261009_223704_b870b941/result.json) | 20 | 24000 | 4000／4000 | 13 | 未保留答案正文 |
+| [缩减图谱占用](runs/20261009_224310_b8e7e9ba/result.json) | 20 | 24000 | 1000／1000 | 19 | 第 16 个内容块包含完整答案 |
 
 - 第一次：CHUNK_TOP_K 从 10 增到 20，让排名第 14 的答案正文进入候选；总预算增到 24000，但最终只留下 13 块，答案仍被裁掉。
 - 第二次：实体、关系预算各从 4000 降到 1000，让图谱材料占用减少。最终留下 19 块，答案正文保留在第 16 块。
@@ -55,16 +55,16 @@
 
 本轮补上原论文使用的 `BAAI/bge-reranker-v2-m3`，在本机 Apple GPU（MPS）上运行。重排的作用是：把问题和每个候选内容块放在一起打分，把更相关的材料排到前面，再按数量和长度限制保留材料。文字与视觉仍使用 DeepSeek，向量仍使用 Ollama。
 
-文字组使用 [14 道补充题](/Users/drw/PycharmProjects/rag-anything-reproduction/questions.supplement.v1.jsonl)，包含 q04、q10 两道旧失败题，以及正文、公式、图表细节、跨表比较和不可回答题；视觉组使用其中 [6 道题](/Users/drw/PycharmProjects/rag-anything-reproduction/questions.supplement.v1.visual.jsonl)。关闭和开启重排各运行一次，共 40 次问答、14 道不同题目，均正常完成，没有失败的模型调用。参考答案见 [补充题核对材料](/Users/drw/PycharmProjects/rag-anything-reproduction/evaluation.supplement.v1.jsonl)，仍为待人工确认的草稿。
+文字组使用 [14 道补充题](questions.supplement.v1.jsonl)，包含 q04、q10 两道旧失败题，以及正文、公式、图表细节、跨表比较和不可回答题；视觉组使用其中 [6 道题](questions.supplement.v1.visual.jsonl)。关闭和开启重排各运行一次，共 40 次问答、14 道不同题目，均正常完成，没有失败的模型调用。参考答案见 [补充题核对材料](evaluation.supplement.v1.jsonl)，仍为待人工确认的草稿。
 
 两组均使用 `mix`，参数统一为 `TOP_K=20`、`CHUNK_TOP_K=20`、`MAX_ENTITY_TOKENS=4000`、`MAX_RELATION_TOKENS=4000`、`MAX_TOTAL_TOKENS=24000`，同一知识库、同一模型和同一问题文件。本轮重排只调整顺序，没有按分数额外筛除候选；BGE 使用 float32、每批 1 对文本、输入上限 8192 tokens。本轮的问题和预算与 2026-10-09 的 20 题测试不同，应在下面的开启／关闭组之间比较。
 
 | 条件与运行记录 | 正常完成 | 核心答案初核正确 | 累计耗时 | 平均每题耗时 | 记录的总 tokens |
 | --- | --- | --- | --- | --- | --- |
-| [文字，关闭重排](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261010_101958_b3bea029/run-manifest.json) | 14/14 | 9/14（64.3%） | 53.05 秒 | 3.79 秒 | 341500 |
-| [文字，开启重排](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261010_102052_ee917d5e/run-manifest.json) | 14/14 | 10/14（71.4%） | 130.67 秒 | 9.33 秒 | 341152 |
-| [视觉，关闭重排](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261010_102308_33f856c8/run-manifest.json) | 6/6 | 4/6（66.7%） | 25.08 秒 | 4.18 秒 | 157873 |
-| [视觉，开启重排](/Users/drw/PycharmProjects/rag-anything-reproduction/runs/20261010_102334_bad72aae/run-manifest.json) | 6/6 | 4/6（66.7%） | 62.34 秒 | 10.39 秒 | 156879 |
+| [文字，关闭重排](runs/20261010_101958_b3bea029/run-manifest.json) | 14/14 | 9/14（64.3%） | 53.05 秒 | 3.79 秒 | 341500 |
+| [文字，开启重排](runs/20261010_102052_ee917d5e/run-manifest.json) | 14/14 | 10/14（71.4%） | 130.67 秒 | 9.33 秒 | 341152 |
+| [视觉，关闭重排](runs/20261010_102308_33f856c8/run-manifest.json) | 6/6 | 4/6（66.7%） | 25.08 秒 | 4.18 秒 | 157873 |
+| [视觉，开启重排](runs/20261010_102334_bad72aae/run-manifest.json) | 6/6 | 4/6（66.7%） | 62.34 秒 | 10.39 秒 | 156879 |
 
 “核心答案正确”指题目要求的信息都答全、答对，部分正确或前后矛盾不算正确。开启重排的文字 q23 虽然答对了两个数值，却额外错误地说 RAGAnything 排第二；若附加判断出错也扣分，本轮文字两组均为 **9/14**。因此，重排救回了一题，但完整答案的正确数没有净增加，视觉题的正确数也没有增加。
 
@@ -88,7 +88,7 @@
 ## 需要重新确认环境时
 
 ```bash
-cd "/Users/drw/PycharmProjects/rag-anything-reproduction"
+cd "/Users/drw/PycharmProjects/RAG-Anything-reproduction"
 source .venv/bin/activate
 python -c "import sys; print(sys.executable)"
 python -m pip check
