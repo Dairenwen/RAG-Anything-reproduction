@@ -1,0 +1,310 @@
+{
+  "schema": 2,
+  "status": "ready",
+  "created_at": "2026-10-10T14:50:29.559806+08:00",
+  "source_commit": "8664e8b318a3ed651fe62dfcfddfb1f1d633d5be",
+  "starter_sha256": "51eb307b959303890f084c514b14d8792a2bfe22e0caa984b539c2a5af0efed0",
+  "index_identity": {
+    "text_model": "deepseek-flash",
+    "text_url": "https://api.deepseek.com",
+    "vision_model": "deepseek-flash",
+    "vision_url": "https://api.deepseek.com",
+    "embedding_model": "qwen3-embedding:latest",
+    "embedding_url": "http://localhost:11434/v1",
+    "embedding_dim": 4096,
+    "send_dimensions": false,
+    "chunk_size": 1200,
+    "chunk_overlap": 100,
+    "summary_language": "English"
+  },
+  "settings": {
+    "text_url": "https://api.deepseek.com",
+    "text_model": "deepseek-flash",
+    "vision_url": "https://api.deepseek.com",
+    "vision_model": "deepseek-flash",
+    "embedding_url": "http://localhost:11434/v1",
+    "embedding_model": "qwen3-embedding:latest",
+    "embedding_dim": 4096,
+    "send_dimensions": false,
+    "chunk_size": 1200,
+    "chunk_overlap": 100,
+    "top_k": 20,
+    "chunk_top_k": 10,
+    "max_entity_tokens": 4000,
+    "max_relation_tokens": 4000,
+    "max_total_tokens": 12000,
+    "concurrency": 2,
+    "summary_language": "English",
+    "enable_rerank": false,
+    "rerank_model_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/models/bge-reranker-v2-m3",
+    "rerank_device": "auto",
+    "rerank_max_length": 8192,
+    "rerank_batch_size": 1
+  },
+  "packages": {
+    "raganything": "1.4.2",
+    "lightrag-hku": "1.4.16",
+    "mineru": "3.4.1",
+    "pypdfium2": "4.30.0",
+    "pdftext": "0.6.3",
+    "openai": "2.54.0",
+    "python-dotenv": "1.2.4"
+  },
+  "documents": [
+    {
+      "schema": 2,
+      "source_commit": "8664e8b318a3ed651fe62dfcfddfb1f1d633d5be",
+      "doc_id": "rag-anything-handson-v2",
+      "pdf_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+      "pdf_sha256": "e6fb48a0f1a66c0bea5d3f10bbeb6eac736d154445b945eb86e0757caaa395fb",
+      "content_sha256": "aad767b065ccaed7ebc1eeed5edcc03b2909259d6b4878753cfbc0acd7a21e6d",
+      "parser_content_sha256": "eaa94d31a8287cd2a1faf4196d966b7db27aeabf1ce12e3e4727dc28e28303bd",
+      "assets": [
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/022d4fa05a921e7e20b52c11351cec770adefdf7e45f111d2b35fca1af268374.jpg",
+          "sha256": "2d43b2f689e7d4621fd9824c624a88725c1698ea0b7c014d8037f2857528d233"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0a1f081bc748ed661d81cb376702e87128c3a7c4514ba6d3de690000e0602bbc.jpg",
+          "sha256": "a4c6c82a5bbfe1c8bbd95360dbc8577dc53b81e7bce087921fddd620e544732d"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0ad6137891a77fd855c107eedd1506d77109e4d36003e6c1a994b1668ecfffc2.jpg",
+          "sha256": "c24af9f166a9d31d43d16eafb7f9282a8ab18bab65fe25d5b1115e92c60ef933"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0dab6a99e879e774e0ab91cfab5feb695cad0878e36e3f6c2dd5a9498dfb255b.jpg",
+          "sha256": "acb70172d4df892adb90ef329921c627be9ea65c78542c3191bd70f97f2d740d"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0ed618963bfcadd441b505152e2390c95ca5f8ca034c4a8efb966ac1cedd3ae7.jpg",
+          "sha256": "eee9fa4268c93dd4dfc97b7f92ca13fc57b01716540c18fbc7c51501cc531576"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/113fc9485e4a4f037967e01fa7c95751b53d30b36f140aa2c31647de93c606b5.jpg",
+          "sha256": "29d175cbef6fc364556bac8e03ed33b6e9ffa12368f53ba5176ab20cf0bc5ee1"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/16bf07325fc0570ce7cd3d68b842df1e6146a4fc36c9948422dc869e1382b0b1.jpg",
+          "sha256": "9d38f570f8770eb5f30f9616950cec576442c4e6d93f96447927e2ed2134e3b7"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/1cf00a9606a5e263cd1e5cdf9be70da8b9b795c137e3c0fd62094b42d84056bb.jpg",
+          "sha256": "1ff5b9aadd15b3fcc03608103643de6822a41bc13462d31275645a59fde7ec4f"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2004f0eb7ea34fa858b277c9b2b0453b43c2424be9403fd5488bec47e1afc7e4.jpg",
+          "sha256": "0549f2ef31021459e304947b9ab046064436a8b5e141b4e4b872da41be7f6d98"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2a4898916e6dea1d8266d55d57962982aa83a2b8de2c3bee0668e270b0669521.jpg",
+          "sha256": "8a42457060c1653ab9e2af240a1b31f4680bb8d9c6add94708f34bdabdd12594"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2f956114ad70ce2bdb390056d1ce75ccd3864eb4b5bd133fc0c8c9bf6e086407.jpg",
+          "sha256": "6482288aa6262255260a767345337c6f20d3427d7e2dbc5448bb4d0bcde3c884"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/340e435ad3cc36dc6fd0d96efded30edfd180deb074502dee740515b9f195afb.jpg",
+          "sha256": "4808152f7c47b7271200c0501157235e89b08463926e8e3e615f04466c7650c1"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/36ae211575ca74ef2abe04eb1ff253710372d42904ca09749e378d2df5fa6da9.jpg",
+          "sha256": "e267006955ca71bc8eae353e19fa8b75c3d46557f8e66acc7b8b6b81335001b0"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/3bc93ae3e45bc6b25bd903f86641e59f93474ec6c333757c65080d55f44180ab.jpg",
+          "sha256": "6bf3c4b6a67499a75624e51f282e7c4a1f7f62bd6868fd22174619d7aa161fc4"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/4e87d15b56d56e5e352bd5b1ba3800e7e17dccdf2f5b2a17805328e6b602714d.jpg",
+          "sha256": "089aeb0234d8689bc0472c1c22152c737197cccb927c816f083e645bb31d3aaf"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/50830fe9f50b1455e171ec8851b3e20a3b4a4eeae0e0e68196dec266ddefd099.jpg",
+          "sha256": "2bd92b90ee183cdd935b935ea294ee262bb195e30e20a221fc4df07e7d88c83b"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/51c6b2b7bab7c76e276a16d8edd9de97b55367acc8bd52b3c685ef9758e7d149.jpg",
+          "sha256": "8bba6769f0c6f9cebe2e071e33c3abecc49970f0634e588ac0e98c3ebba505f3"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/59d3ab08df07bbfc3fe2864ddfe8c864dd9658292edeaa0c57684e80183a45f1.jpg",
+          "sha256": "7978f96ff314b7aeb95ddd54aff5194be9354677b286a497a515b2cfdc66d29b"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/6261ab9f3b66e2dbae9cff54b6fb4d31536cb3b81983005cd81531a9c00b1ba7.jpg",
+          "sha256": "efb3ef74b1afce62f9d2cb59ad7efbc82e63dca6b1c082faf2f715cf418a7561"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/63a37baf4fe15a77e327dfd4f041c89bca97eab4f80bc5d98eced6ae8a7a69bd.jpg",
+          "sha256": "6b1ecd757744e27ce39f54e70c2dc27b09b86e4f12a404fe252d927fc43ef516"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/63d48991c98af4284fa81c12c1a5d27ae7972ad47c2ada223d2aaa9493797d7b.jpg",
+          "sha256": "159ce9bf4a251fbd653b13182fe841b023ef3ec92089eafd1080d1e97efc1c3a"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/64a1d12d6d66f39e9e7ebff262fdc4fd8f832e694b66621a65c1f9fe14577e9f.jpg",
+          "sha256": "cc6265ab8c7617406ffcf3da116e0881499ca847649dcb81ca0e68312757759e"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/655d504288f4427068e2f8bbfdebebb85b01e8928b83716048026a52c2e36257.jpg",
+          "sha256": "9de98a400b814651fcf88a0278ea6fe3ff148f4e472bd5733a8e90517ae0fafb"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/670ed2ca0315dd7fd70ef88479a1fb6c9ddc89a0e850955fab79a01a288a1e1d.jpg",
+          "sha256": "1553fa6aa71450e64711581ef17ab1fb6f21b21cbbf52797d7153bb4f5a0c6c7"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/683a2147eeee14021b84247394c06a646cd732b04fc83f9d63271559f8e56003.jpg",
+          "sha256": "d3e59cb53f0c5bcfbf1f857009f91be23afe0f4e9ec24263f0c0990adad99c0a"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/6a7034ba82548af5b8794c56ada1d310b6d2fb5ad3ab0fb5bb2ff11d3ef8f327.jpg",
+          "sha256": "9f2ff1f8c3a60ae17de1d63d0cdad08e857e4cd40c7209901f93f9e6e9653fcf"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/8c3a00be8a6878756a70466a9074ea19731af969d1a6197bf7d1d175f32e22b3.jpg",
+          "sha256": "e738bba3c5189fbb705a7648aed7099d82a59c5813edd232aa63092fdd3e8e7d"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/955f2a43ef64010f83921d27dbed742b7342e66726455841d83eeac25ba32856.jpg",
+          "sha256": "c757ff39f63ccc0ceba774432cec30b09adc5fc8888a30011503d0b91f2d1796"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/993f7e915163a03cd84198aad6aad0d3622e43b8486b65ebccc030f59151e10d.jpg",
+          "sha256": "f41e95318699747d20a9cb6fd41ef8ece1bef98c0fba23f4010f2d65f9a91c66"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9d2e07af6efb250893fb5d7c6630ebd457a74e3ac742edbac1ccce035e423c6b.jpg",
+          "sha256": "214776bd0929578d33e709cda782b569ad2c8e279389a3a99a7368a77cbb2615"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9d4ae5cb40e880a59c540de16d0ed0023265a8a05c10c184c5279fe4c469bf06.jpg",
+          "sha256": "59b29ec29bb22f010cf0e4aee25fe0d55413f007ac7f19a3fc7333f62dbe351d"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9dfb8bf912054709911ac5eff9b7b835e88d4944768c8e1d169effc02c67fe7b.jpg",
+          "sha256": "88bd439aa1c6c6eb0baa6d9bc2bb884f27d7a73c948561f148195a104ca3737d"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/a157f35a40d305ef63fa08a215ec9db8e2020d0b19eda2e1ac9cb626b58cf8d7.jpg",
+          "sha256": "01216b31ab40acbceceae2abe4bf3fad3f85f87caaf13f3bb2e5a92e0f396ae6"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/a39fa6c72473d460ef7bb772e2771cbdd75ef7b1f8787f6caec79daf43c1da9e.jpg",
+          "sha256": "f9bc4e77b8f719e81a214d98883aa5ecc67c8f538aff7dfa9cb5760000a83259"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/ab272fe6cba55fa810c4b06e732798723250fcbbe08f880156d52d4d28df8e41.jpg",
+          "sha256": "fd879d51a6f2c3a42044e4edab0cd30aa4f57055019c69730dd289469ed7c4be"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/b21c48d88d307c4c12fddcafd1c25f189541efab2f42618d762fdbccecaba93a.jpg",
+          "sha256": "501201979e4c3cdd73bcdbc319eabcf112843d9de193e64720beaf823be139b4"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/b236e44666119ce89800eb2979f7a79e2daf2613ae5f009c4247a7ee34cfaf61.jpg",
+          "sha256": "2ac43106c388603974060a4e30e1ba65cb1579fa4690f0ab7578ef62489cc93d"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/c2e3f8ed153ca7c0a7f31a30176b9826f43404237d44ec73c34d54b4cdc24057.jpg",
+          "sha256": "567938d56e4cc7d694be31451903e713f111bb5456b947f2c9ebe5b4fdc13d58"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/c544c8aeb2b22501705e740ff3cc3a88c0648926e627834629dcfb34cbf6bb57.jpg",
+          "sha256": "85e2092d6e282e7d98c4347a425930f2769f550a4c835270471ab386ad4a1346"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/cb947015a496ffd96206a9265eb9e4babdd5cff4d25abe8d65f8fd514db9f245.jpg",
+          "sha256": "9770f5d4cdb2d15c3a65e5f74b080cd8bcbbc26a9c621e90098e676a2366bce7"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/d74cb843cc1468e81bcead377d2c4f2837a988a5c2ca712b18b372f35da00843.jpg",
+          "sha256": "439deb84054da32b1ba6e36e3cf2a196d8db7a528840cbf6b54c9999f8024c4a"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e1f8b7a601dabfcd549620ea1d2e2be2e94c40b49f9eac83cca591a89142861e.jpg",
+          "sha256": "2d74954ce3ad21c2621e8db58459fbd301feed1e37101ad797a3d459c391cc85"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e25437bf071639fde8e283300d3436c24124e5e94dbc4945638cd7b5017c77ed.jpg",
+          "sha256": "39df693a0704bc78609d5f14c3253a9bdb3fd93b21a4bdcaf9fcd9d337a5dc55"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e583181daa22b9c8a95c85cd7e1a2b57fe2289b7c98ccfd4b73bc6cbefd3de85.jpg",
+          "sha256": "77ada50a7563717724685fbbc38229d063fa49177810d2172b7578c67874e0ec"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e6b47c2f1172b9db8e7c50d8adf485ae13f70dfac9b4c3f3991560d59888de9a.jpg",
+          "sha256": "72f29dfd1d69df623d2735ef94021171a33a7c9953ad78c2e80d10e88ec1c608"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e859de12da36d9d1ddeb00ffe17e7dc086f9388d397978781e4c4928643b4b03.jpg",
+          "sha256": "c729d03f30003e9b9e53b89c7edf1b90dbe93447c81054e10292d72457856283"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e89a28eb26b8b2f0abae9953d6df092bb5bf30955657e840e9d2d158d0d98b12.jpg",
+          "sha256": "1f8c90cfaddcc965296d3db2f9adbb4cb63b081038f3924fd092f3b9a5e82e87"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/edc96ff703aa8cd136dc1205eeda891df21088db04e69e316022da11319987ec.jpg",
+          "sha256": "0a3a01716448820c67d3af7901f35b4fa2f3fe7d81001c69e042c2da46c3e74c"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/f1cbe2a5ee1cdedda549700f1d14a100be4de45805398f9780b0331308e9616f.jpg",
+          "sha256": "3e8514a116f525452a50c1d36805375f94b7d74445f822d3a9461962360915f6"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/f3d31e2b8304d186e52242048da8661c979af53b12d619beb1dfcb776e3c433f.jpg",
+          "sha256": "1ef355537b2e3da7fc727f0b508029018d3b9cdfcb8b8c2aca854278628f100e"
+        },
+        {
+          "path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/fcf3a9eec54fb78364eeda0c089db4a5b81232ca174a1e8e25f97004550b0783.jpg",
+          "sha256": "9ed24eb93589dd8c750ab3fc02d93e197e6bcf771146aebf71c6b6c1c84fe227"
+        }
+      ],
+      "created_at": "2026-10-10T14:48:00.571298+08:00",
+      "content_counts": {
+        "text": 209,
+        "image": 50,
+        "table": 1
+      },
+      "normalization": "chart_to_image_v1; code_to_text_v1; original list preserved",
+      "parser_backend": "pipeline",
+      "parser_method": "auto",
+      "timeout_seconds": 1800,
+      "device": "cpu",
+      "packages": {
+        "raganything": "1.4.2",
+        "lightrag-hku": "1.4.16",
+        "mineru": "3.4.1",
+        "pypdfium2": "4.30.0",
+        "pdftext": "0.6.3",
+        "openai": "2.54.0",
+        "python-dotenv": "1.2.4"
+      },
+      "recovery": {
+        "reason": "Completed MinerU output previously rejected code blocks; normalization finalized without rerunning parsing",
+        "raw_content_counts": {
+          "text": 198,
+          "image": 43,
+          "code": 11,
+          "chart": 7,
+          "table": 1
+        },
+        "source_check": {
+          "parser_origin_sha256": "474fb6a1f53787d5fedcc63447d64ebdac606b1bb44f0b114ac20b7b43c79d12",
+          "page_count": 31,
+          "all_page_dimensions_and_extracted_text_match": true,
+          "render_check_scale": 1,
+          "exact_rgb_page_matches": 29,
+          "maximum_mean_rgb_difference": 0.003952927972535816
+        }
+      },
+      "index_doc_id": "doc-rag-anything-handson-v2"
+    }
+  ],
+  "completed_at": "2026-10-10T15:00:23.536871+08:00"
+}

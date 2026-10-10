@@ -105,9 +105,12 @@ def verify_dependencies():
 def validate_blocks(blocks):
     if not isinstance(blocks, list) or not blocks or not all(isinstance(b, dict) for b in blocks):
         raise ValueError("Parser output must be a nonempty list of content dictionaries.")
-    for block in blocks:
+    for index, block in enumerate(blocks):
         if block.get("type") not in {"text", "image", "table", "equation"}:
-            raise ValueError("Pilot accepts text/image/table/equation blocks; review other types first.")
+            raise ValueError(
+                f"Unsupported parser block type {block.get('type')!r} at index {index} "
+                f"(page_idx={block.get('page_idx')!r}); normalize it before ingestion."
+            )
         if "page_idx" in block and (type(block["page_idx"]) is not int or block["page_idx"] < 0):
             raise ValueError("page_idx must be a nonnegative integer.")
         if block.get("img_path"):
@@ -117,15 +120,31 @@ def validate_blocks(blocks):
 
 
 def normalize_blocks(blocks):
-    """Route MinerU chart crops through the image processor while retaining provenance."""
+    """Adapt MinerU charts and code to supported routes without losing source fields."""
     normalized = []
-    for original in blocks:
+    for index, original in enumerate(blocks):
         block = dict(original)
         if block.get("type") == "chart":
             block["_pilot_original_type"] = "chart"
             block["type"] = "image"
             block["image_caption"] = block.get("chart_caption", [])
             block["image_footnote"] = block.get("chart_footnote", [])
+        elif block.get("type") == "code":
+            body = block.get("code_body") or block.get("text")
+            if not isinstance(body, str) or not body.strip():
+                raise ValueError(f"Code block at index {index} has no usable code_body/text.")
+            parts = []
+            for field in ("code_caption", "code_body", "code_footnote"):
+                value = body if field == "code_body" else block.get(field, [])
+                if isinstance(value, str):
+                    parts.append(value)
+                elif isinstance(value, list) and all(isinstance(item, str) for item in value):
+                    parts.extend(value)
+                else:
+                    raise ValueError(f"Code block at index {index} has invalid {field}.")
+            block["_pilot_original_type"] = "code"
+            block["type"] = "text"
+            block["text"] = "\n".join(part for part in parts if part)
         normalized.append(block)
     return normalized
 
@@ -815,7 +834,7 @@ async def dispatch(args):
                   "pdf_sha256": pdf_hash, "content_sha256": sha256_file(target / "content-list.json"),
                   "parser_content_sha256": sha256_file(target / "parser-content-list.json"),
                   "assets": assets, "created_at": now(), "content_counts": counts,
-                  "normalization": "chart_to_image_v1; original list preserved",
+                  "normalization": "chart_to_image_v1; code_to_text_v1; original list preserved",
                   "parser_backend": "pipeline", "parser_method": "auto", "timeout_seconds": args.timeout,
                   "device": args.device, "packages": installed_versions()})
         print(json.dumps({"output": str(target), "content_counts": counts}, ensure_ascii=False, indent=2))

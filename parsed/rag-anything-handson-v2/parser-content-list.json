@@ -1,0 +1,3264 @@
+[
+  {
+    "type": "text",
+    "text": "MCP服务",
+    "text_level": 2,
+    "page_idx": 0,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      69,
+      240,
+      102
+    ]
+  },
+  {
+    "type": "text",
+    "text": "\u0000 介绍\n\u0000 技术选型\n\u0000.\u0000 antvis/mcp-server-chart\n\u0000.\u0000 apconw/gpt-vis-api\n\u0000.\u0000 MCPHub\n\u0000.\u0000 如何编写⾃⼰的MCP服务\n\u0000 gpt-vis-api部署\n\u0000.\u0000 本地测试\n\u0000.\u0000 Dify测试\n\u0000.\u0000 Qwen\u0000\u0000\u0000\u0000b\n\u0000.\u0000 ⼩模型调⽤MCP\n\u0000.\u0000.\u0000 问题\u0000\n\u0000.\u0000.\u0000 问题\u0000\n\u0000.\u0000.\u0000 总结\n\u0000 调⽤细节\n\u0000 替代⽅案\n插件安装过程中遇到异常应该如何处理？",
+    "list_items": [
+      "\u0000 介绍",
+      "\u0000 技术选型",
+      "\u0000.\u0000 antvis/mcp-server-chart",
+      "\u0000.\u0000 apconw/gpt-vis-api",
+      "\u0000.\u0000 MCPHub",
+      "\u0000.\u0000 如何编写⾃⼰的MCP服务",
+      "\u0000 gpt-vis-api部署",
+      "\u0000.\u0000 本地测试",
+      "\u0000.\u0000 Dify测试",
+      "\u0000.\u0000 Qwen\u0000\u0000\u0000\u0000b",
+      "\u0000.\u0000 ⼩模型调⽤MCP",
+      "\u0000.\u0000.\u0000 问题\u0000",
+      "\u0000.\u0000.\u0000 问题\u0000",
+      "\u0000.\u0000.\u0000 总结",
+      "\u0000 调⽤细节",
+      "\u0000 替代⽅案",
+      "插件安装过程中遇到异常应该如何处理？"
+    ],
+    "list_type": "text_list",
+    "page_idx": 0,
+    "_mineru_v2_type": "index",
+    "bbox": [
+      73,
+      143,
+      400,
+      617
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1 介绍",
+    "text_level": 2,
+    "page_idx": 0,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      657,
+      161,
+      684
+    ]
+  },
+  {
+    "type": "text",
+    "text": "MCP 全称 Model Context Protocol （中⽂名：模型上下⽂协议），是由 Anthropic 于 2024年 11 ⽉推出的开源协议。旨在解决不同⼤语⾔模型（LLM）与不同外部⼯具集成的标准化问题 。MCP 核⼼是让⼤模型能⽅便地调⽤多个⼯具，如本地⽂件、数据库、各⽹站数据等。",
+    "page_idx": 0,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      705,
+      910,
+      786
+    ]
+  },
+  {
+    "type": "text",
+    "text": "dify v1.6.0 ⽀持双向MCP",
+    "page_idx": 0,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      797,
+      302,
+      818
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1. 可以直接从 Dify 调⽤任何 MCP 服务。⽆需局限于现有的 Dify 插件，⽽是可以利⽤强⼤的MCP 服务器。",
+    "page_idx": 0,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      86,
+      830,
+      900,
+      876
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2. ⽀持将你的 Dify⼯作流作为 MCP 服务，⽆缝集成其他客户端。使得这些⼯具能够像原⽣扩展⼀样直接与您的 Dify 应⽤交互。",
+    "page_idx": 0,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      84,
+      885,
+      923,
+      931
+    ]
+  },
+  {
+    "type": "text",
+    "text": "https://dify.ai",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      193,
+      186,
+      205
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Imagine if",
+    "text_level": 1,
+    "page_idx": 1,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      459,
+      171,
+      689,
+      210
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Greetings, Dify builders!",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      153,
+      257,
+      279,
+      270
+    ]
+  },
+  {
+    "type": "text",
+    "text": "We've packed the early-summer stretch (Jun 1 – Jul 10) with upgrades you can ship today",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      153,
+      280,
+      604,
+      292
+    ]
+  },
+  {
+    "type": "text",
+    "text": "双向MCP(v1.6.0)",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      263,
+      297,
+      405,
+      314
+    ]
+  },
+  {
+    "type": "text",
+    "text": "TL;DR: 一键调用任何MCP服务器或发布您自己的服务器",
+    "text_level": 2,
+    "page_idx": 1,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      153,
+      313,
+      632,
+      330
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Two-way MCP (v1.6.0): Call any MCP server or publish your own in one click.",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      173,
+      337,
+      578,
+      349
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Enhanced Workflow Debugging (v1.5.0): Inspect variables, rerun single nodes, fix fast.",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      174,
+      358,
+      632,
+      371
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Azure Al Content Safety Plugin: On-prem moderation for text + images.",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      174,
+      380,
+      552,
+      392
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 100 K GitHub Stars: Meet the 17 contributors powering the journey",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      174,
+      400,
+      529,
+      412
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Built-in Two-Way MCP (v1.6.0)",
+    "text_level": 2,
+    "page_idx": 1,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      161,
+      434,
+      477,
+      452
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Agents and Workflows now speak MCP natively. Add Linear, Notion, Zapier (8 000+ apps) as tools, or expose your own Dify apps as MCP servers for any client to invoke—no glue code required.",
+    "page_idx": 1,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      151,
+      460,
+      616,
+      496
+    ]
+  },
+  {
+    "type": "text",
+    "text": "调⽤的是魔塔的MCP⼴场中的服务",
+    "text_level": 2,
+    "page_idx": 1,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      513,
+      359,
+      531
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0a1f081bc748ed661d81cb376702e87128c3a7c4514ba6d3de690000e0602bbc.jpg",
+    "page_idx": 2,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      41,
+      913,
+      469
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Dify快速接⼊本地MCP服务示例",
+    "text_level": 2,
+    "page_idx": 2,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      481,
+      341,
+      501
+    ]
+  },
+  {
+    "type": "text",
+    "text": "超实⽤！Dify快速接⼊本地MCP服务",
+    "text_level": 2,
+    "page_idx": 2,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      515,
+      405,
+      535
+    ]
+  },
+  {
+    "type": "text",
+    "text": "⽬前遇到的问题，本地deepseek 70b ⽆法成功调⽤MCP服务",
+    "page_idx": 2,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      547,
+      578,
+      568
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/f1cbe2a5ee1cdedda549700f1d14a100be4de45805398f9780b0331308e9616f.jpg",
+    "page_idx": 2,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      578,
+      602,
+      848
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2 技术选型",
+    "text_level": 2,
+    "page_idx": 2,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      886,
+      225,
+      912
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/fcf3a9eec54fb78364eeda0c089db4a5b81232ca174a1e8e25f97004550b0783.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      854,
+      670,
+      877,
+      686
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2.1 antvis/mcp-server-chart",
+    "text_level": 2,
+    "page_idx": 3,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      47,
+      421,
+      70
+    ]
+  },
+  {
+    "type": "text",
+    "text": "之前根据 部署了ant提供的mcp服务mcp-【MCP-server-chart部署及踩坑建议】-CSDN博客server-chart",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      90,
+      864,
+      135
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GitHub - antvis/mcp-server-chart: ?? A visualization mcp contains 25+ visual charts using @antvis. Using for chart generation and data analysis.",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      148,
+      887,
+      194
+    ]
+  },
+  {
+    "type": "text",
+    "text": "发现项⽬issues中作者提到这个需要⼀个远程服务",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      207,
+      482,
+      226
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/b21c48d88d307c4c12fddcafd1c25f189541efab2f42618d762fdbccecaba93a.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      98,
+      243,
+      135,
+      273
+    ]
+  },
+  {
+    "type": "text",
+    "text": "hustcc last week",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      161,
+      252,
+      258,
+      267
+    ]
+  },
+  {
+    "type": "text",
+    "text": "这个mcp需要一个远程服务，你本机上是有网络可以连接远程吧? @tengjie107-netizer",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      161,
+      284,
+      653,
+      299
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/955f2a43ef64010f83921d27dbed742b7342e66726455841d83eeac25ba32856.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      165,
+      308,
+      191,
+      325
+    ]
+  },
+  {
+    "type": "text",
+    "text": "如果需要私有化还需部署",
+    "text_level": 2,
+    "page_idx": 3,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      357,
+      282,
+      376
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GitHub - antvis/GPT-Vis: ?? GPT Vision, Open Source Vision components for GPTs, generative AI, and LLM projects. Not only UI Components.",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      382,
+      831,
+      428
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/ab272fe6cba55fa810c4b06e732798723250fcbbe08f880156d52d4d28df8e41.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      102,
+      444,
+      140,
+      474
+    ]
+  },
+  {
+    "type": "text",
+    "text": "hustcc on May 26",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      165,
+      453,
+      269,
+      467
+    ]
+  },
+  {
+    "type": "text",
+    "text": "You can use AntV's project GPT-Vis-SSR to deploy an HTTP service in a private environment, and then pass the URL address through env VIS_REQUEST_SERVER",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      178,
+      484,
+      859,
+      513
+    ]
+  },
+  {
+    "type": "text",
+    "text": "使用 GPT-Vis-SSR 包装成一个 post 服务，然后这个服务的地址写到VIS_REQUEST_SERVER.",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      165,
+      523,
+      656,
+      537
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/63d48991c98af4284fa81c12c1a5d27ae7972ad47c2ada223d2aaa9493797d7b.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      169,
+      547,
+      194,
+      565
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e1f8b7a601dabfcd549620ea1d2e2be2e94c40b49f9eac83cca591a89142861e.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      89,
+      594,
+      127,
+      626
+    ]
+  },
+  {
+    "type": "text",
+    "text": "hustcc on May 26",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      153,
+      604,
+      256,
+      618
+    ]
+  },
+  {
+    "type": "text",
+    "text": "是的。",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      153,
+      636,
+      187,
+      650
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "impor { render } from '@antv/gpt-vis-ssr'; const image = render(spec).toBuffer();",
+    "content": "impor { render } from '@antv/gpt-vis-ssr'; const image = render(spec).toBuffer();",
+    "page_idx": 3,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      166,
+      671,
+      416,
+      709
+    ]
+  },
+  {
+    "type": "text",
+    "text": "然后把spec来源于post接口的参数，出参就是image，先存到服务器返回一个地址。",
+    "page_idx": 3,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      153,
+      729,
+      632,
+      744
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/36ae211575ca74ef2abe04eb1ff253710372d42904ca09749e378d2df5fa6da9.jpg",
+    "page_idx": 3,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      155,
+      753,
+      181,
+      772
+    ]
+  },
+  {
+    "type": "text",
+    "text": "具体配置⽅法",
+    "text_level": 2,
+    "page_idx": 3,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      86,
+      804,
+      238,
+      827
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "Plain Text 1 { 2 \"mcpServers\": { 3 \"mcp-server-chart\": { 4 \"command\": \"npx\", 5 \"args\": [\"-y\", \"@antv/mcp-server-chart\"], 6 \"env\": { 7 \"VIS_REQUEST_SERVER\": \"<您的私有服务地址>\" 8 } 9 } 10 } 11 }",
+    "content": "Plain Text 1 { 2 \"mcpServers\": { 3 \"mcp-server-chart\": { 4 \"command\": \"npx\", 5 \"args\": [\"-y\", \"@antv/mcp-server-chart\"], 6 \"env\": { 7 \"VIS_REQUEST_SERVER\": \"<您的私有服务地址>\" 8 } 9 } 10 } 11 }",
+    "page_idx": 4,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      78,
+      46,
+      916,
+      311
+    ]
+  },
+  {
+    "type": "text",
+    "text": "技术实现步骤",
+    "text_level": 2,
+    "page_idx": 4,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      84,
+      329,
+      240,
+      353
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1. 部署私有服务：使⽤ AntV 的 GPT-Vis-SSR 项⽬在⾃⼰服务器部署 HTTP 服务",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      99,
+      372,
+      820,
+      393
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2. 配置环境变量：将私有服务的 URL 设置为 VIS_REQUEST_SERVER",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      98,
+      401,
+      700,
+      422
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3. API 接⼝规范：",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      98,
+      430,
+      254,
+      450
+    ]
+  },
+  {
+    "type": "text",
+    "text": "○ ⽅法: POST",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      137,
+      459,
+      269,
+      479
+    ]
+  },
+  {
+    "type": "text",
+    "text": "○ 参数: 图表配置数据，如 {\"type\":\"line\", \"data\":[...]}",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      137,
+      489,
+      691,
+      510
+    ]
+  },
+  {
+    "type": "text",
+    "text": "○ 返回: 包含⽣成图表图⽚URL的对象",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      137,
+      518,
+      472,
+      539
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/59d3ab08df07bbfc3fe2864ddfe8c864dd9658292edeaa0c57684e80183a45f1.jpg",
+    "page_idx": 4,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      553,
+      104,
+      574
+    ]
+  },
+  {
+    "type": "text",
+    "text": "「⼀语成图」：GPT-Vis × MCP 让⼤模型「说句话就出可视化」-CSDN博客",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      86,
+      554,
+      738,
+      575
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2.2 apconw/gpt-vis-api",
+    "text_level": 2,
+    "page_idx": 4,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      609,
+      364,
+      633
+    ]
+  },
+  {
+    "type": "text",
+    "text": "如何使⽤ AntV 的 GPT-Vis-SSR项⽬在⾃⼰服务器部署 HTTP 服务？",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      651,
+      642,
+      670
+    ]
+  },
+  {
+    "type": "text",
+    "text": "apconw提供了GPT-VIS-API及示例应⽤项⽬",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      683,
+      446,
+      703
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GitHub - apconw/gpt-vis-api: GPT-VIS-API 是⼀个轻量级图表⽣成服务，旨在解决 [antv/mcp-server-chart](https://github.com/antvis/mcp-server-chart) 在私有化部署⽅⾯的局限性。该服务接收数据请求，⽣成图表图像，上传到 MinIO 对象存储，并返回带有效期的预签名访问链接。",
+    "page_idx": 4,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      715,
+      916,
+      787
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GPT-VIS-API",
+    "text_level": 2,
+    "page_idx": 5,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      104,
+      55,
+      282,
+      79
+    ]
+  },
+  {
+    "type": "text",
+    "text": "基于Node.js和Express构建的图表生成服务，支持将生成的图表上传至MinlO并返回预签名URL。",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      120,
+      102,
+      792,
+      118
+    ]
+  },
+  {
+    "type": "text",
+    "text": "项目概述",
+    "text_level": 2,
+    "page_idx": 5,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      107,
+      137,
+      240,
+      159
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GPT-VIS API是一个轻量级图表生成服务，旨在解决antv/mcp-server-chart在私有化部署方面的局限性。该服务接收数据请求，生成图表图像，上传到MinIO对象存储，并返回带有效期的预签名访问链接。",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      101,
+      176,
+      893,
+      212
+    ]
+  },
+  {
+    "type": "text",
+    "text": "主要功能包括：",
+    "text_level": 2,
+    "page_idx": 5,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      104,
+      224,
+      207,
+      241
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 接收 JSON 格式的数据请求",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      117,
+      253,
+      323,
+      270
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 使用AntV/G 生成图表(如折线图、柱状图等）",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      117,
+      273,
+      449,
+      290
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 将图表图片上传至MinIO存储",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      117,
+      295,
+      344,
+      310
+    ]
+  },
+  {
+    "type": "text",
+    "text": "· 返回图片的预签名 URL 供前端访问",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      117,
+      315,
+      374,
+      332
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GitHub - apconw/sanic-web: ⼀个轻量级、⽀持全链路且易于⼆次开发的⼤模型应⽤项⽬(LargeModel Data Assistant) ⽀持DeepSeek/Qwen3等⼤模型 基于 Dify 、LangChain/LangGraph、Ollama&Vllm、Sanic 和 Text2SQL ?? 等技术构建的⼀站式⼤模型应⽤开发项⽬，采⽤ Vue3、TypeScript 和 Vite 5 打造现代UI。它⽀持通过 ECharts ?? 实现基于⼤模型的数据图形化问答，具备处理 CSV ⽂件 ?? 表格问答的能⼒。同时，能⽅便对接第三⽅开源 RAG 系统 检索系统 ??等，以⽀持⼴泛的通⽤知识问答。",
+    "page_idx": 5,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      356,
+      911,
+      500
+    ]
+  },
+  {
+    "type": "text",
+    "text": "特性",
+    "text_level": 2,
+    "page_idx": 6,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      104,
+      53,
+      191,
+      74
+    ]
+  },
+  {
+    "type": "text",
+    "text": "•多智能体:支持多模型、多智能体+MCP协同任务",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      94,
+      465,
+      109
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 大模型交互: 全面支持主流大模型交互框架，如Dify与LangChain",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      114,
+      581,
+      131
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 核心技术栈： $\\mathsf { D i f y } + \\mathsf { O i l a m a } + \\mathsf { R a G } + ( \\mathsf { Q w e n 3 } / \\mathsf { D e e p S e e k } ) + \\mathsf { T e x t 2 S O L } + \\mathsf { M C P } + \\mathsf { N e o 4 } ) + \\mathsf { L a n g G r a p h }$",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      136,
+      808,
+      151
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• UI 框架： $\\mathsf { V u e 3 } + \\mathsf { T y p e S c r i p t } + \\mathsf { V i t e 5 }$",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      156,
+      393,
+      172
+    ]
+  },
+  {
+    "type": "text",
+    "text": "●数据问答：集成 ECharts/AntV大模型实现Text2SQL轻量级的图形化数据问答展示",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      178,
+      681,
+      193
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 表格问答：支持CSV格式文件的上传与基于大模型总结预处理和Text2SQL的表格数据问答",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      198,
+      740,
+      214
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 通用问答：支持通用数据形式问答基于对接三方RAG系统+公网检索模式",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      219,
+      625,
+      234
+    ]
+  },
+  {
+    "type": "text",
+    "text": "•应用架构：作为一个轻量级全链路一站式大模型应用开发框架方便扩展落地",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      239,
+      647,
+      256
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• 灵活部署：支持大模型应用开发各依赖组件docker-compose一键拉起快速部署零配置",
+    "page_idx": 6,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      112,
+      261,
+      714,
+      276
+    ]
+  },
+  {
+    "type": "text",
+    "text": "案例展示",
+    "text_level": 2,
+    "page_idx": 6,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      76,
+      295,
+      199,
+      316
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0ad6137891a77fd855c107eedd1506d77109e4d36003e6c1a994b1668ecfffc2.jpg",
+    "page_idx": 6,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      107,
+      337,
+      493,
+      488
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e583181daa22b9c8a95c85cd7e1a2b57fe2289b7c98ccfd4b73bc6cbefd3de85.jpg",
+    "page_idx": 6,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      509,
+      338,
+      890,
+      486
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/655d504288f4427068e2f8bbfdebebb85b01e8928b83716048026a52c2e36257.jpg",
+    "page_idx": 6,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      111,
+      497,
+      493,
+      647
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/a157f35a40d305ef63fa08a215ec9db8e2020d0b19eda2e1ac9cb626b58cf8d7.jpg",
+    "page_idx": 6,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      509,
+      498,
+      890,
+      646
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Environment Requirements",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      99,
+      47,
+      369,
+      66
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Before you start, make sure your development environment meets the following minimum requirements:",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      93,
+      82,
+      691,
+      97
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Operating System: Windows 10/11, macOS M series, Centos/Ubuntu",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      106,
+      514,
+      121
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• GPU: For local deployment with Ollama, an NVIDIA GPU is recommended. Alternatively, you can use the CPU mode or purchase an API key from the public network",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      123,
+      908,
+      152
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Memory: 8GB+",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      156,
+      212,
+      170
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Prerequisites",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      98,
+      185,
+      243,
+      204
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Python 3.8+",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      218,
+      196,
+      233
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Poetry 1.8.3+",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      236,
+      199,
+      250
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Dify 0.7.1+",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      253,
+      186,
+      267
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Mysql 8.0+",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      271,
+      187,
+      285
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Node.js 18.12.x+",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      289,
+      220,
+      303
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Pnpm 9.x",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      306,
+      179,
+      320
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Large Model Deployment",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      96,
+      335,
+      354,
+      354
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Refer to Ollama Deployment",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      369,
+      287,
+      383
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Models: Qwen2.5 7B model",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      387,
+      282,
+      400
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Models: DeepSeek R1 7B model",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      404,
+      307,
+      417
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• Alibaba Cloud Public Network API Key",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      104,
+      421,
+      341,
+      435
+    ]
+  },
+  {
+    "type": "text",
+    "text": "apconw的部署⽅案",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      457,
+      238,
+      476
+    ]
+  },
+  {
+    "type": "text",
+    "text": "⽤ AntV MCP Server Chart 赋能⼤模型  从零构建可视化智能体，图表⽣成效率飙升！⼤模型⼊⻔到精通，收藏这篇就⾜够了！_mcp-server-chart-CSDN博客",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      488,
+      903,
+      535
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2.3 MCPHub",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      569,
+      228,
+      590
+    ]
+  },
+  {
+    "type": "text",
+    "text": "本地部署、⼀键安装、分组路由：MCPHub 重塑 MCP 服务器体验",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      78,
+      611,
+      648,
+      631
+    ]
+  },
+  {
+    "type": "text",
+    "text": "为什么要使用 MCPHub",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      89,
+      647,
+      351,
+      670
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1. 复杂的环境依赖与配置",
+    "text_level": 2,
+    "page_idx": 7,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      89,
+      705,
+      339,
+      728
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• ·MCP服务器常依赖Node.js、Python等多种运行时，需手动维护大量命令、参数和环境变量。",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      89,
+      753,
+      880,
+      796
+    ]
+  },
+  {
+    "type": "text",
+    "text": "•·MCPHub 内置MCP服务器市场，包含众多常用 MCP服务器，支持一键安装和自动配置，简化了环境搭建过程。",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      89,
+      801,
+      883,
+      845
+    ]
+  },
+  {
+    "type": "text",
+    "text": "• ·通过 Docker部署，MCPHub 可在任何支持 Docker 的平台上运行，避免了环境不一致的问题。",
+    "page_idx": 7,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      89,
+      851,
+      887,
+      895
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/d74cb843cc1468e81bcead377d2c4f2837a988a5c2ca712b18b372f35da00843.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      80,
+      544,
+      101,
+      564
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/50830fe9f50b1455e171ec8851b3e20a3b4a4eeae0e0e68196dec266ddefd099.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      102,
+      55,
+      135,
+      80
+    ]
+  },
+  {
+    "type": "text",
+    "text": "无趣",
+    "text_level": 2,
+    "page_idx": 8,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      142,
+      56,
+      187,
+      74
+    ]
+  },
+  {
+    "type": "text",
+    "text": "大佬您好，我把MCPHub部署好了，添加本地的MCP服务也添加成功了，但是用Dify连接MCPHub后，调用不到MCP工具",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      140,
+      75,
+      857,
+      138
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/b236e44666119ce89800eb2979f7a79e2daf2613ae5f009c4247a7ee34cfaf61.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      143,
+      160,
+      176,
+      185
+    ]
+  },
+  {
+    "type": "text",
+    "text": "孙青扬作者",
+    "text_level": 2,
+    "page_idx": 8,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      184,
+      160,
+      287,
+      179
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/3bc93ae3e45bc6b25bd903f86641e59f93474ec6c333757c65080d55f44180ab.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      290,
+      159,
+      313,
+      176
+    ]
+  },
+  {
+    "type": "text",
+    "text": "dify连接不太稳定，要看具体使用哪种方式(sse/mcp)，可以结合日志分析一下",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      183,
+      179,
+      859,
+      222
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2a4898916e6dea1d8266d55d57962982aa83a2b8de2c3bee0668e270b0669521.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      93,
+      262,
+      125,
+      285
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Amoypark",
+    "text_level": 2,
+    "page_idx": 8,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      133,
+      261,
+      238,
+      280
+    ]
+  },
+  {
+    "type": "text",
+    "text": "非常感谢，本地部署，不能联网，是不是需要先在联网机台进行下载所需的插件，然后再次打包成镜像文件到离线服务器，这样是不是就可以使用？",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      132,
+      281,
+      843,
+      320
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/16bf07325fc0570ce7cd3d68b842df1e6146a4fc36c9948422dc869e1382b0b1.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      133,
+      364,
+      166,
+      390
+    ]
+  },
+  {
+    "type": "text",
+    "text": "孙青扬作者",
+    "text_level": 2,
+    "page_idx": 8,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      176,
+      364,
+      305,
+      382
+    ]
+  },
+  {
+    "type": "text",
+    "text": "是的，他们都是这样干的",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      174,
+      385,
+      385,
+      428
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e89a28eb26b8b2f0abae9953d6df092bb5bf30955657e840e9d2d158d0d98b12.jpg",
+    "page_idx": 8,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      696,
+      321,
+      854,
+      429
+    ]
+  },
+  {
+    "type": "text",
+    "text": "⽤MCPHub搭建本地⾃⼰的MCP平台 - 53AI-AI知识库|⼤模型知识库|⼤模型训练|智能体开发",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      448,
+      857,
+      468
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2.4 如何编写⾃⼰的MCP服务",
+    "text_level": 2,
+    "page_idx": 8,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      501,
+      401,
+      525
+    ]
+  },
+  {
+    "type": "text",
+    "text": "mcp-server案例分享-⼿搓⼀个MCP-server，⼿把⼿教你从本地开发到云部署全流程实战 - ⽂章 -开发者社区 - ⽕⼭引擎",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      76,
+      546,
+      915,
+      590
+    ]
+  },
+  {
+    "type": "text",
+    "text": "下⼀步计划在本地⼿搓⼀个MCP服务，看在dify中ollama的deepseek能否调⽤这个服务，如果可以，说明就是模型的算⼒不够，导致不能成功⽣成图形。",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      602,
+      916,
+      647
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3 gpt-vis-api部署",
+    "text_level": 2,
+    "page_idx": 8,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      684,
+      328,
+      712
+    ]
+  },
+  {
+    "type": "text",
+    "text": "部署了apconw/gpt-vis-api服务，可以接收 JSON 格式的数据请求，使⽤ AntV/G ⽣成图表（如折线图、柱状图等），将图表图⽚上传⾄ MinIO 存储并返回图⽚的预签名 URL 供前端访问",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      71,
+      731,
+      906,
+      776
+    ]
+  },
+  {
+    "type": "text",
+    "text": "在mcp-server-chart进⾏apconw/gpt-vis-api服务的配置",
+    "page_idx": 8,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      71,
+      787,
+      558,
+      809
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0dab6a99e879e774e0ab91cfab5feb695cad0878e36e3f6c2dd5a9498dfb255b.jpg",
+    "page_idx": 9,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      78,
+      44,
+      919,
+      422
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.1 本地测试",
+    "text_level": 2,
+    "page_idx": 9,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      457,
+      217,
+      479
+    ]
+  },
+  {
+    "type": "text",
+    "text": "测试⽤例1",
+    "text_level": 2,
+    "page_idx": 9,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      500,
+      160,
+      517
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2f956114ad70ce2bdb390056d1ce75ccd3864eb4b5bd133fc0c8c9bf6e086407.jpg",
+    "page_idx": 10,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      78,
+      42,
+      919,
+      422
+    ]
+  },
+  {
+    "type": "text",
+    "text": "测试⽤例2",
+    "text_level": 2,
+    "page_idx": 10,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      436,
+      163,
+      454
+    ]
+  },
+  {
+    "type": "text",
+    "text": "E:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"line\\\",\\\"data\\\":[{\\\"time\\\": \\\"2025-05\\\",\\\"value\\\": 512},{\\\"time\\\": \\\"2025-06\\\",\\\"value\\\": 1024}]}\" {\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955070350_nvjeflov.png\", \"message\":\"图表生成 并上传成功\"}\nE:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"sankey\\\",\\\"data\\\":[{\\\"source\\\":\\\"访问网站\\\",\\\"target\\\":\\\"浏览商品\\\",\\\"value\\\":1500},{\\\"source\\\":\\\"浏 览商品\\\",\\\"target\\\":\\\"加入购物车\\\",\\\"value\\\"：900},{\\\"source\\\"：\\\"加入购物车\\\",\\\"target\\\"：\\\"进入结算\\\",\\\"value\\\"：600} {\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\"：\\\"完成支付\\\",\\\"value\\\"：400},{\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\":\\\"放弃结算\\\",\\ \"value\\\":200},{\\\"source\\\":\\\"加入购物车\\\",\\\"target\\\":\\\"离开网站\\\",\\\"value\\\"：300},{\\\"source\\\":\\\"浏览商品\\\",\\\"target\\\" :\\\"离开网站\\\",\\\"value\\\":600},{\\\"source\\\":\\\"访问网站\\\"\\\"target\\\":\\\"立即离开\\\".\\\"value\\\":500}].\\\"nodeAlign\\\":\\\"cent er\\\",\\\"style\\\":{\\\"backgroundColor\\\":\\\"#f8f9fa\\\",\\\"palette\\\":[\\\"#4e79a7\\\",\\\"#f28e2b\\\",\\\"#e15759\\\",\\\"#76b7b2\\\",\\\"#59a14 f\\\",\\\"#edc948\\\",\\\"#b07aa1\\\",\\\"#9c755f\\\"],\\\"texture\\\": \\\"default\\\"},\\\"theme\\\":{\\\"fontFamily\\\": \\\"WenQuanYi Zen Hei\\\"},\\\" width\\\":800,\\\"height\\\":500,\\\"title\\\":\\\"用户购买旅程桑基图\\\",\\\"source\\\":\\\"mcp-server-chart\\\"}\"\n{\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955231693_ltlm2muq.png\",\"message\":\"图表生成 并上传成功\"}",
+    "list_items": [
+      "E:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"line\\\",\\\"data\\\":[{\\\"time\\\": \\\"2025-05\\\",\\\"value\\\": 512},{\\\"time\\\": \\\"2025-06\\\",\\\"value\\\": 1024}]}\" {\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955070350_nvjeflov.png\", \"message\":\"图表生成 并上传成功\"}",
+      "E:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"sankey\\\",\\\"data\\\":[{\\\"source\\\":\\\"访问网站\\\",\\\"target\\\":\\\"浏览商品\\\",\\\"value\\\":1500},{\\\"source\\\":\\\"浏 览商品\\\",\\\"target\\\":\\\"加入购物车\\\",\\\"value\\\"：900},{\\\"source\\\"：\\\"加入购物车\\\",\\\"target\\\"：\\\"进入结算\\\",\\\"value\\\"：600} {\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\"：\\\"完成支付\\\",\\\"value\\\"：400},{\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\":\\\"放弃结算\\\",\\ \"value\\\":200},{\\\"source\\\":\\\"加入购物车\\\",\\\"target\\\":\\\"离开网站\\\",\\\"value\\\"：300},{\\\"source\\\":\\\"浏览商品\\\",\\\"target\\\" :\\\"离开网站\\\",\\\"value\\\":600},{\\\"source\\\":\\\"访问网站\\\"\\\"target\\\":\\\"立即离开\\\".\\\"value\\\":500}].\\\"nodeAlign\\\":\\\"cent er\\\",\\\"style\\\":{\\\"backgroundColor\\\":\\\"#f8f9fa\\\",\\\"palette\\\":[\\\"#4e79a7\\\",\\\"#f28e2b\\\",\\\"#e15759\\\",\\\"#76b7b2\\\",\\\"#59a14 f\\\",\\\"#edc948\\\",\\\"#b07aa1\\\",\\\"#9c755f\\\"],\\\"texture\\\": \\\"default\\\"},\\\"theme\\\":{\\\"fontFamily\\\": \\\"WenQuanYi Zen Hei\\\"},\\\" width\\\":800,\\\"height\\\":500,\\\"title\\\":\\\"用户购买旅程桑基图\\\",\\\"source\\\":\\\"mcp-server-chart\\\"}\"",
+      "{\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955231693_ltlm2muq.png\",\"message\":\"图表生成 并上传成功\"}"
+    ],
+    "list_type": "text_list",
+    "list_attribute": "unordered",
+    "page_idx": 10,
+    "_mineru_v2_type": "list",
+    "bbox": [
+      76,
+      469,
+      919,
+      650
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/c544c8aeb2b22501705e740ff3cc3a88c0648926e627834629dcfb34cbf6bb57.jpg",
+    "image_caption": [
+      "用户购买旅程桑基图"
+    ],
+    "page_idx": 11,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      89,
+      87,
+      911,
+      439
+    ],
+    "img_caption": [
+      "用户购买旅程桑基图"
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.2 Dify测试",
+    "text_level": 2,
+    "page_idx": 11,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      477,
+      222,
+      501
+    ]
+  },
+  {
+    "type": "text",
+    "text": "node build/index.js --transport sse 启动MCP服务，运⾏在1122端⼝",
+    "page_idx": 11,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      520,
+      651,
+      540
+    ]
+  },
+  {
+    "type": "text",
+    "text": "台湾地区海空力量包括哪些组织?",
+    "text_level": 2,
+    "page_idx": 12,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      205,
+      113,
+      447,
+      132
+    ]
+  },
+  {
+    "type": "text",
+    "text": "工作流>",
+    "text_level": 2,
+    "page_idx": 12,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      200,
+      162,
+      281,
+      179
+    ]
+  },
+  {
+    "type": "text",
+    "text": "台湾地区的海空力量主要由海军和空军两大分支组成，具体下属组织包括：",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      191,
+      185,
+      508,
+      224
+    ]
+  },
+  {
+    "type": "text",
+    "text": "海军：",
+    "text_level": 2,
+    "page_idx": 12,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      192,
+      234,
+      238,
+      253
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1. 国防部海军司令部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      207,
+      265,
+      362,
+      284
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2. 海军舰队指挥部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      205,
+      287,
+      348,
+      308
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3. 海军保修指挥部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      205,
+      310,
+      348,
+      330
+    ]
+  },
+  {
+    "type": "text",
+    "text": "4. 海军第168舰队",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      205,
+      334,
+      343,
+      353
+    ]
+  },
+  {
+    "type": "text",
+    "text": "5. 海军第131舰队",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      207,
+      357,
+      343,
+      376
+    ]
+  },
+  {
+    "type": "text",
+    "text": "6. 海军第192舰队",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      205,
+      380,
+      343,
+      400
+    ]
+  },
+  {
+    "type": "text",
+    "text": "7. 海军第151舰队",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      207,
+      404,
+      343,
+      422
+    ]
+  },
+  {
+    "type": "text",
+    "text": "8. 海军第124舰队",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      205,
+      426,
+      343,
+      446
+    ]
+  },
+  {
+    "type": "text",
+    "text": "9. 海军陆战队指挥部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      205,
+      449,
+      362,
+      469
+    ]
+  },
+  {
+    "type": "text",
+    "text": "10. 海军制海飞弹指挥部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      199,
+      473,
+      379,
+      492
+    ]
+  },
+  {
+    "type": "text",
+    "text": "11. 海军海洋监侦指挥部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      197,
+      496,
+      379,
+      515
+    ]
+  },
+  {
+    "type": "text",
+    "text": "空军：",
+    "text_level": 2,
+    "page_idx": 12,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      192,
+      526,
+      238,
+      545
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1. 国防部空军司令部",
+    "page_idx": 12,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      207,
+      555,
+      362,
+      575
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/4e87d15b56d56e5e352bd5b1ba3800e7e17dccdf2f5b2a17805328e6b602714d.jpg",
+    "page_idx": 13,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      75,
+      45,
+      916,
+      425
+    ]
+  },
+  {
+    "type": "table",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/cb947015a496ffd96206a9265eb9e4babdd5cff4d25abe8d65f8fd514db9f245.jpg",
+    "table_body": "<table><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>处理后的图表配置：{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;type&quot;: &quot;organization-chart&quot;,</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;data&quot;: {</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;台湾地区海空力量&quot;</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;description&quot;：&quot;基于用户提供的资料整理&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: [</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;: &quot;海军&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;description&quot;：&quot;海军司令部及下属组织&#x27;</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: [</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;国防部海军司令部&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军舰队指挥部&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军保修指挥部&quot;</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军168舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;:[]</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军131舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军192舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军151舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api 2025-11-24 11:57:41</td><td>&quot;children&quot;: []</td></tr><tr><td>gpt-vis-api 2025-11-24 11:57:41</td><td>}, {</td></tr><tr><td>gpt-vis-api</td><td>&quot;name&quot;：&quot;海军124舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api 2025-11-24 11:57:41</td><td>&quot;children&quot;: []</td></tr><tr><td>gpt-vis-api</td><td></td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>}, {</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军陆战队指挥军部&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td></td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军制海飞单指挥部&quot;</td></tr></table>",
+    "table_caption": [
+      "图⽚可在 MinIO中查看"
+    ],
+    "table_type": "simple_table",
+    "table_nest_level": 1,
+    "page_idx": 14,
+    "_mineru_v2_type": "table",
+    "bbox": [
+      71,
+      44,
+      653,
+      738
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/6a7034ba82548af5b8794c56ada1d310b6d2fb5ad3ab0fb5bb2ff11d3ef8f327.jpg",
+    "page_idx": 15,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      44,
+      919,
+      422
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.3 Qwen3:32b",
+    "text_level": 2,
+    "page_idx": 15,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      458,
+      258,
+      479
+    ]
+  },
+  {
+    "type": "text",
+    "text": "启动mcp-server-chart服务node build/index.js --transport sse",
+    "page_idx": 15,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      500,
+      385,
+      553
+    ]
+  },
+  {
+    "type": "text",
+    "text": "在docker中查看gpt-vis-api，qwen3:32b没有成功调⽤到gpt-vis-api服务搜索⼩模型调⽤MCP服务的案例",
+    "page_idx": 15,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      597,
+      687,
+      647
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.4 ⼩模型调⽤MCP",
+    "text_level": 2,
+    "page_idx": 15,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      713,
+      303,
+      736
+    ]
+  },
+  {
+    "type": "text",
+    "text": "⽬前图表⽣成MCP服务存在的问题：qwen3:32b以及deepseek:70b模型运⾏到⼀半都会卡住",
+    "page_idx": 15,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      756,
+      831,
+      775
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/63a37baf4fe15a77e327dfd4f041c89bca97eab4f80bc5d98eced6ae8a7a69bd.jpg",
+    "page_idx": 16,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      171,
+      190,
+      200,
+      210
+    ]
+  },
+  {
+    "type": "text",
+    "text": "预览",
+    "text_level": 2,
+    "page_idx": 16,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      165,
+      64,
+      209,
+      84
+    ]
+  },
+  {
+    "type": "text",
+    "text": "台东县包括哪些军用设施，文字和图表结合起来回答",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      246,
+      127,
+      516,
+      167
+    ]
+  },
+  {
+    "type": "text",
+    "text": "工作流>",
+    "text_level": 2,
+    "page_idx": 16,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      246,
+      198,
+      328,
+      214
+    ]
+  },
+  {
+    "type": "text",
+    "text": "对不起，我还没有学会回答这个问题。如果你",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      238,
+      219,
+      555,
+      258
+    ]
+  },
+  {
+    "type": "text",
+    "text": "对于本地模型未能成功调⽤MCP服务的问题，⽬前有三个怀疑：",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      329,
+      588,
+      347
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1.模型没有调⽤MCP服务的能⼒",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      361,
+      334,
+      378
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2.模型能⼒不⾜，⽆法跟MCP服务需要的格式匹配——",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      392,
+      486,
+      411
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.MCP服务的⼯具太多，过于复杂，导致所需的token超过了模型本身的上下⽂",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      425,
+      718,
+      444
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/1cf00a9606a5e263cd1e5cdf9be70da8b9b795c137e3c0fd62094b42d84056bb.jpg",
+    "page_idx": 16,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      80,
+      458,
+      101,
+      477
+    ]
+  },
+  {
+    "type": "text",
+    "text": "本地Qwen3-4B也能跑通MCP MCP代码实战",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      78,
+      458,
+      506,
+      478
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/993f7e915163a03cd84198aad6aad0d3622e43b8486b65ebccc030f59151e10d.jpg",
+    "page_idx": 16,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      80,
+      491,
+      101,
+      510
+    ]
+  },
+  {
+    "type": "text",
+    "text": "vllm部署与mcp⼯具实践测试",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      101,
+      492,
+      343,
+      511
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.4.1 问题1",
+    "text_level": 2,
+    "page_idx": 16,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      539,
+      169,
+      556
+    ]
+  },
+  {
+    "type": "text",
+    "text": "这周模仿上⾯的⽂章实现了简单的MCP服务，并且⽤Dify上的⼩模型进⾏了测试",
+    "page_idx": 16,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      574,
+      725,
+      592
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "code",
+    "code_body": "MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if __name__ == \"__main__\":28 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"streamable-http\", # 使⽤⽀持流式传输的HTTP协议 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )",
+    "content": "MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if __name__ == \"__main__\":28 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"streamable-http\", # 使⽤⽀持流式传输的HTTP协议 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )",
+    "code_language": "python",
+    "page_idx": 17,
+    "_mineru_v2_type": "code",
+    "bbox": [
+      86,
+      49,
+      918,
+      781
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "code",
+    "code_body": "MCPTest Python 1 import asyncio 2 import httpx 3 from fastmcp import Client 4 from fastmcp.client.transports import StreamableHttpTransport 5 async def test_mcp_service():6 7 \"\"\"测试FastMCP服务的异步函数\"\"\" 8 # 定义服务URL，与服务端配置保持⼀致 9 SERVICE_URL = \"http://127.0.0.1:4200/demo\" 10 11 try: 12 # 创建基于HTTP的流传输客户端 13 transport = StreamableHttpTransport(url=SERVICE_URL) 14 # 使⽤上下⽂管理器创建客户端会话 15 async with Client(transport) as client: 16 print(f\"成功连接到MCP服务: {SERVICE_URL}\") 17 18 # 发送ping请求测试服务连通性 19 await client.ping() 20 print(\"服务⼼跳检测成功\") 21 22 # 获取服务端注册的所有⼯具 23 tools = await client.list_tools() 24 tool_names = [tool.name for tool in tools] 25 print(f\"可⽤⼯具列表: {', '.join(tool_names)}\") 26 27 # ==== ⼯具调⽤示例 ==== 28 29 # 1. 调⽤天⽓⼯具查询北京天⽓ 30 weather_result = await client.call_tool(\"weather\", {\"city\": \"北京\"}) 31 # 直接使⽤结果对象 32 print(f\"北京天⽓查询结果: {weather_result}\") 33 34 # 2. 如果存在股票⼯具，调⽤股票⼯具 35 if \"stock\" in tool_names: 36 stock_result = await client.call_tool(\"stock\", {\"code\": \"6 00519\"}) 37 print(f\"股票查询结果: {stock_result}\") 38 else: 39 print(\"股票⼯具不存在，跳过股票查询\") 40 41 # 3. 测试错误处理（查询不存在的城市） 42 error_result = await client.call_tool(\"weather\", {\"city\": \"东 京\"})",
+    "content": "MCPTest Python 1 import asyncio 2 import httpx 3 from fastmcp import Client 4 from fastmcp.client.transports import StreamableHttpTransport 5 async def test_mcp_service():6 7 \"\"\"测试FastMCP服务的异步函数\"\"\" 8 # 定义服务URL，与服务端配置保持⼀致 9 SERVICE_URL = \"http://127.0.0.1:4200/demo\" 10 11 try: 12 # 创建基于HTTP的流传输客户端 13 transport = StreamableHttpTransport(url=SERVICE_URL) 14 # 使⽤上下⽂管理器创建客户端会话 15 async with Client(transport) as client: 16 print(f\"成功连接到MCP服务: {SERVICE_URL}\") 17 18 # 发送ping请求测试服务连通性 19 await client.ping() 20 print(\"服务⼼跳检测成功\") 21 22 # 获取服务端注册的所有⼯具 23 tools = await client.list_tools() 24 tool_names = [tool.name for tool in tools] 25 print(f\"可⽤⼯具列表: {', '.join(tool_names)}\") 26 27 # ==== ⼯具调⽤示例 ==== 28 29 # 1. 调⽤天⽓⼯具查询北京天⽓ 30 weather_result = await client.call_tool(\"weather\", {\"city\": \"北京\"}) 31 # 直接使⽤结果对象 32 print(f\"北京天⽓查询结果: {weather_result}\") 33 34 # 2. 如果存在股票⼯具，调⽤股票⼯具 35 if \"stock\" in tool_names: 36 stock_result = await client.call_tool(\"stock\", {\"code\": \"6 00519\"}) 37 print(f\"股票查询结果: {stock_result}\") 38 else: 39 print(\"股票⼯具不存在，跳过股票查询\") 40 41 # 3. 测试错误处理（查询不存在的城市） 42 error_result = await client.call_tool(\"weather\", {\"city\": \"东 京\"})",
+    "code_language": "python",
+    "page_idx": 18,
+    "_mineru_v2_type": "code",
+    "bbox": [
+      84,
+      51,
+      919,
+      948
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "code",
+    "code_body": "<sup>43</sup><sub>44</sub> print(f\"错误处理测试结果: {error_result}\")45# 处理连接失败异常46except httpx.ConnectError:47print(f\"连接失败！请检查服务是否运⾏在 {SERVICE_URL}\")48# 处理其他未知异常49except Exception as e:50print(f\"测试失败: {str(e)}\")5152if __name__ == \"__main__\":53# 脚本⼊⼝点54print(\"=\"*50)55print(\"FastMCP服务测试脚本\")56print(\"=\"*50)57# 运⾏异步测试函数58asyncio.run(test_mcp_service())",
+    "content": "<sup>43</sup><sub>44</sub> print(f\"错误处理测试结果: {error_result}\")45# 处理连接失败异常46except httpx.ConnectError:47print(f\"连接失败！请检查服务是否运⾏在 {SERVICE_URL}\")48# 处理其他未知异常49except Exception as e:50print(f\"测试失败: {str(e)}\")5152if __name__ == \"__main__\":53# 脚本⼊⼝点54print(\"=\"*50)55print(\"FastMCP服务测试脚本\")56print(\"=\"*50)57# 运⾏异步测试函数58asyncio.run(test_mcp_service())",
+    "code_language": "python",
+    "page_idx": 19,
+    "_mineru_v2_type": "code",
+    "bbox": [
+      89,
+      42,
+      743,
+      348
+    ]
+  },
+  {
+    "type": "text",
+    "text": "命令⾏测试",
+    "text_level": 2,
+    "page_idx": 19,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      359,
+      171,
+      377
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "(hgmcp) PS D:\\software\\Vscode_File\\hgmcp> python mcptest.py FastMCP服务测试脚本 可用工具列表：weather，stock 北京天气查询结果:CallToolResult(content=[TextContent(type='text'，text='{\"temp\":25,\"condition\":\"晴\"}',annotations=None,meta=None)],structured_content={'temp':25,'condition':'晴'}，meta=None,dat a={'temp': 25, 'condition': '晴'l, is error=False) 股票查询结果: CallToolResult(content=[TextContent(type='text',text='{\"name\":\"贵州茅台\",\"price\":1825.0}',annotations=None,meta=None)],structured_content={'name':'贵州茅台','price':1825.0},meta=N one, data={'name': '贵州茅台', 'price': 1825.0}, is_error=False) 错误处理测试结果：callToolResult(content=[TextContent(type='text',text='{\"error\":\"未找到该城市\"}'，annotations=None，meta=None)],structured_content={'error':'未找到该城市'}，meta=None,data={'error :'未找到该城市'}，is_error=False) (hgmcp) PS D:\\software\\Vscode_File\\hgmcp>",
+    "content": "(hgmcp) PS D:\\software\\Vscode_File\\hgmcp> python mcptest.py FastMCP服务测试脚本 可用工具列表：weather，stock 北京天气查询结果:CallToolResult(content=[TextContent(type='text'，text='{\"temp\":25,\"condition\":\"晴\"}',annotations=None,meta=None)],structured_content={'temp':25,'condition':'晴'}，meta=None,dat a={'temp': 25, 'condition': '晴'l, is error=False) 股票查询结果: CallToolResult(content=[TextContent(type='text',text='{\"name\":\"贵州茅台\",\"price\":1825.0}',annotations=None,meta=None)],structured_content={'name':'贵州茅台','price':1825.0},meta=N one, data={'name': '贵州茅台', 'price': 1825.0}, is_error=False) 错误处理测试结果：callToolResult(content=[TextContent(type='text',text='{\"error\":\"未找到该城市\"}'，annotations=None，meta=None)],structured_content={'error':'未找到该城市'}，meta=None,data={'error :'未找到该城市'}，is_error=False) (hgmcp) PS D:\\software\\Vscode_File\\hgmcp>",
+    "page_idx": 19,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      80,
+      387,
+      919,
+      489
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Dify测试",
+    "text_level": 2,
+    "page_idx": 19,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      507,
+      150,
+      526
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "code",
+    "code_body": "▼ MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if28 __name__ == \"__main__\": 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"sse\", 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )",
+    "content": "▼ MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if28 __name__ == \"__main__\": 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"sse\", 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )",
+    "code_language": "python",
+    "page_idx": 20,
+    "_mineru_v2_type": "code",
+    "bbox": [
+      88,
+      49,
+      918,
+      787
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9d2e07af6efb250893fb5d7c6630ebd457a74e3ac742edbac1ccce035e423c6b.jpg",
+    "page_idx": 21,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      42,
+      921,
+      422
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/f3d31e2b8304d186e52242048da8661c979af53b12d619beb1dfcb776e3c433f.jpg",
+    "image_caption": [
+      "qwen3:8b也可以调⽤这个简单的MCP服务，32b不能调⽤chart的MCP服务应该就是模型能⼒问题，不能⽣成指定的格式，⽽不是模型没有Functioncall"
+    ],
+    "page_idx": 21,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      433,
+      919,
+      813
+    ],
+    "img_caption": [
+      "qwen3:8b也可以调⽤这个简单的MCP服务，32b不能调⽤chart的MCP服务应该就是模型能⼒问题，不能⽣成指定的格式，⽽不是模型没有Functioncall"
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/c2e3f8ed153ca7c0a7f31a30176b9826f43404237d44ec73c34d54b4cdc24057.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      357,
+      178,
+      380,
+      193
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/340e435ad3cc36dc6fd0d96efded30edfd180deb074502dee740515b9f195afb.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      406,
+      178,
+      429,
+      193
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/8c3a00be8a6878756a70466a9074ea19731af969d1a6197bf7d1d175f32e22b3.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      366,
+      114,
+      388,
+      131
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2004f0eb7ea34fa858b277c9b2b0453b43c2424be9403fd5488bec47e1afc7e4.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      93,
+      53,
+      151,
+      101
+    ]
+  },
+  {
+    "type": "text",
+    "text": "感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      163,
+      88,
+      880,
+      132
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/a39fa6c72473d460ef7bb772e2771cbdd75ef7b1f8787f6caec79daf43c1da9e.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      318,
+      114,
+      341,
+      131
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/64a1d12d6d66f39e9e7ebff262fdc4fd8f832e694b66621a65c1f9fe14577e9f.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      165,
+      146,
+      197,
+      170
+    ]
+  },
+  {
+    "type": "text",
+    "text": "新建文件夹X这个和模型能力有关。你可以设置最大tool_calls的递归层数",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      202,
+      148,
+      851,
+      194
+    ]
+  },
+  {
+    "type": "text",
+    "text": "MCP是怎么对接大模型的？抓取AI提示词，拆解MCP的底层原理",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      89,
+      218,
+      498,
+      233
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e6b47c2f1172b9db8e7c50d8adf485ae13f70dfac9b4c3f3991560d59888de9a.jpg",
+    "page_idx": 22,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      93,
+      260,
+      906,
+      613
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.4.2 问题2",
+    "text_level": 2,
+    "page_idx": 22,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      647,
+      178,
+      665
+    ]
+  },
+  {
+    "type": "text",
+    "text": "在后台进⾏监控，发现⼤模型其实成功访问了1122端⼝，并且传输了⼀些数据，但是后台显示⼯具调⽤失败",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      71,
+      681,
+      906,
+      724
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3.4.3 总结",
+    "text_level": 2,
+    "page_idx": 22,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      752,
+      166,
+      771
+    ]
+  },
+  {
+    "type": "text",
+    "text": "⽬前已经测试了简单的MCP服务，⼩模型也可以调⽤",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      787,
+      508,
+      806
+    ]
+  },
+  {
+    "type": "text",
+    "text": "但是qwen 32b也调⽤不了chart的mcp，并且看到别⼈也存在的相同的问题。",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      820,
+      694,
+      838
+    ]
+  },
+  {
+    "type": "text",
+    "text": "下⼀步尝试的解决⽅案是：这个mcp有很多种⼯具，可以⾃⼰实现⽣成图表的⼀到两个⼯具，限制MCP⼯具的数量，应该可以实现32b的调⽤",
+    "page_idx": 22,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      852,
+      911,
+      895
+    ]
+  },
+  {
+    "type": "text",
+    "text": "4 调⽤细节",
+    "text_level": 2,
+    "page_idx": 23,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      46,
+      223,
+      71
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9dfb8bf912054709911ac5eff9b7b835e88d4944768c8e1d169effc02c67fe7b.jpg",
+    "image_caption": [
+      "deepseek-v3"
+    ],
+    "page_idx": 23,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      122,
+      918,
+      434
+    ],
+    "img_caption": [
+      "deepseek-v3"
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/6261ab9f3b66e2dbae9cff54b6fb4d31536cb3b81983005cd81531a9c00b1ba7.jpg",
+    "image_caption": [
+      "qwen3:32b可以看到qwen3:32b没有RPC 5 tools/call的调⽤， 然后直接卡住了"
+    ],
+    "page_idx": 23,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      78,
+      474,
+      918,
+      761
+    ],
+    "img_caption": [
+      "qwen3:32b可以看到qwen3:32b没有RPC 5 tools/call的调⽤， 然后直接卡住了"
+    ]
+  },
+  {
+    "type": "text",
+    "text": "联⽹的qwen3:32b可以调⽤到MCP服务，但是会乱码",
+    "page_idx": 23,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      838,
+      509,
+      857
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9d4ae5cb40e880a59c540de16d0ed0023265a8a05c10c184c5279fe4c469bf06.jpg",
+    "page_idx": 24,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      42,
+      919,
+      367
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e25437bf071639fde8e283300d3436c24124e5e94dbc4945638cd7b5017c77ed.jpg",
+    "page_idx": 24,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      78,
+      378,
+      919,
+      886
+    ]
+  },
+  {
+    "type": "text",
+    "text": "从ollama pull qwen3:30b，看是不是模型没有更新到最新导致不⽀持MCP的tools/call调⽤，结果本地的qwen3:30b也不能调⽤",
+    "page_idx": 24,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      900,
+      908,
+      945
+    ]
+  },
+  {
+    "type": "text",
+    "text": "是模型能⼒的问题吗？",
+    "text_level": 2,
+    "page_idx": 25,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      75,
+      47,
+      254,
+      64
+    ]
+  },
+  {
+    "type": "text",
+    "text": "联⽹的qwen3:14b可以调⽤到MCP服务，虽然格式错误没有返回图⽚，但是确实发出了请求。",
+    "page_idx": 25,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      80,
+      826,
+      98
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/670ed2ca0315dd7fd70ef88479a1fb6c9ddc89a0e850955fab79a01a288a1e1d.jpg",
+    "page_idx": 25,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      80,
+      109,
+      919,
+      462
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e859de12da36d9d1ddeb00ffe17e7dc086f9388d397978781e4c4928643b4b03.jpg",
+    "image_footnote": [
+      "可能是本地部署的qwen3模型没有配置MCP服务相应的格式，导致不能进⾏调⽤"
+    ],
+    "page_idx": 26,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      78,
+      40,
+      919,
+      593
+    ],
+    "img_footnote": [
+      "可能是本地部署的qwen3模型没有配置MCP服务相应的格式，导致不能进⾏调⽤"
+    ]
+  },
+  {
+    "type": "text",
+    "text": "5 替代⽅案",
+    "text_level": 2,
+    "page_idx": 26,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      695,
+      225,
+      723
+    ]
+  },
+  {
+    "type": "text",
+    "text": "没有找到遇到相同问题的案例",
+    "text_level": 2,
+    "page_idx": 26,
+    "_mineru_v2_type": "title",
+    "bbox": [
+      73,
+      744,
+      320,
+      763
+    ]
+  },
+  {
+    "type": "text",
+    "text": "⽤⼯具进⾏替代？在本地部署合适的⼯具，例如只设置条形图和饼状图，在提示词⾥指定需要⽣成的格式，让模型按照格式⽣成，直接把数据传到⼯具中，⼯具⽣成图形并返回。",
+    "page_idx": 26,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      71,
+      777,
+      908,
+      821
+    ]
+  },
+  {
+    "type": "text",
+    "text": "调⽤⼯具测试",
+    "page_idx": 26,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      833,
+      191,
+      852
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/022d4fa05a921e7e20b52c11351cec770adefdf7e45f111d2b35fca1af268374.jpg",
+    "page_idx": 27,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      76,
+      41,
+      921,
+      414
+    ]
+  },
+  {
+    "type": "chart",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/51c6b2b7bab7c76e276a16d8edd9de97b55367acc8bd52b3c685ef9758e7d149.jpg",
+    "page_idx": 27,
+    "_mineru_v2_type": "chart",
+    "bbox": [
+      78,
+      440,
+      919,
+      787
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0ed618963bfcadd441b505152e2390c95ca5f8ca034c4a8efb966ac1cedd3ae7.jpg",
+    "page_idx": 27,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      96,
+      840,
+      199,
+      919
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Dify纯内⽹dify插件离线安装⽀持多平台多架构跨架构(xjl456852原创) - 三杯两盏淡酒 - 博客园",
+    "page_idx": 27,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      83,
+      799,
+      887,
+      819
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Dify 实战<sup>：</sup>纯内⽹dify插件离线安装解决",
+    "page_idx": 27,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      212,
+      861,
+      550,
+      880
+    ]
+  },
+  {
+    "type": "text",
+    "text": "GitHub - junjiem/dify-plugin-repackaging: Scripting tool for downloading Dify plugin package from Dify Marketplace and Github and repackaging [true] offline package.",
+    "page_idx": 28,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      79,
+      916,
+      126
+    ]
+  },
+  {
+    "type": "text",
+    "text": "这个项⽬⽬前看起来还存在⼀些问题，并且需要在linux环境下进⾏离线重新打包",
+    "page_idx": 28,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      137,
+      727,
+      157
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/edc96ff703aa8cd136dc1205eeda891df21088db04e69e316022da11319987ec.jpg",
+    "page_idx": 28,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      75,
+      164,
+      921,
+      518
+    ]
+  },
+  {
+    "type": "text",
+    "text": "在宝德服务器上对antv的可视化⼯具进⾏解压",
+    "page_idx": 28,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      530,
+      447,
+      549
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "LaTeX 1 FORCE_VERIFYING_SIGNATURE=false 2 PLUGIN_MAX_PACKAGE_SIZE=524288000 3 NGINX_CLIENT_MAX_BODY_SIZE=500M",
+    "content": "LaTeX 1 FORCE_VERIFYING_SIGNATURE=false 2 PLUGIN_MAX_PACKAGE_SIZE=524288000 3 NGINX_CLIENT_MAX_BODY_SIZE=500M",
+    "page_idx": 28,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      76,
+      560,
+      916,
+      671
+    ]
+  },
+  {
+    "type": "text",
+    "text": "只修改了第⼀条权限，第⼆和第三已经有⼈修改过了，后续⽣产需要重新把权限设为true",
+    "page_idx": 28,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      685,
+      795,
+      705
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "重启docker还是不⾏，遇到异常信息： plugin verification has been enabled, and t he plugin you want to install has a bad signature",
+    "content": "重启docker还是不⾏，遇到异常信息： plugin verification has been enabled, and t he plugin you want to install has a bad signature",
+    "page_idx": 28,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      73,
+      717,
+      921,
+      763
+    ]
+  },
+  {
+    "type": "text",
+    "text": "插件安装过程中遇到异常应该如何处理？",
+    "page_idx": 28,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      796,
+      509,
+      819
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "问题描述：插件安装过程中遇到异常信息： plugin verification has been enabled, and the plugin you want to install has a bad signature 。应该如何处理？解决⽅案：在 /docker/.env 配置⽂件末尾添加字段",
+    "content": "问题描述：插件安装过程中遇到异常信息： plugin verification has been enabled, and the plugin you want to install has a bad signature 。应该如何处理？解决⽅案：在 /docker/.env 配置⽂件末尾添加字段",
+    "page_idx": 28,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      73,
+      838,
+      921,
+      911
+    ]
+  },
+  {
+    "type": "text",
+    "text": "FORCE_VERIFYING_SIGNATURE=false 。然后，运⾏以下命令重启 Dify 服务：",
+    "page_idx": 28,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      81,
+      915,
+      797,
+      936
+    ]
+  },
+  {
+    "type": "code",
+    "sub_type": "algorithm",
+    "code_body": "解决⽅案 Plain Text 1 cd docker 2 docker compose down 3 docker compose up -d",
+    "content": "解决⽅案 Plain Text 1 cd docker 2 docker compose down 3 docker compose up -d",
+    "page_idx": 29,
+    "_mineru_v2_type": "algorithm",
+    "bbox": [
+      78,
+      46,
+      916,
+      156
+    ]
+  },
+  {
+    "type": "text",
+    "text": "添加此字段后，Dify 平台将允许安装所有未在 Dify Marketplace 上架（审核）的插件，这可能带来安全⻛险。建议先在测试/沙盒环境中安装插件，确认其安全性后再安装到⽣产环境。",
+    "page_idx": 29,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      170,
+      918,
+      217
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/683a2147eeee14021b84247394c06a646cd732b04fc83f9d63271559f8e56003.jpg",
+    "page_idx": 29,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      78,
+      228,
+      916,
+      417
+    ]
+  },
+  {
+    "type": "text",
+    "text": "完成本地上传插件后进⾏测试",
+    "page_idx": 29,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      75,
+      438,
+      318,
+      457
+    ]
+  },
+  {
+    "type": "image",
+    "img_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/113fc9485e4a4f037967e01fa7c95751b53d30b36f140aa2c31647de93c606b5.jpg",
+    "page_idx": 29,
+    "_mineru_v2_type": "image",
+    "bbox": [
+      78,
+      465,
+      919,
+      847
+    ]
+  },
+  {
+    "type": "text",
+    "text": "1 台湾地区海空⼒量包括哪些组织？各个组织⼜由哪些机构构成？",
+    "page_idx": 29,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      71,
+      892,
+      601,
+      911
+    ]
+  },
+  {
+    "type": "text",
+    "text": "2 台湾地区爱国者导弹分布在哪些地⽅？这些地⽅的⼈⼝密度是多少？",
+    "page_idx": 29,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      924,
+      642,
+      943
+    ]
+  },
+  {
+    "type": "text",
+    "text": "3 台湾地区情报系统包括哪些部⻔？这些部⻔由哪些机构构成以及作⽤。",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      47,
+      656,
+      65
+    ]
+  },
+  {
+    "type": "text",
+    "text": "4 台湾地区海空⼒量分布在哪些地区？这些地区的经度/维度/地址是什么？",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      79,
+      678,
+      97
+    ]
+  },
+  {
+    "type": "text",
+    "text": "5 根据营区名字，⽐如安海营区的详细地址/经度/维度？空军台南基地有的详细地址/经度/维度？",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      111,
+      861,
+      130
+    ]
+  },
+  {
+    "type": "text",
+    "text": "6 台湾地区现役舰艇有哪些？列举其信息:xian号/型号/⺟港/率属单位。",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      142,
+      650,
+      161
+    ]
+  },
+  {
+    "type": "text",
+    "text": "7 根据任⼀舰名，获得其详细信息。",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      175,
+      361,
+      193
+    ]
+  },
+  {
+    "type": "text",
+    "text": "8 台湾地区海洋委员会海巡⼒量包括哪些？若有分⽀结构，请列出",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      208,
+      611,
+      224
+    ]
+  },
+  {
+    "type": "text",
+    "text": "9 台湾地区海空⼒量主要武器清单及数量。",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      239,
+      418,
+      257
+    ]
+  },
+  {
+    "type": "text",
+    "text": "10 台湾地区主要军⽤机场概况",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      272,
+      325,
+      290
+    ]
+  },
+  {
+    "type": "text",
+    "text": "11 空军台南基地的LATA代码是什么？驻军是什么联队？主要机型包括哪些？坐标是？",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      304,
+      764,
+      321
+    ]
+  },
+  {
+    "type": "text",
+    "text": "12 雄⻛三型反j导弹的主要参数？作战范围是？速度？制导系统是？研发机构是？重量弹径是？等等",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      335,
+      882,
+      353
+    ]
+  },
+  {
+    "type": "text",
+    "text": "13 台东县（台南/屏东/南投/云林等等）包括哪些军⽤设施？⽐如雷达设施/防空设施/港⼝设施/机场设施/营区设施/海巡设施/靶场设施等",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      367,
+      913,
+      410
+    ]
+  },
+  {
+    "type": "text",
+    "text": "14 空军岗⼭基地包括哪些部⻔？",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      424,
+      334,
+      441
+    ]
+  },
+  {
+    "type": "text",
+    "text": "15 hj左营基地包括哪些部⻔？位于台湾什么位置？",
+    "page_idx": 30,
+    "_mineru_v2_type": "paragraph",
+    "bbox": [
+      73,
+      457,
+      478,
+      474
+    ]
+  }
+]

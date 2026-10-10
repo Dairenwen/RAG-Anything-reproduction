@@ -1,0 +1,1032 @@
+{
+  "chunk-bf33c09cef21a9234b885adc19237c75": {
+    "tokens": 1200,
+    "content": "MCP服务\n\n 介绍\n 技术选型\n. antvis/mcp-server-chart\n. apconw/gpt-vis-api\n. MCPHub\n. 如何编写⾃⼰的MCP服务\n gpt-vis-api部署\n. 本地测试\n. Dify测试\n. Qwenb\n. ⼩模型调⽤MCP\n.. 问题\n.. 问题\n.. 总结\n 调⽤细节\n 替代⽅案\n插件安装过程中遇到异常应该如何处理？\n\n1 介绍\n\nMCP 全称 Model Context Protocol （中⽂名：模型上下⽂协议），是由 Anthropic 于 2024年 11 ⽉推出的开源协议。旨在解决不同⼤语⾔模型（LLM）与不同外部⼯具集成的标准化问题 。MCP 核⼼是让⼤模型能⽅便地调⽤多个⼯具，如本地⽂件、数据库、各⽹站数据等。\n\ndify v1.6.0 ⽀持双向MCP\n\n1. 可以直接从 Dify 调⽤任何 MCP 服务。⽆需局限于现有的 Dify 插件，⽽是可以利⽤强⼤的MCP 服务器。\n\n2. ⽀持将你的 Dify⼯作流作为 MCP 服务，⽆缝集成其他客户端。使得这些⼯具能够像原⽣扩展⼀样直接与您的 Dify 应⽤交互。\n\nhttps://dify.ai\n\nImagine if\n\nGreetings, Dify builders!\n\nWe've packed the early-summer stretch (Jun 1 – Jul 10) with upgrades you can ship today\n\n双向MCP(v1.6.0)\n\nTL;DR: 一键调用任何MCP服务器或发布您自己的服务器\n\n• Two-way MCP (v1.6.0): Call any MCP server or publish your own in one click.\n\n• Enhanced Workflow Debugging (v1.5.0): Inspect variables, rerun single nodes, fix fast.\n\n• Azure Al Content Safety Plugin: On-prem moderation for text + images.\n\n• 100 K GitHub Stars: Meet the 17 contributors powering the journey\n\nBuilt-in Two-Way MCP (v1.6.0)\n\nAgents and Workflows now speak MCP natively. Add Linear, Notion, Zapier (8 000+ apps) as tools, or expose your own Dify apps as MCP servers for any client to invoke—no glue code required.\n\n调⽤的是魔塔的MCP⼴场中的服务\n\nDify快速接⼊本地MCP服务示例\n\n超实⽤！Dify快速接⼊本地MCP服务\n\n⽬前遇到的问题，本地deepseek 70b ⽆法成功调⽤MCP服务\n\n2 技术选型\n\n2.1 antvis/mcp-server-chart\n\n之前根据 部署了ant提供的mcp服务mcp-【MCP-server-chart部署及踩坑建议】-CSDN博客server-chart\n\nGitHub - antvis/mcp-server-chart: ?? A visualization mcp contains 25+ visual charts using @antvis. Using for chart generation and data analysis.\n\n发现项⽬issues中作者提到这个需要⼀个远程服务\n\nhustcc last week\n\n这个mcp需要一个远程服务，你本机上是有网络可以连接远程吧? @tengjie107-netizer\n\n如果需要私有化还需部署\n\nGitHub - antvis/GPT-Vis: ?? GPT Vision, Open Source Vision components for GPTs, generative AI, and LLM projects. Not only UI Components.\n\nhustcc on May 26\n\nYou can use AntV's project GPT-Vis-SSR to deploy an HTTP service in a private environment, and then pass the URL address through env VIS_REQUEST_SERVER\n\n使用 GPT-Vis-SSR 包装成一个 post 服务，然后这个服务的地址写到VIS_REQUEST_SERVER.\n\nhustcc on May 26\n\n是的。\n\nimpor { render } from '@antv/gpt-vis-ssr'; const image = render(spec).toBuffer();\n\n然后把spec来源于post接口的参数，出参就是image，先存到服务器返回一个地址。\n\n具体配置⽅法\n\nPlain Text 1 { 2 \"mcpServers\": { 3 \"mcp-server-chart\": { 4 \"command\": \"npx\", 5 \"args\": [\"-y\", \"@antv/mcp-server-chart\"], 6 \"env\": { 7 \"VIS_REQUEST_SERVER\": \"<您的私有服务地址>\" 8 } 9 } 10 } 11 }\n\n技术实现步骤\n\n1. 部署私有服务：使⽤ AntV 的 GPT-Vis-SSR 项⽬在⾃⼰服务器部署 HTTP 服务\n\n2. 配置环境变量：将私有服务的 URL 设置为 VIS_REQUEST_SERVER\n\n3. API 接⼝规范：\n\n○ ⽅法: POST\n\n○ 参数: 图表配置数据，如 {\"type\":\"line\", \"data\":[...]}\n\n○ 返回: 包含⽣成图表图⽚URL的对象\n\n「⼀语成图」：GPT-Vis × MCP 让⼤模型「说句话就出可视化」-CSDN博客\n\n2.2 ap",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:235dd7c9304601b5451406189cfd41d7",
+      "default:extract:02174c65dea123c02a2e6021679a804b"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-bf33c09cef21a9234b885adc19237c75",
+    "page_idx": 0,
+    "page_idx_end": 4
+  },
+  "chunk-5e6331e7987020e8aab4119b9099c8c7": {
+    "tokens": 1200,
+    "content": "URL 设置为 VIS_REQUEST_SERVER\n\n3. API 接⼝规范：\n\n○ ⽅法: POST\n\n○ 参数: 图表配置数据，如 {\"type\":\"line\", \"data\":[...]}\n\n○ 返回: 包含⽣成图表图⽚URL的对象\n\n「⼀语成图」：GPT-Vis × MCP 让⼤模型「说句话就出可视化」-CSDN博客\n\n2.2 apconw/gpt-vis-api\n\n如何使⽤ AntV 的 GPT-Vis-SSR项⽬在⾃⼰服务器部署 HTTP 服务？\n\napconw提供了GPT-VIS-API及示例应⽤项⽬\n\nGitHub - apconw/gpt-vis-api: GPT-VIS-API 是⼀个轻量级图表⽣成服务，旨在解决 [antv/mcp-server-chart](https://github.com/antvis/mcp-server-chart) 在私有化部署⽅⾯的局限性。该服务接收数据请求，⽣成图表图像，上传到 MinIO 对象存储，并返回带有效期的预签名访问链接。\n\nGPT-VIS-API\n\n基于Node.js和Express构建的图表生成服务，支持将生成的图表上传至MinlO并返回预签名URL。\n\n项目概述\n\nGPT-VIS API是一个轻量级图表生成服务，旨在解决antv/mcp-server-chart在私有化部署方面的局限性。该服务接收数据请求，生成图表图像，上传到MinIO对象存储，并返回带有效期的预签名访问链接。\n\n主要功能包括：\n\n• 接收 JSON 格式的数据请求\n\n• 使用AntV/G 生成图表(如折线图、柱状图等）\n\n• 将图表图片上传至MinIO存储\n\n· 返回图片的预签名 URL 供前端访问\n\nGitHub - apconw/sanic-web: ⼀个轻量级、⽀持全链路且易于⼆次开发的⼤模型应⽤项⽬(LargeModel Data Assistant) ⽀持DeepSeek/Qwen3等⼤模型 基于 Dify 、LangChain/LangGraph、Ollama&Vllm、Sanic 和 Text2SQL ?? 等技术构建的⼀站式⼤模型应⽤开发项⽬，采⽤ Vue3、TypeScript 和 Vite 5 打造现代UI。它⽀持通过 ECharts ?? 实现基于⼤模型的数据图形化问答，具备处理 CSV ⽂件 ?? 表格问答的能⼒。同时，能⽅便对接第三⽅开源 RAG 系统 检索系统 ??等，以⽀持⼴泛的通⽤知识问答。\n\n特性\n\n•多智能体:支持多模型、多智能体+MCP协同任务\n\n• 大模型交互: 全面支持主流大模型交互框架，如Dify与LangChain\n\n• 核心技术栈： $\\mathsf { D i f y } + \\mathsf { O i l a m a } + \\mathsf { R a G } + ( \\mathsf { Q w e n 3 } / \\mathsf { D e e p S e e k } ) + \\mathsf { T e x t 2 S O L } + \\mathsf { M C P } + \\mathsf { N e o 4 } ) + \\mathsf { L a n g G r a p h }$\n\n• UI 框架： $\\mathsf { V u e 3 } + \\mathsf { T y p e S c r i p t } + \\mathsf { V i t e 5 }$\n\n●数据问答：集成 ECharts/AntV大模型实现Text2SQL轻量级的图形化数据问答展示\n\n• 表格问答：支持CSV格式文件的上传与基于大模型总结预处理和Text2SQL的表格数据问答\n\n• 通用问答：支持通用数据形式问答基于对接三方RAG系统+公网检索模式\n\n•应用架构：作为一个轻量级全链路一站式大模型应用开发框架方便扩展落地\n\n• 灵活部署：支持大模型应用开发各依赖组件docker-compose一键拉起快速部署零配置\n\n案例展示\n\nEnvironment Requirements\n\nBefore you start, make sure your development environment meets the following minimum requirements:\n\n• Operating System: Windows 10/11, macOS M series, Centos/Ubuntu\n\n• GPU: For local deployment with Ollama, an NVIDIA GPU is recommended. Alternatively, you can use the CPU mode or purchase an API key from the public network\n\n• Memory: 8GB+\n\nPrerequisites\n\n• Python 3.8+\n\n• Poetry 1.8.3+\n\n• Dify 0.7.1+\n\n• Mysql 8.0+\n\n• Node.js 18.12.x+\n\n• Pnpm 9.x\n\nLarge Model Deployment\n\n• Refer to Ollama Deployment\n\n• Models: Qwen2.5 7B model\n\n• Models: DeepSeek R1 7B model\n\n• Alibaba Cloud Public Network API Key\n\napconw的部署⽅案\n\n⽤ AntV MCP Server Chart",
+    "chunk_order_index": 1,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:e0ae529ddf028bcd1587b29132438749",
+      "default:extract:a8694346955ece85943d4bfeaff148fa"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-5e6331e7987020e8aab4119b9099c8c7",
+    "page_idx": 4,
+    "page_idx_end": 7
+  },
+  "chunk-7dfd9edaf2d6d316a2d66cb563a7b6fd": {
+    "tokens": 1200,
+    "content": "8.3+\n\n• Dify 0.7.1+\n\n• Mysql 8.0+\n\n• Node.js 18.12.x+\n\n• Pnpm 9.x\n\nLarge Model Deployment\n\n• Refer to Ollama Deployment\n\n• Models: Qwen2.5 7B model\n\n• Models: DeepSeek R1 7B model\n\n• Alibaba Cloud Public Network API Key\n\napconw的部署⽅案\n\n⽤ AntV MCP Server Chart 赋能⼤模型  从零构建可视化智能体，图表⽣成效率飙升！⼤模型⼊⻔到精通，收藏这篇就⾜够了！_mcp-server-chart-CSDN博客\n\n2.3 MCPHub\n\n本地部署、⼀键安装、分组路由：MCPHub 重塑 MCP 服务器体验\n\n为什么要使用 MCPHub\n\n1. 复杂的环境依赖与配置\n\n• ·MCP服务器常依赖Node.js、Python等多种运行时，需手动维护大量命令、参数和环境变量。\n\n•·MCPHub 内置MCP服务器市场，包含众多常用 MCP服务器，支持一键安装和自动配置，简化了环境搭建过程。\n\n• ·通过 Docker部署，MCPHub 可在任何支持 Docker 的平台上运行，避免了环境不一致的问题。\n\n无趣\n\n大佬您好，我把MCPHub部署好了，添加本地的MCP服务也添加成功了，但是用Dify连接MCPHub后，调用不到MCP工具\n\n孙青扬作者\n\ndify连接不太稳定，要看具体使用哪种方式(sse/mcp)，可以结合日志分析一下\n\nAmoypark\n\n非常感谢，本地部署，不能联网，是不是需要先在联网机台进行下载所需的插件，然后再次打包成镜像文件到离线服务器，这样是不是就可以使用？\n\n孙青扬作者\n\n是的，他们都是这样干的\n\n⽤MCPHub搭建本地⾃⼰的MCP平台 - 53AI-AI知识库|⼤模型知识库|⼤模型训练|智能体开发\n\n2.4 如何编写⾃⼰的MCP服务\n\nmcp-server案例分享-⼿搓⼀个MCP-server，⼿把⼿教你从本地开发到云部署全流程实战 - ⽂章 -开发者社区 - ⽕⼭引擎\n\n下⼀步计划在本地⼿搓⼀个MCP服务，看在dify中ollama的deepseek能否调⽤这个服务，如果可以，说明就是模型的算⼒不够，导致不能成功⽣成图形。\n\n3 gpt-vis-api部署\n\n部署了apconw/gpt-vis-api服务，可以接收 JSON 格式的数据请求，使⽤ AntV/G ⽣成图表（如折线图、柱状图等），将图表图⽚上传⾄ MinIO 存储并返回图⽚的预签名 URL 供前端访问\n\n在mcp-server-chart进⾏apconw/gpt-vis-api服务的配置\n\n3.1 本地测试\n\n测试⽤例1\n\n测试⽤例2\n\nE:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"line\\\",\\\"data\\\":[{\\\"time\\\": \\\"2025-05\\\",\\\"value\\\": 512},{\\\"time\\\": \\\"2025-06\\\",\\\"value\\\": 1024}]}\" {\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955070350_nvjeflov.png\", \"message\":\"图表生成 并上传成功\"}\nE:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"sankey\\\",\\\"data\\\":[{\\\"source\\\":\\\"访问网站\\\",\\\"target\\\":\\\"浏览商品\\\",\\\"value\\\":1500},{\\\"source\\\":\\\"浏 览商品\\\",\\\"target\\\":\\\"加入购物车\\\",\\\"value\\\"：900},{\\\"source\\\"：\\\"加入购物车\\\",\\\"target\\\"：\\\"进入结算\\\",\\\"value\\\"：600} {\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\"：\\\"完成支付\\\",\\\"value\\\"：400},{\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\":\\\"放弃结算\\\",\\ \"value\\\":200},{\\\"source\\\":\\\"加入购物车\\\",\\\"target\\\":\\\"离开网站\\\",\\\"value\\\"：300},{\\\"source\\\":\\\"浏览商品\\\",\\\"target\\\" :\\\"离开网站\\\",\\\"value\\\":600},{\\\"source\\\":\\\"访问网站\\\"\\\"target\\\":\\\"立即离开\\\".\\\"value\\\":500}].\\\"nodeAlign\\\":\\\"cent er\\\",\\\"style\\\":{\\\"backgroundColor\\\":\\\"#f8f9fa\\\",\\\"palette\\\":[\\\"#4e79a7\\\",\\\"#f28e2b\\\",\\\"#e15759\\\",\\\"#76b7b2\\\",\\\"#59a14 f\\\",\\\"#edc948\\\",\\\"#b07aa1\\\",\\\"#9c755f\\\"],\\\"texture\\\": \\\"default\\\"},\\\"theme\\\":{\\\"fontFamily\\\": \\\"WenQuanYi Zen Hei\\\"},\\\" width\\\":800,\\\"height\\\":500,\\\"title\\\":\\\"用户购买旅程桑基图\\\",\\\"source\\\":\\\"mcp-server-chart\\\"}\"\n{\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/ch",
+    "chunk_order_index": 2,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:554dcfc0a1bad82988652996665f44f9",
+      "default:extract:0d6d6407a67ba03b7770d56144974b81"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-7dfd9edaf2d6d316a2d66cb563a7b6fd",
+    "page_idx": 7,
+    "page_idx_end": 10
+  },
+  "chunk-028b6088d3cdecf0364e7e5da0b83b66": {
+    "tokens": 1200,
+    "content": "59\\\",\\\"#76b7b2\\\",\\\"#59a14 f\\\",\\\"#edc948\\\",\\\"#b07aa1\\\",\\\"#9c755f\\\"],\\\"texture\\\": \\\"default\\\"},\\\"theme\\\":{\\\"fontFamily\\\": \\\"WenQuanYi Zen Hei\\\"},\\\" width\\\":800,\\\"height\\\":500,\\\"title\\\":\\\"用户购买旅程桑基图\\\",\\\"source\\\":\\\"mcp-server-chart\\\"}\"\n{\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955231693_ltlm2muq.png\",\"message\":\"图表生成 并上传成功\"}\n\n3.2 Dify测试\n\nnode build/index.js --transport sse 启动MCP服务，运⾏在1122端⼝\n\n台湾地区海空力量包括哪些组织?\n\n工作流>\n\n台湾地区的海空力量主要由海军和空军两大分支组成，具体下属组织包括：\n\n海军：\n\n1. 国防部海军司令部\n\n2. 海军舰队指挥部\n\n3. 海军保修指挥部\n\n4. 海军第168舰队\n\n5. 海军第131舰队\n\n6. 海军第192舰队\n\n7. 海军第151舰队\n\n8. 海军第124舰队\n\n9. 海军陆战队指挥部\n\n10. 海军制海飞弹指挥部\n\n11. 海军海洋监侦指挥部\n\n空军：\n\n1. 国防部空军司令部\n\n3.3 Qwen3:32b\n\n启动mcp-server-chart服务node build/index.js --transport sse\n\n在docker中查看gpt-vis-api，qwen3:32b没有成功调⽤到gpt-vis-api服务搜索⼩模型调⽤MCP服务的案例\n\n3.4 ⼩模型调⽤MCP\n\n⽬前图表⽣成MCP服务存在的问题：qwen3:32b以及deepseek:70b模型运⾏到⼀半都会卡住\n\n预览\n\n台东县包括哪些军用设施，文字和图表结合起来回答\n\n工作流>\n\n对不起，我还没有学会回答这个问题。如果你\n\n对于本地模型未能成功调⽤MCP服务的问题，⽬前有三个怀疑：\n\n1.模型没有调⽤MCP服务的能⼒\n\n2.模型能⼒不⾜，⽆法跟MCP服务需要的格式匹配——\n\n3.MCP服务的⼯具太多，过于复杂，导致所需的token超过了模型本身的上下⽂\n\n本地Qwen3-4B也能跑通MCP MCP代码实战\n\nvllm部署与mcp⼯具实践测试\n\n3.4.1 问题1\n\n这周模仿上⾯的⽂章实现了简单的MCP服务，并且⽤Dify上的⼩模型进⾏了测试\n\nMCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if __name__ == \"__main__\":28 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"streamable-http\", # 使⽤⽀持流式传输的HTTP协议 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )\n\nMCPTest Python 1 import asyncio 2 import httpx 3 from fastmcp import Client 4 from fastmcp.client.transports import StreamableHttpTransport 5 async def test_mcp_service():6",
+    "chunk_order_index": 3,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:a67eaa7b7c4a63859fb570939df48a90",
+      "default:extract:c21d69b11835141df2b4c0536936a7a4"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-028b6088d3cdecf0364e7e5da0b83b66",
+    "page_idx": 10,
+    "page_idx_end": 18
+  },
+  "chunk-ac52de499112f50a44504163e36d0194": {
+    "tokens": 1200,
+    "content": ".0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )\n\nMCPTest Python 1 import asyncio 2 import httpx 3 from fastmcp import Client 4 from fastmcp.client.transports import StreamableHttpTransport 5 async def test_mcp_service():6 7 \"\"\"测试FastMCP服务的异步函数\"\"\" 8 # 定义服务URL，与服务端配置保持⼀致 9 SERVICE_URL = \"http://127.0.0.1:4200/demo\" 10 11 try: 12 # 创建基于HTTP的流传输客户端 13 transport = StreamableHttpTransport(url=SERVICE_URL) 14 # 使⽤上下⽂管理器创建客户端会话 15 async with Client(transport) as client: 16 print(f\"成功连接到MCP服务: {SERVICE_URL}\") 17 18 # 发送ping请求测试服务连通性 19 await client.ping() 20 print(\"服务⼼跳检测成功\") 21 22 # 获取服务端注册的所有⼯具 23 tools = await client.list_tools() 24 tool_names = [tool.name for tool in tools] 25 print(f\"可⽤⼯具列表: {', '.join(tool_names)}\") 26 27 # ==== ⼯具调⽤示例 ==== 28 29 # 1. 调⽤天⽓⼯具查询北京天⽓ 30 weather_result = await client.call_tool(\"weather\", {\"city\": \"北京\"}) 31 # 直接使⽤结果对象 32 print(f\"北京天⽓查询结果: {weather_result}\") 33 34 # 2. 如果存在股票⼯具，调⽤股票⼯具 35 if \"stock\" in tool_names: 36 stock_result = await client.call_tool(\"stock\", {\"code\": \"6 00519\"}) 37 print(f\"股票查询结果: {stock_result}\") 38 else: 39 print(\"股票⼯具不存在，跳过股票查询\") 40 41 # 3. 测试错误处理（查询不存在的城市） 42 error_result = await client.call_tool(\"weather\", {\"city\": \"东 京\"})\n\n<sup>43</sup><sub>44</sub> print(f\"错误处理测试结果: {error_result}\")45# 处理连接失败异常46except httpx.ConnectError:47print(f\"连接失败！请检查服务是否运⾏在 {SERVICE_URL}\")48# 处理其他未知异常49except Exception as e:50print(f\"测试失败: {str(e)}\")5152if __name__ == \"__main__\":53# 脚本⼊⼝点54print(\"=\"*50)55print(\"FastMCP服务测试脚本\")56print(\"=\"*50)57# 运⾏异步测试函数58asyncio.run(test_mcp_service())\n\n命令⾏测试\n\n(hgmcp) PS D:\\software\\Vscode_File\\hgmcp> python mcptest.py FastMCP服务测试脚本 可用工具列表：weather，stock 北京天气查询结果:CallToolResult(content=[TextContent(type='text'，text='{\"temp\":25,\"condition\":\"晴\"}',annotations=None,meta=None)],structured_content={'temp':25,'condition':'晴'}，meta=None,dat a={'temp': 25, 'condition': '晴'l, is error=False) 股票查询结果: CallToolResult(content=[TextContent(type='text',text='{\"name\":\"贵州茅台\",\"price\":1825.0}',annotations=None,meta=None)],structured_content={'name':'贵州茅台','price':1825.0},meta=N one, data={'name': '贵州茅台', 'price': 1825.0}, is_error=False) 错误处理测试结果：callToolResult(content=[TextContent(type='text',text='{\"error\":\"未找到该城市\"}'，annotations=None，meta=None)],structured_content={'error':'未找到该城市'}，meta=None,data={'error :'未找到该城市'}，is_error=False) (hgmcp) PS D:\\software\\Vscode_File\\hgmcp>\n\nDify测试\n\n▼ MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18",
+    "chunk_order_index": 4,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:4c01d54e52c25ebca874ee4ad5504225",
+      "default:extract:f389bcb580899c78dc0fd0cc64681a9a"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-ac52de499112f50a44504163e36d0194",
+    "page_idx": 17,
+    "page_idx_end": 20
+  },
+  "chunk-f36f33d14dcadc9d9f0360473719433d": {
+    "tokens": 1200,
+    "content": "= { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if28 __name__ == \"__main__\": 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"sse\", 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )\n\n感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3\n\n新建文件夹X这个和模型能力有关。你可以设置最大tool_calls的递归层数\n\nMCP是怎么对接大模型的？抓取AI提示词，拆解MCP的底层原理\n\n3.4.2 问题2\n\n在后台进⾏监控，发现⼤模型其实成功访问了1122端⼝，并且传输了⼀些数据，但是后台显示⼯具调⽤失败\n\n3.4.3 总结\n\n⽬前已经测试了简单的MCP服务，⼩模型也可以调⽤\n\n但是qwen 32b也调⽤不了chart的mcp，并且看到别⼈也存在的相同的问题。\n\n下⼀步尝试的解决⽅案是：这个mcp有很多种⼯具，可以⾃⼰实现⽣成图表的⼀到两个⼯具，限制MCP⼯具的数量，应该可以实现32b的调⽤\n\n4 调⽤细节\n\n联⽹的qwen3:32b可以调⽤到MCP服务，但是会乱码\n\n从ollama pull qwen3:30b，看是不是模型没有更新到最新导致不⽀持MCP的tools/call调⽤，结果本地的qwen3:30b也不能调⽤\n\n是模型能⼒的问题吗？\n\n联⽹的qwen3:14b可以调⽤到MCP服务，虽然格式错误没有返回图⽚，但是确实发出了请求。\n\n5 替代⽅案\n\n没有找到遇到相同问题的案例\n\n⽤⼯具进⾏替代？在本地部署合适的⼯具，例如只设置条形图和饼状图，在提示词⾥指定需要⽣成的格式，让模型按照格式⽣成，直接把数据传到⼯具中，⼯具⽣成图形并返回。\n\n调⽤⼯具测试\n\nDify纯内⽹dify插件离线安装⽀持多平台多架构跨架构(xjl456852原创) - 三杯两盏淡酒 - 博客园\n\nDify 实战<sup>：</sup>纯内⽹dify插件离线安装解决\n\nGitHub - junjiem/dify-plugin-repackaging: Scripting tool for downloading Dify plugin package from Dify Marketplace and Github and repackaging [true] offline package.\n\n这个项⽬⽬前看起来还存在⼀些问题，并且需要在linux环境下进⾏离线重新打包\n\n在宝德服务器上对antv的可视化⼯具进⾏解压\n\nLaTeX 1 FORCE_VERIFYING_SIGNATURE=false 2 PLUGIN_MAX_PACKAGE_SIZE=524288000 3 NGINX_CLIENT_MAX_BODY_SIZE=500M\n\n只修改了第⼀条权限，第⼆和第三已经有⼈修改过了，后续⽣产需要重新把权限设为true\n\n重启docker还是不⾏，遇到异常信息： plugin verification has been enabled, and t he plugin you want to install has a bad signature\n\n插件安装过程中遇到异常应该如何处理？\n\n问题描述：插件安装过程中遇到异常信息： plugin verification has been enabled, and the plugin you want to install has a bad signature 。应该如何处理？解决⽅案：在 /docker/.env 配置⽂件末尾添加字段\n\nFORCE_VERIFYING_SIGNATURE=false 。然后，运⾏以下命令重启 Dify 服务：\n\n解决⽅",
+    "chunk_order_index": 5,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:3d92fa01d0459ed086d7c3ba551fa8d8",
+      "default:extract:b1a63fad51575c8f05b743cb348f039f"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-f36f33d14dcadc9d9f0360473719433d",
+    "page_idx": 20,
+    "page_idx_end": 29
+  },
+  "chunk-ab9af9f795cd884fa4b6080b8c4cbd2b": {
+    "tokens": 603,
+    "content": "you want to install has a bad signature\n\n插件安装过程中遇到异常应该如何处理？\n\n问题描述：插件安装过程中遇到异常信息： plugin verification has been enabled, and the plugin you want to install has a bad signature 。应该如何处理？解决⽅案：在 /docker/.env 配置⽂件末尾添加字段\n\nFORCE_VERIFYING_SIGNATURE=false 。然后，运⾏以下命令重启 Dify 服务：\n\n解决⽅案 Plain Text 1 cd docker 2 docker compose down 3 docker compose up -d\n\n添加此字段后，Dify 平台将允许安装所有未在 Dify Marketplace 上架（审核）的插件，这可能带来安全⻛险。建议先在测试/沙盒环境中安装插件，确认其安全性后再安装到⽣产环境。\n\n完成本地上传插件后进⾏测试\n\n1 台湾地区海空⼒量包括哪些组织？各个组织⼜由哪些机构构成？\n\n2 台湾地区爱国者导弹分布在哪些地⽅？这些地⽅的⼈⼝密度是多少？\n\n3 台湾地区情报系统包括哪些部⻔？这些部⻔由哪些机构构成以及作⽤。\n\n4 台湾地区海空⼒量分布在哪些地区？这些地区的经度/维度/地址是什么？\n\n5 根据营区名字，⽐如安海营区的详细地址/经度/维度？空军台南基地有的详细地址/经度/维度？\n\n6 台湾地区现役舰艇有哪些？列举其信息:xian号/型号/⺟港/率属单位。\n\n7 根据任⼀舰名，获得其详细信息。\n\n8 台湾地区海洋委员会海巡⼒量包括哪些？若有分⽀结构，请列出\n\n9 台湾地区海空⼒量主要武器清单及数量。\n\n10 台湾地区主要军⽤机场概况\n\n11 空军台南基地的LATA代码是什么？驻军是什么联队？主要机型包括哪些？坐标是？\n\n12 雄⻛三型反j导弹的主要参数？作战范围是？速度？制导系统是？研发机构是？重量弹径是？等等\n\n13 台东县（台南/屏东/南投/云林等等）包括哪些军⽤设施？⽐如雷达设施/防空设施/港⼝设施/机场设施/营区设施/海巡设施/靶场设施等\n\n14 空军岗⼭基地包括哪些部⻔？\n\n15 hj左营基地包括哪些部⻔？位于台湾什么位置？",
+    "chunk_order_index": 6,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:03a65549d2d150d03d85b60aa11dc6a1",
+      "default:extract:e8b3ad5e40c2141e7d3d763797ee7e50"
+    ],
+    "create_time": 1791615031,
+    "update_time": 1791615102,
+    "_id": "chunk-ab9af9f795cd884fa4b6080b8c4cbd2b",
+    "page_idx": 28,
+    "page_idx_end": 30
+  },
+  "chunk-a0f8c4393df9c460f378b7662edd6707": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 调⽤的是魔塔的MCP⼴场中的服务\n- Neighbor Text: Built-in Two-Way MCP (v1.6.0) Agents and Workflows now speak MCP natively. Add Linear, Notion, Zapier (8 000+ apps) as tools, or expose your own Dify apps as MCP servers for any client to invoke—no glue code required. 调⽤的是魔塔的MCP⼴场中的服务 Dify快速接⼊本地MCP服务示例 超实⽤！Dify快速接⼊本地MCP服务 ⽬前遇到的问题，本地deepseek 70b ⽆法成功调⽤MCP服务\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0a1f081bc748ed661d81cb376702e87128c3a7c4514ba6d3de690000e0602bbc.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of the ModelScope (魔搭) website's MCP Square (MCP广场) page, used as a tutorial illustration for accessing MCP services. The page has a white background with a top navigation bar containing the ModelScope logo and menu items: 首页, 模型库, 数据集, 创空间, AIGC专区, 文档, 社区, MCP广场, GitHub, along with a search bar and user avatar. Below the navigation, a banner reads 'ModelScope MCP 广场' with the subtitle '聚合优质MCP资源，拓展模型智能边界'. A red arrow labeled '1 来到MCP广场' points to the MCP广场 menu item. Three promotional cards are displayed: 'ModelScope MCP 实验场' (探索开源模型与 MCP Server 的自由组合和碰撞), 'ModelScope MCP 教程与实践' (了解和学习 MCP，观察和交流最佳实践), and 'ModelScope MCP × 通义灵码' (通义灵码编程智能体支持 MCP 工具使用). The main content area is divided into a left sidebar and a right grid. The sidebar lists MCP service categories with counts: 浏览器自动化 (307), 搜索工具 (652), 交流协作工具 (245), 开发者工具 (1240), 娱乐与多媒体 (119), 文件系统 (211), 金融 (231), 知识管理与记忆 (277). The right grid displays MCP service cards. A red arrow labeled '2 搜索所需MCP服务' points from the search bar to a highlighted card in the bottom right. The highlighted card is titled '可视化图表-MCP-S...' with tags '开发者工具', 'MIT License', and 'Hosted'. Its description reads 'A visualization Model Context Protocol server for generating 25+ visual charts using @antvis.' The author is '@antvis' with 19.9k views and 71 likes. Other visible cards include 'Fetch网页内容...', '高德地图', '必应搜索中文', '趣丸千音', '12306-MCP车票查...', '人生教练Agent', 'Jina-AI-MCP-T...', and '支付宝MCP'. The image serves as a visual guide for locating and selecting the antvis/mcp-server-chart service on ModelScope, which is referenced in the surrounding text about deploying MCP services.",
+    "tokens": 770,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 7,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:f536ccf9da3b6f9bd80451e0b55a8bbd",
+      "default:extract:1db4a12d1365e394bae56cca74803b3a"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "ModelScope MCP Square Interface (image)",
+    "original_type": "image",
+    "page_idx": 2,
+    "create_time": 1791615282,
+    "update_time": 1791615315,
+    "_id": "chunk-a0f8c4393df9c460f378b7662edd6707"
+  },
+  "chunk-52d758854de5931b6a611e1204d51bb3": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 超实⽤！Dify快速接⼊本地MCP服务\n- Neighbor Text: Dify快速接⼊本地MCP服务示例 超实⽤！Dify快速接⼊本地MCP服务 ⽬前遇到的问题，本地deepseek 70b ⽆法成功调⽤MCP服务 2 技术选型 2.1 antvis/mcp-server-chart\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/f1cbe2a5ee1cdedda549700f1d14a100be4de45805398f9780b0331308e9616f.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a chat interface, likely from the Dify platform, showing a preview of a conversational AI interaction. The interface has a clean, modern design with a white background and light gray accents. At the top left, the title '预览' (Preview) is displayed in bold black text. In the top right corner, there are three icons: a circular arrow (refresh), a square with an arrow (share/export), and an 'X' (close). The main content area displays a two-turn conversation. The first message, from the user, is in a light blue speech bubble aligned to the right. It contains the text: '台东县包括哪些军用设施，文字和图表结合起来回答' (What military facilities are included in Taitung County? Answer by combining text and charts). To the right of this bubble is a circular user avatar with a light blue background and a white silhouette of a person. The second message, from the AI assistant, is in a white speech bubble with a subtle shadow, aligned to the left. It begins with a green checkmark icon followed by the text '工作流 >' (Workflow >), indicating a workflow execution. Below this, the AI's response text reads: '对不起，我还没有学会回答这个问题。如果你' (Sorry, I haven't learned to answer this question yet. If you). The message is cut off. To the left of this bubble is a circular AI avatar with a light green background and a small, stylized robot face. At the bottom center of the AI's message bubble, there is a pagination indicator showing '< 2 / 2 >', suggesting this is the second page of a multi-part response. The overall scene depicts a user testing a Dify workflow with a specific query about military facilities in Taitung County, and the AI failing to provide an answer, likely due to a lack of relevant data or a configuration issue in the workflow.",
+    "tokens": 607,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 8,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:ac06d3bd9fac3a08543e97327b5fce17",
+      "default:extract:c4592d010b120248c1a7bfcf166745a2"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Dify Chat Preview - Taitung Military Facilities Query (image)",
+    "original_type": "image",
+    "page_idx": 2,
+    "create_time": 1791615282,
+    "update_time": 1791615310,
+    "_id": "chunk-52d758854de5931b6a611e1204d51bb3"
+  },
+  "chunk-6f4544b923b8a7b39d6d44d1fa30b59f": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 2 技术选型\n- Neighbor Text: ⽬前遇到的问题，本地deepseek 70b ⽆法成功调⽤MCP服务 2 技术选型 2.1 antvis/mcp-server-chart 之前根据 部署了ant提供的mcp服务mcp-【MCP-server-chart部署及踩坑建议】-CSDN博客server-chart GitHub - antvis/mcp-server-chart: ?? A visualization mcp contains 25+ visual charts using @antvis. Using for chart generation and data analysis.\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/fcf3a9eec54fb78364eeda0c089db4a5b81232ca174a1e8e25f97004550b0783.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a simple, monochromatic icon consisting of two overlapping square shapes with rounded corners, rendered in a dark gray color against a white background. The icon is a standard 'copy' or 'duplicate' symbol commonly used in user interfaces. The front square is fully visible, while the back square is partially obscured, with only its top and left edges showing. This icon is positioned within the context of a technical document about integrating Dify with local MCP services, specifically under the section '2 技术选型' (2 Technology Selection). The icon likely serves as a visual cue for copying configuration code or commands, such as the JSON snippet provided on Page 4 for setting up the 'mcp-server-chart' environment variable 'VIS_REQUEST_SERVER'. The icon's presence suggests an interactive element in the original document, allowing users to easily copy the associated text or code block.",
+    "tokens": 406,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 9,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:26d822f54bcebfe20c35d6b7fe57eb54",
+      "default:extract:7ef2ac8f22bfa231063bc4de7f9c79f8"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Copy Icon for MCP Configuration (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615315,
+    "_id": "chunk-6f4544b923b8a7b39d6d44d1fa30b59f"
+  },
+  "chunk-9e438aec0e2c5ce9de0dd0bb23713997": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 2.1 antvis/mcp-server-chart\n- Neighbor Text: 之前根据 部署了ant提供的mcp服务mcp-【MCP-server-chart部署及踩坑建议】-CSDN博客server-chart GitHub - antvis/mcp-server-chart: ?? A visualization mcp contains 25+ visual charts using @antvis. Using for chart generation and data analysis. 发现项⽬issues中作者提到这个需要⼀个远程服务 hustcc last week 这个mcp需要一个远程服务，你本机上是有网络可以连接远程吧? @tengjie107-netizer\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/b21c48d88d307c4c12fddcafd1c25f189541efab2f42618d762fdbccecaba93a.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, circular, grayscale illustration that appears to be a stylized mascot or avatar. It is set against a light gray circular background. The central figure is a simple, cartoon-like character drawn with thin, dark outlines. The character has a rounded head with two small, pointed ears on top, resembling a cat or a bear. Its face features two small, slanted lines for eyes, giving it a closed or squinting expression. The body is an elongated oval shape. Two thin, wing-like or arm-like appendages extend outward from the sides of the body. The lower portion of the character consists of a curved, tail-like structure that loops downward. The overall style is minimalist and hand-drawn. This image is likely a logo or icon associated with the AntV visualization library or the GPT-Vis project mentioned in the surrounding text, serving as a visual identifier for the technical content discussed.",
+    "tokens": 428,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 10,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:7f57469b385f7e92652762ac8bc1be7f",
+      "default:extract:70c00ffb819a2793ab9407abe19abde9"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "AntV GPT-Vis Mascot Icon (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615320,
+    "_id": "chunk-9e438aec0e2c5ce9de0dd0bb23713997"
+  },
+  "chunk-193d4ff2da6128dfd70b8e8da601e296": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 2.1 antvis/mcp-server-chart\n- Neighbor Text: hustcc last week 这个mcp需要一个远程服务，你本机上是有网络可以连接远程吧? @tengjie107-netizer 如果需要私有化还需部署 GitHub - antvis/GPT-Vis: ?? GPT Vision, Open Source Vision components for GPTs, generative AI, and LLM projects. Not only UI Components.\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/955f2a43ef64010f83921d27dbed742b7342e66726455841d83eeac25ba32856.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a simple, low-resolution graphic consisting of a circular smiley face icon centered on a white background. The icon is composed of a dark gray or black circular outline containing two small dot eyes and a curved line forming a smile. The overall style is minimalist and resembles a standard emoji or user avatar placeholder. There is no text, diagram, or complex structure present. In the context of the surrounding document, which discusses technical deployment of MCP services and chart generation tools, this image likely serves as a generic icon or placeholder, possibly representing a user profile or a simple visual element within a larger interface or document. It does not contain any technical information or data relevant to the MCP service configuration.",
+    "tokens": 336,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 11,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:af6c7649c84b0c492694958003a075b2",
+      "default:extract:a8b5e4bdf95e6c2d14a34714e0593906"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Smiley Face Icon (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615321,
+    "_id": "chunk-193d4ff2da6128dfd70b8e8da601e296"
+  },
+  "chunk-b5ad16c20174c91752cb2d9fe2947a8f": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 如果需要私有化还需部署\n- Neighbor Text: 如果需要私有化还需部署 GitHub - antvis/GPT-Vis: ?? GPT Vision, Open Source Vision components for GPTs, generative AI, and LLM projects. Not only UI Components. hustcc on May 26 You can use AntV's project GPT-Vis-SSR to deploy an HTTP service in a private environment, and then pass the URL address through env VIS_REQUEST_SERVER 使用 GPT-Vis-SSR 包装成一个 post 服务，然后这个服务的地址写到VIS_REQUEST_SERVER.\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/ab272fe6cba55fa810c4b06e732798723250fcbbe08f880156d52d4d28df8e41.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a simple, hand-drawn style line-art illustration of a cartoonish character, likely a mascot or avatar, set against a plain white background. The character is depicted in a dynamic, slightly playful pose. The head is rounded with two small, pointed ears or horns on top. The facial features are minimal, consisting of two small, closed, curved lines representing eyes (giving a smiling or content expression) and a small, curved line for a mouth. The body is an elongated oval shape. The character has two arms extending outward; the left arm is shorter and points downward, while the right arm is longer and extends outward and slightly upward. The legs are short and stubby, with the left leg appearing to be lifted or bent, suggesting a walking or dancing motion. The entire drawing is rendered in thin, black lines with no shading or color fill. The style is reminiscent of a quick sketch or a logo. In the context of the surrounding document, which discusses technical topics like MCP servers, Dify, and AntV charting tools, this image likely serves as a decorative element, a placeholder, or a small icon representing a user or a specific tool within the documentation. It does not contain any text or technical diagrams.",
+    "tokens": 477,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 12,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:02bcf25f558fb3ade4c22262a8ee796d",
+      "default:extract:ff4ba92fee4fd291172388b4ea9e5876"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Cartoon Character Line Art Sketch (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615324,
+    "_id": "chunk-b5ad16c20174c91752cb2d9fe2947a8f"
+  },
+  "chunk-b546446cf6afd391433a0d3a55406647": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 如果需要私有化还需部署\n- Neighbor Text: hustcc on May 26 You can use AntV's project GPT-Vis-SSR to deploy an HTTP service in a private environment, and then pass the URL address through env VIS_REQUEST_SERVER 使用 GPT-Vis-SSR 包装成一个 post 服务，然后这个服务的地址写到VIS_REQUEST_SERVER. hustcc on May 26 是的。\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/63d48991c98af4284fa81c12c1a5d27ae7972ad47c2ada223d2aaa9493797d7b.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, low-resolution, grayscale icon depicting a classic smiley face. The composition consists of a circular face outline containing two small, dark, dot-like eyes positioned horizontally in the upper half, and a curved, upward-facing line representing a smile in the lower half. The icon is rendered in a soft, slightly blurred style with a light gray background and darker gray strokes, giving it a subtle, almost watermark-like appearance. There is no text, annotation, or additional graphical elements within the image. In the context of the surrounding document, which discusses technical deployment of MCP services and chart generation tools, this smiley face likely serves as a decorative or informal visual element, possibly indicating a positive outcome, user-friendly interface, or a placeholder icon within a UI mockup or documentation. It does not contain any technical data, labels, or structural information relevant to the MCP service configuration or deployment steps described in the text.",
+    "tokens": 380,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 13,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:40fa265a3a2e28ca062dde5d7d73d6a5",
+      "default:extract:81f3d649c830639afbf74b800c65f075"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Smiley Face Icon (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615324,
+    "_id": "chunk-b546446cf6afd391433a0d3a55406647"
+  },
+  "chunk-04514b92a1febfe72cc9e7fdebe469e1": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 如果需要私有化还需部署\n- Neighbor Text: You can use AntV's project GPT-Vis-SSR to deploy an HTTP service in a private environment, and then pass the URL address through env VIS_REQUEST_SERVER 使用 GPT-Vis-SSR 包装成一个 post 服务，然后这个服务的地址写到VIS_REQUEST_SERVER. hustcc on May 26 是的。 impor { render } from '@antv/gpt-vis-ssr'; const image = render(spec).toBuffer();\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e1f8b7a601dabfcd549620ea1d2e2be2e94c40b49f9eac83cca591a89142861e.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, low-resolution, monochrome (black and white) line drawing of a stylized cartoon character, likely a mascot or avatar. The character is depicted in a simple, hand-drawn style with thick, dark outlines against a light gray circular background. The character has a rounded head with two small, pointed ears on top, resembling a cat or a bear. The face features two small, curved lines for closed eyes and a small, curved line for a mouth, giving it a peaceful or smiling expression. The body is a simple, rounded shape. The character's arms are outstretched to the sides, with the left arm (viewer's left) pointing downward and the right arm (viewer's right) pointing upward. The legs are short and stubby, with the left leg (viewer's left) slightly bent and the right leg (viewer's right) straight. The overall pose is dynamic, as if the character is dancing or balancing. The image is placed within the context of a technical document about deploying MCP services, specifically under the section '如果需要私有化还需部署' (If privatization is needed, deployment is also required). The character likely serves as a visual icon or logo for the 'GPT-Vis-SSR' project or the 'apconw/gpt-vis-api' service mentioned in the surrounding text, representing a friendly, approachable interface for the technical tool.",
+    "tokens": 499,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 14,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:3d31dc62ed71543bca3b9b456156741d",
+      "default:extract:3a443b3476dbef73723c9beb116818fa"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "GPT-Vis-SSR Mascot Icon (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615328,
+    "_id": "chunk-04514b92a1febfe72cc9e7fdebe469e1"
+  },
+  "chunk-6c5109d1ac12173a5f2731bc015b2d44": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 如果需要私有化还需部署\n- Neighbor Text: 是的。 impor { render } from '@antv/gpt-vis-ssr'; const image = render(spec).toBuffer(); 然后把spec来源于post接口的参数，出参就是image，先存到服务器返回一个地址。 具体配置⽅法 Plain Text 1 { 2 \"mcpServers\": { 3 \"mcp-server-chart\": { 4 \"command\": \"npx\", 5 \"args\": [\"-y\", \"@antv/mcp-server-chart\"], 6 \"env\": { 7 \"VIS_REQUEST_SERVER\": \"<您的私有服务地址>\" 8 } 9 } 10 } 11 } 技术实现步骤\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/36ae211575ca74ef2abe04eb1ff253710372d42904ca09749e378d2df5fa6da9.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, low-resolution, grayscale graphic consisting of a simple smiley face icon. The icon is composed of a circular outline forming the head, with two small dots positioned horizontally to represent eyes, and a curved upward line below the eyes representing a smiling mouth. The entire graphic is rendered in a soft, slightly blurred grayscale style, with a faint, lighter circular halo or background surrounding the main face. There is no text, annotation, or additional visual element present. In the context of the surrounding document, which discusses technical deployment of MCP services and GPT-Vis-SSR for chart generation, this image appears to be a decorative or placeholder icon, possibly used as a bullet point, a UI element, or a visual marker within the document layout. It does not convey technical information related to the MCP server configuration, API specifications, or deployment steps described in the text.",
+    "tokens": 438,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 15,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:0851fe9d53ba997ef9b54e2186582058",
+      "default:extract:d4a99d93d7300f7571c1444e82c88159"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Smiley Face Icon Placeholder (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791615282,
+    "update_time": 1791615331,
+    "_id": "chunk-6c5109d1ac12173a5f2731bc015b2d44"
+  },
+  "chunk-68766f592d5fea97b491b07c0e727f6e": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 技术实现步骤\n- Neighbor Text: ○ ⽅法: POST ○ 参数: 图表配置数据，如 {\"type\":\"line\", \"data\":[...]} ○ 返回: 包含⽣成图表图⽚URL的对象 「⼀语成图」：GPT-Vis × MCP 让⼤模型「说句话就出可视化」-CSDN博客 2.2 apconw/gpt-vis-api 如何使⽤ AntV 的 GPT-Vis-SSR项⽬在⾃⼰服务器部署 HTTP 服务？\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/59d3ab08df07bbfc3fe2864ddfe8c864dd9658292edeaa0c57684e80183a45f1.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, square icon with rounded corners, featuring a solid, vibrant orange-red background. Centered within the icon is a large, bold, white capital letter 'C'. The letter 'C' is rendered in a clean, sans-serif typeface with uniform stroke thickness. The icon has a flat design with no gradients, shadows, or additional text. This icon is positioned within the context of a technical document discussing the deployment and configuration of MCP (Model Context Protocol) services, specifically 'antvis/mcp-server-chart' and 'apconw/gpt-vis-api'. The icon likely serves as a visual marker or logo for a related tool, service, or section within the document, though its exact meaning is not explicitly defined in the surrounding text. The document itself covers technical implementation steps, including deploying private services, configuring environment variables, and API specifications for chart generation using AntV's GPT-Vis-SSR.",
+    "tokens": 421,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 16,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:303c13de4fa3b8b74b7f67d62788f7fc",
+      "default:extract:72d3290967db3917d5253b1ca786880e"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Orange C Icon (image)",
+    "original_type": "image",
+    "page_idx": 4,
+    "create_time": 1791615282,
+    "update_time": 1791615334,
+    "_id": "chunk-68766f592d5fea97b491b07c0e727f6e"
+  },
+  "chunk-56f8883c6fffe7e65586c4a3b4ad8f88": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 案例展示\n- Neighbor Text: •应用架构：作为一个轻量级全链路一站式大模型应用开发框架方便扩展落地 • 灵活部署：支持大模型应用开发各依赖组件docker-compose一键拉起快速部署零配置 案例展示\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0ad6137891a77fd855c107eedd1506d77109e4d36003e6c1a994b1668ecfffc2.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web-based chat interface for an AI assistant named '我的宝盒AI数据助手' (My Treasure Box AI Data Assistant). The layout is divided into a left sidebar and a main content area. The left sidebar has a purple background and contains a navigation menu with items such as '新建对话' (New Chat), '历史对话' (History), and a list of previous conversations. The main content area displays a welcome message with the assistant's logo and name at the top center. Below the welcome message, there are three distinct cards or panels arranged horizontally, each with a title and a list of bullet points. The first card is titled '通用问答' (General Q&A) and lists capabilities like '支持多模型、多智能体+MCP协同任务' (Supports multi-model, multi-agent + MCP collaborative tasks) and '全面支持主流大模型交互框架，如Dify与LangChain' (Fully supports mainstream large model interaction frameworks such as Dify and LangChain). The second card is titled '数据问答' (Data Q&A) and mentions '集成ECharts/AntV大模型实现Text2SQL轻量级的图形化数据问答展示' (Integrates ECharts/AntV large models to implement lightweight graphical data Q&A display for Text2SQL) and '支持CSV格式文件的上传与基于大模型总结预处理和Text2SQL的表格数据问答' (Supports CSV file upload and table data Q&A based on large model summarization preprocessing and Text2SQL). The third card is titled '表格问答' (Table Q&A) and includes '支持通用数据形式问答基于对接三方RAG系统+公网检索模式' (Supports general data form Q&A based on third-party RAG system + public network retrieval mode) and '作为一个轻量级全链路一站式大模型应用开发框架方便扩展落地' (As a lightweight full-link one-stop large model application development framework, it is convenient for expansion and implementation). At the bottom of the main area, there is a text input box with a placeholder text '输入您的问题...' (Enter your question...) and a send button. The overall color scheme is predominantly white and purple, with a clean and modern design. The interface is likely part of a larger application or documentation, as indicated by the surrounding context which describes the GPT-VIS-API and other technical details.",
+    "tokens": 692,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 17,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:36f690940060de9c342711db9e073509",
+      "default:extract:d4a3390cfc4afd6c0388463973c8d8fc"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "My Treasure Box AI Data Assistant Interface (image)",
+    "original_type": "image",
+    "page_idx": 6,
+    "create_time": 1791615282,
+    "update_time": 1791615337,
+    "_id": "chunk-56f8883c6fffe7e65586c4a3b4ad8f88"
+  },
+  "chunk-a4dc8e8aa6c1ab5915ad672a074c2adb": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 案例展示\n- Neighbor Text: • 灵活部署：支持大模型应用开发各依赖组件docker-compose一键拉起快速部署零配置 案例展示 Environment Requirements\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e583181daa22b9c8a95c85cd7e1a2b57fe2289b7c98ccfd4b73bc6cbefd3de85.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web-based data visualization dashboard, likely generated by a large language model application (such as the Sanic-Web project mentioned in the context) using a charting library like ECharts or AntV. The interface is divided into a left sidebar navigation and a main content area.\n\n**Left Sidebar:**\n- At the top, there is a logo area with a purple icon and the text 'Sanic-Web' (partially visible).\n- Below the logo, a vertical navigation menu contains several items. The visible items include:\n  - '首页' (Home)\n  - '数据问答' (Data Q&A)\n  - '表格问答' (Table Q&A)\n  - '通用问答' (General Q&A)\n  - '应用管理' (Application Management)\n  - '系统设置' (System Settings)\n- The menu item '数据问答' is highlighted with a purple background, indicating it is the current active page.\n\n**Main Content Area:**\n- At the top, there is a title: '各分项案件数量统计' (Statistics of Case Quantity by Sub-item).\n- Below the title, there is a horizontal bar chart. The chart has a y-axis labeled '案件数量' (Case Quantity) and an x-axis with numerical values (0, 50, 100, 150, 200, 250, 300, 350, 400).\n- The chart displays several horizontal bars, each representing a different category. The categories are listed on the left side of the bars, but the text is too small to read clearly. The bars are colored differently: blue, orange, green, red, purple, brown, pink, gray, and yellow.\n- Above the chart, there is a legend with colored squares corresponding to the bars, but the legend labels are also too small to read.\n- Below the chart, there is a text block that appears to be a summary or analysis generated by the system. The text is in Chinese and reads: '根据图表数据，我们可以看出...' (Based on the chart data, we can see...). The full text is not legible due to resolution.\n- At the very bottom of the main content area, there is a chat input box with a send button, suggesting this is an interactive Q&A interface where users can ask questions about the data.\n\n**Overall Style:**\nThe interface has a clean, modern design with a white background and purple accents. The layout is typical of a data analysis dashboard, with a focus on the chart and accompanying textual insights. The presence of the chat input indicates that the chart was likely generated in response to a user query, aligning with the 'Text2SQL' and 'data graphical Q&A' features described in the surrounding context.",
+    "tokens": 722,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 18,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:29f926e6274a49851e2ac0b8a1bf9d50",
+      "default:extract:221fb1158ec876fd6b0de5eadaf1b952"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Sanic-Web Data Q&A Dashboard with Bar Chart (image)",
+    "original_type": "image",
+    "page_idx": 6,
+    "create_time": 1791615282,
+    "update_time": 1791615340,
+    "_id": "chunk-a4dc8e8aa6c1ab5915ad672a074c2adb"
+  },
+  "chunk-46181a4ab3fb239f80f036ff52b8d520": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 案例展示\n- Neighbor Text: 案例展示 Environment Requirements Before you start, make sure your development environment meets the following minimum requirements:\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/655d504288f4427068e2f8bbfdebebb85b01e8928b83716048026a52c2e36257.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web-based data visualization dashboard, likely from a large language model (LLM) application project named 'sanic-web' (LargeModel Data Assistant). The dashboard is divided into a left sidebar and a main content area. The left sidebar contains a vertical navigation menu with several items, including '数据问答' (Data Q&A), '表格问答' (Table Q&A), '通用问答' (General Q&A), and '应用架构' (Application Architecture). The main content area displays a funnel chart titled '漏斗图' (Funnel Chart) at the top. The chart visualizes a conversion funnel with five stages, each represented by a colored horizontal bar that decreases in width from top to bottom. The stages, from top to bottom, are: '浏览网站' (Website Visits) in blue with a value of 50000, '加入购物车' (Add to Cart) in teal with a value of 35000, '生成订单' (Generate Order) in orange with a value of 25000, '支付订单' (Pay Order) in purple with a value of 15000, and '完成交易' (Complete Transaction) in dark blue with a value of 8000. To the right of each stage, there are conversion rate labels: '转换率 70.00%' for the first transition, '转换率 71.43%' for the second, '转换率 60.00%' for the third, and '转换率 53.33%' for the fourth. On the left side of the funnel, there is a label '总转化率 16.00%' indicating the overall conversion rate from the top to the bottom stage. Below the chart, there is a text input area with a placeholder '输入您的问题，例如：分析一下销售数据' (Enter your question, e.g., analyze sales data) and a send button. The interface uses a clean, modern design with a white background and purple accents, consistent with the Vue3 and TypeScript UI framework mentioned in the context. The chart is generated using ECharts or AntV, as indicated in the project description, and demonstrates the Text2SQL and data visualization capabilities of the application.",
+    "tokens": 599,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 19,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:7f19b25c4eb97f08c4e9388f6b712673",
+      "default:extract:ce00d556b768e2f2787e46008d859671"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "sanic-web Data Q&A Funnel Chart Dashboard (image)",
+    "original_type": "image",
+    "page_idx": 6,
+    "create_time": 1791615282,
+    "update_time": 1791615343,
+    "_id": "chunk-46181a4ab3fb239f80f036ff52b8d520"
+  },
+  "chunk-afb1853dad19beada061d2f61679721b": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 案例展示\n- Neighbor Text: Environment Requirements Before you start, make sure your development environment meets the following minimum requirements: • Operating System: Windows 10/11, macOS M series, Centos/Ubuntu\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/a157f35a40d305ef63fa08a215ec9db8e2020d0b19eda2e1ac9cb626b58cf8d7.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web-based chat interface, likely from a large language model (LLM) application or data assistant platform. The interface is divided into a left sidebar and a main content area. The overall color scheme is light with purple accents, typical of modern UI designs.\n\n**Left Sidebar:**\nThe sidebar has a purple background. At the top, there is a logo or icon. Below it, a list of navigation items is visible. The first item is highlighted, indicating the current page. The text labels in the sidebar are in Chinese. The visible items include:\n- '新对话' (New Chat)\n- '历史对话' (History)\n- '知识库' (Knowledge Base)\n- '应用' (Applications)\n- '设置' (Settings)\nAt the bottom of the sidebar, there is a user profile section with an avatar and a username, which appears to be 'admin'.\n\n**Main Content Area:**\nThe main area displays a conversation. At the top, there is a header with the title '数据助手' (Data Assistant). Below the header, there is a chat history.\n\n**User Message:**\nThe first message is from the user, displayed in a light gray bubble. The text is in Chinese: '帮我分析一下这份数据，并生成一个饼图' (Help me analyze this data and generate a pie chart).\n\n**Assistant Response:**\nThe assistant's response is displayed below. It consists of several parts:\n1.  **Text Analysis:** The assistant provides a textual analysis of the data. The text is in Chinese and includes bullet points. The visible text reads:\n    - '根据您提供的数据，我为您生成了以下分析：' (Based on the data you provided, I have generated the following analysis:)\n    - '1. 数据总览：' (1. Data Overview:)\n    - '2. 数据分布：' (2. Data Distribution:)\n    - '3. 数据趋势：' (3. Data Trends:)\n    - '4. 数据异常：' (4. Data Anomalies:)\n    - '5. 数据建议：' (5. Data Recommendations:)\n2.  **Chart Generation:** Below the text, there is a generated pie chart. The chart has a title: '各产品销售额占比' (Sales Proportion of Each Product). The pie chart is divided into several colored segments, each representing a different product category. The legend below the chart lists the categories: '产品A' (Product A), '产品B' (Product B), '产品C' (Product C), '产品D' (Product D), '产品E' (Product E), and '其他' (Others).\n3.  **Code Block:** Below the chart, there is a code block with a header that says 'Python' and a '复制' (Copy) button. The code is not fully legible but appears to be Python code for generating the chart.\n\n**Input Area:**\nAt the bottom of the main content area, there is a text input box with a placeholder text: '请输入您的问题...' (Please enter your question...). To the right of the input box, there is a send button.\n\n**Contextual Relationship:**\nThis image is part of a document discussing the 'GPT-VIS-API' and 'sanic-web' projects, which are tools for generating charts from data using LLMs. The screenshot serves as a '案例展示' (Case Demonstration) of how such a system works in practice, showing a user requesting a pie chart and the system responding with both text analysis and a visual chart. This aligns with the document's description of features like '数据问答' (Data Q&A) and '图表生成' (Chart Generation).",
+    "tokens": 931,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 20,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:6c2d3d106c55568bc8838bdea1ada29c",
+      "default:extract:4c11f26f4af45811ffc0d7d69d8f0e46"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Data Assistant Chat Interface with Pie Chart (image)",
+    "original_type": "image",
+    "page_idx": 6,
+    "create_time": 1791615282,
+    "update_time": 1791615346,
+    "_id": "chunk-afb1853dad19beada061d2f61679721b"
+  },
+  "chunk-2c6746154ee72afea8c47d8e88a7e50e": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 1. 复杂的环境依赖与配置\n- Neighbor Text: • ·MCP服务器常依赖Node.js、Python等多种运行时，需手动维护大量命令、参数和环境变量。 •·MCPHub 内置MCP服务器市场，包含众多常用 MCP服务器，支持一键安装和自动配置，简化了环境搭建过程。 • ·通过 Docker部署，MCPHub 可在任何支持 Docker 的平台上运行，避免了环境不一致的问题。 无趣 大佬您好，我把MCPHub部署好了，添加本地的MCP服务也添加成功了，但是用Dify连接MCPHub后，调用不到MCP工具\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/d74cb843cc1468e81bcead377d2c4f2837a988a5c2ca712b18b372f35da00843.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, low-resolution graphic that appears to be a logo or icon. It depicts a stylized mountain range composed of several overlapping triangular peaks. The peaks are rendered in varying shades of blue and teal, creating a sense of depth and layering. The tallest peak is a vibrant, solid blue and is positioned slightly to the right of the center. To its left, there is a shorter, darker blue peak. In front of and between these main peaks, there are lighter teal and cyan triangular shapes, suggesting foothills or foreground mountains. The overall composition is simple and geometric, with a clean, modern aesthetic. The background is white, making the blue and teal shapes stand out prominently. This graphic is likely a logo for a software tool, service, or project, possibly related to data visualization or cloud services, given the mountain motif and the color palette. In the context of the surrounding document, which discusses the deployment of MCP services, this image might represent a specific tool or component, such as 'MCPHub' or 'gpt-vis-api', though no text is present to confirm this. The image is placed near the section '1. 复杂的环境依赖与配置', which discusses complex environment dependencies and configuration, suggesting the logo might belong to a solution addressing these issues.",
+    "tokens": 521,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 21,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:967628b61c4e47db04da2ef4b4c86608",
+      "default:extract:17bc8f067510112d5f3ebdb56dede462"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blue Mountain Range Logo (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615347,
+    "_id": "chunk-2c6746154ee72afea8c47d8e88a7e50e"
+  },
+  "chunk-1d4763d461b0f95b8e08fd85bc46bd41": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 1. 复杂的环境依赖与配置\n- Neighbor Text: •·MCPHub 内置MCP服务器市场，包含众多常用 MCP服务器，支持一键安装和自动配置，简化了环境搭建过程。 • ·通过 Docker部署，MCPHub 可在任何支持 Docker 的平台上运行，避免了环境不一致的问题。 无趣 大佬您好，我把MCPHub部署好了，添加本地的MCP服务也添加成功了，但是用Dify连接MCPHub后，调用不到MCP工具\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/50830fe9f50b1455e171ec8851b3e20a3b4a4eeae0e0e68196dec266ddefd099.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, highly blurred, low-resolution square thumbnail with no discernible text, labels, or distinct objects. The composition consists of soft, indistinct color fields: a warm yellow-beige area on the left, a muted reddish-brown rounded shape in the upper-right, and a lighter pinkish-tan region in the lower-left. The overall palette is warm and pastel-like, with no sharp edges or recognizable figures. Because of the extreme blur and low resolution, no structural topology, nodes, edges, or annotations can be identified. The image appears to be a decorative or incidental thumbnail embedded within the document, rather than a functional diagram or chart. It does not directly illustrate the surrounding technical content about MCPHub deployment, environment dependencies, or MCP server configuration, and no connection to the adjacent text can be established from the visual content alone.",
+    "tokens": 402,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 22,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:4fba89612cb963f5966ff4e8ce3f410f",
+      "default:extract:75fb747a5cecc1ac36452753fd0715c3"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blurred Warm-Toned Thumbnail Image (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615352,
+    "_id": "chunk-1d4763d461b0f95b8e08fd85bc46bd41"
+  },
+  "chunk-e7d9cd3023643e2df6531a006385352f": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 无趣\n- Neighbor Text: 无趣 大佬您好，我把MCPHub部署好了，添加本地的MCP服务也添加成功了，但是用Dify连接MCPHub后，调用不到MCP工具 孙青扬作者 dify连接不太稳定，要看具体使用哪种方式(sse/mcp)，可以结合日志分析一下\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/b236e44666119ce89800eb2979f7a79e2daf2613ae5f009c4247a7ee34cfaf61.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, square, low-resolution avatar or profile picture. It depicts a stylized, cartoonish character with a large head and small body, typical of 'chibi' or anime-style art. The character has short, dark brown or black hair, large brown eyes, and a pale complexion. The character is wearing a white top with a small, dark, circular detail in the center, possibly a button or a simple design. The background is a blurred, light blue and white pattern, suggesting a digital or abstract setting. The image is heavily pixelated, indicating it has been compressed or scaled down significantly. In the context of the surrounding content, which is a technical discussion about deploying MCPHub and connecting it to Dify, this image serves as the avatar for the user named '无趣' (meaning 'boring' or 'uninteresting') who is asking a question about MCP tool invocation. The avatar is positioned next to the user's comment in the forum or chat interface.",
+    "tokens": 384,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 23,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:9b17a4bd03ba9a30674a0b12a003c86e",
+      "default:extract:d7325a7b99e48dcec5be53de272a0a63"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "User Avatar for 无趣 (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615351,
+    "_id": "chunk-e7d9cd3023643e2df6531a006385352f"
+  },
+  "chunk-cc458fff436dfae5dc91224ef0d7b0dc": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 孙青扬作者\n- Neighbor Text: 大佬您好，我把MCPHub部署好了，添加本地的MCP服务也添加成功了，但是用Dify连接MCPHub后，调用不到MCP工具 孙青扬作者 dify连接不太稳定，要看具体使用哪种方式(sse/mcp)，可以结合日志分析一下 Amoypark\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/3bc93ae3e45bc6b25bd903f86641e59f93474ec6c333757c65080d55f44180ab.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a digital icon consisting of a stylized, rounded blue badge or seal shape with a scalloped, gear-like edge. Centered within the blue shape is a prominent white checkmark. The icon has a soft, slightly blurred appearance, suggesting it may be a low-resolution graphic or a screenshot element. The background is a plain, light color, likely white or very pale gray. This icon is typically used to indicate success, completion, verification, or a positive status. In the context of the surrounding document, which discusses the deployment of MCPHub, Dify, and MCP services, this icon likely represents a successful step, a completed configuration, or a verified connection within the technical setup process. It may be part of a user interface screenshot showing a successful deployment or a status indicator in a tutorial or guide.",
+    "tokens": 353,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 24,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:41ce8369a6bf9e8b6fd6e96a17c7235d",
+      "default:extract:18a8df3aa6083b868f8a443e9d654f82"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blue Checkmark Success Icon (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615358,
+    "_id": "chunk-cc458fff436dfae5dc91224ef0d7b0dc"
+  },
+  "chunk-62c6000d6de041c5bcf23c16a5e559e8": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 孙青扬作者\n- Neighbor Text: 孙青扬作者 dify连接不太稳定，要看具体使用哪种方式(sse/mcp)，可以结合日志分析一下 Amoypark 非常感谢，本地部署，不能联网，是不是需要先在联网机台进行下载所需的插件，然后再次打包成镜像文件到离线服务器，这样是不是就可以使用？\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2a4898916e6dea1d8266d55d57962982aa83a2b8de2c3bee0668e270b0669521.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, low-resolution, heavily blurred square photograph used as a user avatar within a discussion thread. The central subject is a person, likely male, positioned in the middle of the frame. The person has dark hair and is wearing a dark-colored top (possibly black or dark blue). The person's face is indistinct due to the blur, but they appear to be facing forward. The background is an outdoor scene with a muted, overcast sky in the upper portion and a brownish, earthy ground in the lower portion, suggesting a field or open area. The image has a white border on the left and bottom edges, typical of a rounded or square profile picture. No text, labels, or other graphical elements are present within the image itself. The image is associated with the username '孙青扬作者' (Sun Qingyang, the author) in the surrounding discussion context, serving as the avatar for that user's comments. The surrounding text discusses MCPHub deployment, Dify connection issues, and offline deployment strategies, but the image itself contains no technical content.",
+    "tokens": 409,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 25,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:77eb56b43481a68767de9cfe5bcabdaa",
+      "default:extract:1d368a86f913574ef0f2af056aec69ac"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Sun Qingyang Author Avatar (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615358,
+    "_id": "chunk-62c6000d6de041c5bcf23c16a5e559e8"
+  },
+  "chunk-46e12b3f95e745beb9427a8d2c356fd6": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Amoypark\n- Neighbor Text: Amoypark 非常感谢，本地部署，不能联网，是不是需要先在联网机台进行下载所需的插件，然后再次打包成镜像文件到离线服务器，这样是不是就可以使用？ 孙青扬作者 是的，他们都是这样干的\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/16bf07325fc0570ce7cd3d68b842df1e6146a4fc36c9948422dc869e1382b0b1.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, square, low-resolution avatar or profile picture. It depicts a stylized, cartoonish character with a large head and small body, typical of 'chibi' or anime-inspired art styles. The character has short, dark brown or black hair that is parted slightly to the side. The face features large, dark, expressive eyes with prominent highlights, and a small, simple mouth. The character is wearing a white top with a dark, possibly black, circular or oval design on the chest area. The background is a blurred, mottled pattern of light blue and white, resembling a cloudy sky or a textured surface. The image is heavily pixelated, suggesting it has been compressed or is a small thumbnail. In the context of the surrounding content, which is a technical discussion about deploying MCPHub, Dify, and MCP services, this image serves as the avatar for the user 'Amoypark'. The user 'Amoypark' is asking a question about offline deployment of MCP services, and this avatar visually identifies their contribution in the forum or comment thread.",
+    "tokens": 394,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 26,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:e143530076bf2081f07558ffc0446e80",
+      "default:extract:b4632151d8914696f42327614e86f210"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Amoypark User Avatar (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615362,
+    "_id": "chunk-46e12b3f95e745beb9427a8d2c356fd6"
+  },
+  "chunk-cd96a7b68c52bd13466193e24646560d": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 孙青扬作者\n- Neighbor Text: 孙青扬作者 是的，他们都是这样干的 ⽤MCPHub搭建本地⾃⼰的MCP平台 - 53AI-AI知识库|⼤模型知识库|⼤模型训练|智能体开发 2.4 如何编写⾃⼰的MCP服务 mcp-server案例分享-⼿搓⼀个MCP-server，⼿把⼿教你从本地开发到云部署全流程实战 - ⽂章 -开发者社区 - ⽕⼭引擎\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e89a28eb26b8b2f0abae9953d6df092bb5bf30955657e840e9d2d158d0d98b12.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, cropped screenshot of a user interface element, likely from a Chinese social media or forum platform. It displays two identical rows of interaction buttons, one at the top and one at the bottom, separated by a large vertical white space. Each row contains two buttons: on the left, a dark gray circular speech bubble icon followed by the Chinese text '回复' (Reply); on the right, a light gray heart icon followed by the Chinese text '喜欢' (Like). The text is rendered in a light gray, sans-serif font. The overall design is minimalist and monochromatic, using shades of gray on a white background. This image appears to be a cropped section from a comment thread, specifically from the section where the author '孙青扬作者' responds to user comments, as indicated by the surrounding context. The buttons are standard UI elements for engaging with a comment.",
+    "tokens": 435,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 27,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:075d4a174aaa8cccc34006534b833405",
+      "default:extract:9749321d2c0dfc423eff994ef377cee0"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Comment Interaction Buttons (Reply and Like) (image)",
+    "original_type": "image",
+    "page_idx": 8,
+    "create_time": 1791615282,
+    "update_time": 1791615362,
+    "_id": "chunk-cd96a7b68c52bd13466193e24646560d"
+  },
+  "chunk-545b90e2cab5ad4d8fede3a9c2c4f58f": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 3 gpt-vis-api部署\n- Neighbor Text: 3 gpt-vis-api部署 部署了apconw/gpt-vis-api服务，可以接收 JSON 格式的数据请求，使⽤ AntV/G ⽣成图表（如折线图、柱状图等），将图表图⽚上传⾄ MinIO 存储并返回图⽚的预签名 URL 供前端访问 在mcp-server-chart进⾏apconw/gpt-vis-api服务的配置 3.1 本地测试 测试⽤例1\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0dab6a99e879e774e0ab91cfab5feb695cad0878e36e3f6c2dd5a9498dfb255b.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a Visual Studio Code (VS Code) integrated development environment (IDE) window running on a Windows operating system. The VS Code window is maximized, occupying the majority of the screen. The title bar of the VS Code window displays the file path 'E:\\mcp-server-chart-main' and the active file name 'env.js'. The window is divided into several main sections: an activity bar on the far left, a file explorer sidebar, a main editor area, a bottom panel, and a status bar at the very bottom.\n\n**Left Sidebar (File Explorer):**\nThe file explorer shows the directory structure of the project 'MCP-SERVER-CHART-MAIN'. The root folder is expanded, revealing several subdirectories and files. The visible items include:\n- 'build' (folder)\n- 'services' (folder)\n- 'index.js'\n- 'sse.d.ts'\n- 'sse.js'\n- 'stdio.d.ts'\n- 'stdio.js'\n- 'streamable.d.ts'\n- 'streamable.js'\n- 'utils' (folder)\n- 'callTool.d.ts'\n- 'callTool.js'\n- 'env.d.ts'\n- 'env.js' (highlighted, indicating it is the currently open file)\n- 'generate.d.ts'\n- 'generate.js'\n- 'getBody.d.ts'\n- 'getBody.js'\n- 'httpServer.d.ts'\n- 'httpServer.js'\n- 'index.d.ts'\n- 'index.js'\n- 'inMemoryEventStore.d.ts'\n- 'inMemoryEventStore.js'\n- 'schema.d.ts'\n- 'schema.js'\n- 'validator.d.ts'\n- 'validator.js'\n- 'index.d.ts'\n- 'index.js'\n- 'sdk.d.ts'\n- 'sdk.js'\n- 'server.d.ts'\n- 'server.js'\n- 'docker' (folder)\n- 'sse' (folder)\n- 'streamable' (folder)\n- 'docker-compose.yml'\n- 'node_modules' (folder)\n\n**Main Editor Area:**\nThe main editor area displays the contents of the file 'env.js'. The code is written in JavaScript and is structured as follows:\n- Line 1: `\"use strict\";`\n- Lines 2-4: A variable declaration `var __importDefault = (this && this.__importDefault) || function (mod) { return (mod && mod.__esModule) ? mod : { \"default\": mod }; };`\n- Line 5: `Object.defineProperty(exports, \"__esModule\", { value: true });`\n- Lines 6-8: Export statements for functions: `exports.getVisRequestServer = getVisRequestServer;`, `exports.getServiceIdentifier = getServiceIdentifier;`, `exports.getDisabledTools = getDisabledTools;`\n- Line 9: `const node_process_1 = __importDefault(require(\"node:process\"));`\n- Lines 10-16: A function definition for `getVisRequestServer()` with a JSDoc comment. The function returns `node_process_1.default.env.VIS_REQUEST_SERVER || \"http://localhost:3100/generate\";`\n- Lines 17-22: A function definition for `getServiceIdentifier()` with a JSDoc comment. The function returns `node_process_1.default.env.SERVICE_ID;`\n- Lines 23-32: A function definition for `getDisabledTools()` with a JSDoc comment. The function checks the environment variable `DISABLED_TOOLS`. If it is undefined, it returns an empty array `[]`. Otherwise, it returns `disabledTools.split(\",\");`.\n\n**Bottom Panel:**\nThe bottom panel is currently showing the 'TERMINAL' tab. The terminal prompt indicates a PowerShell session with the path `(base) PS E:\\mcp-server-chart-main\\mcp-server-chart-main>`. This suggests a Python virtual environment named 'base' is active, and the current working directory is the project root.\n\n**Status Bar:**\nThe status bar at the bottom of the VS Code window shows the current Git branch as 'master', the Python environment as 'base', and the time as '12:04'. The Windows taskbar is visible at the very bottom of the screen, showing the Start button, search bar, and various application icons including File Explorer, Microsoft Edge, and VS Code. The system tray shows the date '2025/11/24' and the time '12:04'.\n\n**Contextual Relationship:**\nThis image is part of a tutorial or documentation section titled '3 gpt-vis-api部署' (3 gpt-vis-api deployment). The code shown in 'env.js' is directly related to configuring the 'mcp-server-chart' service to interact with the 'apconw/gpt-vis-api' service. Specifically, the function `getVisRequestServer()` retrieves the URL for the gpt-vis-api service from the environment variable `VIS_REQUEST_SERVER`, defaulting to 'http://localhost:3100/generate'. This aligns with the surrounding text which mentions configuring the 'apconw/gpt-vis-api' service within 'mcp-server-chart'. The terminal prompt confirms the user is working within the 'mcp-server-chart-main' directory, which is the project being configured.",
+    "tokens": 1322,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 28,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:63cd68f8d1ce8bbc167fbfd8942c0ba6",
+      "default:extract:0b6eb96558fd09f52d49419b40ce4e0e"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "VS Code env.js configuration for mcp-server-chart (image)",
+    "original_type": "image",
+    "page_idx": 9,
+    "create_time": 1791615282,
+    "update_time": 1791615371,
+    "_id": "chunk-545b90e2cab5ad4d8fede3a9c2c4f58f"
+  },
+  "chunk-9208d3d4d0af3445436567fdc54112d7": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 测试⽤例1\n- Neighbor Text: 3.1 本地测试 测试⽤例1 测试⽤例2 E:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"line\\\",\\\"data\\\":[{\\\"time\\\": \\\"2025-05\\\",\\\"value\\\": 512},{\\\"time\\\": \\\"2025-06\\\",\\\"value\\\": 1024}]}\" {\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955070350_nvjeflov.png\", \"message\":\"图表生成 并上传成功\"}\nE:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"sankey\\\",\\\"data\\\":[{\\\"source\\\":\\\"访问网站\\\",\\\"target\\\":\\\"浏览商品\\\",\\\"value\\\":1500},{\\\"source\\\":\\\"浏 览商品\\\",\\\"target\\\":\\\"加入购物车\\\",\\\"value\\\"：900},{\\\"source\\\"：\\\"加入购物车\\\",\\\"target\\\"：\\\"进入结算\\\",\\\"value\\\"：600} {\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\"：\\\"完成支付\\\",\\\"value\\\"：400},{\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\":\\\"放弃结算\\\",\\ \"value\\\":200},{\\\"source\\\":\\\"加入购物车\\\",\\\"target\\\":\\\"离开网站\\\",\\\"value\\\"：300},{\\\"source\\\":\\\"浏览商品\\\",\\\"target\\\" :\\\"离开网站\\\",\\\"value\\\":600},{\\\"source\\\":\\\"访问网站\\\"\\\"target\\\":\\\"立即离开\\\".\\\"value\\\":500}].\\\"nodeAlign\\\":\\\"cent er\\\",\\\"style\\\":{\\\"backgroundColor\\\":\\\"#f8f9fa\\\",\\\"palette\\\":[\\\"#4e79a7\\\",\\\"#f28e2b\\\",\\\"#e15759\\\",\\\"#76b7b2\\\",\\\"#59a14 f\\\",\\\"#edc948\\\",\\\"#b07aa1\\\",\\\"#9c755f\\\"],\\\"texture\\\": \\\"default\\\"},\\\"theme\\\":{\\\"fontFamily\\\": \\\"WenQuanYi Zen Hei\\\"},\\\" width\\\":800,\\\"height\\\":500,\\\"title\\\":\\\"用户购买旅程桑基图\\\",\\\"source\\\":\\\"mcp-server-chart\\\"}\"\n{\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955231693_ltlm2muq.png\",\"message\":\"图表生成 并上传成功\"}\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2f956114ad70ce2bdb390056d1ce75ccd3864eb4b5bd133fc0c8c9bf6e086407.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a Windows desktop environment displaying an image viewer application. The main content is a simple line chart generated by an API, as indicated by the surrounding context. The chart is displayed within a white canvas area, with a light gray background surrounding it. The image viewer's interface includes a top toolbar with various icons for zooming, rotating, and other functions, and a bottom status bar showing the image file name '1763955070_jeflov.png', its dimensions '1800*1200像素', and the zoom level '1/1'. The Windows taskbar is visible at the bottom, showing the time '11:32', date '2025/11/24', and various application icons. A notification popup from a remote desktop application is also visible in the bottom right corner.\n\nThe line chart itself plots a single data series with two points connected by a straight blue line. The x-axis represents time, with two labeled points: '2025-05' and '2025-06'. The y-axis represents a numerical value, with grid lines and labels at intervals of 100, starting from 500 up to 1100. The first data point is at (2025-05, 512), and the second is at (2025-06, 1024). The data points are marked with small blue circles, and the numerical values '512' and '1024' are displayed next to their respective points. The chart has no title or axis titles. The overall visual style is clean and minimalistic, typical of a basic charting library output.\n\nThis image is a direct result of the first test case described in the surrounding context. The context shows a curl command that sends a POST request to a local API endpoint to generate a line chart with the exact data points shown in the image: time '2025-05' with value 512, and time '2025-06' with value 1024. The API response indicates success and provides a URL to the generated chart image, which is the image being displayed in the viewer. This confirms that the image is a successful output of the '测试用例1' (Test Case 1) for the local testing of the chart generation service.",
+    "tokens": 1087,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 29,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:a772a344ebb30458e80700250cc3f989",
+      "default:extract:75453356c250f8f7536ae4e042fa3916"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Line Chart Test Case 1 Output (image)",
+    "original_type": "image",
+    "page_idx": 10,
+    "create_time": 1791615282,
+    "update_time": 1791615368,
+    "_id": "chunk-9208d3d4d0af3445436567fdc54112d7"
+  },
+  "chunk-3da2e3ba09aaf5c26f390a62fa29f730": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 测试⽤例2\n- Neighbor Text: 测试⽤例2 E:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"line\\\",\\\"data\\\":[{\\\"time\\\": \\\"2025-05\\\",\\\"value\\\": 512},{\\\"time\\\": \\\"2025-06\\\",\\\"value\\\": 1024}]}\" {\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955070350_nvjeflov.png\", \"message\":\"图表生成 并上传成功\"}\nE:\\gpt-vis-api-main\\gpt-vis-api-main>curl -X POST http://localhost:3100/generate -H \"Content-Type: application/json\" -d \"{\\\"type\\\":\\\"sankey\\\",\\\"data\\\":[{\\\"source\\\":\\\"访问网站\\\",\\\"target\\\":\\\"浏览商品\\\",\\\"value\\\":1500},{\\\"source\\\":\\\"浏 览商品\\\",\\\"target\\\":\\\"加入购物车\\\",\\\"value\\\"：900},{\\\"source\\\"：\\\"加入购物车\\\",\\\"target\\\"：\\\"进入结算\\\",\\\"value\\\"：600} {\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\"：\\\"完成支付\\\",\\\"value\\\"：400},{\\\"source\\\"：\\\"进入结算\\\",\\\"target\\\":\\\"放弃结算\\\",\\ \"value\\\":200},{\\\"source\\\":\\\"加入购物车\\\",\\\"target\\\":\\\"离开网站\\\",\\\"value\\\"：300},{\\\"source\\\":\\\"浏览商品\\\",\\\"target\\\" :\\\"离开网站\\\",\\\"value\\\":600},{\\\"source\\\":\\\"访问网站\\\"\\\"target\\\":\\\"立即离开\\\".\\\"value\\\":500}].\\\"nodeAlign\\\":\\\"cent er\\\",\\\"style\\\":{\\\"backgroundColor\\\":\\\"#f8f9fa\\\",\\\"palette\\\":[\\\"#4e79a7\\\",\\\"#f28e2b\\\",\\\"#e15759\\\",\\\"#76b7b2\\\",\\\"#59a14 f\\\",\\\"#edc948\\\",\\\"#b07aa1\\\",\\\"#9c755f\\\"],\\\"texture\\\": \\\"default\\\"},\\\"theme\\\":{\\\"fontFamily\\\": \\\"WenQuanYi Zen Hei\\\"},\\\" width\\\":800,\\\"height\\\":500,\\\"title\\\":\\\"用户购买旅程桑基图\\\",\\\"source\\\":\\\"mcp-server-chart\\\"}\"\n{\"success\":true,\"result0bj\":\"http://localhost:19200/chart-images/charts/1763955231693_ltlm2muq.png\",\"message\":\"图表生成 并上传成功\"} 3.2 Dify测试 node build/index.js --transport sse 启动MCP服务，运⾏在1122端⼝ 台湾地区海空力量包括哪些组织?\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/c544c8aeb2b22501705e740ff3cc3a88c0648926e627834629dcfb34cbf6bb57.jpg\nCaptions: 用户购买旅程桑基图\nFootnotes: None\n\nVisual Analysis: The image is a Sankey diagram titled '用户购买旅程桑基图' (User Purchase Journey Sankey Diagram), visualizing the flow of users through a website purchase funnel. The diagram is set against a light gray background (#f8f9fa) and uses a vertical, left-to-right layout with colored rectangular nodes representing stages and gray bands representing the flow volume between them. The nodes are aligned in the center ('nodeAlign': 'center').\n\nFrom left to right, the nodes and their connections are:\n- **访问网站 (Visit Website)**: A tall blue node on the far left. It splits into two flows: a large flow to '浏览商品' (Browse Products) and a smaller flow to '立即离开' (Leave Immediately).\n- **浏览商品 (Browse Products)**: An orange node. It receives flow from '访问网站' and splits into two flows: one to '加入购物车' (Add to Cart) and one to '离开网站' (Leave Website).\n- **加入购物车 (Add to Cart)**: A purple node. It receives flow from '浏览商品' and splits into two flows: one to '进入结算' (Enter Checkout) and one to '离开网站' (Leave Website).\n- **进入结算 (Enter Checkout)**: A teal node. It receives flow from '加入购物车' and splits into two flows: one to '完成支付' (Complete Payment) and one to '放弃结算' (Abandon Checkout).\n- **完成支付 (Complete Payment)**: A dark purple node on the far right, representing the successful end of the journey.\n- **放弃结算 (Abandon Checkout)**: A yellow node on the far right, representing users who abandon the checkout process.\n- **离开网站 (Leave Website)**: A green node positioned to the right of '加入购物车' and '浏览商品'. It receives flows from both '浏览商品' and '加入购物车'.\n- **立即离开 (Leave Immediately)**: A pink node positioned below '浏览商品'. It receives flow from '访问网站'.\n\nThe width of the gray bands is proportional to the number of users (value) flowing between stages. The diagram uses a color palette of blue, orange, purple, teal, dark purple, yellow, green, and pink for the nodes, with gray for the flows. The text labels are in Chinese, using the 'WenQuanYi Zen Hei' font family. The diagram is 800 pixels wide and 500 pixels tall.\n\nThis image is the output of a test case (测试用例2) for an MCP service, as indicated by the surrounding context. The context shows a curl command that generates a Sankey diagram with specific data and styling parameters, and the image is the resulting chart uploaded to a server. The diagram illustrates a user purchase journey with stages: Visit Website, Browse Products, Add to Cart, Enter Checkout, Complete Payment, Abandon Checkout, Leave Website, and Leave Immediately. The data values from the command are: Visit Website to Browse Products: 1500, Browse Products to Add to Cart: 900, Add to Cart to Enter Checkout: 600, Enter Checkout to Complete Payment: 400, Enter Checkout to Abandon Checkout: 200, Add to Cart to Leave Website: 300, Browse Products to Leave Website: 600, Visit Website to Leave Immediately: 500.",
+    "tokens": 1363,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 30,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:c7098b52cd54870a6a6f6af8e9f9dfc6",
+      "default:extract:2e81ca4c7211187e6166b3d94a8d8f0b"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "用户购买旅程桑基图 (image)",
+    "original_type": "image",
+    "page_idx": 11,
+    "create_time": 1791615282,
+    "update_time": 1791615377,
+    "_id": "chunk-3da2e3ba09aaf5c26f390a62fa29f730"
+  },
+  "chunk-5b0c6a1890889cb47462112bf019f02f": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 空军：\n- Neighbor Text: 11. 海军海洋监侦指挥部 空军： 1. 国防部空军司令部 3.3 Qwen3:32b\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/4e87d15b56d56e5e352bd5b1ba3800e7e17dccdf2f5b2a17805328e6b602714d.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a software interface, likely a mind-mapping or diagramming tool, displaying a hierarchical organizational chart. The chart is centered on a white canvas and is structured from left to right. The root node on the far left is a blue box labeled '台湾地区海空力量'. This node branches into two main categories: '海军' (Navy) and '空军' (Air Force). The '海军' branch is a light orange box and connects to a vertical list of 11 sub-nodes, each in a light blue box with a small colored icon. The text in these boxes, from top to bottom, reads: '国防部海军司令部', '海军舰队指挥部', '海军保修指挥部', '海军第168舰队', '海军第131舰队', '海军第192舰队', '海军第151舰队', '海军第124舰队', '海军陆战队指挥部', '海军制海飞弹指挥部', and '海军海洋监侦指挥部'. Similarly, the '空军' branch is a light green box and connects to a vertical list of 7 sub-nodes, also in light blue boxes. The text in these boxes, from top to bottom, reads: '国防部空军司令部', '空军作战指挥部', '空军防空暨导弹指挥部', '空军保修指挥部', '空军第1-7战术战斗机连队', '空军松山基地指挥部', and '空军航空科技研究发展中心'. The interface has a dark gray top menu bar with icons and text such as '文件', '编辑', '视图', '插入', '格式', '工具', '帮助', and a '发布' button. On the right side of the screen, there is a dark gray panel displaying a text list that mirrors the content of the chart, with headings '海军：' and '空军：' followed by numbered lists of the same organizations. Below the '空军' list, there is a line of text '相关组织架构图如下：' and a small, partially visible thumbnail of the organizational chart. The bottom right corner shows a status bar with a user ID 'orkj466609ww32bg' and a message '正在远程本机', along with several icons for chat, microphone, and other functions.",
+    "tokens": 688,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 31,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:0c79c73d05d9b43c8415587c1deaad97",
+      "default:extract:b1a3eefe1946596f6f3c733213d9750a"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "台湾地区海空力量组织架构图 (image)",
+    "original_type": "image",
+    "page_idx": 13,
+    "create_time": 1791615282,
+    "update_time": 1791615378,
+    "_id": "chunk-5b0c6a1890889cb47462112bf019f02f"
+  },
+  "chunk-f5702ae24a0f62f9c64271f9c3ff84f6": {
+    "content": "Table Analysis:\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/cb947015a496ffd96206a9265eb9e4babdd5cff4d25abe8d65f8fd514db9f245.jpg\nCaption: 图⽚可在 MinIO中查看\nStructure: <table><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>处理后的图表配置：{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;type&quot;: &quot;organization-chart&quot;,</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;data&quot;: {</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;台湾地区海空力量&quot;</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;description&quot;：&quot;基于用户提供的资料整理&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: [</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;: &quot;海军&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;description&quot;：&quot;海军司令部及下属组织&#x27;</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: [</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;国防部海军司令部&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军舰队指挥部&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军保修指挥部&quot;</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军168舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;:[]</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军131舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军192舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军151舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api 2025-11-24 11:57:41</td><td>&quot;children&quot;: []</td></tr><tr><td>gpt-vis-api 2025-11-24 11:57:41</td><td>}, {</td></tr><tr><td>gpt-vis-api</td><td>&quot;name&quot;：&quot;海军124舰队&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api 2025-11-24 11:57:41</td><td>&quot;children&quot;: []</td></tr><tr><td>gpt-vis-api</td><td></td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>}, {</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军陆战队指挥军部&quot;，</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td></td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;children&quot;: []</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>},</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>{</td></tr><tr><td>2025-11-24 11:57:41 gpt-vis-api</td><td>&quot;name&quot;：&quot;海军制海飞单指挥部&quot;</td></tr></table>\nFootnotes: None\n\nAnalysis: The table presents a log output from the 'gpt-vis-api' service, captured on '2025-11-24 11:57:41'. It is structured in two columns: the first column contains the timestamp and the service name ('gpt-vis-api'), while the second column contains fragments of a JSON configuration for an 'organization-chart'. The JSON data describes a hierarchical organizational structure for '台湾地区海空力量' (Taiwan Region Sea and Air Forces), with a root node and children nodes representing various naval commands and fleets. The table is part of a document discussing the integration of MCP (Model Context Protocol) services with large language models like Qwen3:32b and DeepSeek:70b. The surrounding context highlights issues where these models get stuck during execution when generating charts via MCP services. This table serves as a concrete example of the output from the 'gpt-vis-api' service, illustrating the type of data being processed and potentially the point at which the models encounter difficulties. The JSON structure includes nested 'children' arrays, indicating a tree-like organization chart, with nodes such as '海军' (Navy), '国防部海军司令部' (Ministry of National Defense Navy Command), and various fleet commands. The data is incomplete in the table, ending mid-JSON, which may reflect the truncation or interruption mentioned in the context.",
+    "tokens": 2200,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 32,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:e1a7a4b48caccb0819606300454465be",
+      "default:extract:ce21743f478c4c9dade2020264f7fa60"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "gpt-vis-api Log Output for Organization Chart Configuration (table)",
+    "original_type": "table",
+    "page_idx": 14,
+    "create_time": 1791615282,
+    "update_time": 1791615384,
+    "_id": "chunk-f5702ae24a0f62f9c64271f9c3ff84f6"
+  },
+  "chunk-22289987ab43c6909c9d91c1d8530ece": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 空军：\n- Neighbor Text: 1. 国防部空军司令部 3.3 Qwen3:32b 启动mcp-server-chart服务node build/index.js --transport sse 在docker中查看gpt-vis-api，qwen3:32b没有成功调⽤到gpt-vis-api服务搜索⼩模型调⽤MCP服务的案例\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/6a7034ba82548af5b8794c56ada1d310b6d2fb5ad3ab0fb5bb2ff11d3ef8f327.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a full-screen screenshot of a Windows desktop environment, primarily showing a web browser window displaying a generated chart preview. The browser is Google Chrome, and the active tab is titled 'Preview - charts/1763956661760_fii9yr7x.png'. The URL bar shows 'localhost:19201/browser/chart-images/charts%2F1763956661760_fii9yr7x.png', indicating a local server hosting the chart image. The chart itself is a vertical, hierarchical diagram (likely a mind map or tree diagram) with a central root node on the left labeled '台东县军用设施' (Taitung County Military Facilities). From this root node, numerous branches extend to the right, each connecting to a child node. The child nodes are small rectangular boxes containing text, but the text is too small and blurry to read verbatim. The nodes are connected by thin lines, forming a tree structure. The background of the chart is white, and the nodes appear to have a light blue or gray fill. The browser window also has a sidebar on the left with various tabs and tools, and a bottom taskbar showing the Windows start menu, search bar, and system tray with icons for network, volume, and the time '12:01' and date '2025/11/24'. The desktop background is a dark blue abstract pattern. The overall context from the surrounding document indicates this is a screenshot related to testing MCP (Model Context Protocol) services with local models, specifically Qwen3:32b and DeepSeek:70b, which are encountering issues when generating charts. The chart shown is likely an output from the MCP service, demonstrating the model's attempt to visualize military facilities in Taitung County, as prompted in the document. The image serves as visual evidence of the chart generation process and its current state.",
+    "tokens": 576,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 33,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:64dff44c5bbb0a7b4c839c4b5aa108ef",
+      "default:extract:abb6211d244c1e6239374e8b3737971a"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Taitung County Military Facilities Chart Preview (image)",
+    "original_type": "image",
+    "page_idx": 15,
+    "create_time": 1791615282,
+    "update_time": 1791615383,
+    "_id": "chunk-22289987ab43c6909c9d91c1d8530ece"
+  },
+  "chunk-0825df065525dd92af8d2c20f70b3388": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 3.4 ⼩模型调⽤MCP\n- Neighbor Text: 在docker中查看gpt-vis-api，qwen3:32b没有成功调⽤到gpt-vis-api服务搜索⼩模型调⽤MCP服务的案例 3.4 ⼩模型调⽤MCP ⽬前图表⽣成MCP服务存在的问题：qwen3:32b以及deepseek:70b模型运⾏到⼀半都会卡住 预览 台东县包括哪些军用设施，文字和图表结合起来回答 工作流>\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/63a37baf4fe15a77e327dfd4f041c89bca97eab4f80bc5d98eced6ae8a7a69bd.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a small, stylized, cartoon-like robot character, likely serving as an avatar or icon within a technical document. The robot has a predominantly light pink or lavender body with a rounded, somewhat rectangular head. On top of its head is a small, flat, yellow rectangular block. Two thin, pink antennae extend upwards and outwards from the sides of its head, each topped with a small, dark, circular knob. The robot's face features a large, dark blue or black visor-like area that spans horizontally across the upper half of its face. Within this visor, there are two lighter blue, rounded rectangular shapes that resemble eyes. Below the visor, there is a small, dark, horizontal rectangular slot that serves as a mouth. The overall style is simple, flat, and illustrative, typical of modern digital icons or mascots. This image appears in the context of a technical document discussing the implementation and testing of MCP (Model Context Protocol) services with small language models, specifically Qwen3-4B and Qwen3:32b. The robot character likely represents the AI model or the MCP service itself, serving as a visual aid in the section titled '3.4 ⼩模型调⽤MCP' (Small Model Calling MCP).",
+    "tokens": 508,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 34,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:80396fd4b755576374142c155d71cf38",
+      "default:extract:8037a45b9ee36ac50baa02e597342f4d"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Pink Robot Mascot Icon (image)",
+    "original_type": "image",
+    "page_idx": 16,
+    "create_time": 1791615282,
+    "update_time": 1791615389,
+    "_id": "chunk-0825df065525dd92af8d2c20f70b3388"
+  },
+  "chunk-cb20a950ebc664cec0ec504d03fed297": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 工作流>\n- Neighbor Text: 1.模型没有调⽤MCP服务的能⼒ 2.模型能⼒不⾜，⽆法跟MCP服务需要的格式匹配—— 3.MCP服务的⼯具太多，过于复杂，导致所需的token超过了模型本身的上下⽂ 本地Qwen3-4B也能跑通MCP MCP代码实战 vllm部署与mcp⼯具实践测试\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/1cf00a9606a5e263cd1e5cdf9be70da8b9b795c137e3c0fd62094b42d84056bb.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a single, stylized digital icon on a plain white background. The icon represents a document or file, depicted as a blue rectangle with a folded top-right corner, a common visual convention for files. Centered within the blue document shape is a white cloud symbol. The icon is rendered in a flat, modern style with solid colors and no gradients or shadows. There is no text, annotation, or additional graphical elements present. In the context of the surrounding document, which discusses MCP (Model Context Protocol) services, tool registration, and local model testing, this icon likely serves as a visual marker for a file, configuration, or service component related to the MCP server implementation described in the text.",
+    "tokens": 369,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 35,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:735c49c680a2fc2da84a858379c4c5c8",
+      "default:extract:8ca9e4b63e0ac24cae4b659724d31151"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blue Document with Cloud Icon (image)",
+    "original_type": "image",
+    "page_idx": 16,
+    "create_time": 1791615282,
+    "update_time": 1791615388,
+    "_id": "chunk-cb20a950ebc664cec0ec504d03fed297"
+  },
+  "chunk-215f43fa31733949908bb507a3fa6f2c": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 工作流>\n- Neighbor Text: 3.MCP服务的⼯具太多，过于复杂，导致所需的token超过了模型本身的上下⽂ 本地Qwen3-4B也能跑通MCP MCP代码实战 vllm部署与mcp⼯具实践测试 3.4.1 问题1 这周模仿上⾯的⽂章实现了简单的MCP服务，并且⽤Dify上的⼩模型进⾏了测试\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/993f7e915163a03cd84198aad6aad0d3622e43b8486b65ebccc030f59151e10d.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, simple digital icon rendered in a flat, illustrative style. It depicts a blue document or file symbol with a folded top-right corner, a common visual convention for representing a file. Centered within the blue document shape is a white cloud symbol. The icon has no text labels, annotations, or other elements. The blue color is a medium, slightly muted shade, and the white cloud is solid. The overall composition is centered and minimal, typical of a UI icon used to denote cloud storage, cloud services, or a cloud-based file. In the context of the surrounding content, which discusses MCP (Model Context Protocol) services, local model deployment, and tool integration, this icon likely represents a cloud service or cloud-based API (such as the gpt-vis-api mentioned in the text) that the local models are attempting to call. The icon may be used in the document to visually indicate cloud-related components or services within the MCP workflow.",
+    "tokens": 421,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 36,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:0d6b45160eebcf949b894d981bd8e76c",
+      "default:extract:f06fc81a3dad2ec03ce47b60dc7cddcd"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blue Document with Cloud Icon (image)",
+    "original_type": "image",
+    "page_idx": 16,
+    "create_time": 1791615282,
+    "update_time": 1791615394,
+    "_id": "chunk-215f43fa31733949908bb507a3fa6f2c"
+  },
+  "chunk-886c2e8ce4df58fde41127defb87413b": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: (hgmcp) PS D:\\software\\Vscode_File\\hgmcp> python mcptest.py FastMCP服务测试脚本 可用工具列表：weather，stock 北京天气查询结果:CallToolResult(content=[TextContent(type='text'，text='{\"temp\":25,\"condition\":\"晴\"}',annotations=None,meta=None)],structured_content={'temp':25,'condition':'晴'}，meta=None,dat a={'temp': 25, 'condition': '晴'l, is error=False) 股票查询结果: CallToolResult(content=[TextContent(type='text',text='{\"name\":\"贵州茅台\",\"price\":1825.0}',annotations=None,meta=None)],structured_content={'name':'贵州茅台','price':1825.0},meta=N one, data={'name': '贵州茅台', 'price': 1825.0}, is_error=False) 错误处理测试结果：callToolResult(content=[TextContent(type='text',text='{\"error\":\"未找到该城市\"}'，annotations=None，meta=None)],structured_content={'error':'未找到该城市'}，meta=None,data={'error :'未找到该城市'}，is_error=False) (hgmcp) PS D:\\software\\Vscode_File\\hgmcp> Dify测试 ▼ MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if28 __name__ == \"__main__\": 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"sse\", 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9d2e07af6efb250893fb5d7c6630ebd457a74e3ac742edbac1ccce035e423c6b.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web browser displaying the Dify platform's workflow editor interface, specifically for a workflow named 'sql生成Test mcp'. The browser window shows multiple tabs, with the active tab being 'Agent测试 - Dify'. The URL bar indicates a localhost address: 'localhost/app/d0563991-bcca-4153-bd36-0449f5bc02a0/workflow'. The Dify interface is divided into several sections:\n\n1.  **Top Navigation Bar**: Contains the Dify logo, 'admin's Workspace' dropdown, and tabs for '探索', '工作室', '知识库', and '工具'. The '工作室' tab is active, and a sub-tab 'sql生成Test mcp' is selected.\n2.  **Left Sidebar**: Displays the workflow name 'sql生成Test mcp' with a 'DRAFT' label. Below are menu items: '编排', '访问 API', '日志与标注', and '监测'.\n3.  **Main Canvas (Center)**: Shows a visual workflow diagram with three nodes connected by arrows. The nodes are:\n    *   '开始' (Start) node on the left.\n    *   'AGENT' node in the center, with a label '预览 ReAct (支持 MCP 工具)' and '模型 qwen3:8b CHAT'.\n    *   '直接回复' (Direct Reply) node on the right, with a label '回复 Agent (x) text'.\n4.  **Right Panel (Agent Configuration)**: This panel is titled 'Agent' and contains settings for the agent node:\n    *   'AGENT 策略': Set to 'ReAct (支持 MCP 工具)'.\n    *   '模型': Set to 'qwen3:8b CHAT'.\n    *   '工具列表': A section to add tools.\n    *   'MCP 服务配置': A text area containing JSON configuration:\n        ```json\n        {\n          \"mcp-server-chart\": {\n            \"transport\": \"sse\",\n            \"url\": \"http://host.docker.internal:4200/demo\"\n          }\n        }\n        ```\n    *   'MCP 资源作为工具': Set to 'True'.\n    *   'MCP 提示词作为工具': Set to 'True'.\n    *   '指令': A text area with the prompt '你可以调用MCP服务进行天气查询和股票查询'.\n    *   '查询': Set to '开始 (x) sys.query'.\n    *   '最大迭代次数': Set to '5'.\n    *   '记忆': An empty field.\n    *   '输出变量': An empty field.\n5.  **Preview Panel (Far Right)**: Shows a chat interface with a user message '上海天气怎么样' and an assistant response '上海天气多云，温度28摄氏度。'.\n6.  **Browser Extensions/Overlays**: A dark overlay in the top right corner shows a browser extension popup with the text 'orkj466609ww32bg正在远程本机'. At the bottom right, a notification reads '正通过长期验证码被控，安全级别低建议改为单次验证码'. The Windows taskbar is visible at the bottom, showing the time as '11:12' and date '2025/12/8', along with various application icons.\n\nThe image illustrates the configuration of an MCP (Model Context Protocol) server within a Dify agent workflow, specifically connecting to a local MCP server running on port 4200 with the path '/demo', as referenced in the surrounding code context.",
+    "tokens": 1618,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 37,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:206ccb68010c0d8453e1b4110a18cff1",
+      "default:extract:7877a66c9e551ec966cfecd619fe8ae1"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Dify Agent MCP Configuration Interface (image)",
+    "original_type": "image",
+    "page_idx": 21,
+    "create_time": 1791615282,
+    "update_time": 1791615397,
+    "_id": "chunk-886c2e8ce4df58fde41127defb87413b"
+  },
+  "chunk-677387b0d12710d9b55ebc13fd550e1e": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: Dify测试 ▼ MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if28 __name__ == \"__main__\": 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"sse\", 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/f3d31e2b8304d186e52242048da8661c979af53b12d619beb1dfcb776e3c433f.jpg\nCaptions: qwen3:8b也可以调⽤这个简单的MCP服务，32b不能调⽤chart的MCP服务应该就是模型能⼒问题，不能⽣成指定的格式，⽽不是模型没有Functioncall\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a Visual Studio Code (VS Code) window on a Windows desktop, showing a Python project for an MCP (Model Context Protocol) server. The window title bar reads '573 890 206' and the active file tab is 'mcpserver.py'. The left sidebar shows the Explorer with a folder named 'HGMCP' containing 'mcpserver.py' and 'mcptest.py'. The main editor area displays Python code for a FastMCP server. The code imports FastMCP, creates an app instance named 'demo', and defines two tools: 'weather' (城市天气查询) and 'stock' (股票价格查询). The weather tool returns preset data for '北京' (25°C, 晴) and '上海' (28°C, 多云). The stock tool returns data for '600519' (贵州茅台, 1825.0) and '000858' (五粮液, 158.3). The server runs with SSE transport on host '127.0.0.1', port '4200', path '/demo', and debug log level. Below the code editor, a terminal panel shows the server running with debug logs. The logs indicate successful HTTP requests (POST and GET) to various endpoints like '/messages/', '/sse', and '/demo'. Notably, the logs show 'Handler called: call_tool stock with { code : 600519 }' and 'Handler called: call_tool weather with { city : 上海 }', indicating successful tool invocations. On the right side of the VS Code window, a chat panel titled 'Build with Agent' is visible, with a message 'orkj466609w32bq正在远程主机' and a button 'Generate Agent instructions to onboard AI onto your codebase.' The bottom status bar shows the time '11:13', date '2025/12/8', and weather '14°C 晴朗'. The overall scene depicts a developer testing an MCP server implementation, with the terminal confirming that the server is receiving and processing tool calls correctly.",
+    "tokens": 1075,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 38,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:94deb44a87980fb8e8311ac8bab61e18",
+      "default:extract:3372f99a344f625a234d546058a3e53e"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "VS Code MCP Server Debugging Session (image)",
+    "original_type": "image",
+    "page_idx": 21,
+    "create_time": 1791615282,
+    "update_time": 1791615403,
+    "_id": "chunk-677387b0d12710d9b55ebc13fd550e1e"
+  },
+  "chunk-d14809c97d977d90b6981933292df49d": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: ▼ MCPServer Python 1 from fastmcp import FastMCP 2 3 # 创建FastMCP应⽤实例，\"demo\"为应⽤名称 4 app = FastMCP(\"demo\") 5 6 # 注册天⽓查询⼯具，⽤于获取指定城市的天⽓信息 7 @app.tool(name=\"weather\", description=\"城市天⽓查询\") def get_weather(city: str):8 9 # 预设的天⽓数据（实际应⽤中可替换为API调⽤） 10 weather_data = { 11 \"北京\": {\"temp\": 25, \"condition\": \"晴\"}, 12 \"上海\": {\"temp\": 28, \"condition\": \"多云\"} 13 } 14 # 返回对应城市的天⽓，不存在则返回错误信息 15 return weather_data.get(city, {\"error\": \"未找到该城市\"}) 16 17 # 注册股票查询⼯具，⽤于获取指定股票代码的价格信息 18 @app.tool(name=\"stock\", description=\"股票价格查询\") def get_stock(code: str):19 20 # 预设的股票数据（实际应⽤中可替换为API调⽤） 21 stock_data = { 22 \"600519\": {\"name\": \"贵州茅台\", \"price\": 1825.0}, 23 \"000858\": {\"name\": \"五粮液\", \"price\": 158.3} 24 } 25 # 返回对应股票的信息，不存在则返回错误信息 26 return stock_data.get(code, {\"error\": \"未找到该股票\"}) 27 if28 __name__ == \"__main__\": 29 # 启动HTTP服务，⽀持流式响应 30 app.run( 31 transport=\"sse\", 32 host=\"127.0.0.1\", # 监听本地地址 33 port=4200, # 服务端⼝ 34 path=\"/demo\", # 服务路径前缀 35 log_level=\"debug\", # 调试⽇志级别 36 )\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/c2e3f8ed153ca7c0a7f31a30176b9826f43404237d44ec73c34d54b4cdc24057.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a simple, low-resolution graphic of a thumbs-up icon. The icon is rendered in a light gray color with a slightly darker gray outline, giving it a somewhat blurred or pixelated appearance. The thumbs-up symbol consists of a hand with the thumb pointing upwards, a common gesture indicating approval, agreement, or a positive outcome. The icon is centered on a plain white background. There are no text labels, annotations, or other visual elements present in the image. In the context of the surrounding document, which discusses testing MCP (Model Context Protocol) services with large language models like Qwen 32B and Llama 3.3, this thumbs-up icon likely serves as a visual indicator of success or a positive result. For instance, it may be used to denote that a particular test case passed, a tool call was successful, or a model performed as expected. The document mentions issues such as tool calls not returning results, garbled output, and failed tool calls, so this icon could be part of a status indicator in a testing interface or a summary table. The icon's presence suggests a binary or qualitative assessment, contrasting with the detailed technical problems described in the text.",
+    "tokens": 828,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 39,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:50358eb92c29573eb93a9cf2eed526e0",
+      "default:extract:f2c455167ec26b9ecfa0765e96d1e6d7"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Thumbs-Up Approval Icon (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615402,
+    "_id": "chunk-d14809c97d977d90b6981933292df49d"
+  },
+  "chunk-981b9086710d6ccd0c9a98a302e00c7d": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: 感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/340e435ad3cc36dc6fd0d96efded30edfd180deb074502dee740515b9f195afb.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a simple, monochromatic icon of a thumbs-down gesture. The icon is rendered in a light gray color against a plain white background. The design is minimalist, featuring a stylized hand with the thumb pointing downwards, enclosed within a rounded rectangular shape that represents the palm and fingers. The icon is slightly blurred, suggesting it may be a low-resolution graphic or a screenshot element. There is no text, annotation, or additional visual elements present. In the context of the surrounding document, which discusses issues with model tool calls and MCP service integration, this thumbs-down icon likely represents a negative outcome, failure, or dissatisfaction, possibly indicating a failed tool call or an unsatisfactory result in the testing process described in the text.",
+    "tokens": 286,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 40,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:e05d19b03f0d151461e176ffd79a62fc",
+      "default:extract:37576d6538b72f290867000b7e02219f"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Thumbs-Down Icon (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615406,
+    "_id": "chunk-981b9086710d6ccd0c9a98a302e00c7d"
+  },
+  "chunk-78ecb26ec990da909579b2d0d8e16aa6": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: 感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/8c3a00be8a6878756a70466a9074ea19731af969d1a6197bf7d1d175f32e22b3.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a simple, monochromatic icon of a 'thumbs down' or 'dislike' symbol. The icon is rendered in a light gray color against a plain white background. The graphic consists of a stylized hand with the thumb pointing downwards, enclosed within a rounded rectangular outline that represents the palm and fingers. The design is minimalist, using thick, uniform lines without any shading or internal details. This icon is commonly used in digital interfaces to express disapproval, disagreement, or a negative response. In the context of the surrounding document, which discusses technical issues with AI models (like llama3.3 and qwen 32b) failing to properly execute tool calls or returning garbled text, this 'thumbs down' icon likely serves as a visual indicator of failure, dissatisfaction, or a negative outcome related to the described problems. It may be part of a user interface screenshot or a status indicator within the 'Dify测试' section mentioned in the document structure.",
+    "tokens": 346,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 41,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:8b2afedf29da03a182d49f48bf4a8cb3",
+      "default:extract:1c76239b823496e8e0afe30d8bba1755"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Thumbs Down Dislike Icon (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615407,
+    "_id": "chunk-78ecb26ec990da909579b2d0d8e16aa6"
+  },
+  "chunk-fda34b6704d5dded4db6263706653770": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: 感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/2004f0eb7ea34fa858b277c9b2b0453b43c2424be9403fd5488bec47e1afc7e4.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, circular avatar or icon rendered in a monochromatic, light gray color palette. It depicts a stylized, anthropomorphic character whose head is shaped like a vintage television set. The television head features two small antennae protruding from the top, a rectangular screen area, and a simple face drawn on the screen. The face consists of two downward-slanting lines representing closed or sad eyes, and a small, straight horizontal line for a mouth, giving the character a tired, unamused, or disappointed expression. Below the television head, the character has a small, triangular body shape with two tiny, pointed legs or feet. The entire figure is set against a solid, light gray circular background. The image is a low-resolution, flat-style graphic, likely used as a user avatar or a placeholder icon in a digital interface. In the context of the surrounding text, which discusses issues with model tool calls, MCP (Model Context Protocol) integration, and error messages like 'tool call failed' or 'garbled text', this sad television character likely serves as a visual representation of a failed or problematic state, possibly an error icon or a user profile picture associated with a user experiencing these technical difficulties.",
+    "tokens": 394,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 42,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:d3ae881013615fa30cb6204b177d347e",
+      "default:extract:ef852e03986874033e72b2d863bcda71"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Sad Television Character Avatar (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615410,
+    "_id": "chunk-fda34b6704d5dded4db6263706653770"
+  },
+  "chunk-ac5e894e81be3f4f149dd2361ff4710b": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: 感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3 新建文件夹X这个和模型能力有关。你可以设置最大tool_calls的递归层数 MCP是怎么对接大模型的？抓取AI提示词，拆解MCP的底层原理\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/a39fa6c72473d460ef7bb772e2771cbdd75ef7b1f8787f6caec79daf43c1da9e.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a simple, monochromatic icon of a hand giving a 'thumbs up' gesture. The icon is rendered in a light gray color against a plain white background. The hand is depicted with a rounded, stylized shape, featuring a prominent thumb pointing upwards and the other fingers curled into a fist. The outline of the hand is slightly blurred, giving it a soft, almost sketch-like appearance. There is no text, annotation, or additional visual elements present in the image. The icon is a universal symbol for approval, agreement, or a positive response. In the context of the surrounding document, which discusses technical issues with MCP (Model Context Protocol) tool calls and model capabilities, this image likely serves as a visual cue for a positive outcome, a successful test, or a point of agreement within the text, such as the note that 'small models can also call' MCP services.",
+    "tokens": 372,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 43,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:f06e184f3c2505f07e689b66c0338b07",
+      "default:extract:9c8bf50134a25822cd5b51dd5ba8eab1"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Thumbs Up Icon (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615411,
+    "_id": "chunk-ac5e894e81be3f4f149dd2361ff4710b"
+  },
+  "chunk-a0f6b87323bdb838bd0839433c2a27ab": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: 感谢分享,但为什么我的model一直都是tool calls而不返回结果呢?我用的是llama3.3 新建文件夹X这个和模型能力有关。你可以设置最大tool_calls的递归层数 MCP是怎么对接大模型的？抓取AI提示词，拆解MCP的底层原理\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/64a1d12d6d66f39e9e7ebff262fdc4fd8f832e694b66621a65c1f9fe14577e9f.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a small, circular avatar or profile picture with a blurred, low-resolution appearance. It depicts a stylized, cartoonish character face. The character has light blue or teal hair that is swept to the side, covering part of the forehead. The face is pale with simple, dark eyes and a small, neutral mouth. The character appears to be wearing a dark, possibly black or dark blue, garment around the neck or shoulders. The background within the circle is a light, off-white color. The image is heavily pixelated and lacks sharp details, suggesting it is a thumbnail or a small icon. This image is likely a user avatar or a bot icon associated with the Dify testing section mentioned in the surrounding context, which discusses MCP (Model Context Protocol) service integration and tool calling issues with models like llama3.3 and qwen 32b.",
+    "tokens": 372,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 44,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:620289ef0226af9f5bf8b945135c9a25",
+      "default:extract:2ed75108860629d1a722b33854a7e656"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blurred Cartoon Avatar Profile Picture (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615414,
+    "_id": "chunk-a0f6b87323bdb838bd0839433c2a27ab"
+  },
+  "chunk-61cfd720b0bb2ed54aa4a2374dc11cca": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > Dify测试\n- Neighbor Text: 新建文件夹X这个和模型能力有关。你可以设置最大tool_calls的递归层数 MCP是怎么对接大模型的？抓取AI提示词，拆解MCP的底层原理 3.4.2 问题2 在后台进⾏监控，发现⼤模型其实成功访问了1122端⼝，并且传输了⼀些数据，但是后台显示⼯具调⽤失败 3.4.3 总结\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e6b47c2f1172b9db8e7c50d8adf485ae13f70dfac9b4c3f3991560d59888de9a.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a technical flowchart diagram on a dark background with faint, stylized binary code patterns, illustrating the communication flow between a user, an AI model (represented by a blue whale icon), and an MCP Server (represented by the Python logo). The diagram is structured in a vertical sequence of interactions, moving from top to bottom, with arrows indicating the direction of data flow. The diagram is divided into three main vertical sections: the user/AI interaction on the right, the MCP Server on the left, and the intermediate processing steps in the center.\n\n**Top Section:**\n- On the top right, a blue whale icon (representing the AI model) is shown. An arrow points from a robot icon (representing the user) to the whale, labeled with the text '用户提问+MCP使用方法' (User question + MCP usage method).\n- Below this, an arrow points from the whale back to the robot, labeled '调用MCP' (Call MCP).\n- To the left of this interaction, a code block is displayed in white text on a black background, representing a JSON-RPC request. The code reads:\n  ```json\n  {\n    \"jsonrpc\": \"2.0\",\n    \"id\": 123,\n    \"method\": \"tools/call\",\n    \"params\": {\n      \"name\": \"get_current_time\",\n      \"arguments\": {\n        \"timeZone\": \"Asia/Shanghai\"\n      }\n    }\n  }\n  ```\n- An arrow labeled '调用' (Call) points from the robot icon to the MCP Server (Python logo) on the left.\n\n**Middle Section:**\n- The MCP Server (Python logo) is positioned on the left side. Below it, a code block shows the response from the server:\n  ```json\n  {\n    \"timezone\": \"Asia/Shanghai\",\n    \"datetime\": \"2025-03-16T21:53:31+08:00\",\n    \"is_dst\": false\n  }\n  ```\n- An arrow labeled '输出' (Output) points from the MCP Server to a central robot icon.\n- To the right of the central robot, a text block shows the XML-like format used by the AI to call the tool:\n  ```xml\n  <use_mcp_tool>\n  <server_name>time</server_name>\n  <tool_name>get_current_time</tool_name>\n  <arguments>{\"timezone\": \"Asia/Shanghai\"}</arguments>\n  </use_mcp_tool>\n  ```\n\n**Bottom Section:**\n- An arrow points from the central robot to the blue whale icon on the right, labeled '用户提问+MCP调用过程' (User question + MCP call process).\n- Below this, an arrow points from the whale back to a bottom robot icon, labeled '最终结果' (Final result).\n- At the very bottom, large white text reads '然后把最终的结果呈现给用户' (Then present the final result to the user).\n\n**Additional Elements:**\n- In the top right corner, there is a watermark logo for '技术爬爬虾' (Tech Crawfish) and 'bilibili'.\n- In the bottom right corner, there is a small icon resembling a TV or video player.\n- The overall color scheme is dark with white text and blue arrows, creating a high-contrast, technical aesthetic.",
+    "tokens": 926,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 45,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:fe0e8dd568a14f80b0eba852996614df",
+      "default:extract:855696b60f84b4e112227e9a1373d5f7"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "MCP Server Communication Flow Diagram (image)",
+    "original_type": "image",
+    "page_idx": 22,
+    "create_time": 1791615282,
+    "update_time": 1791615417,
+    "_id": "chunk-61cfd720b0bb2ed54aa4a2374dc11cca"
+  },
+  "chunk-6cb0f2f468eb972869d2a51b23a64211": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 4 调⽤细节\n- Neighbor Text: 但是qwen 32b也调⽤不了chart的mcp，并且看到别⼈也存在的相同的问题。 下⼀步尝试的解决⽅案是：这个mcp有很多种⼯具，可以⾃⼰实现⽣成图表的⼀到两个⼯具，限制MCP⼯具的数量，应该可以实现32b的调⽤ 4 调⽤细节 联⽹的qwen3:32b可以调⽤到MCP服务，但是会乱码\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9dfb8bf912054709911ac5eff9b7b835e88d4944768c8e1d169effc02c67fe7b.jpg\nCaptions: deepseek-v3\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a terminal or console log window displaying a sequence of JSON-RPC 2.0 messages exchanged between a client and an MCP (Model Context Protocol) server. The log is presented in a monospaced font on a dark background, typical of command-line interfaces. The text is primarily white and light gray, with some elements in a slightly different shade to indicate different types of information.\n\nThe log entries are structured in a repeating pattern. Each interaction begins with a line indicating a received client message, followed by a line showing the HTTP headers, and then a line showing the JSON payload. The log entries are prefixed with a session ID: `[SSE:23ee1132-8330-4711-9a29-e664e3ca4b4a]`.\n\nThe sequence of RPC calls is as follows:\n1.  **RPC 0: notifications/initialized** - A notification indicating the client has initialized. The payload is `{\"jsonrpc\":\"2.0\",\"method\":\"notifications/initialized\",\"params\":{}}`.\n2.  **RPC 1: tools/list** - A request to list available tools. The payload is `{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\",\"params\":{}}`. The log shows `Tool call succeeded`.\n3.  **RPC 2: resources/list** - A request to list resources. The payload is `{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"resources/list\",\"params\":{}}`. The log shows `Tool call failed { code: -32601, message: Method not found }`.\n4.  **RPC 3: resources/templates/list** - A request to list resource templates. The payload is `{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"resources/templates/list\",\"params\":{}}`. The log shows `Tool call failed { code: -32601, message: Method not found }`.\n5.  **RPC 4: prompts/list** - A request to list prompts. The payload is `{\"jsonrpc\":\"2.0\",\"id\":4,\"method\":\"prompts/list\",\"params\":{}}`. The log shows `Tool call failed { code: -32601, message: Method not found }`.\n6.  **RPC 5: tools/call** - A request to call a specific tool. The payload is a large JSON object: `{\"jsonrpc\":\"2.0\",\"id\":5,\"method\":\"tools/call\",\"params\":{\"name\":\"generate_organization_chart\",\"arguments\":{\"data\":{\"name\":\"空军岗山基地\",\"description\":\"主要部门\",\"children\":[{\"name\":\"指挥中心\",\"description\":\"负责基地整体指挥\"},{\"name\":\"作战部\",\"description\":\"负责战斗任务执行\"},{\"name\":\"后勤部\",\"description\":\"负责物资和装备保障\"},{\"name\":\"训练部\",\"description\":\"负责人员培训与考核\"},{\"name\":\"通信部\",\"description\":\"负责通讯与信息管理\"}]},\"orient\":\"vertical\",\"width\":800,\"height\":600,\"title\":\"空军岗山基地部门结构图\"}}}`. The log shows `Tool call succeeded`.\n\nThe HTTP headers for each request are also visible, showing `host: host.docker.internal:1122`, `accept: */*`, `accept-encoding: gzip, deflate`, `connection: keep-alive`, and `user-agent: python-httpx/0.27.2`. The `content-type` is `application/json` and the `content-length` varies for each request.\n\nThe image is a direct visual representation of the technical issues discussed in the surrounding text. The text mentions that a model (qwen3:32b) can call MCP services but returns garbled text, and that a local qwen3:30b model cannot call MCP tools. The log shows a successful `tools/list` call and a successful `tools/call` for `generate_organization_chart`, which contradicts the text's claim that the model cannot call MCP tools. However, the log also shows failed calls for `resources/list`, `resources/templates/list`, and `prompts/list` with a `Method not found` error, which might be related to the 'garbled' or 'failed' behavior described. The caption 'deepseek-v3' suggests this log might be from a different model or a specific test case.",
+    "tokens": 1160,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 46,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:aecc77dcbabce0b47880803d32d8cacc",
+      "default:extract:fa23474f70eea11db0c792ce1ccd05cd"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+    "original_type": "image",
+    "page_idx": 23,
+    "create_time": 1791615282,
+    "update_time": 1791615422,
+    "_id": "chunk-6cb0f2f468eb972869d2a51b23a64211"
+  },
+  "chunk-629ff97ba9b08501fb91ecc6de8ffc80": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 4 调⽤细节\n- Neighbor Text: 下⼀步尝试的解决⽅案是：这个mcp有很多种⼯具，可以⾃⼰实现⽣成图表的⼀到两个⼯具，限制MCP⼯具的数量，应该可以实现32b的调⽤ 4 调⽤细节 联⽹的qwen3:32b可以调⽤到MCP服务，但是会乱码\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/6261ab9f3b66e2dbae9cff54b6fb4d31536cb3b81983005cd81531a9c00b1ba7.jpg\nCaptions: qwen3:32b可以看到qwen3:32b没有RPC 5 tools/call的调⽤， 然后直接卡住了\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a terminal or log viewer displaying a sequence of Server-Sent Events (SSE) log entries. The background is black with white and light gray monospaced text. The log entries are structured with a session ID prefix `[SSE:c10e2988-ab9d-453c-8b59-d352158e943b]` followed by a message describing the event. The log captures a communication session between a client and an MCP (Model Context Protocol) server running on `host.docker.internal:1122`. The sequence of events is as follows:\n\n1.  **Connection Established:** The log begins with `Connected`.\n2.  **Initialization:** The client sends a POST request to `/messages?sessionId=c10e2988-ab9d-453c-8b59-d352158e943b`. The headers indicate a Python HTTP client (`user-agent: python-httpx/0.27.2`). The payload is a JSON-RPC 2.0 request with `method: \"initialize\"`, `id: 3dee177e64b743dd91e9055c34d5b0dd`, and `params` specifying `protocolVersion: \"2024-11-05\"` and `clientInfo: {name: \"MCP HTTP with SSE client\", version: \"1.0.0\"}`. The log notes `Tool call succeeded`.\n3.  **Initialized Notification:** The client sends a POST request with `method: \"notifications/initialized\"`. The log notes `RPC undefined notifications/initialized`.\n4.  **Tools List Request:** The client sends a POST request with `method: \"tools/list\"` and `id: 1`. The log notes `Tool call succeeded`.\n5.  **Resources List Request:** The client sends a POST request with `method: \"resources/list\"` and `id: 2`. The log notes `Tool call failed { code: -32601, message: 'Method not found' }`.\n6.  **Resources Templates List Request:** The client sends a POST request with `method: \"resources/templates/list\"` and `id: 3`. The log notes `Tool call failed { code: -32601, message: 'Method not found' }`.\n7.  **Prompts List Request:** The client sends a POST request with `method: \"prompts/list\"` and `id: 4`. The log notes `Tool call failed { code: -32601, message: 'Method not found' }`.\n\nThe log ends abruptly after the `prompts/list` failure, with no further activity, which aligns with the caption stating the model 'got stuck'. The image is a technical diagnostic log showing the specific JSON-RPC methods being called and the server's responses, highlighting that the server supports `initialize` and `tools/list` but not `resources/list`, `resources/templates/list`, or `prompts/list`.",
+    "tokens": 864,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 47,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:7a951f44839b6ce0d5b35e31a09e8d8f",
+      "default:extract:a965e7ff9d47ba6e3f6402c988274408"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+    "original_type": "image",
+    "page_idx": 23,
+    "create_time": 1791615282,
+    "update_time": 1791615424,
+    "_id": "chunk-629ff97ba9b08501fb91ecc6de8ffc80"
+  },
+  "chunk-e9f3e6cbaad85774625cbce27c7b8383": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 4 调⽤细节\n- Neighbor Text: 联⽹的qwen3:32b可以调⽤到MCP服务，但是会乱码 从ollama pull qwen3:30b，看是不是模型没有更新到最新导致不⽀持MCP的tools/call调⽤，结果本地的qwen3:30b也不能调⽤ 是模型能⼒的问题吗？\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/9d4ae5cb40e880a59c540de16d0ed0023265a8a05c10c184c5279fe4c469bf06.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a terminal window displaying the console output of a Node.js server process. The terminal has a dark background with light-colored text, typical of a command-line interface. The window title bar is not visible, but the content is clearly a log of server activity.\n\nThe output begins with a command prompt: `(base) PS E:\\mcp-server-chart-main\\mcp-server-chart-main> node build/index.js --transport sse`. This indicates the user is running a Node.js script named `index.js` from the `build` directory within a project folder `mcp-server-chart-main`, using the `sse` (Server-Sent Events) transport protocol. The `(base)` prefix suggests a Conda environment.\n\nFollowing the command, the log shows a series of HTTP POST requests received by the server. Each request is identified by a session ID: `c7becf5b-ad2d-450c-aaea-436e593b26b6`. The log entries are structured as follows:\n\n1.  **Request Reception:** `Received client message POST /messages?sessionId=c7becf5b-ad2d-450c-aaea-436e593b26b6`\n2.  **Headers:** A JSON object showing request headers, including `host: host.docker.internal:1122`, `accept: */*`, `accept-encoding: gzip, deflate`, `connection: keep-alive`, `user-agent: python-httpx/0.27.2`, and `content-type: application/json`. The `content-length` varies per request.\n3.  **RPC Call:** A line indicating the Remote Procedure Call (RPC) method being invoked, such as `RPC 1 tools/list`, `RPC 2 resources/list`, `RPC 3 resources/templates/list`, `RPC 4 prompts/list`, and `RPC 5 tools/call`.\n4.  **Payload:** A JSON-RPC 2.0 formatted payload. For example, `Payload 65 {\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\",\"params\":{}}`.\n5.  **Result:** A confirmation line `Tool call succeeded`.\n\nThe sequence of RPC calls is as follows:\n- `RPC 1 tools/list` with payload `{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\",\"params\":{}}`.\n- `RPC 2 resources/list` with payload `{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"resources/list\",\"params\":{}}`.\n- `RPC 3 resources/templates/list` with payload `{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"resources/templates/list\"}`.\n- `RPC 4 prompts/list` with payload `{\"jsonrpc\":\"2.0\",\"id\":4,\"method\":\"prompts/list\",\"params\":{}}`.\n- `RPC 5 tools/call` with a much larger payload (content-length 1630). The payload is a JSON-RPC request to call a tool named `generate_organization_chart`. The arguments contain a complex JSON object defining an organizational chart structure. The data includes a root node with `name: \"台湾地区海空力量架构\"` (Taiwan Region Air and Sea Power Structure) and `children` nodes for `\"海军\"` (Navy), `\"空军\"` (Air Force), and `\"防空预警系统\"` (Air Defense Early Warning System). Each of these has further nested children with descriptions. The arguments also specify `\"orient\":\"vertical\"`, `\"width\":800`, and `\"height\":600`.\n\nThe log concludes with `Tool call succeeded` for the `generate_organization_chart` call. The overall visual style is a standard terminal output, with no colors other than the default text color on a dark background. The text is monospaced. The image serves as a technical log demonstrating the successful invocation of an MCP (Model Context Protocol) service, specifically a chart generation tool, by a client (likely a Python script using `httpx`). This aligns with the surrounding context discussing the ability of models like `qwen3:14b` to call MCP services, even if the output format is incorrect.",
+    "tokens": 1069,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 48,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:ce133ebd4eb7cc9c1258b9eb04a3b335",
+      "default:extract:6e03c5b68f6efb6aceea80c5cdbdb6ff"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "MCP Server Terminal Log for Chart Generation (image)",
+    "original_type": "image",
+    "page_idx": 24,
+    "create_time": 1791615282,
+    "update_time": 1791615430,
+    "_id": "chunk-e9f3e6cbaad85774625cbce27c7b8383"
+  },
+  "chunk-3d8028699a132034eca5b3a45821eee0": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 4 调⽤细节\n- Neighbor Text: 联⽹的qwen3:32b可以调⽤到MCP服务，但是会乱码 从ollama pull qwen3:30b，看是不是模型没有更新到最新导致不⽀持MCP的tools/call调⽤，结果本地的qwen3:30b也不能调⽤ 是模型能⼒的问题吗？ 联⽹的qwen3:14b可以调⽤到MCP服务，虽然格式错误没有返回图⽚，但是确实发出了请求。\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e25437bf071639fde8e283300d3436c24124e5e94dbc4945638cd7b5017c77ed.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a software interface, likely a low-code AI agent development platform (similar to Dify or Coze), split into two main panels: a configuration panel on the left and a preview/chat panel on the right. The interface is in Chinese and English.\\n\\n**Left Panel (Configuration):**\\n- **Header:** Titled 'Agent' with a blue robot icon. Below it is a text field '添加描述...' (Add description...).\\n- **AGENT 策略 (Agent Strategy):** A dropdown menu set to 'ReAct (支持 MCP 工具)' (ReAct (Supports MCP tools)).\\n- **模型 (Model):** A dropdown menu set to 'Qwen/Qwen3-32B' with a 'CHAT' tag.\\n- **工具列表 (Tool List):** A section with a '+' button. Text says '点击 \\",
+    "tokens": 423,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 49,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:f4bd9794d0ea177f57a3671927773945",
+      "default:extract:61b4e8c1975f4d5902bf1c19ac7d4159"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "unknown_entity (unknown)",
+    "original_type": "image",
+    "page_idx": 24,
+    "create_time": 1791615282,
+    "update_time": 1791615430,
+    "_id": "chunk-3d8028699a132034eca5b3a45821eee0"
+  },
+  "chunk-72d350e3bb80f0fef24e7c96667c4d8a": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 是模型能⼒的问题吗？\n- Neighbor Text: 从ollama pull qwen3:30b，看是不是模型没有更新到最新导致不⽀持MCP的tools/call调⽤，结果本地的qwen3:30b也不能调⽤ 是模型能⼒的问题吗？ 联⽹的qwen3:14b可以调⽤到MCP服务，虽然格式错误没有返回图⽚，但是确实发出了请求。 5 替代⽅案 没有找到遇到相同问题的案例\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/670ed2ca0315dd7fd70ef88479a1fb6c9ddc89a0e850955fab79a01a288a1e1d.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a terminal window displaying the server-side logs of an MCP (Model Context Protocol) server running in SSE (Server-Sent Events) transport mode. The terminal prompt indicates the server was started with the command `node build/index.js --transport sse` from the directory `E:\\mcp-server-chart-main\\mcp-server-chart-main`. The logs show a sequence of JSON-RPC 2.0 requests and responses between a client (identified by the user-agent `python-httpx/0.27.2`) and the server. The session ID for all interactions is `58dbb7a4-e264-4bb2-b57b-9c09b96d95b3`.\n\nThe log entries are structured as follows:\n1.  **RPC 1 tools/list**: The client sends a POST request with payload `{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\",\"params\":{}}`. The server responds with `Tool call succeeded`.\n2.  **RPC 2 resources/list**: The client sends a POST request with payload `{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"resources/list\",\"params\":{}}`. The server responds with `Tool call succeeded`.\n3.  **RPC 3 resources/templates/list**: The client sends a POST request with payload `{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"resources/templates/list\"}`. The server responds with `Tool call succeeded`.\n4.  **RPC 4 prompts/list**: The client sends a POST request with payload `{\"jsonrpc\":\"2.0\",\"id\":4,\"method\":\"prompts/list\",\"params\":{}}`. The server responds with `Tool call succeeded`.\n5.  **RPC 5 tools/call**: The client sends a POST request with payload `{\"jsonrpc\":\"2.0\",\"id\":5,\"method\":\"tools/call\",\"params\":{\"name\":\"generate_pin_map\",\"arguments\":{\"title\":\"台东县军用设施分布图\",\"data\":[\"富冈营区\",\"空军志航基地\",\"空军太麻里靶场\",\"知本营区\"],\"width\":1600,\"height\":1000}}}`. The server responds with `Tool call failed` and an error object: `{\"code\": -32603, \"message\": \"MCP error -32603: Failed to generate chart: 图表渲染失败: Unknown chart type: undefined\"}`.\n6.  **RPC 6 tools/call**: The client retries the same request with payload `{\"jsonrpc\":\"2.0\",\"id\":6,\"method\":\"tools/call\",\"params\":{\"name\":\"generate_pin_map\",\"arguments\":{\"title\":\"台东县军用设施分布图\",\"data\":[\"富冈营区\",\"空军志航基地\",\"空军太麻里靶场\",\"知本营区\"],\"width\":1600,\"height\":1000}}}`. The server again responds with `Tool call failed` and the same error message.\n\nIn the bottom right corner, there are two small floating windows indicating remote connections: one labeled `orkg859243j0a4jz` and another labeled `orkj466609ww32bg`, both with the text `正在远程本机` (meaning 'remoting to local machine'). The terminal background is black with white text, typical of a command-line interface. The image is part of a document discussing MCP server integration and troubleshooting, specifically under the section '是模型能力的问题吗？' (Is it a model capability issue?). The logs demonstrate that while the MCP server successfully handles basic protocol requests (tools/list, resources/list, etc.), it fails when attempting to execute the `generate_pin_map` tool, indicating a server-side error in chart generation rather than a model capability issue.",
+    "tokens": 1034,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 50,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:505aa739e25976ede077e6eefcab0f96",
+      "default:extract:1579a389cb01d5545842ff2dc22b6cc9"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+    "original_type": "image",
+    "page_idx": 25,
+    "create_time": 1791615282,
+    "update_time": 1791615439,
+    "_id": "chunk-72d350e3bb80f0fef24e7c96667c4d8a"
+  },
+  "chunk-796cca4fcff695d899b8a0523c299544": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 是模型能⼒的问题吗？\n- Neighbor Text: 是模型能⼒的问题吗？ 联⽹的qwen3:14b可以调⽤到MCP服务，虽然格式错误没有返回图⽚，但是确实发出了请求。 5 替代⽅案 没有找到遇到相同问题的案例 ⽤⼯具进⾏替代？在本地部署合适的⼯具，例如只设置条形图和饼状图，在提示词⾥指定需要⽣成的格式，让模型按照格式⽣成，直接把数据传到⼯具中，⼯具⽣成图形并返回。\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/e859de12da36d9d1ddeb00ffe17e7dc086f9388d397978781e4c4928643b4b03.jpg\nCaptions: None\nFootnotes: 可能是本地部署的qwen3模型没有配置MCP服务相应的格式，导致不能进⾏调⽤\n\nVisual Analysis: The image is a screenshot of a software interface, likely a low-code AI application development platform such as Dify, showing the configuration and testing of an AI Agent. The interface is divided into two main panels: a configuration panel on the left and a preview/chat panel on the right. A dark overlay at the bottom right shows a remote desktop connection window.\n\n**Left Panel (Agent Configuration):**\n- **Header:** Titled 'Agent' with icons for play, settings, and close.\n- **AGENT 策略:** A dropdown menu set to 'ReAct (支持 MCP 工具)'.\n- **模型:** A dropdown menu set to 'Qwen/Qwen3-14B' with a 'CHAT' tag.\n- **工具列表:** A section with a '+' button and text '点击 \"+\" 按钮添加工具。您可以添加多个工具。' (Click the '+' button to add tools. You can add multiple tools.)\n- **MCP 服务配置:** A text area containing JSON configuration:\n  ```json\n  {\n    \"mcp-server-chart\": {\n      \"transport\": \"sse\",\n      \"url\": \"http://host.docker.internal:1122/sse\"\n    }\n  }\n  ```\n- **MCP 资源作为工具:** A toggle set to 'True'.\n- **MCP 提示词作为工具:** A toggle set to 'False'.\n- **指令:** A text area with the instruction: '根据用户的问题根据给定的数据 [x] result 并使用tools/call来调用MCP服务生成合适的图形并回答用户的问题' (Based on the user's question and the given data [x] result, use tools/call to invoke the MCP service to generate a suitable graph and answer the user's question). Below it is a variable '开始 (x) sys.query'.\n- **查询:** A text area containing the variable '开始 (x) sys.query'.\n- **最大迭代次数:** A slider set to '5'.\n\n**Right Panel (Preview):**\n- **Header:** Titled '预览' (Preview).\n- **Chat Interface:**\n  - **User Message:** '台东县包括哪些军用设施？用图表展示' (What military facilities are included in Taitung County? Display with a chart).\n  - **Workflow Execution:** A green box titled '工作流' (Workflow) showing the execution steps and timings:\n    - '开始' (Start): 13.548 ms\n    - '循环' (Loop): 806 tokens · 2.037 s\n    - 'AGENT': 48.441K tokens · 29.768 s\n    - '直接回复' (Direct Reply): 12.322 ms\n    - '变量赋值 2' (Variable Assignment 2): 15.499 ms\n  - **Agent Response:** '台东县包括以下军用设施：' (Taitung County includes the following military facilities:)\n    1. '富冈营区 (基地)' (Fugang Camp (Base))\n    2. '空军志航基地 (机场)' (Air Force Zhihang Base (Airport))\n    3. '空军太麻里靶场 (其他)' (Air Force Taimali Range (Other))\n    4. '知本营区 (基地)' (Zhiben Camp (Base))\n\n**Bottom Right Overlay:**\n- A dark window showing remote desktop connections:\n  - 'orkj859243j0a4jz正在远程本机' (orkj859243j0a4jz is remotely accessing this machine)\n  - 'orkj466609ww32bg正在远程本机' (orkj466609ww32bg is remotely accessing this machine)\n- A warning message at the bottom: '正通过长期验证码被控，安全级别低建议改为单次验证码' (Being controlled via long-term verification code, security level is low, recommend changing to single-use verification code).\n\n**Contextual Relationship:**\nThe image illustrates a test scenario for an AI Agent using the ReAct strategy with MCP (Model Context Protocol) tools. The user asks for a chart of military facilities in Taitung County. The agent successfully retrieves the data and lists the facilities but fails to generate the requested chart, as indicated by the text-only response. This aligns with the surrounding content discussing whether the model's capability is the issue, noting that while the online Qwen3:14b model can call MCP services, it returned a format error and did not return an image. The footnote suggests the local Qwen3 model may lack the correct MCP service configuration format.",
+    "tokens": 1266,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 51,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:b41186fb707497b1a409176d5fff5466",
+      "default:extract:527274c247b83c1c8d33dcb43bf90f3f"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Dify Agent MCP Configuration and Test (image)",
+    "original_type": "image",
+    "page_idx": 26,
+    "create_time": 1791615282,
+    "update_time": 1791615436,
+    "_id": "chunk-796cca4fcff695d899b8a0523c299544"
+  },
+  "chunk-af0cb0c15a552c37fc70116a7ff063ed": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 没有找到遇到相同问题的案例\n- Neighbor Text: 没有找到遇到相同问题的案例 ⽤⼯具进⾏替代？在本地部署合适的⼯具，例如只设置条形图和饼状图，在提示词⾥指定需要⽣成的格式，让模型按照格式⽣成，直接把数据传到⼯具中，⼯具⽣成图形并返回。 调⽤⼯具测试 Dify纯内⽹dify插件离线安装⽀持多平台多架构跨架构(xjl456852原创) - 三杯两盏淡酒 - 博客园\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/022d4fa05a921e7e20b52c11351cec770adefdf7e45f111d2b35fca1af268374.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a full-screen screenshot of a web browser displaying the Dify workflow editor interface, specifically for a workflow named 'sql生成Test Echats'. The browser is running on a Windows desktop, as indicated by the taskbar at the bottom showing the date '2025/12/31' and various application icons. The Dify interface is divided into three main sections: a left sidebar, a central canvas, and a right configuration panel.\n\n**Left Sidebar:**\nThe sidebar contains navigation options. At the top, the workflow name 'sql生成Test Echats' is displayed. Below it are menu items: '编排' (Orchestrate), '访问 API' (Access API), '日志与标注' (Logs & Annotations), and '监控' (Monitoring). The '编排' option is currently selected.\n\n**Central Canvas:**\nThe canvas displays a simple workflow consisting of two nodes connected by a directed edge. The left node is labeled 'AGENT' and contains the following configuration details: '策略: ReAct (支持 MCP 工具)', '模型: qwen3:32b (CHAT)', and '工具: 2/2'. The right node is labeled '直接回复' (Direct Reply) and contains the text '回复: Agent 的 text'. An arrow points from the 'AGENT' node to the '直接回复' node, indicating the flow of data.\n\n**Right Configuration Panel:**\nThis panel shows the detailed settings for the selected 'AGENT' node. The panel is titled 'Agent' and includes several fields:\n- 'AGENT 策略': Set to 'ReAct (支持 MCP 工具)'.\n- '模型': Set to 'qwen3:32b (CHAT)'.\n- '工具列表': Shows '2/2 启用' (2/2 enabled). Below this, two tools are listed: 'VISUALIZATION 生成条形图' and 'VISUALIZATION 生成柱状图'.\n- 'MCP 服务配置': Shows '3 (0) 启用' (3 (0) enabled).\n- 'MCP 资源作为工具': Set to 'True'.\n- 'MCP 提示词作为工具': Set to 'True'.\n- '指令': Contains the text '工具列表中有两个工具，一个生成条形图，一个生成柱状图，根据用户提问选择合适的图表进行生成'.\n- '查询': Contains the text '根据 {{#sys.query#}} 使用工具列表中的工具生成条形图提供图表链接进行展示'.\n- '最大迭代次数': Set to '5'.\n- '记忆': Empty.\n- '输出变量': Empty.\n\n**Right Preview Panel:**\nA preview panel on the far right shows a chat interface. A user message reads '台东县包括哪些军用设施？'. Below it, an assistant response is loading, showing a URL: 'https://mcdn.alipayobjects.com/one_clip/a fts/img/5yTSJ8HV/4AAAAAAReAAAAgAo EACAQCF/original'. Below the URL, it shows '2 / 2'.\n\n**Bottom Right Overlay:**\nA small black notification box is visible in the bottom right corner. It contains the text 'orjk466609ww32bg正在远程本机' and '正通过长期验证码被控，安全级别低建议修改为单次验证码'.\n\n**Browser Tabs:**\nThe browser has multiple tabs open, including '军事问答 - Dify', '文件自动提取标题和摘要', '工作流 Run failed: Failed to', '测试HTTP - Dify', 'v2.0添加文件上传功能', 'sql生成Test Echats - Dify', and 'original (1800×1200)'.\n\n**Contextual Relationship:**\nThis screenshot is part of a document discussing alternative solutions for generating charts (bar and pie charts) using tools in a local deployment. The workflow shown is a practical implementation of this idea, where an AI agent (using the qwen3:32b model) is configured with visualization tools to generate charts based on user queries. The '指令' and '查询' fields explicitly instruct the agent to use these tools to create bar or column charts. The preview panel demonstrates a test query about military facilities in Taitung County, which is likely related to the document's broader topic of military Q&A.",
+    "tokens": 1184,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 52,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:d3bdf074c73f085af060a0d6ef63c09d",
+      "default:extract:32ab88b8af7f7b70774302131fc63d2f"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Dify Workflow Editor for SQL Chart Generation (image)",
+    "original_type": "image",
+    "page_idx": 27,
+    "create_time": 1791615282,
+    "update_time": 1791615443,
+    "_id": "chunk-af0cb0c15a552c37fc70116a7ff063ed"
+  },
+  "chunk-d94e514b546c10ac25541d2ef917278a": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 没有找到遇到相同问题的案例\n- Neighbor Text: ⽤⼯具进⾏替代？在本地部署合适的⼯具，例如只设置条形图和饼状图，在提示词⾥指定需要⽣成的格式，让模型按照格式⽣成，直接把数据传到⼯具中，⼯具⽣成图形并返回。 调⽤⼯具测试 Dify纯内⽹dify插件离线安装⽀持多平台多架构跨架构(xjl456852原创) - 三杯两盏淡酒 - 博客园 Dify 实战<sup>：</sup>纯内⽹dify插件离线安装解决\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/51c6b2b7bab7c76e276a16d8edd9de97b55367acc8bd52b3c685ef9758e7d149.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a horizontal bar chart displayed within a remote desktop application window on a Windows operating system. The chart is titled '台东地区军事设施经度分布对比' (Comparison of Longitude Distribution of Military Facilities in Taitung Area). The chart visualizes the longitude coordinates of four military facilities.\n\nThe vertical axis (y-axis) is labeled '设施名称' (Facility Name) and lists four facilities from top to bottom: '富冈营区' (Fugang Camp), '空军志航基地' (Air Force Zhihang Base), '空军太麻里靶场' (Air Force Taimali Target Range), and '知本营区' (Zhiben Camp). The horizontal axis (x-axis) is labeled '经度值' (Longitude Value) and has a scale from 0 to 140 with increments of 20.\n\nEach facility is represented by a horizontal bar of a distinct color, with the exact longitude value displayed at the end of the bar:\n- '富冈营区' (Fugang Camp): Blue bar, value 121.191.\n- '空军志航基地' (Air Force Zhihang Base): Teal bar, value 121.17.\n- '空军太麻里靶场' (Air Force Taimali Target Range): Orange bar, value 121.001.\n- '知本营区' (Zhiben Camp): Purple bar, value 121.074.\n\nThe chart is presented in a clean, modern style with a white background and light gray grid lines. The surrounding context indicates this image is part of a technical document discussing alternatives for generating charts using tools, specifically mentioning setting up bar and pie charts locally and passing data to tools for generation. This chart serves as an example of such a generated visualization.\n\nAt the bottom of the screenshot, the Windows taskbar is visible, showing the date '2025/12/31' and time '8:58'. A remote desktop connection toolbar is also visible at the top, indicating the chart is being viewed remotely.",
+    "tokens": 715,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 53,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:0eb6b69bfb345ee9256c73ac8b1162c4",
+      "default:extract:023c366e60c2d55195d34f55fe10d7e2"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "台东地区军事设施经度分布对比条形图 (image)",
+    "original_type": "image",
+    "page_idx": 27,
+    "create_time": 1791615282,
+    "update_time": 1791615446,
+    "_id": "chunk-d94e514b546c10ac25541d2ef917278a"
+  },
+  "chunk-6e8a2ff85ae807c2af6a13dc42642923": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 没有找到遇到相同问题的案例\n- Neighbor Text: 调⽤⼯具测试 Dify纯内⽹dify插件离线安装⽀持多平台多架构跨架构(xjl456852原创) - 三杯两盏淡酒 - 博客园 Dify 实战<sup>：</sup>纯内⽹dify插件离线安装解决 GitHub - junjiem/dify-plugin-repackaging: Scripting tool for downloading Dify plugin package from Dify Marketplace and Github and repackaging [true] offline package.\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/0ed618963bfcadd441b505152e2390c95ca5f8ca034c4a8efb966ac1cedd3ae7.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image displays a square icon with rounded corners, characteristic of an app icon or a logo. The background of the icon is a solid, vibrant blue color. Centered within this blue square is a white circle. Inside the white circle, there are blue shapes that resemble a stylized, abstract representation of a globe or continents. Specifically, there is a large, irregular blue shape in the upper right portion of the circle, a smaller blue shape in the lower left, and a tiny blue dot in the lower right. The overall design is minimalist and flat, with no gradients or shadows. This icon is likely a logo for a software tool or plugin, possibly related to visualization or mapping, given the globe-like imagery. In the context of the surrounding document, which discusses Dify plugins, offline installation, and visualization tools like AntV, this icon may represent a specific plugin or tool being referenced, such as a visualization plugin or a mapping tool. The image is placed near text about 'AntV visualization tools' and 'Dify plugin offline installation', suggesting it could be the logo for AntV or a related Dify plugin.",
+    "tokens": 464,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 54,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:4d67198997e311f2feee9938ed27d4aa",
+      "default:extract:8d1d0d23f4f5553c298f2e1cd55fdf0f"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Blue Globe Icon (image)",
+    "original_type": "image",
+    "page_idx": 27,
+    "create_time": 1791615282,
+    "update_time": 1791615447,
+    "_id": "chunk-6e8a2ff85ae807c2af6a13dc42642923"
+  },
+  "chunk-f28345b99168d6f816c3bff9402b4a89": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 没有找到遇到相同问题的案例\n- Neighbor Text: Dify 实战<sup>：</sup>纯内⽹dify插件离线安装解决 GitHub - junjiem/dify-plugin-repackaging: Scripting tool for downloading Dify plugin package from Dify Marketplace and Github and repackaging [true] offline package. 这个项⽬⽬前看起来还存在⼀些问题，并且需要在linux环境下进⾏离线重新打包 在宝德服务器上对antv的可视化⼯具进⾏解压 LaTeX 1 FORCE_VERIFYING_SIGNATURE=false 2 PLUGIN_MAX_PACKAGE_SIZE=524288000 3 NGINX_CLIENT_MAX_BODY_SIZE=500M 只修改了第⼀条权限，第⼆和第三已经有⼈修改过了，后续⽣产需要重新把权限设为true\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/edc96ff703aa8cd136dc1205eeda891df21088db04e69e316022da11319987ec.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web browser displaying the GitHub Issues page for the repository 'junjiem/dify-plugin-repackaging'. The browser's address bar shows the URL 'https://github.com/junjiem/dify-plugin-repackaging/issues'. The page is titled 'Issues · junjiem/dify-plugin-repackaging' and has a tab labeled 'Issues'. The main content area lists a series of issue threads, each with a title, labels, and metadata. The issues are displayed in a list format with a search bar and filter options at the top. The visible issues, from top to bottom, are:\n\n1. '打包后正常，但是添加模型报错 Input payload validation failed' with a red 'bug' label, issue number #49, opened by 'Treasurcff' 5 days ago.\n2. 'Deepseek plugin repackaged but failed to install' with a red 'bug' label, issue number #48, opened by 'AdaChambers' on Nov 6, with 1 comment.\n3. '可能是python版本的问题，很多模块打包失败' with a red 'bug' label, issue number #47, opened by 'sunjister' on Oct 22, with 3 comments.\n4. 'After the offline packaging is completed, some dependencies are still missing.' with a red 'bug' label, issue number #43, opened by 'skyline0705' on Sep 8.\n5. '重新打包依旧错误' with a red 'bug' label, issue number #42, opened by 'mingzhi74' on Aug 29.\n6. '如何修改地址？' with a green 'enhancement' label, issue number #40, opened by 'gim1236' on Aug 13, with 3 comments.\n7. 'dify1.6.0' with a red 'bug' label, issue number #39, opened by 'moxuemeng' on Jul 23.\n8. 'No module named 'distutils'' with a red 'bug' label, issue number #38, opened by '3097407306' on Jul 22.\n9. '内网环境报错init environment failed: failed to find uv path: exit status 1, retry in 30s，非内网环境安装运行成功' with a red 'bug' label, issue number #37, opened by 'RoboCO2' on Jul 18, with 1 comment.\n10. '打包markdown插件时候报错了' with a red 'bug' label, issue number #36, opened by 'willem1111' on Jul 9.\n11. 'dify1.5.0版本，在运行插件时，一直转圈' with a red 'bug' label, issue number #34, opened by 'moonmoonbird11' on Jun 30.\n12. '离线安装一直在上传插件' with a red 'bug' label, issue number #33, opened by 'YOUNGzzy' on Jun 30, with 4 comments.\n13. '页面显示安装成功，但是插件上依然不显示，刷新页面也不管用' with a red 'bug' label, issue number #32, opened by 'liuxi-ML' on Jun 20, with 5 comments.\n14. 'database插件离线安装时报错' with a red 'bug' label, issue number #30, opened by 'liqing1317' on Jun 12, with 2 comments.\n15. 'pluginInvokeError' with a red 'bug' label, issue number #29, opened by 'jiangcheng' on Jun 11.\n16. 'openapi_api_compatible 打包然后内网安装插件如果有网的情况下会生成一个/.venv/文件如果没网就没有' with a red 'bug' label, issue number #24, opened by 'shenjian123' on May 27, with 1 comment.\n17. '重新打包时报错，找不到依赖包' with a red 'bug' label, issue number #13, opened by 'dyf8521' on Apr 28, with 6 comments.\n18. '离线安装后报错because socksio was not found in the provided package locations' with a red 'bug' label, issue number #12, opened by 'dyf8521' on Apr 28, with 1 comment.\n\nThe page also includes a navigation bar with tabs for 'Code', 'Issues', 'Pull requests', 'Actions', 'Projects', 'Wiki', 'Security', 'Insights', and 'Settings'. The repository name 'junjiem/dify-plugin-repackaging' is displayed at the top. The overall color scheme is typical of GitHub, with a white background and blue links. The context from the surrounding content indicates that this image is part of a document discussing offline installation of Dify plugins, specifically addressing issues encountered during the process. The issues listed here reflect common problems users face when repackaging and installing Dify plugins offline, such as dependency errors, signature verification failures, and module import issues. This aligns with the document's focus on troubleshooting and solutions for offline plugin installation in restricted network environments.",
+    "tokens": 1408,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 55,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:bd85e9c8d61bf5fde8293a3f6654f6c8",
+      "default:extract:56ec3a0a8d9f3ece3d3dca9a38a12736"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+    "original_type": "image",
+    "page_idx": 28,
+    "create_time": 1791615282,
+    "update_time": 1791615460,
+    "_id": "chunk-f28345b99168d6f816c3bff9402b4a89"
+  },
+  "chunk-d44e3b316c15841047ae8db2e5bc076a": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 没有找到遇到相同问题的案例\n- Neighbor Text: FORCE_VERIFYING_SIGNATURE=false 。然后，运⾏以下命令重启 Dify 服务： 解决⽅案 Plain Text 1 cd docker 2 docker compose down 3 docker compose up -d 添加此字段后，Dify 平台将允许安装所有未在 Dify Marketplace 上架（审核）的插件，这可能带来安全⻛险。建议先在测试/沙盒环境中安装插件，确认其安全性后再安装到⽣产环境。 完成本地上传插件后进⾏测试 1 台湾地区海空⼒量包括哪些组织？各个组织⼜由哪些机构构成？\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/683a2147eeee14021b84247394c06a646cd732b04fc83f9d63271559f8e56003.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of the Dify platform's plugin management interface, specifically the 'Plugins' tab. The top navigation bar displays the Dify logo on the left, followed by a workspace selector showing 'admin's Workspace' with a dropdown arrow. On the right side of the top bar, there are two navigation options: '探索' (Explore) with a compass icon, and '工作室' (Workspace) with a briefcase icon. Below the top bar, there is a tab bar with two tabs: '插件' (Plugins) which is currently active and shows a badge with the number '12', and '探索 Marketplace' (Explore Marketplace). Underneath the tabs, there is a filter row containing three dropdown menus: '所有类别' (All Categories), '所有标签' (All Tags), and a search bar with a magnifying glass icon and placeholder text '搜索' (Search). The main content area displays a single plugin card. The card features the AntV logo (a purple triangle with a white 'V' inside) on the left. The plugin title is 'AntV 可视化图表' (AntV Visualization Charts) with a version badge '0.2.0' next to it. Below the title, a description reads: '基于 AntV 可视化解决方案封装的可视化图表生成 dify 插件，支持 25+ 常用可视化图表，通过 dify 工具创建各种类型的图表。' (A visualization chart generation Dify plugin encapsulated based on the AntV visualization solution, supporting 25+ common visualization charts, creating various types of charts through Dify tools.) On the right side of the card, there is a label '工具' (Tool) at the top, and a trash can icon below it. At the bottom of the card, the word 'visualization' is displayed on the left, and on the right, there is a label 'LOCAL PLUGIN' with a small icon. The overall color scheme is light with white backgrounds, gray text, and purple accents from the AntV logo and the active tab indicator.",
+    "tokens": 701,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 56,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:50389737171508c23ea2508d5102ce07",
+      "default:extract:804b264fab4805a508839dcacdfd8ec6"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+    "original_type": "image",
+    "page_idx": 29,
+    "create_time": 1791615282,
+    "update_time": 1791615454,
+    "_id": "chunk-d44e3b316c15841047ae8db2e5bc076a"
+  },
+  "chunk-d8df96894d64e07a9d6fc07e19e8f283": {
+    "content": "\nImage Content Analysis:\n- Section Path: Imagine if > 没有找到遇到相同问题的案例\n- Neighbor Text: 添加此字段后，Dify 平台将允许安装所有未在 Dify Marketplace 上架（审核）的插件，这可能带来安全⻛险。建议先在测试/沙盒环境中安装插件，确认其安全性后再安装到⽣产环境。 完成本地上传插件后进⾏测试 1 台湾地区海空⼒量包括哪些组织？各个组织⼜由哪些机构构成？ 2 台湾地区爱国者导弹分布在哪些地⽅？这些地⽅的⼈⼝密度是多少？ 3 台湾地区情报系统包括哪些部⻔？这些部⻔由哪些机构构成以及作⽤。\nImage Path: /Users/drw/PycharmProjects/RAG-Anything-reproduction/parsed/rag-anything-handson-v2/mineru/MCP服务_843f5d3f/MCP服务/auto/images/113fc9485e4a4f037967e01fa7c95751b53d30b36f140aa2c31647de93c606b5.jpg\nCaptions: None\nFootnotes: None\n\nVisual Analysis: The image is a screenshot of a web browser displaying the Dify platform's workflow editor interface, specifically for an application named 'sql生成Test Echats'. The browser has multiple tabs open, including '新建标签页', '美军test - Dify', '文件自动提取标题和摘要', 'kibana下载安装', 'Elasticsearch在Windows系统', 'Download Kibana', and 'sql生成Test Echats - Dify'. The URL bar shows 'localhost/app/cd7060fc-ab70-43fe-8863-eb5feeecd2b1/workflow'. The Dify interface is divided into three main sections: a left sidebar, a central canvas, and a right configuration panel. The left sidebar contains navigation items: '编排', '访问 API', '日志与标注', and '监测'. The central canvas displays a workflow with a single node labeled 'AGENT'. The node shows '策略: ReAct (支持 MCP 工具)', '模型: qwen3:32b CHAT', and '工具: 可视化'. The right panel is a configuration form for the 'AGENT' node. It includes fields: 'AGENT 策略' set to 'ReAct (支持 MCP 工具)', '模型' set to 'qwen3:32b CHAT', '工具列表' with 'VISUALIZATION 生成条形图' enabled, 'MCP 服务配置' with a JSON input, 'MCP 资源作为工具' set to 'True', 'MCP 提示词作为工具' set to 'True', '指令' with a text area containing '工具列表有一个生成条形图的工具，根据用户提问进行回答并生成条形图', and '查询' with a text area containing '根据 {{#sys.query#}} 使用工具列表中的工具生成条形图并提供图表链接进行展示，同时回答用户问题'. At the bottom, there is a '最大迭代次数' field set to '5'. On the right side of the screen, a preview panel shows a chat interface with a user message '空军岗山基地包括哪些部门' and an AI response that includes a bar chart titled '空军岗山基地各部门人员分布' with categories like '飞行部队', '地勤支援', '情报部门', '维修部门', and '后勤部门'. Below the chart, there is a '文件传输完成' notification and a chat input box. The bottom of the screen shows a Windows taskbar with various application icons and the system tray showing the time '16:56' and date '2026/1/7'.",
+    "tokens": 840,
+    "full_doc_id": "doc-rag-anything-handson-v2",
+    "chunk_order_index": 57,
+    "file_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/data/MCP服务.pdf",
+    "llm_cache_list": [
+      "default:extract:81f48d9193078f2f2fa5932764d786ce",
+      "default:extract:4f91a02e5e738a0c62fd19b405edce89"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "Dify Workflow Editor for sql生成Test Echats (image)",
+    "original_type": "image",
+    "page_idx": 29,
+    "create_time": 1791615282,
+    "update_time": 1791615461,
+    "_id": "chunk-d8df96894d64e07a9d6fc07e19e8f283"
+  }
+}

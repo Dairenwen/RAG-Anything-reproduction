@@ -1,0 +1,5785 @@
+{
+  "doc-rag-anything-handson-v2": {
+    "relation_pairs": [
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "Technology Selection"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "Plugin"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Workflow"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Junjiem"
+      ],
+      [
+        "RAG-Anything",
+        "Thumbs Down Dislike Icon (image)"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Offline Deployment",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "Image Path",
+        "Table Analysis"
+      ],
+      [
+        "Image Viewer",
+        "Windows Desktop"
+      ],
+      [
+        "Getvisrequestserver",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Kweichow Moutai",
+        "Stock Tool"
+      ],
+      [
+        "MCP",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "MCP服务",
+        "Tool Call Failure"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Junjiem"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "Qwen 32b"
+      ],
+      [
+        "Orange C Icon (image)",
+        "apconw/gpt-vis-api"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "YOUNGzzy"
+      ],
+      [
+        "AdaChambers",
+        "Deepseek Plugin"
+      ],
+      [
+        "Pie Chart Generation Tool",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "台湾地区海空力量",
+        "海军"
+      ],
+      [
+        "MCP Server Chart",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Applications",
+        "Data Assistant Chat Interface with Pie Chart (image)"
+      ],
+      [
+        "MCP",
+        "Notion"
+      ],
+      [
+        "Build With Agent",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Dify",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Generate API Endpoint",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Admin's Workspace",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "Mcpserver.Py",
+        "Weather Tool"
+      ],
+      [
+        "Csdn Blog",
+        "MCP-Server-Chart Deployment And Pitfall Advice"
+      ],
+      [
+        "MCP Service",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Python-Httpx/0.27.2"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Production Environment"
+      ],
+      [
+        "CSDN Blog",
+        "Orange C Icon (image)"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Dify Marketplace"
+      ],
+      [
+        "海军",
+        "海军第124舰队"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Linux Environment"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Product A"
+      ],
+      [
+        "Error Code -32601",
+        "MCP Server"
+      ],
+      [
+        "Browser Automation",
+        "MCP Square"
+      ],
+      [
+        "Antv/G",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Dify",
+        "无趣"
+      ],
+      [
+        "@antv/mcp-server-chart",
+        "MCP Server Chart"
+      ],
+      [
+        "Table Q&A",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "ModelScope MCP Square Interface (image)",
+        "ModelScope MCP Tutorials And Practices"
+      ],
+      [
+        "Navy",
+        "Navy Warranty Command"
+      ],
+      [
+        "MCP Servers",
+        "MCPHub"
+      ],
+      [
+        "Mcpserver.Py",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Jina-AI-MCP-T",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "MCP",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "Database Plugin Installation Error",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Agent",
+        "Workflow"
+      ],
+      [
+        "Large Model",
+        "Orange C Icon (image)"
+      ],
+      [
+        "JSON Configuration",
+        "Organization-Chart"
+      ],
+      [
+        "Sun Qingyang",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Json Snippet"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Product C"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Nginx Client Max Body Size"
+      ],
+      [
+        "Case Category",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "Tool Call"
+      ],
+      [
+        "Orange C Icon (image)",
+        "Technical Implementation Steps"
+      ],
+      [
+        "Pink Robot Mascot Icon (image)",
+        "Taitung County"
+      ],
+      [
+        "Organization-Chart",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Json-Rpc 2.0",
+        "Node.js Server"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Image Content Analysis"
+      ],
+      [
+        "Organization Chart",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "国防部空军司令部"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Localhost:4200"
+      ],
+      [
+        "Browse Products",
+        "Leave Website"
+      ],
+      [
+        "Cartoon Character",
+        "GPT-Vis"
+      ],
+      [
+        "CSDN Blog",
+        "MCP-Server-Chart Deployment"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军海洋监侦指挥部"
+      ],
+      [
+        "MCP Server",
+        "Port 4200"
+      ],
+      [
+        "Large Model",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "Organizational Chart",
+        "台湾地区海空力量"
+      ],
+      [
+        "53AI-AI知识库",
+        "Comment Interaction Buttons (Reply and Like) (image)"
+      ],
+      [
+        "Organizational Chart",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Python Version Issue"
+      ],
+      [
+        "Agent Node",
+        "MCP"
+      ],
+      [
+        "Powershell",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Browse Products",
+        "Visit Website"
+      ],
+      [
+        "Funnel Chart",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Prompts/List Method"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Operations Department"
+      ],
+      [
+        "Smiley Face Icon",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "Leave Website",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Chart Generation",
+        "MCP Service"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军第151舰队"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Cloud Service"
+      ],
+      [
+        "MCP Service",
+        "MCPHub"
+      ],
+      [
+        "Agent",
+        "Military Facilities Query"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Dify"
+      ],
+      [
+        "Deepseek Plugin",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Application Management",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Line Chart",
+        "Line Chart Test Case 1 Output (image)"
+      ],
+      [
+        "Bar Chart",
+        "Visualization Tool"
+      ],
+      [
+        "Shanghai",
+        "Weather Tool"
+      ],
+      [
+        "Hustcc",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Host.Docker.Internal:1122",
+        "MCP Server"
+      ],
+      [
+        "MCP",
+        "User Avatar for 无趣 (image)"
+      ],
+      [
+        "Llama3.3",
+        "New Folder X"
+      ],
+      [
+        "Knowledge Management And Memory",
+        "MCP Square"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "User Purchase Journey"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Repackaging Error"
+      ],
+      [
+        "Python Version Issue",
+        "Sunjister"
+      ],
+      [
+        "Collaboration Tools",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Mcp Service",
+        "Smiley Face Icon"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "Comment Thread"
+      ],
+      [
+        "User Purchase Journey Sankey Diagram",
+        "Visit Website"
+      ],
+      [
+        "Agent Node",
+        "Sql生成Test Echats"
+      ],
+      [
+        "Host.Docker.Internal:1122",
+        "MCP HTTP With SSE Client"
+      ],
+      [
+        "Dify测试",
+        "Thumbs Down Dislike Icon (image)"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "进入结算"
+      ],
+      [
+        "Linear",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Chart Generation",
+        "Military Facilities Query"
+      ],
+      [
+        "Force Verifying Signature",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Plugin Display Issue"
+      ],
+      [
+        "Navy Sea Control Missile Command",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Remote Service",
+        "Tengjie107-Netizer"
+      ],
+      [
+        "MCP",
+        "MCPHub"
+      ],
+      [
+        "Dify",
+        "MCP Service"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "User"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Tools/List"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Line Chart Test Case 1 Output (image)"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "MCP Server"
+      ],
+      [
+        "Mind-Mapping Software Interface",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "MCP"
+      ],
+      [
+        "Getserviceidentifier",
+        "SERVICE_ID"
+      ],
+      [
+        "Antvis",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "CSV",
+        "Data Q&A"
+      ],
+      [
+        "加入购物车",
+        "进入结算"
+      ],
+      [
+        "Smiley Face Icon (image)",
+        "Tengjie107-Netizer"
+      ],
+      [
+        "Mcp-Server-Chart",
+        "Powershell"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "MCP Service"
+      ],
+      [
+        "MCP Service",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Table Analysis",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Resources/List"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Python-Httpx/0.27.2"
+      ],
+      [
+        "MCP-Server-Chart",
+        "MCP-Server-Chart Deployment"
+      ],
+      [
+        "Windows Operating System",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Agent",
+        "ReAct"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Explore Marketplace Tab"
+      ],
+      [
+        "MCPHub",
+        "孙青扬"
+      ],
+      [
+        "Others",
+        "Pie Chart"
+      ],
+      [
+        "Bar Chart Generation Tool",
+        "Longitude Distribution Comparison Chart"
+      ],
+      [
+        "Data Analysis Summary",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Smiley Face Icon Placeholder (image)",
+        "Spec"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "军用设施"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Force Verifying Signature"
+      ],
+      [
+        "Blog",
+        "Xjl456852"
+      ],
+      [
+        "Database Plugin Installation Error",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Qwen3:32b Chat"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "MCP Resources As Tools"
+      ],
+      [
+        "MCP-Server-Chart",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Deepseek:70b",
+        "MCP"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Init Environment Failed"
+      ],
+      [
+        "Pie Chart",
+        "Product A"
+      ],
+      [
+        "AI Prompt Extraction",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "apconw/gpt-vis-api"
+      ],
+      [
+        "AntV",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "MCP Server Chart",
+        "MCP Service"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Mcp-Server-Chart"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "MCP Server"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Plugin Max Package Size"
+      ],
+      [
+        "Agent",
+        "Qwen3:32b"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Qwen3:32b"
+      ],
+      [
+        "Master",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "GPT-Vis-SSR"
+      ],
+      [
+        "Navy",
+        "Navy Fleet Command"
+      ],
+      [
+        "AntV",
+        "GPT-Vis"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Image Path"
+      ],
+      [
+        "Dify",
+        "Tool_calls Recursion Depth"
+      ],
+      [
+        "Port 1122",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Generate_Organization_Chart",
+        "Node.js Server"
+      ],
+      [
+        "Dify测试",
+        "Thumbs-Down Icon (image)"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "Log Analysis"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "GitHub"
+      ],
+      [
+        "Amoypark",
+        "Offline Deployment"
+      ],
+      [
+        "Llama3.3",
+        "Tool Calls"
+      ],
+      [
+        "MCP Service",
+        "Token"
+      ],
+      [
+        "MCP Service",
+        "Qwen3-4B"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "MCPHub"
+      ],
+      [
+        "Complete Payment",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Total Conversion Rate",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "富冈营区"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军制海飞弹指挥部"
+      ],
+      [
+        "Image",
+        "Sad Television Character"
+      ],
+      [
+        "Dify测试",
+        "MCP服务"
+      ],
+      [
+        "Localhost:4200",
+        "Mcp Server Configuration"
+      ],
+      [
+        "Google Chrome",
+        "Hierarchical Chart"
+      ],
+      [
+        "Taitung Area",
+        "Zhiben Camp"
+      ],
+      [
+        "Thumbs-Down Icon",
+        "Thumbs-Down Icon (image)"
+      ],
+      [
+        "Init Environment Failed",
+        "RoboCO2"
+      ],
+      [
+        "Dify 1.5.0",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "Dify",
+        "FORCE_VERIFYING_SIGNATURE"
+      ],
+      [
+        "Dify",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Socksio Missing Error"
+      ],
+      [
+        "MCP Server",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Qwen3:14B",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Dify",
+        "MCP Server"
+      ],
+      [
+        "32b",
+        "Functioncall"
+      ],
+      [
+        "Data Assistant",
+        "Windows 10/11"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Mcp-Server-Chart-Main"
+      ],
+      [
+        "Bing Search Chinese",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Skyline0705"
+      ],
+      [
+        "My Treasure Box AI Data Assistant",
+        "Table Q&A"
+      ],
+      [
+        "Add To Cart",
+        "Funnel Chart"
+      ],
+      [
+        "Docker",
+        "Mcphub"
+      ],
+      [
+        "Abandon Checkout",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Gpt",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Air Force",
+        "Taiwan Region Air And Sea Power Structure"
+      ],
+      [
+        "Agent Node",
+        "Maximum Iterations"
+      ],
+      [
+        "Agent",
+        "直接回复"
+      ],
+      [
+        "MCP",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Fetch Web Content",
+        "MCP Square"
+      ],
+      [
+        "Admin",
+        "Data Assistant"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Offline Plugin Installation"
+      ],
+      [
+        "Sanic-Web",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "Bar Chart",
+        "Dify Workflow Editor for sql生成Test Echats (image)"
+      ],
+      [
+        "MCP",
+        "Vllm"
+      ],
+      [
+        "Avatar Image",
+        "User Avatar for 无趣 (image)"
+      ],
+      [
+        "Life Coach Agent",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Data Analysis Summary",
+        "Sanic-Web"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Qwen3:30b"
+      ],
+      [
+        "Air Force Taimali Range",
+        "Taitung County"
+      ],
+      [
+        "MCP Server",
+        "Stock Tool"
+      ],
+      [
+        "MCP",
+        "Zapier"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "Llama3.3"
+      ],
+      [
+        "Image Path",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Sankey Diagram",
+        "WenQuanYi Zen Hei"
+      ],
+      [
+        "Generative Ai",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Sankey Chart",
+        "User Purchase Journey"
+      ],
+      [
+        "2025-11-24 11:57:41",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "MCPHub",
+        "Offline Deployment"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Table Analysis"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "浏览商品"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Tools/List"
+      ],
+      [
+        "Jina-AI-MCP-T",
+        "MCP Square"
+      ],
+      [
+        "Low-Code AI Agent Development Platform",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Hierarchical Chart",
+        "Taitung County Military Facilities"
+      ],
+      [
+        "58dbb7a4-E264-4bb2-B57b-9c09b96d95b3",
+        "MCP Server"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "台湾地区海空力量"
+      ],
+      [
+        "Deepseek 70b",
+        "Dify Chat Preview - Taitung Military Facilities Query (image)"
+      ],
+      [
+        "孙青扬",
+        "无趣"
+      ],
+      [
+        "Bar Chart",
+        "Logistics Department"
+      ],
+      [
+        "MCPHub",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "MCP Service"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "立即离开"
+      ],
+      [
+        "加入购物车",
+        "浏览商品"
+      ],
+      [
+        "Markdown Plugin Packaging Error",
+        "Willem1111"
+      ],
+      [
+        "Get Current Time Tool",
+        "MCP Server"
+      ],
+      [
+        "MCP Service",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "ModelScope MCP Square Interface (image)",
+        "Search Tools"
+      ],
+      [
+        "Sad Television Character",
+        "Tool Call Failure"
+      ],
+      [
+        "Navy Fleet Command",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "Tengjie107-Netizer"
+      ],
+      [
+        "Dify测试",
+        "Llama3.3"
+      ],
+      [
+        "Leave Immediately",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Dify",
+        "MCP Tool"
+      ],
+      [
+        "Dyf8521",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Thumbs Down Dislike Icon (image)",
+        "Tool Calls"
+      ],
+      [
+        "Cloud Service",
+        "MCP"
+      ],
+      [
+        "MCP服务",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "Llama3.3",
+        "Thumbs Up Icon (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Mcp"
+      ],
+      [
+        "58dbb7a4-E264-4bb2-B57b-9c09b96d95b3",
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)"
+      ],
+      [
+        "Hustcc",
+        "Tengjie107-Netizer"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "MCP"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Sunjister"
+      ],
+      [
+        "Navy",
+        "Navy Marine Corps Command"
+      ],
+      [
+        "MCP服务",
+        "问题1"
+      ],
+      [
+        "Llama 3.3",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "JSON Configuration",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Air Force Zhihang Base",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Getvisrequestserver",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Chat Interface",
+        "Dify Chat Preview - Taitung Military Facilities Query (image)"
+      ],
+      [
+        "JSON-RPC 2.0",
+        "MCP Server"
+      ],
+      [
+        "Generate_Pin_Map",
+        "台东县军用设施分布图"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Ground Support"
+      ],
+      [
+        "53AI-AI知识库",
+        "MCP"
+      ],
+      [
+        "Sanic-Web",
+        "Vue3"
+      ],
+      [
+        "Complete Transaction",
+        "Funnel Chart"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Openapi Api Compatible"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "GitHub"
+      ],
+      [
+        "GPT-Vis-SSR Mascot Icon (image)",
+        "Private Deployment"
+      ],
+      [
+        "Chart Image URL",
+        "Orange C Icon (image)"
+      ],
+      [
+        "Deepseek-V3",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Dify Chat Preview - Taitung Military Facilities Query (image)",
+        "Workflow"
+      ],
+      [
+        "Air Force",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "MCP Protocol",
+        "Tool Call"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Stock Tool"
+      ],
+      [
+        "Taiwan Region",
+        "Taiwan Sea And Air Forces"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "空军岗山基地"
+      ],
+      [
+        "Hierarchical Chart",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Context Window"
+      ],
+      [
+        "Dify",
+        "Dify Agent MCP Configuration Interface (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "MCP Service"
+      ],
+      [
+        "JSON-RPC 2.0",
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)"
+      ],
+      [
+        "Chart Rendering Failure",
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)"
+      ],
+      [
+        "Antv Visualization Library",
+        "Antvis/Mcp-Server-Chart"
+      ],
+      [
+        "Case Category",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "访问网站"
+      ],
+      [
+        "Agent",
+        "Qwen3-14B"
+      ],
+      [
+        "Production Environment",
+        "Test/Sandbox Environment"
+      ],
+      [
+        "ECharts",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "Collaboration Tools",
+        "MCP Square"
+      ],
+      [
+        "Sse Endpoint",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Hierarchical Chart",
+        "MCP Service"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "New Chat"
+      ],
+      [
+        "Database Plugin Installation Error",
+        "Liqing1317"
+      ],
+      [
+        "Node.js Server",
+        "Python-Httpx/0.27.2"
+      ],
+      [
+        "32b",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "MCP Square",
+        "ModelScope"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "MCP Service"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Plugin Invoke Error"
+      ],
+      [
+        "My Treasure Box AI Data Assistant",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "Dify 1.6.0",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "MCP Tools",
+        "User Avatar for 无趣 (image)"
+      ],
+      [
+        "General Q&A",
+        "MCP"
+      ],
+      [
+        "Add To Cart",
+        "Enter Checkout"
+      ],
+      [
+        "Dify",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "MCPHub"
+      ],
+      [
+        "Kweichow Moutai",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "Taitung County",
+        "Taitung County Military Facilities"
+      ],
+      [
+        "MCP服务",
+        "Vllm部署与Mcp工具实践测试"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Military Facilities Query"
+      ],
+      [
+        "Image",
+        "Sad Television Character Avatar (image)"
+      ],
+      [
+        "CentOS/Ubuntu",
+        "Data Assistant Chat Interface with Pie Chart (image)"
+      ],
+      [
+        "MCP",
+        "MCP Service"
+      ],
+      [
+        "Navy 168 Fleet",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "E:\\Mcp-Server-Chart-Main\\Mcp-Server-Chart-Main",
+        "Powershell"
+      ],
+      [
+        "Chart Legend",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "MCP Tools",
+        "MCPHub"
+      ],
+      [
+        "MCP Server",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Copy Icon",
+        "Copy Icon for MCP Configuration (image)"
+      ],
+      [
+        "Chat Interface",
+        "Workflow"
+      ],
+      [
+        "Air Force Taimali Target Range",
+        "Taitung Area"
+      ],
+      [
+        "Case Quantity",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "MCP"
+      ],
+      [
+        "Chart MCP Service",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Guizhou Moutai",
+        "Stock Tool"
+      ],
+      [
+        "Dify",
+        "MCP"
+      ],
+      [
+        "AdaChambers",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Smiley Face Icon Placeholder (image)",
+        "Technical Implementation Steps"
+      ],
+      [
+        "MCP服务",
+        "Thumbs-Down Icon"
+      ],
+      [
+        "Chart Preview",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Qwen3:30b"
+      ],
+      [
+        "Messages Endpoint",
+        "Terminal Panel"
+      ],
+      [
+        "MCP",
+        "ModelScope MCP Experiment Ground"
+      ],
+      [
+        "Qwen3:32b",
+        "RPC 5 Tools/Call"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "Dify"
+      ],
+      [
+        "Dify",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "Missing Dependencies",
+        "Skyline0705"
+      ],
+      [
+        "Sad Television Character Avatar (image)",
+        "Tool Call Failure"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "Dify测试"
+      ],
+      [
+        "Dify",
+        "User Avatar"
+      ],
+      [
+        "Thumbs Down Dislike Icon (image)",
+        "Thumbs Down Icon"
+      ],
+      [
+        "AI Assistant",
+        "User"
+      ],
+      [
+        "Dify",
+        "Dify Agent MCP Configuration and Test (image)"
+      ],
+      [
+        "Error Code -32601",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "上下文"
+      ],
+      [
+        "Funnel Chart",
+        "Generate Order"
+      ],
+      [
+        "WenQuanYi Zen Hei",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "AntV",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "Qwen3:32b",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Line Chart"
+      ],
+      [
+        "AntV Visualization Charts",
+        "Visualization"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Prompts/List"
+      ],
+      [
+        "Demo",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Avatar Image",
+        "无趣"
+      ],
+      [
+        "127.0.0.1",
+        "MCP Server"
+      ],
+      [
+        "Chart Generation Tools",
+        "MCP"
+      ],
+      [
+        "Sql生成Test Mcp",
+        "Stock Tool"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "Sql生成Test Echats"
+      ],
+      [
+        "海军",
+        "海军第168舰队"
+      ],
+      [
+        "Thumbs Up Icon",
+        "Thumbs Up Icon (image)"
+      ],
+      [
+        "MCP",
+        "Thumbs Up Icon"
+      ],
+      [
+        "Dify",
+        "Sql生成Test Echats"
+      ],
+      [
+        "台湾地区海空力量",
+        "空军岗山基地"
+      ],
+      [
+        "Dify测试",
+        "Thumbs-Down Icon"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "Test Case 1"
+      ],
+      [
+        "Openapi Api Compatible",
+        "Shenjian123"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军"
+      ],
+      [
+        "AI Model",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军第168舰队"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Orkj466609ww32bg"
+      ],
+      [
+        "AntV",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Add To Cart",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军第131舰队"
+      ],
+      [
+        "Dify",
+        "MCPHub"
+      ],
+      [
+        "海军",
+        "海军陆战队指挥部"
+      ],
+      [
+        "Communications Department",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Bing Search Chinese",
+        "MCP Square"
+      ],
+      [
+        "MCP Service",
+        "Qwen3:32b"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Maximum Iterations"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "Sankey Chart"
+      ],
+      [
+        "32b",
+        "Chart MCP Service"
+      ],
+      [
+        "Gim1236",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "MCP Server",
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "Localhost"
+      ],
+      [
+        "Cartoon Character",
+        "GPT-Vis-SSR"
+      ],
+      [
+        "AntV Visualization Tools",
+        "Blue Globe Icon"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Tools/Call"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Dify Test",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "MCP Service",
+        "Smiley Face Icon"
+      ],
+      [
+        "Thumbs-Up Approval Icon (image)",
+        "Wuliangye"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Pie Chart"
+      ],
+      [
+        "600519",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Host.Docker.Internal:1122",
+        "MCP Server Terminal Log for Chart Generation (image)"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Taiwan Region Air And Sea Power Structure"
+      ],
+      [
+        "Life Coach Agent",
+        "MCP Square"
+      ],
+      [
+        "Image File",
+        "Offline Server"
+      ],
+      [
+        "Llama3.3",
+        "User"
+      ],
+      [
+        "Error Handling Test",
+        "Mcptest.Py"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "User Avatar"
+      ],
+      [
+        "Offline Installation Upload Issue",
+        "YOUNGzzy"
+      ],
+      [
+        "Enter Checkout",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Chart Generation MCP Service",
+        "Pink Robot Mascot Icon (image)"
+      ],
+      [
+        "FastMCP",
+        "Stock Tool"
+      ],
+      [
+        "MCP",
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)"
+      ],
+      [
+        "AntV",
+        "Data Q&A"
+      ],
+      [
+        "Json-Rpc 2.0",
+        "MCP Server Terminal Log for Chart Generation (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Input Payload Validation Failed"
+      ],
+      [
+        "Agent Node",
+        "ReAct"
+      ],
+      [
+        "Host.Docker.Internal:1122",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "MCP服务",
+        "Token"
+      ],
+      [
+        "MCP服务",
+        "RAG-Anything"
+      ],
+      [
+        "MCP",
+        "Model Context Protocol"
+      ],
+      [
+        "LangChain",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "MCP Server",
+        "Resources/List"
+      ],
+      [
+        "Ollama",
+        "Qwen3:30B"
+      ],
+      [
+        "MCP Server",
+        "Python-Httpx/0.27.2"
+      ],
+      [
+        "Chart Generation",
+        "Sanic-Web"
+      ],
+      [
+        "DeepSeek 70B",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Chart MCP Tool",
+        "Qwen3:32b"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Mcp Server Configuration"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "MCPHub"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "Hustcc"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "MCP Tool"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Product D"
+      ],
+      [
+        "Longitude Value",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "RoboCO2"
+      ],
+      [
+        "Amoypark",
+        "Blue Checkmark Success Icon (image)"
+      ],
+      [
+        "Linear",
+        "MCP"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "FastMCP"
+      ],
+      [
+        "Dify测试",
+        "User Avatar"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Intelligence Department"
+      ],
+      [
+        "Image File",
+        "MCP Service"
+      ],
+      [
+        "Taitung County",
+        "Zhiben Camp"
+      ],
+      [
+        "Longitude Distribution Comparison Chart",
+        "Windows Operating System"
+      ],
+      [
+        "Agent Node",
+        "MCP Service Configuration"
+      ],
+      [
+        "AI Prompt Extraction",
+        "MCP Underlying Principles"
+      ],
+      [
+        "MCP Tools",
+        "无趣"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "空军志航基地"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军"
+      ],
+      [
+        "127.0.0.1",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "MCP-Server-Chart-Main",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "博客园",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "VS Code env.js configuration for mcp-server-chart (image)",
+        "Visual Studio Code"
+      ],
+      [
+        "Large Model",
+        "Port 1122"
+      ],
+      [
+        "Antvis MCP Server Chart",
+        "MCP Server"
+      ],
+      [
+        "Sanic-Web",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Getvisrequestserver",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "Networked Machine",
+        "Plugin"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Tool Registration"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Product E"
+      ],
+      [
+        "Complete Transaction",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Session C7becf5b-Ad2d-450c-Aaea-436e593b26b6"
+      ],
+      [
+        "MCP",
+        "Thumbs Up Icon (image)"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Flight Units"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军作战指挥部"
+      ],
+      [
+        "Navy",
+        "Navy 124 Fleet"
+      ],
+      [
+        "GPT-Vis",
+        "MCP"
+      ],
+      [
+        "MCP Server Chart",
+        "Npx"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "JSON Configuration"
+      ],
+      [
+        "Fugang Camp",
+        "Taitung Area"
+      ],
+      [
+        "MCP Server",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Ollama",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Qwen3:32b",
+        "Section 3.4 Small Model Calling MCP"
+      ],
+      [
+        "AI Assistant",
+        "Dify Chat Preview - Taitung Military Facilities Query (image)"
+      ],
+      [
+        "MCP Server",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Error Handling Test"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "MCP Servers"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "Prompts/List Method"
+      ],
+      [
+        "Data Assistant",
+        "Data Q&A"
+      ],
+      [
+        "Demo Path",
+        "MCP Server"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Offline Installation Upload Issue"
+      ],
+      [
+        "AntV",
+        "Sanic-Web"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Prompts/List"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Resources/Templates/List"
+      ],
+      [
+        "Token",
+        "上下文"
+      ],
+      [
+        "Beijing",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Beijing",
+        "Dify Agent MCP Configuration Interface (image)"
+      ],
+      [
+        "Ollama",
+        "Qwen3:30b"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Private Deployment"
+      ],
+      [
+        "600519",
+        "贵州茅台"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "MCP Service"
+      ],
+      [
+        "空军",
+        "空军作战指挥部"
+      ],
+      [
+        "ReAct Agent",
+        "Sql生成Test Mcp"
+      ],
+      [
+        "Cartoon Character",
+        "Cartoon Character Line Art Sketch (image)"
+      ],
+      [
+        "Fugang Camp",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Apconw/Gpt-Vis-Api",
+        "Mcp-Server-Chart"
+      ],
+      [
+        "Antv/G",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "Agent",
+        "Qwen3:32B"
+      ],
+      [
+        "SSE",
+        "User Avatar for 无趣 (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Mingzhi74"
+      ],
+      [
+        "Amoypark",
+        "Amoypark User Avatar (image)"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Resources/List"
+      ],
+      [
+        "立即离开",
+        "访问网站"
+      ],
+      [
+        "AntV",
+        "GPT-Vis-SSR"
+      ],
+      [
+        "Mcp",
+        "Sql生成Test Mcp"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "Offline Server"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "SSE Log"
+      ],
+      [
+        "MCP Square",
+        "Search Tools"
+      ],
+      [
+        "AntV Charting Tools",
+        "GPT-Vis"
+      ],
+      [
+        "Longitude Distribution Comparison Chart",
+        "Zhiben Camp"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "GPT-VIS-API"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Node.Js"
+      ],
+      [
+        "Fetch Web Content",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Navy",
+        "Navy 151 Fleet"
+      ],
+      [
+        "MCP Server",
+        "Prompts/List Method"
+      ],
+      [
+        "Dify",
+        "Neighbor Text"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Markdown Plugin Packaging Error"
+      ],
+      [
+        "MCP-Server-Chart",
+        "Sankey Diagram"
+      ],
+      [
+        "Baode Server",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Facility Name",
+        "Longitude Distribution Comparison Chart"
+      ],
+      [
+        "Agent",
+        "Dify Workflow Editor for SQL Chart Generation (image)"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Generate Order",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "MCP"
+      ],
+      [
+        "Env.Js",
+        "Getvisrequestserver"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军第124舰队"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Tools/Call"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Docker"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "MCP Service"
+      ],
+      [
+        "Generate_Organization_Chart",
+        "MCP Server Terminal Log for Chart Generation (image)"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "New Folder X"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军松山基地指挥部"
+      ],
+      [
+        "台东县军用设施分布图",
+        "富冈营区"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Qwen3-14B"
+      ],
+      [
+        "MCP Service",
+        "Qwen3-14B"
+      ],
+      [
+        "ECharts",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "MCP Server",
+        "Tools/List"
+      ],
+      [
+        "Post Interface",
+        "Spec"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "Visualization生成柱状图"
+      ],
+      [
+        "MCP Server",
+        "SSE Log"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "Visualization生成条形图"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Port 19200"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Resources/List"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "台湾地区爱国者导弹"
+      ],
+      [
+        "MCP Server",
+        "MCP Testing"
+      ],
+      [
+        "Mcptest.Py",
+        "Stock Tool"
+      ],
+      [
+        "Dify",
+        "Test/Sandbox Environment"
+      ],
+      [
+        "MCP Server",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "Npx",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "空军",
+        "空军松山基地指挥部"
+      ],
+      [
+        "Blog Post By Xjl456852",
+        "Dify"
+      ],
+      [
+        "Amoypark",
+        "孙青扬"
+      ],
+      [
+        "12306-MCP Ticket Query",
+        "MCP Square"
+      ],
+      [
+        "MCP服务",
+        "Mineru"
+      ],
+      [
+        "VIS_REQUEST_SERVER",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Chart Generation Tools",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "Beijing",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "Gpt",
+        "Gpt-Vis"
+      ],
+      [
+        "Leave Website",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Docker Compose"
+      ],
+      [
+        "Chart Legend",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "Remote Service"
+      ],
+      [
+        "Liuxi-ML",
+        "Plugin Display Issue"
+      ],
+      [
+        "Pie Chart",
+        "Product D"
+      ],
+      [
+        "Mingzhi74",
+        "Repackaging Error"
+      ],
+      [
+        "HTTP Service",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "Demo Path",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Case Quantity",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "Dify"
+      ],
+      [
+        "Base",
+        "Powershell"
+      ],
+      [
+        "Port 4200",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "AI Prompts",
+        "Blurred Cartoon Avatar Profile Picture (image)"
+      ],
+      [
+        "CSDN Blog",
+        "MCP"
+      ],
+      [
+        "GPT-Vis",
+        "Large Model"
+      ],
+      [
+        "Env.Js",
+        "Getserviceidentifier"
+      ],
+      [
+        "AntV",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "MCPHub"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Environment Dependency And Configuration"
+      ],
+      [
+        "Generative Ai",
+        "Gpt-Vis"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "SSE Log"
+      ],
+      [
+        "Build With Agent",
+        "Visual Studio Code"
+      ],
+      [
+        "Blurred Thumbnail Image",
+        "Blurred Warm-Toned Thumbnail Image (image)"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Mcp Server Marketplace"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Tools/List Method"
+      ],
+      [
+        "Text2SQL",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Organization Chart",
+        "Taiwan Region Sea And Air Forces"
+      ],
+      [
+        "AntV",
+        "Cartoon Character Line Art Sketch (image)"
+      ],
+      [
+        "Blog Post By Xjl456852",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "Dify"
+      ],
+      [
+        "ModelScope",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Notifications/Initialized Method"
+      ],
+      [
+        "Pink Robot Mascot Icon (image)",
+        "Qwen3-4B"
+      ],
+      [
+        "Blurred Thumbnail Image",
+        "Image Content Analysis"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "Networked Machine"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Qwen3:32b"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "MCP服务"
+      ],
+      [
+        "Base",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Air Force",
+        "Ministry Of National Defense Air Force Command"
+      ],
+      [
+        "JSON-RPC 2.0",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "Large Model",
+        "MCP"
+      ],
+      [
+        "Input Payload Validation Failed",
+        "Treasurcff"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "Tool Calls"
+      ],
+      [
+        "MCP Server Chart",
+        "MCP Servers Configuration"
+      ],
+      [
+        "My Treasure Box AI Data Assistant Interface (image)",
+        "RAG System"
+      ],
+      [
+        "Add To Cart",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Funnel Chart",
+        "Website Visits"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "ReAct"
+      ],
+      [
+        "Model Capability Issue",
+        "Qwen3:30b"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Pink Robot Mascot Icon (image)"
+      ],
+      [
+        "Bar Chart",
+        "Ground Support"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "GitHub"
+      ],
+      [
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)",
+        "Text2SQL"
+      ],
+      [
+        "File System",
+        "MCP Square"
+      ],
+      [
+        "Mcpserver.Py",
+        "Visual Studio Code"
+      ],
+      [
+        "军用设施",
+        "台东县"
+      ],
+      [
+        "Generate_Pin_Map",
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)"
+      ],
+      [
+        "Dify Chat Preview - Taitung Military Facilities Query (image)",
+        "Taitung County"
+      ],
+      [
+        "ECharts",
+        "Sanic-Web"
+      ],
+      [
+        "2025-11-24 11:57:41",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Python"
+      ],
+      [
+        "Image",
+        "Spec"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Local Plugin"
+      ],
+      [
+        "Bar Chart",
+        "空军岗山基地"
+      ],
+      [
+        "AntV",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Thumbs Up Icon (image)",
+        "Tool Calls"
+      ],
+      [
+        "Air Force Taimali Range",
+        "Dify Agent MCP Configuration and Test (image)"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "MCP Service Configuration"
+      ],
+      [
+        "Node.js Server",
+        "Session C7becf5b-Ad2d-450c-Aaea-436e593b26b6"
+      ],
+      [
+        "Address Modification",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Dify",
+        "MCP Tools"
+      ],
+      [
+        "Dify Marketplace",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Navy 131 Fleet",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Initialize Method",
+        "Protocol Version 2024-11-05"
+      ],
+      [
+        "海军",
+        "海军保修指挥部"
+      ],
+      [
+        "TypeScript",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "火山引擎"
+      ],
+      [
+        "Asia/Shanghai Timezone",
+        "Get Current Time Tool"
+      ],
+      [
+        "E:\\Mcp-Server-Chart-Main",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Missing Dependencies"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "History"
+      ],
+      [
+        "Navy",
+        "Navy 192 Fleet"
+      ],
+      [
+        "MCP Tools",
+        "Qwen3:32b"
+      ],
+      [
+        "Taitung County Military Facilities",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Chart Generation",
+        "Data Assistant Chat Interface with Pie Chart (image)"
+      ],
+      [
+        "放弃结算",
+        "进入结算"
+      ],
+      [
+        "Llama3.3",
+        "Thumbs Down Dislike Icon (image)"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Tools/List"
+      ],
+      [
+        "Blue Checkmark Icon",
+        "Blue Checkmark Success Icon (image)"
+      ],
+      [
+        "RAG-Anything",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "Dify Chat Preview - Taitung Military Facilities Query (image)",
+        "Preview"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "Model Context Protocol"
+      ],
+      [
+        "Blog",
+        "Blue Globe Icon (image)"
+      ],
+      [
+        "Antv Visualization Library",
+        "Gpt-Vis Project"
+      ],
+      [
+        "ReAct (Supports MCP Tools)",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "MCP Server",
+        "SSE Transport"
+      ],
+      [
+        "Generate_Organization_Chart",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "AntV",
+        "GPT-Vis-SSR Mascot Icon (image)"
+      ],
+      [
+        "Image",
+        "Render Function"
+      ],
+      [
+        "MCP",
+        "Qwen3:30b"
+      ],
+      [
+        "Complete Payment",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Deepseek Plugin",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "Pie Chart",
+        "Product C"
+      ],
+      [
+        "Longitude Distribution Comparison Chart",
+        "Longitude Value"
+      ],
+      [
+        "Amoypark",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "MCP服务",
+        "Sad Television Character Avatar (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Dify Chat Preview - Taitung Military Facilities Query (image)"
+      ],
+      [
+        "Qwen3:8b",
+        "ReAct Agent"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Protocol Version 2024-11-05"
+      ],
+      [
+        "Chat Interface",
+        "Taitung County"
+      ],
+      [
+        "Qwen 32B",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "Technical Flowchart"
+      ],
+      [
+        "MCP Square",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Navy",
+        "Taiwan Region Air And Sea Power Structure"
+      ],
+      [
+        "Navy Warranty Command",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Blog Post By Xjl456852",
+        "博客园"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Training Department"
+      ],
+      [
+        "Data Assistant",
+        "macOS M Series"
+      ],
+      [
+        "AntV Visualization Charts",
+        "Dify"
+      ],
+      [
+        "Air Defense Early Warning System",
+        "MCP Server Terminal Log for Chart Generation (image)"
+      ],
+      [
+        "Dify Test",
+        "MCP Service"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Remote Service"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "Json Snippet"
+      ],
+      [
+        "Ministry Of National Defense Navy Command",
+        "Navy"
+      ],
+      [
+        "Chart Rendering Failure",
+        "Generate_Pin_Map"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Dify"
+      ],
+      [
+        "000858",
+        "Stock Tool"
+      ],
+      [
+        "Thumbs-Up Approval Icon (image)",
+        "Weather Tool"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Document Icon"
+      ],
+      [
+        "Taitung Area",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "Antv Visualization Library"
+      ],
+      [
+        "Command Center",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Abandon Checkout",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Sanic-Web",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Smiley Face Icon",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "MCP",
+        "Qwen3-4B"
+      ],
+      [
+        "Blurred Thumbnail Image",
+        "Image Path"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Maintenance Department"
+      ],
+      [
+        "Llama3.3",
+        "Thumbs-Down Icon (image)"
+      ],
+      [
+        "Private Service Address",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Nginx Client Max Body Size"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "问题1"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "Qwen3:32b"
+      ],
+      [
+        "Dify Marketplace",
+        "Dify Platform"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Wuliangye"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Workspace"
+      ],
+      [
+        "Pink Robot Mascot Icon (image)",
+        "Robot Character"
+      ],
+      [
+        "Military Facilities",
+        "Taitung County"
+      ],
+      [
+        "MCP Server Marketplace",
+        "MCPHub"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "MCP"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Orkg859243j0a4jz"
+      ],
+      [
+        "MCP Service",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Dify"
+      ],
+      [
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)",
+        "Table Q&A"
+      ],
+      [
+        "Dify测试",
+        "Thumbs Down Icon"
+      ],
+      [
+        "Navy",
+        "Taiwan Region Sea And Air Forces"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "Windows"
+      ],
+      [
+        "Agent",
+        "Dify Agent MCP Configuration Interface (image)"
+      ],
+      [
+        "Dify",
+        "Windows"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Python Version Issue"
+      ],
+      [
+        "VS Code MCP Server Debugging Session (image)",
+        "贵州茅台"
+      ],
+      [
+        "MCP Server",
+        "SSE Transport Mode"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "Csdn Blog"
+      ],
+      [
+        "Ministry Of National Defense Navy Command",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "MCP-Server",
+        "火山引擎"
+      ],
+      [
+        "Local Server",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "GitHub"
+      ],
+      [
+        "Llama3.3",
+        "Sad Television Character Avatar (image)"
+      ],
+      [
+        "Thumbs-Up Approval Icon (image)",
+        "Thumbs-Up Icon"
+      ],
+      [
+        "Port 3100",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "AI Prompts",
+        "MCP"
+      ],
+      [
+        "Air Force Zhihang Base",
+        "Longitude Distribution Comparison Chart"
+      ],
+      [
+        "Line Chart",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Leave Immediately",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Dify测试",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Dify",
+        "Thumbs Up Icon (image)"
+      ],
+      [
+        "Chart Generation Tools",
+        "Qwen3:32b"
+      ],
+      [
+        "FastMCP",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "Junjiem",
+        "Junjiem/Dify-Plugin-Repackaging"
+      ],
+      [
+        "MCP Servers Configuration",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "DISABLED_TOOLS",
+        "Getdisabledtools"
+      ],
+      [
+        "Pay Order",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "Tool Call Failure"
+      ],
+      [
+        "Llm",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Moxuemeng"
+      ],
+      [
+        "MCP",
+        "Tongyi Lingma"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Repackaging Error"
+      ],
+      [
+        "Data Assistant",
+        "Data Assistant Chat Interface with Pie Chart (image)"
+      ],
+      [
+        "MCP Service",
+        "Qwen3:14b"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Qwen3:30b"
+      ],
+      [
+        "Sanic-Web",
+        "Table Q&A"
+      ],
+      [
+        "DeepSeek 70B",
+        "MCP"
+      ],
+      [
+        "Terminal Panel",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Vllm部署与Mcp工具实践测试"
+      ],
+      [
+        "General Q&A",
+        "My Treasure Box AI Data Assistant"
+      ],
+      [
+        "Debug Log Level",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "直接回复"
+      ],
+      [
+        "Blurred Cartoon Avatar Profile Picture (image)",
+        "MCP"
+      ],
+      [
+        "Tools/Call",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Powershell",
+        "Visual Studio Code"
+      ],
+      [
+        "MCP Servers Configuration",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "MCP Server Chart"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Section Path"
+      ],
+      [
+        "ECharts",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Workflow"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "Hustcc"
+      ],
+      [
+        "JSON-RPC 2.0",
+        "MCP HTTP With SSE Client"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "完成支付"
+      ],
+      [
+        "Image Content Analysis",
+        "Section Path"
+      ],
+      [
+        "HGMCP",
+        "Mcpserver.Py"
+      ],
+      [
+        "MCP Server",
+        "Node.Js"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Tool"
+      ],
+      [
+        "Navy",
+        "Navy Sea Control Missile Command"
+      ],
+      [
+        "Mind-Mapping Software Interface",
+        "Organizational Chart"
+      ],
+      [
+        "Bar Chart",
+        "Intelligence Department"
+      ],
+      [
+        "@antv/gpt-vis-ssr",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "MCP Server",
+        "Prompts/List"
+      ],
+      [
+        "MCP Server",
+        "Resources/Templates/List"
+      ],
+      [
+        "AI Model",
+        "MCP Server"
+      ],
+      [
+        "AntV",
+        "Orange C Icon (image)"
+      ],
+      [
+        "MinIO",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Shenjian123"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Willem1111"
+      ],
+      [
+        "MCPHub",
+        "User Avatar for 无趣 (image)"
+      ],
+      [
+        "Sankey Diagram",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Node.js Server",
+        "Resources/List"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "CSDN Blog"
+      ],
+      [
+        "Mcpserver.Py",
+        "Stock Tool"
+      ],
+      [
+        "Image Viewer",
+        "Line Chart Test Case 1 Output (image)"
+      ],
+      [
+        "Qwen3:32B",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Search Bar"
+      ],
+      [
+        "Dify Plugin Repackaging Issues Page",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Dify测试",
+        "MCP"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "MCP-Server-Chart Deployment And Pitfall Advice"
+      ],
+      [
+        "AntV",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "Mcptest.Py",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "User Avatar for 无趣 (image)",
+        "孙青扬"
+      ],
+      [
+        "Dify",
+        "Offline Plugin Installation"
+      ],
+      [
+        "台东县军用设施分布图",
+        "空军志航基地"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "SSE Transport Mode"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军航空科技研究发展中心"
+      ],
+      [
+        "MCP Testing",
+        "Thumbs-Up Icon"
+      ],
+      [
+        "VS Code env.js configuration for mcp-server-chart (image)",
+        "Windows"
+      ],
+      [
+        "Bar Chart",
+        "Flight Units"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军第1-7战术战斗机连队"
+      ],
+      [
+        "MCP",
+        "Orange-Red Icon With Letter C"
+      ],
+      [
+        "Dify",
+        "Docker Compose"
+      ],
+      [
+        "Antv/G",
+        "Apconw/Gpt-Vis-Api"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Data Q&A"
+      ],
+      [
+        "Agent",
+        "Sql生成Test Echats"
+      ],
+      [
+        "Base",
+        "Visual Studio Code"
+      ],
+      [
+        "海军",
+        "海军第192舰队"
+      ],
+      [
+        "DISABLED_TOOLS",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "MCP",
+        "Robot Character"
+      ],
+      [
+        "Environment Dependency And Configuration",
+        "MCP Server"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Sankey Chart"
+      ],
+      [
+        "SERVICE_ID",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "GPT-Vis-SSR Mascot Icon (image)",
+        "Render Function"
+      ],
+      [
+        "Pink Robot Mascot Icon (image)",
+        "Qwen3:32b"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Junjiem"
+      ],
+      [
+        "HGMCP",
+        "Mcptest.Py"
+      ],
+      [
+        "Docker",
+        "Pink Robot Mascot Icon (image)"
+      ],
+      [
+        "MCP Server",
+        "Tools/Call"
+      ],
+      [
+        "MCP",
+        "MCP-Server"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Start Node"
+      ],
+      [
+        "MCP",
+        "ModelScope MCP Tutorials And Practices"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "Dify"
+      ],
+      [
+        "空军",
+        "空军航空科技研究发展中心"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Ollama"
+      ],
+      [
+        "Deepseek-V3",
+        "MCP Server"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军第192舰队"
+      ],
+      [
+        "Qwen3:30B",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Technology Selection"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "MCP-Server-Chart Deployment"
+      ],
+      [
+        "Render Function",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "空军",
+        "空军第1-7战术战斗机连队"
+      ],
+      [
+        "Entertainment And Multimedia",
+        "MCP Square"
+      ],
+      [
+        "New Folder X",
+        "Tool Calls"
+      ],
+      [
+        "Thumbs-Down Icon (image)",
+        "User"
+      ],
+      [
+        "Air Force Taimali Target Range",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Smiley Face Icon (image)",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "MCP Server"
+      ],
+      [
+        "MCP",
+        "MCP Tools"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "博客园"
+      ],
+      [
+        "General Q&A",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Dify",
+        "Qwen3-14B"
+      ],
+      [
+        "Agent",
+        "ReAct (Supports MCP Tools)"
+      ],
+      [
+        "Amap",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "E:\\Mcp-Server-Chart-Main",
+        "Visual Studio Code"
+      ],
+      [
+        "Agent",
+        "Low-Code AI Agent Development Platform"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Socksio Missing Error"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Resources/Templates/List"
+      ],
+      [
+        "HGMCP",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "12306-MCP Ticket Query",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Taitung County",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Master",
+        "Visual Studio Code"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "Deepseek 70b"
+      ],
+      [
+        "@antv/mcp-server-chart",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "Dify Marketplace",
+        "Dify Workflow Editor for sql生成Test Echats (image)"
+      ],
+      [
+        "Document Icon",
+        "MCP Service"
+      ],
+      [
+        "Google Chrome",
+        "Local Server"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "ReAct"
+      ],
+      [
+        "MCP Service",
+        "ReAct"
+      ],
+      [
+        "Remote Desktop Application",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "MCP Server"
+      ],
+      [
+        "Browse Products",
+        "User Purchase Journey Sankey Diagram"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Sanic-Web"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Token"
+      ],
+      [
+        "AntV Visualization Charts",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "Dify测试",
+        "User"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "Reply Button"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "CSDN Blog",
+        "GPT-Vis"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Dify",
+        "Sun Qingyang"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Junjiem/Dify-Plugin-Repackaging"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "工作流"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Navy"
+      ],
+      [
+        "Data Q&A",
+        "My Treasure Box AI Data Assistant"
+      ],
+      [
+        "Chart Configuration Data",
+        "POST"
+      ],
+      [
+        "Navy 151 Fleet",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Agent",
+        "unknown_entity (unknown)"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "MCP Service"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Vllm"
+      ],
+      [
+        "Website Visits",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Chat Interface",
+        "Dify"
+      ],
+      [
+        "Asia/Shanghai Timezone",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "MCP-Server"
+      ],
+      [
+        "MCP Server",
+        "Mcpserver.Py"
+      ],
+      [
+        "Orange C Icon (image)",
+        "Orange-Red Icon With Letter C"
+      ],
+      [
+        "HTTP Service",
+        "MCP Server"
+      ],
+      [
+        "Node.js Server",
+        "Tools/List"
+      ],
+      [
+        "Generate API Endpoint",
+        "Port 3100"
+      ],
+      [
+        "Developer Tools",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Hustcc"
+      ],
+      [
+        "POST Service",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Cartoon Character",
+        "GPT-Vis-Api"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Resources/Templates/List"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Prompts/List"
+      ],
+      [
+        "Antvis",
+        "Copy Icon for MCP Configuration (image)"
+      ],
+      [
+        "MCP Server",
+        "Qwen3:32b"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军陆战队指挥部"
+      ],
+      [
+        "Initialize Method",
+        "MCP HTTP With SSE Client"
+      ],
+      [
+        "Enter Checkout",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "SSE Transport",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "MCP Service",
+        "MCP-Server-Chart"
+      ],
+      [
+        "Sql生成Test Mcp",
+        "Start Node"
+      ],
+      [
+        "Qwen 32b",
+        "Thumbs Down Dislike Icon (image)"
+      ],
+      [
+        "Gpt-Vis",
+        "Llm"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "Antvis/Mcp-Server-Chart"
+      ],
+      [
+        "File System",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "New Folder X",
+        "Thumbs Up Icon (image)"
+      ],
+      [
+        "MCP",
+        "Qwen3:32b"
+      ],
+      [
+        "ModelScope MCP Square Interface (image)",
+        "Zapier"
+      ],
+      [
+        "Env.Js",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Post Interface",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "MCPHub",
+        "Neighbor Text"
+      ],
+      [
+        "Qwen3:30b",
+        "Tools/Call"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "Command Center"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Sse Transport"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "Dify"
+      ],
+      [
+        "Navy 192 Fleet",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Sad Television Character",
+        "Sad Television Character Avatar (image)"
+      ],
+      [
+        "MCPHub",
+        "无趣"
+      ],
+      [
+        "MCP",
+        "Model Capability Issue"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Openapi Api Compatible"
+      ],
+      [
+        "Curl",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "MCP Server",
+        "Weather Tool"
+      ],
+      [
+        "General Q&A",
+        "Sanic-Web"
+      ],
+      [
+        "Alipay MCP",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "JSON-RPC Request",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Tools/Call"
+      ],
+      [
+        "Military Facilities",
+        "Pink Robot Mascot Icon (image)"
+      ],
+      [
+        "AntV Charting Tools",
+        "Cartoon Character Line Art Sketch (image)"
+      ],
+      [
+        "Dify",
+        "Dify Marketplace"
+      ],
+      [
+        "000858",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Plugin Display Issue"
+      ],
+      [
+        "Leave Immediately",
+        "Visit Website"
+      ],
+      [
+        "Sse Endpoint",
+        "Terminal Panel"
+      ],
+      [
+        "Beijing",
+        "Weather Tool"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "台湾地区情报系统"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "FORCE_VERIFYING_SIGNATURE"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "Resources/List Method"
+      ],
+      [
+        "Antvis",
+        "Antvis/Mcp-Server-Chart"
+      ],
+      [
+        "Agent Node",
+        "MCP Prompts As Tools"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Qwen3:32b"
+      ],
+      [
+        "LargeModel Data Assistant",
+        "Sanic-Web"
+      ],
+      [
+        "Conversion Rate",
+        "Funnel Chart"
+      ],
+      [
+        "Data Q&A",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "All Categories",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "Dify",
+        "SSE"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "HTTP Service"
+      ],
+      [
+        "Hustcc",
+        "Mcp Service"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Qwen3:14b"
+      ],
+      [
+        "Antvis",
+        "Gpt-Vis"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "Mcphub"
+      ],
+      [
+        "Fugang Camp",
+        "Longitude Distribution Comparison Chart"
+      ],
+      [
+        "浏览商品",
+        "离开网站"
+      ],
+      [
+        "Distutils Module Error",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)",
+        "System Settings"
+      ],
+      [
+        "2025/12/31",
+        "Dify Workflow Editor for SQL Chart Generation (image)"
+      ],
+      [
+        "Blue Globe Icon",
+        "Blue Globe Icon (image)"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Minio"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Init Environment Failed"
+      ],
+      [
+        "All Tags",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "CSV",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Sql生成Test Mcp"
+      ],
+      [
+        "Chart Generation",
+        "Local Deployment"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Model Capability Issue"
+      ],
+      [
+        "MCP Server",
+        "Resources/List Method"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Dify Plugin Repackaging Issues Page"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Plugin Max Package Size"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Copy Icon for MCP Configuration (image)"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "MCP Service"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Taiwan Sea And Air Forces"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "孙青扬"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Mcptest.Py"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军防空暨导弹指挥部"
+      ],
+      [
+        "Sanic-Web",
+        "TypeScript"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Weather Tool"
+      ],
+      [
+        "Chart Generation MCP Service",
+        "Deepseek:70b"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "Tools/List Method"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Spec"
+      ],
+      [
+        "Visit Website",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Guizhou Moutai"
+      ],
+      [
+        "Amoypark",
+        "Dify"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "Operations Department"
+      ],
+      [
+        "Dify Chat Preview - Taitung Military Facilities Query (image)",
+        "Military Facilities"
+      ],
+      [
+        "GPT-Vis-SSR Mascot Icon (image)",
+        "Hustcc"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "Notifications/Initialized Method"
+      ],
+      [
+        "AI Model",
+        "User"
+      ],
+      [
+        "Address Modification",
+        "Gim1236"
+      ],
+      [
+        "Chart Generation",
+        "Data Assistant"
+      ],
+      [
+        "Conda Environment",
+        "MCP Server Terminal Log for Chart Generation (image)"
+      ],
+      [
+        "DeepSeek:70b",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Environment Dependency And Configuration",
+        "MCPHub"
+      ],
+      [
+        "Longitude Distribution Comparison Chart",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Image",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "macOS M Series"
+      ],
+      [
+        "Agent",
+        "Start Node"
+      ],
+      [
+        "Finance",
+        "MCP Square"
+      ],
+      [
+        "Mineru",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Qwen3:32b"
+      ],
+      [
+        "DeepSeek:70b",
+        "MCP Service"
+      ],
+      [
+        "MCP Server Terminal Log for Chart Generation (image)",
+        "Node.js Server"
+      ],
+      [
+        "空军",
+        "空军防空暨导弹指挥部"
+      ],
+      [
+        "Taitung County Military Facilities Chart Preview (image)",
+        "mcp-server-chart"
+      ],
+      [
+        "Air Force Zhihang Base",
+        "Taitung County"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Windows 10/11"
+      ],
+      [
+        "MCP Service",
+        "Qwen3:14B"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "Qwen3:30B",
+        "Tools/Call"
+      ],
+      [
+        "Getdisabledtools",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Json"
+      ],
+      [
+        "MCP Server",
+        "Tools/List Method"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Render Function"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Dify"
+      ],
+      [
+        "Dify",
+        "Dify Chat Preview - Taitung Military Facilities Query (image)"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Resources/List Method"
+      ],
+      [
+        "Smiley Face Icon Placeholder (image)",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Image Viewer",
+        "Line Chart"
+      ],
+      [
+        "Chat Input Box",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Logistics Department",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Docker",
+        "MCPHub"
+      ],
+      [
+        "Agent",
+        "MCP Service"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "MCP Service"
+      ],
+      [
+        "Bar Chart",
+        "Maintenance Department"
+      ],
+      [
+        "Amap",
+        "MCP Square"
+      ],
+      [
+        "Dify",
+        "Mcphub"
+      ],
+      [
+        "Facility Name",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Neighbor Text"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Gpt-Vis"
+      ],
+      [
+        "Generate_Organization_Chart",
+        "Taiwan Region Air And Sea Power Structure"
+      ],
+      [
+        "海军",
+        "海军海洋监侦指挥部"
+      ],
+      [
+        "Generate_Pin_Map",
+        "Tools/Call"
+      ],
+      [
+        "Agent Node",
+        "Visualization Tool"
+      ],
+      [
+        "Data Q&A",
+        "Sanic-Web"
+      ],
+      [
+        "Cartoon Character",
+        "GPT-Vis-SSR Mascot Icon (image)"
+      ],
+      [
+        "Getserviceidentifier",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "VS Code MCP Server Debugging Session (image)",
+        "五粮液"
+      ],
+      [
+        "Llama3.3",
+        "Tool Call Failure"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "放弃结算"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "Resources/Templates/List Method"
+      ],
+      [
+        "Jiangcheng",
+        "Plugin Invoke Error"
+      ],
+      [
+        "海军",
+        "海军第151舰队"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Jiangcheng"
+      ],
+      [
+        "AntV Visualization Charts",
+        "Tool"
+      ],
+      [
+        "Funnel Chart",
+        "Pay Order"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Knowledge Base"
+      ],
+      [
+        "Copy Icon for MCP Configuration (image)",
+        "Vis_Request_Server"
+      ],
+      [
+        "MCP Testing",
+        "Qwen 32B"
+      ],
+      [
+        "Chart Generation",
+        "GPT-VIS-API"
+      ],
+      [
+        "FastMCP",
+        "MCP Server"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Mcp Service"
+      ],
+      [
+        "Dify",
+        "Dify Workflow Editor for SQL Chart Generation (image)"
+      ],
+      [
+        "MCP服务",
+        "Thumbs Down Dislike Icon (image)"
+      ],
+      [
+        "Private Deployment",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "加入购物车"
+      ],
+      [
+        "Sql生成Test Mcp",
+        "Weather Tool"
+      ],
+      [
+        "Pie Chart",
+        "Product E"
+      ],
+      [
+        "Home",
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)"
+      ],
+      [
+        "Port 19200",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Data Assistant",
+        "Pie Chart"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Input Payload Validation Failed"
+      ],
+      [
+        "Taitung County Military Facilities Chart Preview (image)",
+        "gpt-vis-api"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Visualization"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Organization Chart"
+      ],
+      [
+        "Mcp Server Marketplace",
+        "Mcphub"
+      ],
+      [
+        "FastMCP",
+        "Mcpserver.Py"
+      ],
+      [
+        "General Q&A",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Context Window",
+        "MCP Service"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "国防部海军司令部"
+      ],
+      [
+        "Developer Tools",
+        "MCP Square"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "GPT-Vis-SSR Mascot Icon (image)"
+      ],
+      [
+        "AI Assistant",
+        "Dify"
+      ],
+      [
+        "Generate API Endpoint",
+        "Line Chart"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Model Context Protocol"
+      ],
+      [
+        "Dify Chat Preview - Taitung Military Facilities Query (image)",
+        "User"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Treasurcff"
+      ],
+      [
+        "Node.js Server",
+        "Sse Transport"
+      ],
+      [
+        "Dify 1.5.0",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Add To Cart",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Sad Television Character",
+        "User"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "离开网站"
+      ],
+      [
+        "LargeModel Data Assistant",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Python"
+      ],
+      [
+        "User Avatar for 无趣 (image)",
+        "无趣"
+      ],
+      [
+        "Mcp Server Configuration",
+        "Sse Transport"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Liuxi-ML"
+      ],
+      [
+        "MCP",
+        "antvis/mcp-server-chart"
+      ],
+      [
+        "VS Code MCP Server Debugging Session (image)",
+        "Weather Tool"
+      ],
+      [
+        "My Treasure Box AI Data Assistant Interface (image)",
+        "Text2SQL"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "MCP Server Chart"
+      ],
+      [
+        "Taiwan Region Sea And Air Forces",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "加入购物车",
+        "离开网站"
+      ],
+      [
+        "Dify 1.5.0",
+        "Moonmoonbird11"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Taitung County"
+      ],
+      [
+        "Shanghai",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "台东县军用设施分布图"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "Training Department"
+      ],
+      [
+        "MCP Server",
+        "Terminal Panel"
+      ],
+      [
+        "Chat Input Box",
+        "Sanic-Web"
+      ],
+      [
+        "RAG System",
+        "Table Q&A"
+      ],
+      [
+        "FastMCP",
+        "Weather Tool"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "孙青扬"
+      ],
+      [
+        "MCP服务",
+        "Thumbs-Down Icon (image)"
+      ],
+      [
+        "Entertainment And Multimedia",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Plugin Invoke Error"
+      ],
+      [
+        "Env.Js",
+        "Visual Studio Code"
+      ],
+      [
+        "Alipay MCP",
+        "MCP Square"
+      ],
+      [
+        "GPT-Vis-Api",
+        "GPT-Vis-SSR Mascot Icon (image)"
+      ],
+      [
+        "Qwen3:32b",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "ModelScope",
+        "Tongyi Lingma"
+      ],
+      [
+        "Visual Studio Code",
+        "Windows"
+      ],
+      [
+        "Functioncall",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "MCP Prompts As Tools"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Docker"
+      ],
+      [
+        "Node.js Server",
+        "Resources/Templates/List"
+      ],
+      [
+        "Node.js Server",
+        "Prompts/List"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Xjl456852"
+      ],
+      [
+        "Conversion Rate",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "国防部空军司令部",
+        "空军"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军保修指挥部"
+      ],
+      [
+        "AI Prompts",
+        "Thumbs Up Icon (image)"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "SSE"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Moonmoonbird11"
+      ],
+      [
+        "MCP Square",
+        "Quwan Qianyin"
+      ],
+      [
+        "Sanic-Web",
+        "Text2SQL"
+      ],
+      [
+        "Bar Chart Generation Tool",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Mcp-Server-Chart",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "MCP-Server-Chart Deployment And Pitfall Advice"
+      ],
+      [
+        "Generate_Organization_Chart",
+        "Tools/Call"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "CSDN Blog"
+      ],
+      [
+        "MCP Service",
+        "mcp-server-chart"
+      ],
+      [
+        "Chart Configuration Data",
+        "Orange C Icon (image)"
+      ],
+      [
+        "浏览商品",
+        "访问网站"
+      ],
+      [
+        "FastMCP",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Distutils Module Error"
+      ],
+      [
+        "Data Q&A",
+        "Text2SQL"
+      ],
+      [
+        "600519",
+        "Stock Tool"
+      ],
+      [
+        "海军",
+        "海军舰队指挥部"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Image"
+      ],
+      [
+        "海军",
+        "海军制海飞弹指挥部"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "MCP Tools"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Direct Reply Node"
+      ],
+      [
+        "Home",
+        "Sanic-Web"
+      ],
+      [
+        "Avatar",
+        "Sad Television Character Avatar (image)"
+      ],
+      [
+        "Blue Mountain Range Logo (image)",
+        "MCP Tool"
+      ],
+      [
+        "Debug Log Level",
+        "MCP Server"
+      ],
+      [
+        "AntV",
+        "Baode Server"
+      ],
+      [
+        "CentOS/Ubuntu",
+        "Data Assistant"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "GitHub"
+      ],
+      [
+        "Agent",
+        "Sql生成Test Mcp"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Plugins Tab"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "ReAct"
+      ],
+      [
+        "MCP HTTP With SSE Client",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "Sanic-Web Data Q&A Dashboard with Bar Chart (image)",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "Agent Node",
+        "Dify Workflow Editor for sql生成Test Echats (image)"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "MCP代码实战"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "海军舰队指挥部"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Settings"
+      ],
+      [
+        "Messages Endpoint",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "MCP Server Marketplace"
+      ],
+      [
+        "Air Force",
+        "MCP Server Terminal Log for Chart Generation (image)"
+      ],
+      [
+        "MCP Service",
+        "Vllm"
+      ],
+      [
+        "Docker",
+        "gpt-vis-api"
+      ],
+      [
+        "ModelScope MCP Square Interface (image)",
+        "Notion"
+      ],
+      [
+        "Navy",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Local Deployment"
+      ],
+      [
+        "Dify测试",
+        "Sad Television Character Avatar (image)"
+      ],
+      [
+        "Dify",
+        "Thumbs-Down Icon (image)"
+      ],
+      [
+        "Orange C Icon (image)",
+        "antvis/mcp-server-chart"
+      ],
+      [
+        "Blurred Warm-Toned Thumbnail Image (image)",
+        "Environment Dependency And Configuration"
+      ],
+      [
+        "Data Q&A",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "Shanghai",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "GPT-Vis-SSR Mascot Icon (image)",
+        "VIS_REQUEST_SERVER"
+      ],
+      [
+        "Blog Post By Xjl456852",
+        "Offline Plugin Installation"
+      ],
+      [
+        "Pink Robot Mascot Icon (image)",
+        "Workflow"
+      ],
+      [
+        "Stock Tool",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "Sad Television Character Avatar (image)",
+        "User"
+      ],
+      [
+        "Dyf8521",
+        "Repackaging Error"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Ollama"
+      ],
+      [
+        "Gpt-Vis",
+        "Ui Components"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "Private Deployment"
+      ],
+      [
+        "Funnel Chart",
+        "Total Conversion Rate"
+      ],
+      [
+        "Blog",
+        "Dify"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Technical Implementation Steps"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "Logistics Department"
+      ],
+      [
+        "Air Defense Early Warning System",
+        "Taiwan Region Air And Sea Power Structure"
+      ],
+      [
+        "Zhiben Camp",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "GPT-VIS-API",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "Dify 1.6.0",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Dify",
+        "孙青扬"
+      ],
+      [
+        "MCP Server",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Product B"
+      ],
+      [
+        "JSON-RPC 2.0",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "My Treasure Box AI Data Assistant Interface (image)",
+        "Table Q&A"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Hustcc"
+      ],
+      [
+        "MCP Protocol",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "Log Analysis",
+        "孙青扬"
+      ],
+      [
+        "Dify",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "Orange C Icon (image)"
+      ],
+      [
+        "Minio",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Chart Configuration Data",
+        "Chart Image URL"
+      ],
+      [
+        "Dify",
+        "MCP服务"
+      ],
+      [
+        "Llama3.3",
+        "MCP服务"
+      ],
+      [
+        "Address Modification",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "Dify Marketplace",
+        "Dify Plugin Repackaging"
+      ],
+      [
+        "Navy",
+        "Navy 168 Fleet"
+      ],
+      [
+        "Initialize Method",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "Chart Preview",
+        "Local Server"
+      ],
+      [
+        "MCP",
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)"
+      ],
+      [
+        "MCP代码实战",
+        "MCP服务"
+      ],
+      [
+        "台东县军用设施分布图",
+        "空军太麻里靶场"
+      ],
+      [
+        "AntV",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "MCP Service",
+        "Qwen3:32B"
+      ],
+      [
+        "GPT-Vis",
+        "GitHub"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "Offline Deployment"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "MCP-Server-Chart"
+      ],
+      [
+        "Amoypark",
+        "MCPHub"
+      ],
+      [
+        "History",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "MCP Server",
+        "Mcphub"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Visualization Tool"
+      ],
+      [
+        "VS Code MCP Server Debugging Session (image)",
+        "Visual Studio Code"
+      ],
+      [
+        "Comment Thread",
+        "Like Button"
+      ],
+      [
+        "Pie Chart",
+        "Python"
+      ],
+      [
+        "Docker",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Air Force Zhihang Base",
+        "Taitung Area"
+      ],
+      [
+        "Fugang Camp",
+        "Taitung County"
+      ],
+      [
+        "Longitude Distribution Comparison Chart",
+        "Remote Desktop Application"
+      ],
+      [
+        "General Q&A",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "MCP Service",
+        "Tool Registration"
+      ],
+      [
+        "Image Path",
+        "MinIO"
+      ],
+      [
+        "Offline Plugin Installation",
+        "台东地区军事设施经度分布对比条形图 (image)"
+      ],
+      [
+        "Dify Marketplace",
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)"
+      ],
+      [
+        "Dify Workflow Editor for SQL Chart Generation (image)",
+        "台东县"
+      ],
+      [
+        "MCP",
+        "Qwen 32b"
+      ],
+      [
+        "Pink Robot Mascot Icon (image)",
+        "Section 3.4 Small Model Calling MCP"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Llama 3.3",
+        "MCP Testing"
+      ],
+      [
+        "Mcptest.Py",
+        "Weather Tool"
+      ],
+      [
+        "MCP Server SSE Log for qwen3:32b Tool Call Failure (image)",
+        "RPC 5 Tools/Call"
+      ],
+      [
+        "HTTP Service",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Copy Icon",
+        "Vis_Request_Server"
+      ],
+      [
+        "MCP Server",
+        "Qwen3:14b"
+      ],
+      [
+        "Navy",
+        "Navy 131 Fleet"
+      ],
+      [
+        "Antvis MCP Server Chart",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "MCP"
+      ],
+      [
+        "Agent",
+        "MCP"
+      ],
+      [
+        "Add To Cart",
+        "Browse Products"
+      ],
+      [
+        "Llama3.3",
+        "Thumbs Down Icon"
+      ],
+      [
+        "Dify Platform",
+        "Sql生成Test Echats"
+      ],
+      [
+        "Application Architecture",
+        "Sanic-Web"
+      ],
+      [
+        "Dify",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "国防部海军司令部",
+        "海军"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "Communications Department"
+      ],
+      [
+        "Sankey Diagram",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "Orange C Icon (image)",
+        "POST"
+      ],
+      [
+        "Stock Tool",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "MCP Service",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "ModelScope MCP Experiment Ground",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Comment Thread",
+        "Reply Button"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Test Case 1"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "Gpt-Vis Project"
+      ],
+      [
+        "Agent",
+        "Dify Agent MCP Configuration and Test (image)"
+      ],
+      [
+        "Dify Chat Preview - Taitung Military Facilities Query (image)",
+        "MCP Service"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Sse Transport"
+      ],
+      [
+        "Dify",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "MCP Underlying Principles"
+      ],
+      [
+        "MCP Server Chart",
+        "Technical Implementation Steps"
+      ],
+      [
+        "Antvis/Mcp-Server-Chart",
+        "Dify"
+      ],
+      [
+        "Docker",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "Add To Cart",
+        "Leave Website"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Sql生成Test Echats"
+      ],
+      [
+        "MCP Server",
+        "Qwen3:8b"
+      ],
+      [
+        "Qwen3-4B",
+        "Section 3.4 Small Model Calling MCP"
+      ],
+      [
+        "Mcp Server Configuration",
+        "Sql生成Test Mcp"
+      ],
+      [
+        "Dify",
+        "General Q&A"
+      ],
+      [
+        "Dyf8521",
+        "Socksio Missing Error"
+      ],
+      [
+        "GPT-Vis-SSR",
+        "POST Service"
+      ],
+      [
+        "Deepseek 70b",
+        "MCP Service"
+      ],
+      [
+        "Dify Plugin Repackaging",
+        "Missing Dependencies"
+      ],
+      [
+        "台东县军用设施分布图",
+        "知本营区"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Test/Sandbox Environment"
+      ],
+      [
+        "Cartoon Character Line Art Sketch (image)",
+        "GPT-Vis"
+      ],
+      [
+        "General Q&A",
+        "LangChain"
+      ],
+      [
+        "Gpt-Vis-Api",
+        "Localhost"
+      ],
+      [
+        "3097407306",
+        "Distutils Module Error"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Offline Installation Upload Issue"
+      ],
+      [
+        "Finance",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Air Force Taimali Target Range",
+        "Longitude Distribution Comparison Chart"
+      ],
+      [
+        "Smiley Face Icon (image)",
+        "Ui Components"
+      ],
+      [
+        "Chart Generation",
+        "Dify Agent MCP Configuration and Test (image)"
+      ],
+      [
+        "GitHub",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Browser Automation",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "Dify",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "Apconw/Gpt-Vis-Api",
+        "Minio"
+      ],
+      [
+        "Generate API Endpoint",
+        "Gpt-Vis-Api"
+      ],
+      [
+        "Dify 1.6.0",
+        "Moxuemeng"
+      ],
+      [
+        "Comment Interaction Buttons (Reply and Like) (image)",
+        "Like Button"
+      ],
+      [
+        "Large Model",
+        "Tool Call Failure"
+      ],
+      [
+        "Qwen3:8b",
+        "VS Code MCP Server Debugging Session (image)"
+      ],
+      [
+        "台湾地区海空力量",
+        "台湾地区海空力量组织架构图 (image)"
+      ],
+      [
+        "Blog",
+        "博客园"
+      ],
+      [
+        "@antv/gpt-vis-ssr",
+        "GPT-Vis-SSR"
+      ],
+      [
+        "Gpt-Vis",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "SSE",
+        "孙青扬"
+      ],
+      [
+        "Taiwan Region Sea And Air Forces",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "Qwen3:14b"
+      ],
+      [
+        "Llama3.3",
+        "MCP"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Linux Environment"
+      ],
+      [
+        "Get Current Time Tool",
+        "MCP Server Communication Flow Diagram (image)"
+      ],
+      [
+        "JSON-RPC Request",
+        "MCP Server"
+      ],
+      [
+        "Image",
+        "Post Interface"
+      ],
+      [
+        "Dify Platform",
+        "Dify Workflow Editor for sql生成Test Echats (image)"
+      ],
+      [
+        "Pie Chart",
+        "Product B"
+      ],
+      [
+        "AntV GPT-Vis Mascot Icon (image)",
+        "MCP"
+      ],
+      [
+        "Mcp-Server-Chart-Main",
+        "Node.js Server"
+      ],
+      [
+        "000858",
+        "五粮液"
+      ],
+      [
+        "Admin",
+        "Data Assistant Chat Interface with Pie Chart (image)"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Markdown Plugin Packaging Error"
+      ],
+      [
+        "MCP",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "Document Icon",
+        "Workflow"
+      ],
+      [
+        "Terminal Panel",
+        "Visual Studio Code"
+      ],
+      [
+        "Chart MCP Tool",
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "Tool_calls Recursion Depth"
+      ],
+      [
+        "Env.Js",
+        "Getdisabledtools"
+      ],
+      [
+        "Taitung County",
+        "Workflow"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Zhiben Camp"
+      ],
+      [
+        "Qwen3:32b",
+        "gpt-vis-api"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Qwen3:8b"
+      ],
+      [
+        "E:\\Mcp-Server-Chart-Main\\Mcp-Server-Chart-Main",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Dify",
+        "MCP Testing"
+      ],
+      [
+        "Direct Reply Node",
+        "Sql生成Test Mcp"
+      ],
+      [
+        "MCP",
+        "Section 3.4 Small Model Calling MCP"
+      ],
+      [
+        "Browse Products",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "MCP Service",
+        "Port 1122"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Offline Plugin Installation"
+      ],
+      [
+        "AntV",
+        "AntV Visualization Charts"
+      ],
+      [
+        "Data Q&A",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "Agent",
+        "Direct Reply Node"
+      ],
+      [
+        "Dify",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "Offline Deployment",
+        "孙青扬"
+      ],
+      [
+        "Blue Document with Cloud Icon (image)",
+        "Qwen3-4B"
+      ],
+      [
+        "Blue Globe Icon (image)",
+        "Junjiem/Dify-Plugin-Repackaging"
+      ],
+      [
+        "AntV Visualization Tools",
+        "Blue Globe Icon (image)"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "ReAct Agent"
+      ],
+      [
+        "Complete Payment",
+        "Enter Checkout"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "空军太麻里靶场"
+      ],
+      [
+        "Apconw/Gpt-Vis-Api",
+        "Json"
+      ],
+      [
+        "海军",
+        "海军第131舰队"
+      ],
+      [
+        "Dify",
+        "User Avatar for 无趣 (image)"
+      ],
+      [
+        "MCP Server Communication Flow Diagram (image)",
+        "Port 1122"
+      ],
+      [
+        "Dify Agent MCP Configuration and Test (image)",
+        "Fugang Camp"
+      ],
+      [
+        "Stock Tool",
+        "Wuliangye"
+      ],
+      [
+        "MCP Testing",
+        "Thumbs-Up Approval Icon (image)"
+      ],
+      [
+        "ModelScope MCP Square Interface (image)",
+        "Quwan Qianyin"
+      ],
+      [
+        "Generate API Endpoint",
+        "Sankey Diagram"
+      ],
+      [
+        "Data Analysis Summary",
+        "Statistics Of Case Quantity By Sub-Item"
+      ],
+      [
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)",
+        "Liqing1317"
+      ],
+      [
+        "MCP",
+        "Pink Robot Mascot Icon (image)"
+      ],
+      [
+        "Smiley Face Icon",
+        "Technical Implementation Steps"
+      ],
+      [
+        "MCP Server",
+        "Python"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "Notifications/Initialized"
+      ],
+      [
+        "Data Assistant Chat Interface with Pie Chart (image)",
+        "Others"
+      ],
+      [
+        "Line Chart Test Case 1 Output (image)",
+        "Windows Desktop"
+      ],
+      [
+        "Image File",
+        "Plugin"
+      ],
+      [
+        "Dify Workflow Editor for sql生成Test Echats (image)",
+        "Logistics Department"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Taiwan Region"
+      ],
+      [
+        "Knowledge Management And Memory",
+        "ModelScope MCP Square Interface (image)"
+      ],
+      [
+        "User Purchase Journey Sankey Diagram",
+        "用户购买旅程桑基图 (image)"
+      ],
+      [
+        "GPT-Vis",
+        "Hustcc"
+      ],
+      [
+        "Blue Checkmark Success Icon (image)",
+        "孙青扬"
+      ],
+      [
+        "Dify Agent MCP Configuration Interface (image)",
+        "Shanghai"
+      ],
+      [
+        "Comment Thread",
+        "孙青扬"
+      ],
+      [
+        "GPT-Vis",
+        "Orange C Icon (image)"
+      ],
+      [
+        "AntV Visualization Charts",
+        "Local Plugin"
+      ],
+      [
+        "Mcp Service",
+        "Private Deployment"
+      ],
+      [
+        "Abandon Checkout",
+        "Enter Checkout"
+      ],
+      [
+        "Data Q&A",
+        "ECharts"
+      ],
+      [
+        "Ministry Of National Defense Air Force Command",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "MCP Server Chart",
+        "Private Service Address"
+      ],
+      [
+        "Navy 124 Fleet",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "台湾地区海空力量组织架构图 (image)",
+        "空军保修指挥部"
+      ],
+      [
+        "Qwen3:32b",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Funnel Chart",
+        "Sanic-Web"
+      ],
+      [
+        "台湾地区海空力量",
+        "空军"
+      ],
+      [
+        "MCP Server Chart",
+        "Sankey Chart"
+      ],
+      [
+        "Application Architecture",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "MCP",
+        "孙青扬"
+      ],
+      [
+        "完成支付",
+        "进入结算"
+      ],
+      [
+        "FastMCP",
+        "Sse Transport"
+      ],
+      [
+        "Mcp Service",
+        "Remote Service"
+      ],
+      [
+        "Vue3",
+        "sanic-web Data Q&A Funnel Chart Dashboard (image)"
+      ],
+      [
+        "My Treasure Box AI Data Assistant Interface (image)",
+        "New Chat"
+      ],
+      [
+        "ECharts",
+        "My Treasure Box AI Data Assistant Interface (image)"
+      ],
+      [
+        "Air Force Zhihang Base",
+        "Dify Agent MCP Configuration and Test (image)"
+      ],
+      [
+        "Mcp Service",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Json Snippet",
+        "Vis_Request_Server"
+      ],
+      [
+        "MCP Server JSON-RPC Log for Organization Chart Tool Call (image)",
+        "MCP Tools"
+      ],
+      [
+        "Amoypark User Avatar (image)",
+        "Image File"
+      ],
+      [
+        "Navy Marine Corps Command",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Remote Service",
+        "Smiley Face Icon (image)"
+      ],
+      [
+        "Qwen 32b",
+        "Tool Calls"
+      ],
+      [
+        "空军",
+        "空军保修指挥部"
+      ],
+      [
+        "HGMCP",
+        "Visual Studio Code"
+      ],
+      [
+        "Agent Node",
+        "Qwen3:32b Chat"
+      ],
+      [
+        "Dify",
+        "Dify Workflow Editor for sql生成Test Echats (image)"
+      ],
+      [
+        "Agent Node",
+        "MCP Resources As Tools"
+      ],
+      [
+        "Render Function",
+        "Spec"
+      ],
+      [
+        "Apconw/Gpt-Vis-Api",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "Amoypark",
+        "MCP Service"
+      ],
+      [
+        "SSE",
+        "Sun Qingyang Author Avatar (image)"
+      ],
+      [
+        "3097407306",
+        "GitHub Issues Page for junjiem/dify-plugin-repackaging (image)"
+      ],
+      [
+        "Air Force Gangshan Base",
+        "Generate_Organization_Chart"
+      ],
+      [
+        "Blue Checkmark Icon",
+        "MCPHub"
+      ],
+      [
+        "MCP Server SSE Logs for generate_pin_map Tool Call Failure (image)",
+        "知本营区"
+      ],
+      [
+        "Chart Generation MCP Service",
+        "Qwen3:32b"
+      ],
+      [
+        "DeepSeek:70b",
+        "gpt-vis-api Log Output for Organization Chart Configuration (table)"
+      ],
+      [
+        "Dify Plugin Management Interface - AntV Visualization Charts (image)",
+        "Explore"
+      ],
+      [
+        "ModelScope MCP Square Interface (image)",
+        "Tongyi Lingma"
+      ],
+      [
+        "Json",
+        "VS Code env.js configuration for mcp-server-chart (image)"
+      ],
+      [
+        "MCP",
+        "Technical Implementation Steps"
+      ],
+      [
+        "Curl",
+        "Line Chart Test Case 1 Output (image)"
+      ],
+      [
+        "Antvis MCP Server Chart",
+        "MCP Square"
+      ],
+      [
+        "Google Chrome",
+        "Taitung County Military Facilities Chart Preview (image)"
+      ],
+      [
+        "Env.Js",
+        "Mcp-Server-Chart"
+      ],
+      [
+        "HTTP Service",
+        "Orange C Icon (image)"
+      ],
+      [
+        "MCP Server Chart",
+        "Smiley Face Icon Placeholder (image)"
+      ],
+      [
+        "Agent",
+        "Visualization生成柱状图"
+      ],
+      [
+        "Deepseek:70b",
+        "Pink Robot Mascot Icon (image)"
+      ],
+      [
+        "Blurred Thumbnail Image",
+        "MCPHub"
+      ],
+      [
+        "Agent",
+        "Visualization生成条形图"
+      ],
+      [
+        "MCP",
+        "Orange C Icon (image)"
+      ]
+    ],
+    "count": 1444,
+    "update_time": 1791615623,
+    "_id": "doc-rag-anything-handson-v2"
+  }
+}

@@ -205,6 +205,41 @@ class OfflineTests(unittest.TestCase):
         self.assertEqual(result[0]["image_caption"], ["Figure 2"])
         self.assertEqual(result[0]["_pilot_original_type"], "chart")
 
+    def test_mineru_code_body_is_ingested_as_text_without_changing_original(self):
+        from raganything.utils import separate_content
+        body = 'from fastmcp import FastMCP\napp = FastMCP("demo")'
+        original = [{"type": "code", "code_body": body, "code_language": "python", "page_idx": 17}]
+        result = reproduce.normalize_blocks(original)
+        reproduce.validate_blocks(result)
+        self.assertEqual(original[0]["type"], "code")
+        self.assertNotIn("text", original[0])
+        self.assertEqual(result[0]["type"], "text")
+        self.assertEqual(result[0]["text"], body)
+        self.assertEqual(result[0]["code_body"], body)
+        self.assertEqual(result[0]["code_language"], "python")
+        self.assertEqual(result[0]["page_idx"], 17)
+        self.assertEqual(result[0]["_pilot_original_type"], "code")
+        text, multimodal = separate_content(result)
+        self.assertIn(body, text)
+        self.assertEqual(multimodal, [])
+
+    def test_code_captions_and_footnotes_are_preserved_in_searchable_text(self):
+        result = reproduce.normalize_blocks([{
+            "type": "code", "code_body": "print('hello')\nprint('world')",
+            "code_caption": ["Listing 1", "Python example"], "code_footnote": "Source note",
+        }])
+        self.assertEqual(result[0]["text"],
+                         "Listing 1\nPython example\nprint('hello')\nprint('world')\nSource note")
+        fallback = reproduce.normalize_blocks([{"type": "code", "text": "example"}])
+        self.assertEqual(fallback[0]["text"], "example")
+
+    def test_empty_code_and_unrecognized_types_fail_with_block_location(self):
+        with self.assertRaisesRegex(ValueError, "Code block at index 0"):
+            reproduce.normalize_blocks([{"type": "code", "code_body": ""}])
+        with self.assertRaisesRegex(ValueError, "'audio' at index 1.*page_idx=2"):
+            reproduce.validate_blocks([{"type": "text", "text": "source"},
+                                       {"type": "audio", "page_idx": 2}])
+
     def test_deepseek_disables_thinking_without_mutating_input(self):
         original = {"extra_body": {"other": "value"}, "temperature": 0}
         options = reproduce.model_request_kwargs("https://api.deepseek.com", original)
