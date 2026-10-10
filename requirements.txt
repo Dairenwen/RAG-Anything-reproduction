@@ -1,0 +1,9 @@
+raganything @ git+https://github.com/HKUDS/RAG-Anything.git@8664e8b318a3ed651fe62dfcfddfb1f1d633d5be
+lightrag-hku==1.4.16
+mineru[core]==3.4.1
+# MinerU 3.4.1 calls PdfImage.get_pos(), removed in pypdfium2 5.x.
+pypdfium2==4.30.0
+# New pdftext releases pin pypdfium2 5.x; preserve the compatible pair.
+pdftext==0.6.3
+openai==2.54.0
+python-dotenv==1.2.4
