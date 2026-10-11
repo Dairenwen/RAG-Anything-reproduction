@@ -413,13 +413,30 @@ def check_kb_manifest(kb_dir, settings, *, indexing=False):
     return manifest
 
 
+def validated_image_directories(kb_dir):
+    """Preserve indexed path spelling for verified assets on case-insensitive disks."""
+    manifest = load_json(Path(kb_dir) / "pilot_manifest.json")
+    directories = set()
+    parsed_root = ROOT / "parsed"
+    for document in manifest.get("documents", []):
+        for asset in document.get("assets", []):
+            path = Path(asset["path"])
+            if not any(parent.samefile(parsed_root) for parent in path.resolve().parents):
+                raise ValueError("Knowledge base image is outside this project's parsed directory.")
+            if sha256_file(path) != asset["sha256"]:
+                raise ValueError("A knowledge base image changed after parsing.")
+            directories.add(str(path.parent))
+    return sorted(directories)
+
+
 class Runtime:
-    def __init__(self, rag, tracker, events, settings, reranker_info=None):
+    def __init__(self, rag, tracker, events, settings, reranker_info=None, image_safe_dirs=()):
         self.rag = rag
         self.tracker = tracker
         self.events = events
         self.settings = settings
         self.reranker_info = reranker_info
+        self.image_safe_dirs = list(image_safe_dirs)
 
 
 async def build_runtime(settings, kb_dir):
@@ -431,6 +448,7 @@ async def build_runtime(settings, kb_dir):
     from raganything import RAGAnything, RAGAnythingConfig
 
     validate_settings(settings)
+    image_safe_dirs = validated_image_directories(kb_dir)
     events = []
     tracker = TokenTracker()
 
@@ -522,7 +540,8 @@ async def build_runtime(settings, kb_dir):
     except BaseException:
         await lightrag.finalize_storages()
         raise
-    return Runtime(rag, tracker, events, settings, reranker.info if reranker else None)
+    return Runtime(rag, tracker, events, settings, reranker.info if reranker else None,
+                   image_safe_dirs=image_safe_dirs)
 
 
 async def audit_ingestion(runtime, doc_id, blocks):
@@ -606,7 +625,8 @@ async def run_query(runtime, question, mode, *, context_only=False, vlm=False):
 
         rag.lightrag.aquery = observed_query
         try:
-            output = await rag.aquery(question, mode=mode, vlm_enhanced=vlm, **opts)
+            vlm_options = {"extra_safe_dirs": runtime.image_safe_dirs} if vlm else {}
+            output = await rag.aquery(question, mode=mode, vlm_enhanced=vlm, **opts, **vlm_options)
         finally:
             rag.lightrag.aquery = original_query
     rerank_audit = audit_reranking(runtime.settings, runtime.events)

@@ -87,7 +87,7 @@ python reproduce.py check
 
 RAG-Anything-reproduction/
 ├── README.md                              # 当前目录、现有库及日常使用说明
-├── reproduce.py                           # 保留的解析／建库／检索入口，源码未改
+├── reproduce.py                           # 解析／建库／检索入口，含视觉图片路径兼容修复
 ├── api.py                                 # 保留的本地检索 API，源码未改
 ├── requirements.txt                       # 固定官方组件版本及提交
 ├── requirements-service.txt               # 可选 API 依赖
@@ -311,6 +311,8 @@ EMBEDDING_BASE_URL=http://127.0.0.1:11434/v1 python reproduce.py query \
   --vlm \
   --question "Figure 1 中合并前的两个知识图分别是什么？"
 ```
+
+2026-10-11 修复了 macOS 目录名大小写不同导致原图被安全检查拦截的问题：项目入口从知识库清单读取图片目录，确认图片位于本项目解析目录且校验值一致后，通过官方 `extra_safe_dirs` 参数传入原图目录的已存路径拼写。无需重建库。若旧运行出现 `Blocking image path outside safe directories` 且图片输入数为 0，该次视觉问答实际退回了文字查询，应在修复后重新运行。
 
 启用本地 BGE 重排：
 
