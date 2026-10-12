@@ -1,0 +1,1919 @@
+{
+  "question": "只根据原论文第 3.1 节，实验使用的嵌入模型叫什么，向量维度是多少？不要用本机 v1 库的配置代替论文设置。",
+  "answer": "根据原论文第 3.1 节，实验使用的嵌入模型是 **text-embedding-3-large**，向量维度为 **3072 维**。\n\n### References\n\n- [1] /Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+  "historical_diagnostic": true,
+  "versions": {
+    "raganything": "1.4.2",
+    "lightrag-hku": "1.4.16",
+    "mineru": "3.4.1",
+    "pypdfium2": "4.30.0",
+    "pdftext": "0.6.3",
+    "openai": "2.54.0",
+    "python-dotenv": "1.2.4"
+  },
+  "index_identity": {
+    "text_model": "benchmark-312-qwen25-7b-ctx16k",
+    "text_url": "http://127.0.0.1:11434/v1",
+    "vision_model": "benchmark-312-qwen38-27b-ctx16k",
+    "vision_url": "http://127.0.0.1:11434/v1",
+    "embedding_model": "qwen3-embedding:latest",
+    "embedding_url": "http://127.0.0.1:11434/v1",
+    "embedding_dim": 4096,
+    "send_dimensions": false,
+    "chunk_size": 1200,
+    "chunk_overlap": 100,
+    "summary_language": "English"
+  },
+  "query_settings": {
+    "text_url": "https://api.deepseek.com",
+    "text_model": "deepseek-flash",
+    "vision_url": "https://api.deepseek.com",
+    "vision_model": "deepseek-flash",
+    "embedding_url": "http://127.0.0.1:11434/v1",
+    "embedding_model": "qwen3-embedding:latest",
+    "embedding_dim": 4096,
+    "send_dimensions": false,
+    "chunk_size": 1200,
+    "chunk_overlap": 100,
+    "top_k": 20,
+    "chunk_top_k": 20,
+    "max_entity_tokens": 4000,
+    "max_relation_tokens": 4000,
+    "max_total_tokens": 24000,
+    "concurrency": 2,
+    "summary_language": "English",
+    "enable_rerank": true,
+    "rerank_model_path": "/Users/drw/PycharmProjects/RAG-Anything-reproduction/models/bge-reranker-v2-m3",
+    "rerank_device": "auto",
+    "rerank_max_length": 8192,
+    "rerank_batch_size": 1
+  },
+  "metadata": {
+    "query_mode": "mix",
+    "keywords": {
+      "high_level": [
+        "Original paper",
+        "Embedding model",
+        "Vector dimension"
+      ],
+      "low_level": [
+        "Section 3.1",
+        "Embedding model",
+        "Vector dimension"
+      ]
+    },
+    "processing_info": {
+      "total_entities_found": 48,
+      "total_relations_found": 48,
+      "entities_after_truncation": 48,
+      "relations_after_truncation": 48,
+      "merged_chunks_count": 35,
+      "final_chunks_count": 15
+    }
+  },
+  "keyword_response": {
+    "high_level_keywords": [
+      "Original paper",
+      "Embedding model",
+      "Vector dimension"
+    ],
+    "low_level_keywords": [
+      "Section 3.1",
+      "Embedding model",
+      "Vector dimension"
+    ]
+  },
+  "counts": {
+    "nodes": 563,
+    "edges": 998,
+    "anchors": 27,
+    "belongs_to_edges": 406,
+    "chunks": 37,
+    "chunk_types": {
+      "text": 10,
+      "equation": 6,
+      "image": 15,
+      "table": 6
+    },
+    "final_types": {
+      "text": 5,
+      "image": 6,
+      "equation": 2,
+      "table": 2
+    },
+    "mixed_nodes": 45,
+    "mixed_edges": 15,
+    "entity_source_store": 536,
+    "relation_source_store": 998,
+    "full_entity_names": 320,
+    "full_relation_pairs": 786
+  },
+  "checks": {
+    "id_formulas": {
+      "entities": {
+        "verified": 563,
+        "bad": [],
+        "first_vector_dimensions": 4096
+      },
+      "relationships": {
+        "verified": 998,
+        "bad": [],
+        "first_vector_dimensions": 4096
+      },
+      "chunks": {
+        "verified": 37,
+        "bad": [],
+        "first_vector_dimensions": 4096
+      }
+    },
+    "entity_standard_content": 536,
+    "entity_summary_only_content": 27,
+    "entity_content_other": [],
+    "relationship_content_bad": [],
+    "missing_graph_source_chunks": [],
+    "same_prompt_chunks": true,
+    "same_keyword_twice": true,
+    "same_rerank_order_twice": true
+  },
+  "sample_nodes": {
+    "Text Info, Vector Database, Text VDB, Multi-modal VDB": {
+      "graph": {
+        "entity_id": "Text Info, Vector Database, Text VDB, Multi-modal VDB",
+        "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+        "description": "The Text Encoder processes textual information to create a Vector Database.",
+        "entity_type": "UNKNOWN",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+        "created_at": "1791643597",
+        "truncate": ""
+      },
+      "vector": {
+        "__id__": "ent-593c92b4435a60e3ecf1f7958626e08c",
+        "__created_at__": 1791643597,
+        "content": "Text Info, Vector Database, Text VDB, Multi-modal VDB\nThe Text Encoder processes textual information to create a Vector Database.",
+        "entity_name": "Text Info, Vector Database, Text VDB, Multi-modal VDB",
+        "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+      },
+      "degree": 1
+    },
+    "RAG-Anything Framework Architecture Diagram (image)": {
+      "graph": {
+        "entity_id": "RAG-Anything Framework Architecture Diagram (image)",
+        "entity_type": "image",
+        "description": "This image is a high-level architectural diagram of the RAG-Anything framework. It illustrates the end-to-end process of handling heterogeneous multimodal documents. The pipeline starts with parsing various file formats, unifies them into a structured content list, constructs dual knowledge graphs (text-based and cross-modal), and merges them with a vector database. Finally, it shows how a user query is processed through hybrid retrieval (structural and semantic) to generate a response via an LLM. This figure is central to understanding the system's design and workflow.",
+        "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+        "created_at": "1791642748"
+      },
+      "vector": {
+        "__id__": "ent-c507256b7914dab2f7c3bf1be0075609",
+        "__created_at__": 1791642748,
+        "entity_name": "RAG-Anything Framework Architecture Diagram (image)",
+        "content": "This image is a high-level architectural diagram of the RAG-Anything framework. It illustrates the end-to-end process of handling heterogeneous multimodal documents. The pipeline starts with parsing various file formats, unifies them into a structured content list, constructs dual knowledge graphs (text-based and cross-modal), and merges them with a vector database. Finally, it shows how a user query is processed through hybrid retrieval (structural and semantic) to generate a response via an LLM. This figure is central to understanding the system's design and workflow.",
+        "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+      },
+      "degree": 38
+    },
+    "RAG-Anything": {
+      "graph": {
+        "entity_id": "RAG-Anything",
+        "entity_type": "artifact",
+        "description": "RAG-Anything is a comprehensive framework for Retrieval-Augmented Generation (RAG) that excels in multimodal knowledge unification and long-context document understanding. It is designed to address the limitations of existing text-centric systems by extending GraphRAG to all modalities, including visual elements, structured data, and mathematical expressions. RAG-Anything employs a dual-graph construction strategy, enhancing its performance on long documents through cross-modal hybrid retrieval. This framework demonstrates advanced visual reasoning and complex tabular data handling capabilities, making it a robust system for multimodal document understanding.\n\nRAG-Anything is an all-in-one RAG framework that outperforms other methods in accuracy across various domains, particularly in information-dense contexts. It is noted for its superior performance on long documents compared to MM-GraphRAG and is used in case studies to answer questions about visual documents and financial table navigation. The system is designed to handle complex visual reasoning tasks and is used in the analysis and evaluation of multimodal document understanding. RAG-Anything is an advanced retrieval and augmentation framework that constructs modality-aware graphs to manage complex document layouts, and it has demonstrated systematic factual accuracy in various tasks.",
+        "source_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651<SEP>chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-2d4727f37ea1b30518f13dc89ffc7ea1<SEP>chunk-de93d4b6f02e5ae737b9b9e8142401cd<SEP>chunk-a43d425aea6f4b6c0edc38f28595f400<SEP>chunk-7aefd567d430c404aab77872282400eb<SEP>chunk-dded67fd8182de2201aa35ccbb4c8cd9<SEP>chunk-6489e2fb8e8849e9fba34fe5f95e4a0f<SEP>chunk-3199f24e41812cb62bea94f7c85f2636<SEP>chunk-63a71b30187cb0788470f7a4ef8b5a7a<SEP>chunk-dfc6c28e224a59948d1c3f970cd333d3<SEP>chunk-3030640e3aa96c21a21f63f845339bb7<SEP>chunk-841b2e1a62bf11ef382f155dc5fd836b<SEP>chunk-1025c419093621f01b9bd6bda58a4d8b<SEP>chunk-e0b7a22ef18d1df90b09c6752fdaa849<SEP>chunk-9d7b65a77beeebaa7ba6c82a6b282bc8<SEP>chunk-514397fe4b91c504d493b81ae4f2af0d<SEP>chunk-fc6b663130fa82a15ae0568ebdd7e714<SEP>chunk-e67b53472cda54f4238a2ccf98da3bdd<SEP>chunk-26f9e861c68e93709074930b8e53d41c<SEP>chunk-55d457152e0dea0c28144e5e94403cb2",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+        "created_at": "1791643531",
+        "truncate": ""
+      },
+      "vector": {
+        "__id__": "ent-72edf7be1488cc3ed6c583c39590a126",
+        "__created_at__": 1791643531,
+        "entity_name": "RAG-Anything",
+        "content": "RAG-Anything\nRAG-Anything is a comprehensive framework for Retrieval-Augmented Generation (RAG) that excels in multimodal knowledge unification and long-context document understanding. It is designed to address the limitations of existing text-centric systems by extending GraphRAG to all modalities, including visual elements, structured data, and mathematical expressions. RAG-Anything employs a dual-graph construction strategy, enhancing its performance on long documents through cross-modal hybrid retrieval. This framework demonstrates advanced visual reasoning and complex tabular data handling capabilities, making it a robust system for multimodal document understanding.\n\nRAG-Anything is an all-in-one RAG framework that outperforms other methods in accuracy across various domains, particularly in information-dense contexts. It is noted for its superior performance on long documents compared to MM-GraphRAG and is used in case studies to answer questions about visual documents and financial table navigation. The system is designed to handle complex visual reasoning tasks and is used in the analysis and evaluation of multimodal document understanding. RAG-Anything is an advanced retrieval and augmentation framework that constructs modality-aware graphs to manage complex document layouts, and it has demonstrated systematic factual accuracy in various tasks.",
+        "source_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651<SEP>chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-2d4727f37ea1b30518f13dc89ffc7ea1<SEP>chunk-de93d4b6f02e5ae737b9b9e8142401cd<SEP>chunk-a43d425aea6f4b6c0edc38f28595f400<SEP>chunk-7aefd567d430c404aab77872282400eb<SEP>chunk-dded67fd8182de2201aa35ccbb4c8cd9<SEP>chunk-6489e2fb8e8849e9fba34fe5f95e4a0f<SEP>chunk-3199f24e41812cb62bea94f7c85f2636<SEP>chunk-63a71b30187cb0788470f7a4ef8b5a7a<SEP>chunk-dfc6c28e224a59948d1c3f970cd333d3<SEP>chunk-3030640e3aa96c21a21f63f845339bb7<SEP>chunk-841b2e1a62bf11ef382f155dc5fd836b<SEP>chunk-1025c419093621f01b9bd6bda58a4d8b<SEP>chunk-e0b7a22ef18d1df90b09c6752fdaa849<SEP>chunk-9d7b65a77beeebaa7ba6c82a6b282bc8<SEP>chunk-514397fe4b91c504d493b81ae4f2af0d<SEP>chunk-fc6b663130fa82a15ae0568ebdd7e714<SEP>chunk-e67b53472cda54f4238a2ccf98da3bdd<SEP>chunk-26f9e861c68e93709074930b8e53d41c<SEP>chunk-55d457152e0dea0c28144e5e94403cb2",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+      },
+      "degree": 123
+    },
+    "bge-reranker-v2-m3": {
+      "graph": {
+        "entity_id": "bge-reranker-v2-m3",
+        "entity_type": "artifact",
+        "description": "bge-reranker-v2-m3 is a model used for reranking.",
+        "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+        "created_at": "1791642299",
+        "truncate": ""
+      },
+      "vector": {
+        "__id__": "ent-ceffc9687f679f969cc531f874e3ebe9",
+        "__created_at__": 1791642299,
+        "entity_name": "bge-reranker-v2-m3",
+        "content": "bge-reranker-v2-m3\nbge-reranker-v2-m3 is a model used for reranking.",
+        "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+      },
+      "degree": 1
+    },
+    "Text Encoder": {
+      "graph": {
+        "entity_id": "Text Encoder",
+        "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+        "description": "The Text Encoder processes textual information to create a Vector Database.",
+        "entity_type": "UNKNOWN",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+        "created_at": "1791643597",
+        "truncate": ""
+      },
+      "vector": {
+        "__id__": "ent-84bd184c7fc092245edbb033c9f687ab",
+        "__created_at__": 1791643597,
+        "content": "Text Encoder\nThe Text Encoder processes textual information to create a Vector Database.",
+        "entity_name": "Text Encoder",
+        "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+      },
+      "degree": 1
+    },
+    "Embedding Table": {
+      "graph": {
+        "entity_id": "Embedding Table",
+        "entity_type": "artifact",
+        "description": "Embedding Table is a table that contains dense representations of graph entities, relationships, and atomic content chunks.<SEP>Embedding Table stores the dense vector representations of knowledge components for efficient retrieval.<SEP>Embedding Table is a critical component of the RAG-Anything framework, storing dense vector representations.",
+        "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-ea106f7be2831088c0a1118ecb40eee8<SEP>chunk-77ff6101b55afb188a8b2aba9f83cd92",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+        "created_at": "1791643557",
+        "truncate": ""
+      },
+      "vector": {
+        "__id__": "ent-47bed8db8879d0b26032fce0e757cd62",
+        "__created_at__": 1791643557,
+        "entity_name": "Embedding Table",
+        "content": "Embedding Table\nEmbedding Table is a table that contains dense representations of graph entities, relationships, and atomic content chunks.<SEP>Embedding Table stores the dense vector representations of knowledge components for efficient retrieval.<SEP>Embedding Table is a critical component of the RAG-Anything framework, storing dense vector representations.",
+        "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-ea106f7be2831088c0a1118ecb40eee8<SEP>chunk-77ff6101b55afb188a8b2aba9f83cd92",
+        "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+      },
+      "degree": 4
+    }
+  },
+  "sample_edges": [
+    {
+      "src_id": "RAG-Anything",
+      "tgt_id": "bge-reranker-v2-m3",
+      "weight": "1.0",
+      "description": "bge-reranker-v2-m3 is used for reranking in RAG-Anything.",
+      "keywords": "reranking,tool usage",
+      "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": "1791642318",
+      "truncate": ""
+    },
+    {
+      "src_id": "RAG-Anything",
+      "tgt_id": "RAG-Anything Framework Architecture Diagram (image)",
+      "weight": "10.0",
+      "description": "Entity RAG-Anything belongs to RAG-Anything Framework Architecture Diagram (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": "1791643598",
+      "truncate": ""
+    },
+    {
+      "src_id": "Text Encoder",
+      "tgt_id": "Text Info, Vector Database, Text VDB, Multi-modal VDB",
+      "weight": "1.0",
+      "description": "The Text Encoder processes textual information to create a Vector Database.",
+      "keywords": "database,processing",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": "1791643597",
+      "truncate": ""
+    }
+  ],
+  "sample_relationship_vector": {
+    "__id__": "rel-23c52c8f49d25283f55d351381ecd2b0",
+    "__created_at__": 1791642318,
+    "src_id": "RAG-Anything",
+    "tgt_id": "bge-reranker-v2-m3",
+    "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+    "content": "reranking,tool usage\tRAG-Anything\nbge-reranker-v2-m3\nbge-reranker-v2-m3 is used for reranking in RAG-Anything.",
+    "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf"
+  },
+  "main_chunk_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+  "main_chunk": {
+    "tokens": 1200,
+    "content": "systematically combining retrieved multimodal knowledge into comprehensive, evidence-grounded responses.\n\n• (i) Building Textual Context. Given the top-ranked retrieval candidates $\\mathcal { C } ^ { \\star } ( q )$, we construct a structured textual context. We concatenate textual representations of all retrieved components, including entity summaries, relationship descriptions, and chunk contents. The concatenation incorporates appropriate delimiters to indicate modality types and hierarchical origins. This approach ensures the language model can effectively parse and reason over heterogeneous knowledge components.\n\n• (ii) Recovering Visual Content. For multimodal chunks corresponding to visual artifacts, we perform dereferencing to recover original visual content, creating $\\mathcal { V } ^ { \\star } ( q )$. This design maintains consistency with our unified embedding strategy. Textual proxies enable efficient retrieval while authentic visual content provides rich semantics necessary for sophisticated reasoning during synthesis.\n\nThe synthesis process jointly conditions on both the assembled comprehensive textual context and dereferenced visual artifacts using a vision-language model:\n\nwhere the VLM integrates information from query, textual context, and visual content. This unified conditioning enables sophisticated visual interpretation while maintaining grounding in retrieved evidence. The resulting responses are both visually informed and factually grounded.\n\n3 EVALUATION\n\n3.1 EXPERIMENTAL SETTINGS\n\nEvaluation Datasets. We conduct comprehensive evaluations on two challenging multimodal Document Question Answering (DQA) benchmarks that reflect real-world complexity and diversity. DocBench (Zou et al., 2024) provides a rigorous testbed with 229 multimodal documents spanning five critical domains: Academia, Finance, Government, Laws, and News. The dataset includes 1,102 expert-crafted question-answer pairs. These documents are notably extensive, averaging 66 pages and approximately 46,377 tokens, which presents substantial challenges for long-context understanding.\n\nMMLongBench (Ma et al., 2024) complements this evaluation by focusing specifically on longcontext multimodal document comprehension. It features 135 documents across 7 diverse document types with 1,082 expert-annotated questions. Together, these benchmarks provide comprehensive coverage of the multimodal document understanding challenges that RAG-Anything aims to address. They ensure our evaluation captures both breadth across domains and depth in document complexity. Detailed dataset statistics and characteristics are provided in Appendix A.1.\n\nBaselines. We compare RAG-Anything against the following methods for performance evaluation:\n\n• GPT-4o-mini: A powerful multimodal language model with native text and image understanding capabilities. Its 128K token context window enables direct processing of entire documents. We evaluate this model as a strong baseline for long-context multimodal understanding.\n\n• LightRAG (Guo et al., 2024): A graph-enhanced RAG system that integrates structured knowledge representation with dual-level retrieval mechanisms. It captures both fine-grained entity-relation information and broader semantic context, improving retrieval precision and response coherence.\n\n• MMGraphRAG (Wan & Yu, 2025): A multimodal retrieval framework that constructs unified knowledge graphs spanning textual and visual content. This method employs spectral clustering for multimodal entity analysis and retrieves context along reasoning paths to guide generation.\n\nExperimental Settings. In our experiments, we implement all baselines using GPT-4o-mini as the backbone LLM. Documents are parsed using MinerU (Wang et al., 2024) to extract text, images, tables, and equations for downstream RAG processing. For the retrieval pipeline, we employ the text-embedding-3-large model with 3072-dimensional embeddings. We use the bge-reranker-v2-m3 model for reranking. For graph-based RAG methods, we enforce a combined entity-and-relation token limit of 20,000 tokens and a chunk token limit of 12,000 tokens.\n\nOutputs are constrained to a one-sentence format. For the baseline GPT-4o-mini in our QA scenario, documents are concatenated into image form with a maximum of 50 pages per document, rendered at 144 dpi. Finally, all query results are evaluated for accuracy by GPT-4o-mini.\n\n3.2 PERFORMANCE COMPARISON\n\nSuperior Performance and Cross-Domain Generalization. RAG-Anything demonstrates superior overall performance over baselines through its unified multimodal framework. Unlike LightRAG, which is restricted to text-only content processing, RAG-Anything treats text, images, tables, and equations as first-class entities. MMGraphRAG only adds basic image processing while treating tables and equations as plain text, missing crucial structural information. RAG-Anything introduces a comprehensive dual-graph construction strategy that preserves structural relationships across all modalities. This unified approach enables superior performance across both evaluation benchmarks.\n\nEnhanced Long-Context Performance. RAG-Anything demonstrates superior performance on long-context documents. The framework excels where relevant evidence is dispersed across multiple modalities and sections. It achieves the best results in information-dense domains such as Research Reports and Financial Reports on MMLongBench. These improvements stem from the structured context injection mechanism. This mechanism integrates dual-graph construction for cross-page entity alignment. It combines semantic retrieval with structural navigation. The framework also employs modality-aware processing for efficient context window utilization. Unlike baselines that cannot uniformly process diverse modalities, RAG-Anything effectively captures scattered multimodal evidence. Its cross-modal hybrid retrieval architecture combines structural knowledge navigation with semantic similarity matching. This enables the framework to leverage both explicit relationships and implicit semantic connections across modalities.\n\nTo systematically evaluate model performance across varying document lengths, we conducted comprehensive experiments on both datasets. As illustrated in Figure 2, RAG-Anything and MM-GraphRAG exhibit comparable performance on shorter documents. However, RAG-Anything’s advantages become increasingly pronounced as document length grows. On DocBench, the performance gap expands dramatically to over 13 points for documents exceeding 100 pages (68.2% vs.\n\n54.6% for 101–200 pages; 68.8%",
+    "chunk_order_index": 4,
+    "full_doc_id": "doc-rag-anything-handson-v1",
+    "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+    "llm_cache_list": [
+      "default:extract:f64dad462cb87b80ef8732d9e589e318",
+      "default:extract:803b9f89855157f06288e58dfae51f4c"
+    ],
+    "create_time": 1791641853,
+    "update_time": 1791642328,
+    "_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+    "page_idx": 5,
+    "page_idx_end": 8
+  },
+  "main_excerpt": "mini as the backbone LLM. Documents are parsed using MinerU (Wang et al., 2024) to extract text, images, tables, and equations for downstream RAG processing. For the retrieval pipeline, we employ the text-embedding-3-large model with 3072-dimensional embeddings. We use the bge-reranker-v2-m3 model for reranking. For graph-based RAG methods, we enforce a combined entity-and-relation token limit of 20,000 tokens and a chunk token limit of 12,000 tokens.\n\nOutputs are constrained to a one-sentence format. For the baseline GPT-4o-mini in our QA scenario, documents are concatenated into image form with a maximum of 50 pages per document, rendered at 144 dpi. Finally, all query results are evaluated for accuracy by GPT-4o-mini.\n\n3.2 PERFORMANCE COMPARISON\n\nSuperior Performance and Cross-Domain Generalization. RAG-Anything demonstrates superior overall performance over baselines through its unified multimodal framework. Unlike LightRAG, which is restricted to text-only content processing, RAG-Anything treats text, images, tables, and equations as first-class entities. MMGraphRAG only adds basic image processing while treating tables and equations as plain text, missing crucial structural information. RAG-Anything introduces a comprehensive dual-graph construction strategy that preserves structural relationships across all modalities. This unified approach enables superior performance across both evaluation benchmarks.\n\nEnhanced Long-Context Performance. RAG-Anything demonstrates superior performance on long-context documents. The framework excels where relevant evidence is dispersed across multiple modalities and sections. It achieves the best results in information-dense domains such as Research Reports and Financial Reports on MMLongBench. These improvements stem from the structured context injection mechanism. This mechanism integrates dual-graph construction for cross-page entity alignment. It combines semantic retrieval with structural navigation. The framework also em",
+  "architecture_chunk_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+  "architecture_chunk": {
+    "content": "\nImage Content Analysis:\n- Section Path: RAG-ANYTHING: ALL-IN-ONE RAG FRAMEWORK > 2.2 UNIVERSAL REPRESENTATION FOR HETEROGENEOUS KNOWLEDGE\n- Neighbor Text: Formally, each knowledge source $k _ { i } \\in \\mathcal { K } \\left( \\mathbf { e . g . , a } \\right.$ web page) is decomposed into atomic content units: where each unit $c _ { j }$ consists of a modality type $t _ { j } ~ \\in \\mathrm { { \\ t e x t } }$, image, table, equation, $\\dots$ and its corresponding raw content $x _ { j }$. The content $x _ { j }$ represents the extracted information from the original knowledge source, processed in a modality-aware manner to preserve semantic integrity. To ensure high-fidelity extraction, RAG-Anything leverages specialized parsers for different content types. Text is segmented into coherent paragraphs or list items. Figures are extracted with associated metadata such as captions and cross-references. Tables are parsed into structured cells with headers and values. Mathematical expressions are converted into symbolic representations. The resulting x<sub>j</sub> preserves both content and structural context within the source. This provides a faithful, modalityconsistent representation. The decomposition abstracts diverse file formats into atomic units while maintaining their hierarchical order and contextual relationships. This canonicalization enables uniform processing, indexing, and retrieval of multimodal content within our framework. 2.2.1 DUAL-GRAPH CONSTRUCTION FOR MULTIMODAL KNOWLEDGE While multimodal knowledge unification provides a uniform abstraction across modalities, directly constructing a single unified graph often risks overlooking modality-specific structural signals. The proposed RAG-Anything addresses this challenge through a dual-graph construction strategy. The system first builds a cross-modal knowledge graph that faithfully grounds non-textual modalities within their contextual environment. It then constructs a text-based knowledge graph using established text-centric extraction pipelines. These complementary graphs are merged through entity alignment. This design ensures accurate cross-modal grounding and comprehensive coverage of textual semantics, enabling richer knowledge representation and robust retrieval.\nImage Path: /Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/d960511e87edf887a6ee67caba7d4f7cb9da80f3fe7cdea264ab856390831d14.jpg\nCaptions: Figure 1: Overview of our proposed universal RAG framework RAG-Anything.\nFootnotes: None\n\nVisual Analysis: The image presents a comprehensive architectural diagram of the 'RAG-Anything' framework, a universal Retrieval-Augmented Generation (RAG) system. The diagram is organized horizontally into four main stages, flowing from left to right, illustrating the process from input to response generation.\n\n1.  **Input Documents (Far Left):** A vertical column labeled 'Input Documents' displays icons representing various file formats: PPT, PDF, DOC, JPG, PNG, XLS, and PPT. These feed into a 'Profile Parser' block.\n\n2.  **Multimodal Knowledge Unification (Left-Center):** This section is enclosed in a dashed box. It processes the parsed input into a 'Structured Content List'. The process involves four parallel extraction paths: 'Hierarchical Text Extraction' (yielding 'Text Info'), 'Image Caption & Metadata Extraction' (yielding 'Image Info'), 'LaTeX Equation Recognition' (yielding 'Equation Info'), and 'Table Structure & Content Parsing' (yielding 'Table Info'). These outputs are represented as vertical stacks of colored boxes (white, light blue, light purple, light green).\n\n3.  **Dual-Graph Construction for Multimodal Knowledge (Center):** This central section, also in a dashed box, is subtitled '(each document)'. It splits into two parallel processing streams:\n    *   **Text-Based Knowledge Graph:** The 'Text Info' stream goes through 'Text Info Processing' and 'Entity & Relation Extraction' (indicated by icons of a brain and a network). This produces a small graph with nodes labeled 'Developer', 'Bee', and 'Observe'.\n    *   **Cross-Modal Knowledge Graph:** The 'Image Info', 'Equation Info', and 'Table Info' streams are processed by 'Multi-modal Processors' and 'VLM/LLM' to generate 'Textual Multi-modal Info'. This leads to a 'Cross-Modal Knowledge Graph' with nodes labeled 'Parent Node: Multi-modal Instance' and 'Child Node'.\n    *   **Merging:** Both graphs are 'Merged' into a larger 'Knowledge Graph' (labeled 'KG over All Documents') containing 'Merged Node' structures. Simultaneously, a 'Text Encoder' processes the textual info to create a 'Vector Database' (labeled 'VDB over All Documents'), which merges 'Text VDB' and 'Multi-modal VDB'.\n\n4.  **Retrieval and Response (Right):** The final stage begins with a 'Query' icon and a sample question in a speech bubble: 'Could you share insights on the experimental results and data tables?'. The query undergoes 'Query High-/Low-level Keys Extraction' and 'Text Encoder' processing. This leads to 'Structural Knowledge Navigation' (using the KG) and 'Semantic Similarity Matching' (using the VDB). These steps produce 'Hybrid Retrieved Info', which is fed into an 'LLM' to generate the final 'Response'. A sample response is shown in a speech bubble: 'Based on the experimental data, the results revealed...'.\n\nThe diagram uses a clean, schematic style with dashed lines for process boundaries, solid arrows for data flow, and distinct colors to differentiate modalities (e.g., blue for text, purple for equations, green for tables).",
+    "tokens": 1235,
+    "full_doc_id": "doc-rag-anything-handson-v1",
+    "chunk_order_index": 11,
+    "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+    "llm_cache_list": [
+      "default:extract:d46b4412880060ec7a63c01491bfa6c8",
+      "default:extract:0147b0d0e10532f74139c78ef40aebd3"
+    ],
+    "is_multimodal": true,
+    "modal_entity_name": "RAG-Anything Framework Architecture Diagram (image)",
+    "original_type": "image",
+    "page_idx": 3,
+    "create_time": 1791642730,
+    "update_time": 1791642831,
+    "_id": "chunk-1025c419093621f01b9bd6bda58a4d8b"
+  },
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "chunk_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+      "type": "text",
+      "page": 6,
+      "page_end": 9,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 17,
+      "relevance_score": 0.01849685050547123,
+      "content_sha256": "cbbc5d871c113a85da4e77b67020560d8cb95b1928deae8e76f3d68df2bda5c4",
+      "input_tokens": 1601,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1315,
+      "cumulative_budget_tokens": 1315
+    },
+    {
+      "rank": 2,
+      "chunk_id": "chunk-de93d4b6f02e5ae737b9b9e8142401cd",
+      "type": "text",
+      "page": 8,
+      "page_end": 11,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 4,
+      "relevance_score": 0.01008215919137001,
+      "content_sha256": "c8b293af42d84b72d8a0da0958cac0a96b66f3403c353a905c9b8c4025d806d4",
+      "input_tokens": 1594,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1307,
+      "cumulative_budget_tokens": 2622
+    },
+    {
+      "rank": 3,
+      "chunk_id": "chunk-fc6b663130fa82a15ae0568ebdd7e714",
+      "type": "image",
+      "page": 13,
+      "page_end": 13,
+      "modal_entity_name": "Comparison of RAG systems on GCAN ablation chart query (image)",
+      "tokens": 1136,
+      "index": 3,
+      "relevance_score": 0.008361299522221088,
+      "content_sha256": "e18d2cabb72df0dd0c9848caafe792ee3a1418066f74d88dd6b7934d629b02d7",
+      "input_tokens": 1479,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1239,
+      "cumulative_budget_tokens": 3861
+    },
+    {
+      "rank": 4,
+      "chunk_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "type": "image",
+      "page": 17,
+      "page_end": 17,
+      "modal_entity_name": "Comparison of RAG system responses to a multimodal document query (image)",
+      "tokens": 812,
+      "index": 13,
+      "relevance_score": 0.007635959889739752,
+      "content_sha256": "ccf6ebf89152ce5b73fd42bef66308bc45b384a3f7c82fb530b65b5b00f42dec",
+      "input_tokens": 1089,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 892,
+      "cumulative_budget_tokens": 4753
+    },
+    {
+      "rank": 5,
+      "chunk_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "type": "image",
+      "page": 4,
+      "page_end": 4,
+      "modal_entity_name": "RAG-Anything Framework Architecture Diagram (image)",
+      "tokens": 1235,
+      "index": 33,
+      "relevance_score": 0.007335412781685591,
+      "content_sha256": "509adca35db76e9499e488b7e088bca3dbcae3aa2cd682b08e04f4eb7b89619d",
+      "input_tokens": 1656,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1336,
+      "cumulative_budget_tokens": 6089
+    },
+    {
+      "rank": 6,
+      "chunk_id": "chunk-76a69463e145e164e890b6c29aba9ec0",
+      "type": "text",
+      "page": 12,
+      "page_end": 13,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 10,
+      "relevance_score": 0.006604840513318777,
+      "content_sha256": "cbdc6fd8f47cd3854ffa1fbdfdda2a214b18d81f276445cbe5696a1a3683efd6",
+      "input_tokens": 1398,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1300,
+      "cumulative_budget_tokens": 7389
+    },
+    {
+      "rank": 7,
+      "chunk_id": "chunk-9d7b65a77beeebaa7ba6c82a6b282bc8",
+      "type": "image",
+      "page": 10,
+      "page_end": 10,
+      "modal_entity_name": "Comparison of model responses on multi-panel figure interpretation (image)",
+      "tokens": 1228,
+      "index": 1,
+      "relevance_score": 0.006600274704396725,
+      "content_sha256": "c157c9650d4580a7f2c3444c5b7ab74b72dffa45f1c0f08030ed0e1338f4dcf2",
+      "input_tokens": 1564,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1324,
+      "cumulative_budget_tokens": 8713
+    },
+    {
+      "rank": 8,
+      "chunk_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "type": "equation",
+      "page": 7,
+      "page_end": 7,
+      "modal_entity_name": "Response Generation Equation (equation)",
+      "tokens": 700,
+      "index": 22,
+      "relevance_score": 0.006479794625192881,
+      "content_sha256": "a724db4a1f9415f81eb5d2f80464efd92860446e930e05ad7c421622be3fb8d2",
+      "input_tokens": 955,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 818,
+      "cumulative_budget_tokens": 9531
+    },
+    {
+      "rank": 9,
+      "chunk_id": "chunk-dfc6c28e224a59948d1c3f970cd333d3",
+      "type": "table",
+      "page": 8,
+      "page_end": 8,
+      "modal_entity_name": "MMLongBench Accuracy Table (table)",
+      "tokens": 1313,
+      "index": 16,
+      "relevance_score": 0.006009329110383987,
+      "content_sha256": "15aef251792e57fb4054aca4ec4935bc10d25e13aedf8f3f4e936f1976b9c155",
+      "input_tokens": 1671,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1421,
+      "cumulative_budget_tokens": 10952
+    },
+    {
+      "rank": 10,
+      "chunk_id": "chunk-ea106f7be2831088c0a1118ecb40eee8",
+      "type": "text",
+      "page": 5,
+      "page_end": 6,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 5,
+      "relevance_score": 0.0050756619311869144,
+      "content_sha256": "bdcfb2730c16aad8e56fd6939d41aa7243253082066817c0f99a2fb4a1acc669",
+      "input_tokens": 1679,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1314,
+      "cumulative_budget_tokens": 12266
+    },
+    {
+      "rank": 11,
+      "chunk_id": "chunk-3199f24e41812cb62bea94f7c85f2636",
+      "type": "image",
+      "page": 9,
+      "page_end": 9,
+      "modal_entity_name": "DocBench Accuracy vs Page Range Comparison (image)",
+      "tokens": 853,
+      "index": 34,
+      "relevance_score": 0.0049810404889285564,
+      "content_sha256": "0b5ffa4ea5af4a5d14c9132e83bd01b9819eae51fd4f49bbbfd01c85589bc08d",
+      "input_tokens": 1092,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 938,
+      "cumulative_budget_tokens": 13204
+    },
+    {
+      "rank": 12,
+      "chunk_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "type": "equation",
+      "page": 5,
+      "page_end": 5,
+      "modal_entity_name": "Unified Embedding Table (equation)",
+      "tokens": 806,
+      "index": 2,
+      "relevance_score": 0.004848563112318516,
+      "content_sha256": "020d821b63eb0951ebc2b482363edd92dbf33c074286fd82916343debe94ed8b",
+      "input_tokens": 1127,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 933,
+      "cumulative_budget_tokens": 14137
+    },
+    {
+      "rank": 13,
+      "chunk_id": "chunk-a534f8987f70ae30ffc6f998509f96a7",
+      "type": "table",
+      "page": 7,
+      "page_end": 7,
+      "modal_entity_name": "Experimental Datasets Statistics Table (table)",
+      "tokens": 464,
+      "index": 15,
+      "relevance_score": 0.004288486670702696,
+      "content_sha256": "52b4d4fad362396a9570074cb636fe678530d11cd36c12dc03f88dd49b0f6487",
+      "input_tokens": 614,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 543,
+      "cumulative_budget_tokens": 14680
+    },
+    {
+      "rank": 14,
+      "chunk_id": "chunk-e0b7a22ef18d1df90b09c6752fdaa849",
+      "type": "image",
+      "page": 9,
+      "page_end": 9,
+      "modal_entity_name": "MMLongBench Accuracy Comparison Chart (image)",
+      "tokens": 718,
+      "index": 32,
+      "relevance_score": 0.003976556472480297,
+      "content_sha256": "4be16777c5d1789c057541a6cb41d32947a3116ecf8e9119ffd913fb8bfe850c",
+      "input_tokens": 862,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 801,
+      "cumulative_budget_tokens": 15481
+    },
+    {
+      "rank": 15,
+      "chunk_id": "chunk-7aefd567d430c404aab77872282400eb",
+      "type": "text",
+      "page": 13,
+      "page_end": 18,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 8,
+      "relevance_score": 0.0038968021981418133,
+      "content_sha256": "e5786bf2bec3047c998b3f74d138d18791d755af50848e40ab2487f2e0f84661",
+      "input_tokens": 1684,
+      "truncated": false,
+      "in_final": true,
+      "budget_tokens": 1316,
+      "cumulative_budget_tokens": 16797
+    },
+    {
+      "rank": 16,
+      "chunk_id": "chunk-2c1dc026d368316a0e447d9d04cb5bc4",
+      "type": "table",
+      "page": 9,
+      "page_end": 9,
+      "modal_entity_name": "Ablation Study Results Table (table)",
+      "tokens": 1049,
+      "index": 25,
+      "relevance_score": 0.0036931473296135664,
+      "content_sha256": "8df3e2414f867cd973ec13560555da051cadc9d5cdac3b01fcf836d762391a0a",
+      "input_tokens": 1368,
+      "truncated": false,
+      "in_final": false,
+      "budget_tokens": 1147,
+      "cumulative_budget_tokens": 17944
+    },
+    {
+      "rank": 17,
+      "chunk_id": "chunk-a43d425aea6f4b6c0edc38f28595f400",
+      "type": "text",
+      "page": 1,
+      "page_end": 2,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 9,
+      "relevance_score": 0.0035855232272297144,
+      "content_sha256": "a216992f590bbd41addcb89f034e881ac76db67cfef17ab3864161eb5edb281a",
+      "input_tokens": 1654,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 18,
+      "chunk_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651",
+      "type": "text",
+      "page": 10,
+      "page_end": 12,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 23,
+      "relevance_score": 0.0033899538684636354,
+      "content_sha256": "70a75f4eed04e825b86aa1b280cfe9f2f9ea39c2b66d76b724720a91a0c7cc9f",
+      "input_tokens": 1515,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 19,
+      "chunk_id": "chunk-e67b53472cda54f4238a2ccf98da3bdd",
+      "type": "image",
+      "page": 17,
+      "page_end": 17,
+      "modal_entity_name": "Cross-modal noise and ambiguous table structure failure case (image)",
+      "tokens": 1019,
+      "index": 29,
+      "relevance_score": 0.0033384691923856735,
+      "content_sha256": "18059d53a3ccbe84731158c20736cace726d7319b4a32155b4d1104c15d76f16",
+      "input_tokens": 1259,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 20,
+      "chunk_id": "chunk-55d457152e0dea0c28144e5e94403cb2",
+      "type": "image",
+      "page": 9,
+      "page_end": 9,
+      "modal_entity_name": "DocBench QA Counts Distribution Chart (image)",
+      "tokens": 696,
+      "index": 28,
+      "relevance_score": 0.0032091618049889803,
+      "content_sha256": "a0a19b8359f7ae9dc0aff8a14d7f34f92f18132d651d1c5bc91f5db37e4bbc17",
+      "input_tokens": 902,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 21,
+      "chunk_id": "chunk-a411e34e853ae45bfd9bcee5b30fdc44",
+      "type": "table",
+      "page": 8,
+      "page_end": 8,
+      "modal_entity_name": "Performance Comparison Table on DocBench Dataset (table)",
+      "tokens": 971,
+      "index": 31,
+      "relevance_score": 0.003118263091892004,
+      "content_sha256": "40de883fd2174278801a0310a12d5359ca0815fe6c53430488ae413707721041",
+      "input_tokens": 1225,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 22,
+      "chunk_id": "chunk-d7f162fe747d4504218a5bc094c97cc4",
+      "type": "image",
+      "page": 16,
+      "page_end": 16,
+      "modal_entity_name": "Equation Analysis Prompt Template (image)",
+      "tokens": 626,
+      "index": 27,
+      "relevance_score": 0.002956138225272298,
+      "content_sha256": "30f8443d5ab3ae683a63302fba2ea0c336baa1a422fadc127ff27474b50206c9",
+      "input_tokens": 882,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 23,
+      "chunk_id": "chunk-63a71b30187cb0788470f7a4ef8b5a7a",
+      "type": "image",
+      "page": 16,
+      "page_end": 16,
+      "modal_entity_name": "Accuracy Evaluation Prompt for RAG System (image)",
+      "tokens": 728,
+      "index": 11,
+      "relevance_score": 0.002953615039587021,
+      "content_sha256": "68650d4b2074558f1d8b483f8ff4e95d424aab4eca60f6349fe027a31d7ac8c1",
+      "input_tokens": 975,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 24,
+      "chunk_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "type": "text",
+      "page": 2,
+      "page_end": 4,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 21,
+      "relevance_score": 0.0029452452436089516,
+      "content_sha256": "8a4b6cf128b515007df296c26c3c2c437360db6dca2f0911f41c161158586272",
+      "input_tokens": 1675,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 25,
+      "chunk_id": "chunk-3030640e3aa96c21a21f63f845339bb7",
+      "type": "image",
+      "page": 10,
+      "page_end": 10,
+      "modal_entity_name": "Financial Table Navigation Case Study Comparison (image)",
+      "tokens": 1078,
+      "index": 12,
+      "relevance_score": 0.0029293170664459467,
+      "content_sha256": "38ec739a3d31b855a4e2a2ce5a6393c37433e02a5533d70ebc629121d825ec49",
+      "input_tokens": 1389,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 26,
+      "chunk_id": "chunk-6489e2fb8e8849e9fba34fe5f95e4a0f",
+      "type": "table",
+      "page": 13,
+      "page_end": 13,
+      "modal_entity_name": "MMLongBench Document Type Distribution Table (table)",
+      "tokens": 1048,
+      "index": 19,
+      "relevance_score": 0.0029095790814608335,
+      "content_sha256": "09ee61cdb1f892af3c4b1379ddd2beb8e934dacbdfc9cbf57dadff23b78921ef",
+      "input_tokens": 1296,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 27,
+      "chunk_id": "chunk-2d13b5eb03f64e659615c9a7b0a7b167",
+      "type": "image",
+      "page": 15,
+      "page_end": 15,
+      "modal_entity_name": "Vision Analysis Prompt Template (image)",
+      "tokens": 701,
+      "index": 18,
+      "relevance_score": 0.0022421509493142366,
+      "content_sha256": "3eed457f29f1387a4c7c21d03512436627c7aa73bf76a07b57770ad4e1c54cbe",
+      "input_tokens": 962,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 28,
+      "chunk_id": "chunk-19c485068d1b3af6c308fbeb4976b40e",
+      "type": "table",
+      "page": 13,
+      "page_end": 13,
+      "modal_entity_name": "DocBench Document Type Distribution Table (table)",
+      "tokens": 942,
+      "index": 0,
+      "relevance_score": 0.0021301170345395803,
+      "content_sha256": "5605f9499ffa37780456f675c70e8feefee28494a247e09e59ffaf6ed5b82a61",
+      "input_tokens": 1163,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 29,
+      "chunk_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "type": "image",
+      "page": 15,
+      "page_end": 15,
+      "modal_entity_name": "Table Analysis Prompt Template (image)",
+      "tokens": 768,
+      "index": 24,
+      "relevance_score": 0.0019244425930082798,
+      "content_sha256": "3d006b141fb5e2c2d582f7143db8f6d9a2fc50d1fdd84977d79a7cb482e66561",
+      "input_tokens": 1075,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 30,
+      "chunk_id": "chunk-514397fe4b91c504d493b81ae4f2af0d",
+      "type": "image",
+      "page": 14,
+      "page_end": 14,
+      "modal_entity_name": "Comparison of RAG systems on tabular navigation task (image)",
+      "tokens": 1087,
+      "index": 6,
+      "relevance_score": 0.001880548195913434,
+      "content_sha256": "329b911dcb04fe64365e54860044f8a2b9c346ba3d5fdcfceec6c24bc8454bcd",
+      "input_tokens": 1417,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 31,
+      "chunk_id": "chunk-841b2e1a62bf11ef382f155dc5fd836b",
+      "type": "image",
+      "page": 9,
+      "page_end": 9,
+      "modal_entity_name": "Distribution of QA Pairs by Document Page Range (image)",
+      "tokens": 503,
+      "index": 20,
+      "relevance_score": 0.0017174098175019026,
+      "content_sha256": "1ceaa262bbbcfa81b3eb0187b019224f5cb6117457d0c01bf0ddccaea9735996",
+      "input_tokens": 605,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 32,
+      "chunk_id": "chunk-9f0dae3e849332dc4c4fecee687039a4",
+      "type": "equation",
+      "page": 5,
+      "page_end": 5,
+      "modal_entity_name": "Multimodal Entity Node Set Construction (equation)",
+      "tokens": 731,
+      "index": 14,
+      "relevance_score": 0.0016517034964635968,
+      "content_sha256": "e466368d93d5585657e1c2dae0f4cb7b0bd128158d39a750532339bfd5fd913f",
+      "input_tokens": 1021,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 33,
+      "chunk_id": "chunk-eac0008c777dab7291aec281277e77a1",
+      "type": "text",
+      "page": 4,
+      "page_end": 5,
+      "modal_entity_name": "",
+      "tokens": 1200,
+      "index": 7,
+      "relevance_score": 0.0015914940740913153,
+      "content_sha256": "64a80a18f2e1a230c7e09a81852339872ee06a050523a9690c1df78f8a5a13c7",
+      "input_tokens": 1645,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 34,
+      "chunk_id": "chunk-a9db98ce0de085186d020ad648b70ae3",
+      "type": "equation",
+      "page": 3,
+      "page_end": 3,
+      "modal_entity_name": "Decomposition of Knowledge Source into Atomic Units (equation)",
+      "tokens": 881,
+      "index": 26,
+      "relevance_score": 0.0014558814000338316,
+      "content_sha256": "32af0ddfe4d3e79ef59456ddbd55e7a3a3d68241f82b9edabf22561dc2a1eeb4",
+      "input_tokens": 1196,
+      "truncated": false,
+      "in_final": false
+    },
+    {
+      "rank": 35,
+      "chunk_id": "chunk-abcce11b032cb7a3594b3a1302046124",
+      "type": "equation",
+      "page": 4,
+      "page_end": 4,
+      "modal_entity_name": "Graph Construction from Multimodal Content (equation)",
+      "tokens": 766,
+      "index": 30,
+      "relevance_score": 0.001257907715626061,
+      "content_sha256": "57ca301a3ed25a572ac3ac0de007a1ef85bb7a1fc41885fb1f308131a174400f",
+      "input_tokens": 1025,
+      "truncated": false,
+      "in_final": false
+    }
+  ],
+  "final_chunk_ids": [
+    "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+    "chunk-de93d4b6f02e5ae737b9b9e8142401cd",
+    "chunk-fc6b663130fa82a15ae0568ebdd7e714",
+    "chunk-26f9e861c68e93709074930b8e53d41c",
+    "chunk-1025c419093621f01b9bd6bda58a4d8b",
+    "chunk-76a69463e145e164e890b6c29aba9ec0",
+    "chunk-9d7b65a77beeebaa7ba6c82a6b282bc8",
+    "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+    "chunk-dfc6c28e224a59948d1c3f970cd333d3",
+    "chunk-ea106f7be2831088c0a1118ecb40eee8",
+    "chunk-3199f24e41812cb62bea94f7c85f2636",
+    "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+    "chunk-a534f8987f70ae30ffc6f998509f96a7",
+    "chunk-e0b7a22ef18d1df90b09c6752fdaa849",
+    "chunk-7aefd567d430c404aab77872282400eb"
+  ],
+  "images": [
+    {
+      "index": 1,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/84aeb4bd1fae215b505273557de97339f2993ac9df2ff758f47d3309f79979d1.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/84aeb4bd1fae215b505273557de97339f2993ac9df2ff758f47d3309f79979d1.jpg",
+      "chunk_id": "chunk-fc6b663130fa82a15ae0568ebdd7e714",
+      "type": "image",
+      "page": 13,
+      "anchor": "Comparison of RAG systems on GCAN ablation chart query (image)",
+      "payload_sha256": "51a48c9f161e9cbca6761a2edc817cfe4472513039b13217d6286ba887e0f034",
+      "payload_matches": true
+    },
+    {
+      "index": 2,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/ef1e87bcb449d11035de88719ea5c5eaf35647d707ec839aa3d3e11e0b3ca55d.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/ef1e87bcb449d11035de88719ea5c5eaf35647d707ec839aa3d3e11e0b3ca55d.jpg",
+      "chunk_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "type": "image",
+      "page": 17,
+      "anchor": "Comparison of RAG system responses to a multimodal document query (image)",
+      "payload_sha256": "0089f2210618943e85cf02d11149494686f7f138e97bacbabb28b10155306eb4",
+      "payload_matches": true
+    },
+    {
+      "index": 3,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/d960511e87edf887a6ee67caba7d4f7cb9da80f3fe7cdea264ab856390831d14.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/d960511e87edf887a6ee67caba7d4f7cb9da80f3fe7cdea264ab856390831d14.jpg",
+      "chunk_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "type": "image",
+      "page": 4,
+      "anchor": "RAG-Anything Framework Architecture Diagram (image)",
+      "payload_sha256": "31ecc276dc41ffe25f4267f84bd29b88f9c16eb07384b53d13ab269a01201c0c",
+      "payload_matches": true
+    },
+    {
+      "index": 4,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/e6fb7cc0e85cfddd3fdab85b3633187c8d710bdb6c5abff05cfd5ef21737cad5.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/e6fb7cc0e85cfddd3fdab85b3633187c8d710bdb6c5abff05cfd5ef21737cad5.jpg",
+      "chunk_id": "chunk-9d7b65a77beeebaa7ba6c82a6b282bc8",
+      "type": "image",
+      "page": 10,
+      "anchor": "Comparison of model responses on multi-panel figure interpretation (image)",
+      "payload_sha256": "b7444266db84e8574ff0558d8f50ce0b3b562d9e59efaa880f5fd9254cf19e49",
+      "payload_matches": true
+    },
+    {
+      "index": 5,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/4dafc32b233a45f226a4c12e429034cb9e37529272541e77f5d0c7be2888ff0b.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/4dafc32b233a45f226a4c12e429034cb9e37529272541e77f5d0c7be2888ff0b.jpg",
+      "chunk_id": "chunk-dfc6c28e224a59948d1c3f970cd333d3",
+      "type": "table",
+      "page": 8,
+      "anchor": "MMLongBench Accuracy Table (table)",
+      "payload_sha256": "c114f10ca0241c0fc06b7bb0968e45bbe543823138439f3dd33ac0846ab05a58",
+      "payload_matches": true
+    },
+    {
+      "index": 6,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/f31dea98118298da9874431172c90b6519da2a5a5cb74847779484f96a73aa97.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/f31dea98118298da9874431172c90b6519da2a5a5cb74847779484f96a73aa97.jpg",
+      "chunk_id": "chunk-3199f24e41812cb62bea94f7c85f2636",
+      "type": "image",
+      "page": 9,
+      "anchor": "DocBench Accuracy vs Page Range Comparison (image)",
+      "payload_sha256": "bd61d8d36de7f434575d636515da9ac896b8bf09b98ba3c01b013b975073be6d",
+      "payload_matches": true
+    },
+    {
+      "index": 7,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/f4207144427f6c162d05c828b9fe66a2adfe497515e2f8cd93db7f0427ec56ad.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/f4207144427f6c162d05c828b9fe66a2adfe497515e2f8cd93db7f0427ec56ad.jpg",
+      "chunk_id": "chunk-a534f8987f70ae30ffc6f998509f96a7",
+      "type": "table",
+      "page": 7,
+      "anchor": "Experimental Datasets Statistics Table (table)",
+      "payload_sha256": "0fb782c09d0a0840b428d7f080732ac1e158b49da4c2ae198de680afa38c7d9d",
+      "payload_matches": true
+    },
+    {
+      "index": 8,
+      "stored_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/26ef73a064b6acf1bdd6641af7ee50a43ff4e56177cd68f1cb306cbc7863f3d2.jpg",
+      "actual_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/parsed/rag-anything-handson-v1/mineru/RAG-Anything_arXiv_2025_4ae5f35e/RAG-Anything_arXiv_2025/auto/images/26ef73a064b6acf1bdd6641af7ee50a43ff4e56177cd68f1cb306cbc7863f3d2.jpg",
+      "chunk_id": "chunk-e0b7a22ef18d1df90b09c6752fdaa849",
+      "type": "image",
+      "page": 9,
+      "anchor": "MMLongBench Accuracy Comparison Chart (image)",
+      "payload_sha256": "277bb934ae1c431ceb6e31db4a798dc17c4023e7ded0c4a2c7d2fc29fe1c23c7",
+      "payload_matches": true
+    }
+  ],
+  "retrieved_entities": [
+    {
+      "entity_name": "Text Info, Vector Database, Text VDB, Multi-modal VDB",
+      "entity_type": "UNKNOWN",
+      "description": "The Text Encoder processes textual information to create a Vector Database.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643597
+    },
+    {
+      "entity_name": "Academic Papers",
+      "entity_type": "concept",
+      "description": "Academic Papers is a domain category used to measure the accuracy of methods.",
+      "source_id": "chunk-dfc6c28e224a59948d1c3f970cd333d3",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643536
+    },
+    {
+      "entity_name": "Vector Database, Hybrid Retrieved Info",
+      "entity_type": "UNKNOWN",
+      "description": "Semantic Similarity Matching matches queries to information in the Vector Database to produce Hybrid Retrieved Info.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643597
+    },
+    {
+      "entity_name": "MMLongBench Accuracy Table (table)",
+      "entity_type": "table",
+      "description": "This table compares the accuracy of different methods (GPT-4o-mini, LightRAG, MMGraphRAG, and RAG-Anything) on the MMLongBench dataset across various document domains and overall performance. RAG-Anything demonstrates superior performance, particularly in long-context documents, supporting the claims about its effectiveness in handling complex multimodal information.",
+      "source_id": "chunk-dfc6c28e224a59948d1c3f970cd333d3",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "Semantic Similarity Matching, LLM, Response",
+      "entity_type": "UNKNOWN",
+      "description": "Hybrid Retrieved Info is input to the LLM to generate the Response.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643598
+    },
+    {
+      "entity_name": "Text Encoder",
+      "entity_type": "UNKNOWN",
+      "description": "The Text Encoder processes textual information to create a Vector Database.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643597
+    },
+    {
+      "entity_name": "bge-reranker-v2-m3",
+      "entity_type": "artifact",
+      "description": "bge-reranker-v2-m3 is a model used for reranking.",
+      "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642299
+    },
+    {
+      "entity_name": "Semantic Similarity Matching",
+      "entity_type": "method",
+      "description": "Semantic Similarity Matching addresses the challenge of identifying semantically relevant knowledge that lacks explicit structural connections by conducting dense vector similarity search.<SEP>Semantic Similarity Matching is a method for matching queries to information in the Vector Database.",
+      "source_id": "chunk-ea106f7be2831088c0a1118ecb40eee8<SEP>chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643552
+    },
+    {
+      "entity_name": "\\(\\mathrm{emb}(\\cdot)\\)",
+      "entity_type": "method",
+      "description": "\\(\\mathrm{emb}(\\cdot)\\) is the embedding function that maps elements into a high-dimensional vector space.",
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643557
+    },
+    {
+      "entity_name": "Knowledge Graph, Hybrid Retrieved Info",
+      "entity_type": "UNKNOWN",
+      "description": "Structural Knowledge Navigation navigates the Knowledge Graph to produce Hybrid Retrieved Info.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643597
+    },
+    {
+      "entity_name": "RAG-Anything Framework Architecture Diagram (image)",
+      "entity_type": "image",
+      "description": "This image is a high-level architectural diagram of the RAG-Anything framework. It illustrates the end-to-end process of handling heterogeneous multimodal documents. The pipeline starts with parsing various file formats, unifies them into a structured content list, constructs dual knowledge graphs (text-based and cross-modal), and merges them with a vector database. Finally, it shows how a user query is processed through hybrid retrieval (structural and semantic) to generate a response via an LLM. This figure is central to understanding the system's design and workflow.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "\\(\\mathcal{T}\\)",
+      "entity_type": "artifact",
+      "description": "\\(\\mathcal{T}\\) represents the embedding table that encapsulates the dense vector representations of all graph entities, relationships, and atomic content chunks.",
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643556
+    },
+    {
+      "entity_name": "Vector Database",
+      "entity_type": "artifact",
+      "description": "The Vector Database is a database that stores vector representations of textual and multimodal information.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643551
+    },
+    {
+      "entity_name": "Text Info, Developer, Bee, Observe",
+      "entity_type": "UNKNOWN",
+      "description": "The Text-Based Knowledge Graph contains nodes such as Developer, Bee, and Observe.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643596
+    },
+    {
+      "entity_name": "Context-Aware Multimodal Prompting",
+      "entity_type": "concept",
+      "description": "Context-Aware Multimodal Prompting is a concept discussed in the surrounding content, emphasizing the need to process different types of documents with varying numbers of questions and pages.",
+      "source_id": "chunk-19c485068d1b3af6c308fbeb4976b40e",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643544
+    },
+    {
+      "entity_name": "text",
+      "entity_type": "UNKNOWN",
+      "description": "Multimodal Knowledge Unification ensures that text is segmented into coherent paragraphs or list items.",
+      "source_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642325
+    },
+    {
+      "entity_name": "DocBench Document Type Distribution Table (table)",
+      "entity_type": "table",
+      "description": "This table provides a detailed breakdown of document types and their associated statistics for the DocBench benchmark, highlighting the diversity and complexity of the documents used in the evaluation of RAG systems. It supports the evaluation of RAG systems across different document types and their characteristics.",
+      "source_id": "chunk-19c485068d1b3af6c308fbeb4976b40e",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "Table Analysis Prompt Template",
+      "entity_type": "artifact",
+      "description": "Table Analysis Prompt Template is a template for analyzing table content.",
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643552
+    },
+    {
+      "entity_name": "Comparison of RAG system responses to a multimodal document query (image)",
+      "entity_type": "image",
+      "description": "This image compares the performance of four RAG systems (GPT-4o-mini, MIMGraphRAG, LightRAG, RAG-Anything) in answering a question about a neural network diagram found in a multimodal document. It highlights that RAG-Anything correctly identifies the data flow sequence from the diagram, while the other systems provide incorrect answers, demonstrating RAG-Anything's superior ability to interpret complex visual information.",
+      "source_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "figure",
+      "entity_type": "UNKNOWN",
+      "description": "Multimodal Knowledge Unification extracts figures with associated metadata such as captions and cross-references.",
+      "source_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642325
+    },
+    {
+      "entity_name": "GPT-4o-mini",
+      "entity_type": "artifact",
+      "description": "GPT-4o-mini is a powerful multimodal language model with native text and image understanding capabilities. It is used in various experimental frameworks and case studies, including accuracy evaluations and comprehensive experimental consistency and reliability checks. GPT-4o-mini achieved 61.0% overall accuracy on the DocBench Dataset, performing particularly well in 'Tutorials/Workshops' and poorly in 'Academic Papers'. In some case studies, it provided incorrect answers, such as in financial table navigation and visual analysis. Despite these limitations, GPT-4o-mini is a key model used for answering questions about visual documents and comparing responses in experimental evaluations.",
+      "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1<SEP>chunk-7aefd567d430c404aab77872282400eb<SEP>chunk-dfc6c28e224a59948d1c3f970cd333d3<SEP>chunk-a411e34e853ae45bfd9bcee5b30fdc44<SEP>chunk-3030640e3aa96c21a21f63f845339bb7<SEP>chunk-d68c9b009fe16eb1ecc9d4a748e081f2<SEP>chunk-9d7b65a77beeebaa7ba6c82a6b282bc8<SEP>chunk-514397fe4b91c504d493b81ae4f2af0d<SEP>chunk-fc6b663130fa82a15ae0568ebdd7e714<SEP>chunk-e67b53472cda54f4238a2ccf98da3bdd<SEP>chunk-26f9e861c68e93709074930b8e53d41c<SEP>chunk-d7f162fe747d4504218a5bc094c97cc4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643546
+    },
+    {
+      "entity_name": "Context from Surrounding Content",
+      "entity_type": "concept",
+      "description": "Context from Surrounding Content is a placeholder for context in the prompt template.",
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643553
+    },
+    {
+      "entity_name": "Equation",
+      "entity_type": "concept",
+      "description": "Equations are a modality type that can be extracted from knowledge sources.<SEP>(\\(\\mathcal{V}_j, \\mathcal{E}_j\\) = R(\\(d_j^{chunk}\\))) is a key component in the RAG-Anything framework, defining the process of generating a structured graph representation from a chunk of multimodal content.<SEP>The equation \\(\\mathcal{T} = \\mathrm{emb}(s) : s \\in \\mathcal{V} \\cup \\mathcal{E} \\cup c_{j_j}\\) is a key component in the RAG-Anything framework.",
+      "source_id": "chunk-abcce11b032cb7a3594b3a1302046124<SEP>chunk-1025c419093621f01b9bd6bda58a4d8b<SEP>chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643548
+    },
+    {
+      "entity_name": "Image Info, Equation Info, Table Info, Parent Node: Multi-modal Instance, Child Node",
+      "entity_type": "UNKNOWN",
+      "description": "The Cross-Modal Knowledge Graph contains nodes such as Parent Node: Multi-modal Instance and Child Node.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643596
+    },
+    {
+      "entity_name": "Unified Embedding Table (equation)",
+      "entity_type": "equation",
+      "description": "The equation \\(\\mathcal{T} = \\mathrm{emb}(s) : s \\in \\mathcal{V} \\cup \\mathcal{E} \\cup c_{j_j}\\) defines the process of generating dense vector representations for the unified knowledge graph in the RAG-Anything framework. This ensures that all elements, including entities, relationships, and atomic content chunks, are represented in a consistent vector space, facilitating efficient cross-modal retrieval and reasoning.",
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "A.3",
+      "entity_type": "section",
+      "description": "Section A.3 documents the complete set of multimodal analysis prompts for vision, table, and equation processing that enable context-aware interpretation.",
+      "source_id": "chunk-76a69463e145e164e890b6c29aba9ec0",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642292
+    },
+    {
+      "entity_name": "Deep Learning Models",
+      "entity_type": "concept",
+      "description": "Deep Learning Models are used for natural language processing and computer vision.",
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643556
+    },
+    {
+      "entity_name": "table",
+      "entity_type": "UNKNOWN",
+      "description": "Multimodal Knowledge Unification parses tables into structured cells with headers and values.",
+      "source_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642325
+    },
+    {
+      "entity_name": "Response Generation Equation (equation)",
+      "entity_type": "equation",
+      "description": "The equation \\(\\mathrm{Response} = \\mathrm{VLM}(q, \\mathcal{P}(q), \\mathcal{V}^{\\star}(q))\\) defines the process of generating a response using a Vision-Language Model, integrating query, textual context, and visual content. This equation is central to the hybrid knowledge retrieval and synthesis framework, ensuring comprehensive and contextually rich answers.",
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "v",
+      "entity_type": "artifact",
+      "description": "v is a multimodal entity node associated with a non-text unit.",
+      "source_id": "chunk-9f0dae3e849332dc4c4fecee687039a4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643547
+    },
+    {
+      "entity_name": "RAG-Anything Framework",
+      "entity_type": "concept",
+      "description": "RAG-Anything Framework is a framework that addresses the challenges of multimodal knowledge representation and retrieval.<SEP>The RAG-Anything Framework is a specific implementation of the Universal RAG Framework.<SEP>RAG-Anything Framework is a framework used in the dual-graph construction phase to build a unified knowledge graph from multimodal content.<SEP>RAG-Anything Framework is a framework for constructing multimodal knowledge graphs.<SEP>RAG-Anything Framework is a framework that aims to build a unified knowledge representation across different modalities.<SEP>RAG-Anything Framework is a system designed to test long-context understanding and multimodal document comprehension.",
+      "source_id": "chunk-9f0dae3e849332dc4c4fecee687039a4<SEP>chunk-abcce11b032cb7a3594b3a1302046124<SEP>chunk-1025c419093621f01b9bd6bda58a4d8b<SEP>chunk-77ff6101b55afb188a8b2aba9f83cd92<SEP>chunk-a9db98ce0de085186d020ad648b70ae3<SEP>chunk-a534f8987f70ae30ffc6f998509f96a7<SEP>chunk-2c1dc026d368316a0e447d9d04cb5bc4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643547
+    },
+    {
+      "entity_name": "Unified Text Embedding",
+      "entity_type": "artifact",
+      "description": "Unified Text Embedding is a unified text embedding computed using the same encoder as during indexing, ensuring consistency between query and knowledge representations.",
+      "source_id": "chunk-ea106f7be2831088c0a1118ecb40eee8",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642303
+    },
+    {
+      "entity_name": "Multimodal Document",
+      "entity_type": "artifact",
+      "description": "Multimodal Document is a visual input in the image, showing a page with a table titled 'Evidence table in the document'.<SEP>Multimodal Document is a section of an academic paper that is part of the RAG-ANYTHING framework.<SEP>Multimodal Document is a structured document used in the analysis, featuring a question and a schematic of a document page with highlighted regions and tables.",
+      "source_id": "chunk-514397fe4b91c504d493b81ae4f2af0d<SEP>chunk-e67b53472cda54f4238a2ccf98da3bdd<SEP>chunk-26f9e861c68e93709074930b8e53d41c",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643558
+    },
+    {
+      "entity_name": "Hybrid Retrieved Info, Response",
+      "entity_type": "UNKNOWN",
+      "description": "The LLM processes Hybrid Retrieved Info to generate the Response.",
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643598
+    },
+    {
+      "entity_name": "Unified Knowledge Graph",
+      "entity_type": "concept",
+      "description": "Unified Knowledge Graph is the final graph that combines both multimodal and text-based knowledge.<SEP>Unified Knowledge Graph represents the combined structural knowledge and embedding table for efficient cross-modal retrieval.<SEP>Unified Knowledge Graph is a graph that includes entities, relationships, and atomic content chunks across different modalities.",
+      "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-ea106f7be2831088c0a1118ecb40eee8<SEP>chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643557
+    },
+    {
+      "entity_name": "q",
+      "entity_type": "variable",
+      "description": "q represents the query or question posed by the user.",
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643555
+    },
+    {
+      "entity_name": "Experimental Datasets Statistics Table (table)",
+      "entity_type": "table",
+      "description": "The table details the statistics of two experimental datasets, DocBench and MMLongBench, used to evaluate the RAG-Anything framework. DocBench contains 229 documents with an average of 66 pages and 46,377 tokens, while MMLongBench includes 135 documents with an average of 47.5 pages and 21,214 tokens. The datasets cover a wide range of document types and questions, providing a comprehensive testbed for the framework's performance.",
+      "source_id": "chunk-a534f8987f70ae30ffc6f998509f96a7",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "MMLongBench Document Type Distribution Table (table)",
+      "entity_type": "table",
+      "description": "This table details the distribution of document types and their associated statistics from the MMLongBench benchmark, providing a comprehensive view of the document types and their characteristics, which is crucial for evaluating the performance of multimodal retrieval-augmented generation systems.",
+      "source_id": "chunk-6489e2fb8e8849e9fba34fe5f95e4a0f",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "Research",
+      "entity_type": "concept",
+      "description": "Research documents are categorized as a type of document in the MMLongBench benchmark.",
+      "source_id": "chunk-6489e2fb8e8849e9fba34fe5f95e4a0f",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643524
+    },
+    {
+      "entity_name": "Scientific Papers",
+      "entity_type": "concept",
+      "description": "Scientific Papers are an example of scenarios where visual information is crucial.",
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643556
+    },
+    {
+      "entity_name": "GraphRAG",
+      "entity_type": "artifact",
+      "description": "GraphRAG is a reference method for text-based knowledge graph construction.<SEP>GraphRAG is a specific implementation of Graph-Enhanced Retrieval-Augmented Generation, focusing on optimizing structures for retrieval efficiency.",
+      "source_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651<SEP>chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-de93d4b6f02e5ae737b9b9e8142401cd",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642292
+    },
+    {
+      "entity_name": "VideoRAG",
+      "entity_type": "artifact",
+      "description": "VideoRAG is a dual-channel architecture for video understanding, employed in multimodal RAG systems.",
+      "source_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642293
+    },
+    {
+      "entity_name": "ALL-IN-ONE RAG FRAMEWORK",
+      "entity_type": "artifact",
+      "description": "ALL-IN-ONE RAG FRAMEWORK is a framework that includes RAG-ANYTHING.",
+      "source_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643561
+    },
+    {
+      "entity_name": "-S-A",
+      "entity_type": "artifact",
+      "description": "-S-A is a specific model configuration used in RAG-Anything's evaluation.",
+      "source_id": "chunk-7aefd567d430c404aab77872282400eb",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642301
+    },
+    {
+      "entity_name": "RAG-Anything",
+      "entity_type": "artifact",
+      "description": "RAG-Anything is a comprehensive framework for Retrieval-Augmented Generation (RAG) that excels in multimodal knowledge unification and long-context document understanding. It is designed to address the limitations of existing text-centric systems by extending GraphRAG to all modalities, including visual elements, structured data, and mathematical expressions. RAG-Anything employs a dual-graph construction strategy, enhancing its performance on long documents through cross-modal hybrid retrieval. This framework demonstrates advanced visual reasoning and complex tabular data handling capabilities, making it a robust system for multimodal document understanding.\n\nRAG-Anything is an all-in-one RAG framework that outperforms other methods in accuracy across various domains, particularly in information-dense contexts. It is noted for its superior performance on long documents compared to MM-GraphRAG and is used in case studies to answer questions about visual documents and financial table navigation. The system is designed to handle complex visual reasoning tasks and is used in the analysis and evaluation of multimodal document understanding. RAG-Anything is an advanced retrieval and augmentation framework that constructs modality-aware graphs to manage complex document layouts, and it has demonstrated systematic factual accuracy in various tasks.",
+      "source_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651<SEP>chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-2d4727f37ea1b30518f13dc89ffc7ea1<SEP>chunk-de93d4b6f02e5ae737b9b9e8142401cd<SEP>chunk-a43d425aea6f4b6c0edc38f28595f400<SEP>chunk-7aefd567d430c404aab77872282400eb<SEP>chunk-dded67fd8182de2201aa35ccbb4c8cd9<SEP>chunk-6489e2fb8e8849e9fba34fe5f95e4a0f<SEP>chunk-3199f24e41812cb62bea94f7c85f2636<SEP>chunk-63a71b30187cb0788470f7a4ef8b5a7a<SEP>chunk-dfc6c28e224a59948d1c3f970cd333d3<SEP>chunk-3030640e3aa96c21a21f63f845339bb7<SEP>chunk-841b2e1a62bf11ef382f155dc5fd836b<SEP>chunk-1025c419093621f01b9bd6bda58a4d8b<SEP>chunk-e0b7a22ef18d1df90b09c6752fdaa849<SEP>chunk-9d7b65a77beeebaa7ba6c82a6b282bc8<SEP>chunk-514397fe4b91c504d493b81ae4f2af0d<SEP>chunk-fc6b663130fa82a15ae0568ebdd7e714<SEP>chunk-e67b53472cda54f4238a2ccf98da3bdd<SEP>chunk-26f9e861c68e93709074930b8e53d41c<SEP>chunk-55d457152e0dea0c28144e5e94403cb2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643531
+    },
+    {
+      "entity_name": "Embedding Table",
+      "entity_type": "artifact",
+      "description": "Embedding Table is a table that contains dense representations of graph entities, relationships, and atomic content chunks.<SEP>Embedding Table stores the dense vector representations of knowledge components for efficient retrieval.<SEP>Embedding Table is a critical component of the RAG-Anything framework, storing dense vector representations.",
+      "source_id": "chunk-eac0008c777dab7291aec281277e77a1<SEP>chunk-ea106f7be2831088c0a1118ecb40eee8<SEP>chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643557
+    },
+    {
+      "entity_name": "Accuracy Evaluation Prompt for RAG System (image)",
+      "entity_type": "image",
+      "description": "A screenshot of a text file containing a standardized prompt for evaluating the factual accuracy of RAG system outputs. The prompt instructs an AI evaluator to compare a generated answer against an expected answer, using a binary 0/1 accuracy scale and providing a JSON output with reasoning. It prioritizes factual correctness over style and handles edge cases like partial matches and unanswerable questions. This figure illustrates the methodology used for consistent assessment across the experimental framework.",
+      "source_id": "chunk-63a71b30187cb0788470f7a4ef8b5a7a",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642748
+    },
+    {
+      "entity_name": "Multimodal RAG",
+      "entity_type": "concept",
+      "description": "Multimodal RAG systems are discussed for their challenges and future directions.",
+      "source_id": "chunk-63a71b30187cb0788470f7a4ef8b5a7a",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643533
+    }
+  ],
+  "retrieved_relations": [
+    {
+      "src_id": "RAG-Anything",
+      "tgt_id": "bge-reranker-v2-m3",
+      "description": "bge-reranker-v2-m3 is used for reranking in RAG-Anything.",
+      "keywords": "reranking,tool usage",
+      "weight": 1.0,
+      "source_id": "chunk-2d4727f37ea1b30518f13dc89ffc7ea1",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642318
+    },
+    {
+      "src_id": "Academic Papers",
+      "tgt_id": "MMLongBench Accuracy Table (table)",
+      "description": "Entity Academic Papers belongs to MMLongBench Accuracy Table (table)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-dfc6c28e224a59948d1c3f970cd333d3",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643574
+    },
+    {
+      "src_id": "Equation",
+      "tgt_id": "\\(\\mathcal{T}\\)",
+      "description": "The equation defines the process of embedding elements into the embedding table \\(\\mathcal{T}\\).",
+      "keywords": "defines,embedding table",
+      "weight": 1.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643617
+    },
+    {
+      "src_id": "Text Encoder",
+      "tgt_id": "Text Info, Vector Database, Text VDB, Multi-modal VDB",
+      "description": "The Text Encoder processes textual information to create a Vector Database.",
+      "keywords": "database,processing",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643597
+    },
+    {
+      "src_id": "Table Analysis Prompt Template",
+      "tgt_id": "Table Analysis Prompt Template (image)",
+      "description": "Entity Table Analysis Prompt Template belongs to Table Analysis Prompt Template (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643604
+    },
+    {
+      "src_id": "Semantic Similarity Matching",
+      "tgt_id": "Vector Database, Hybrid Retrieved Info",
+      "description": "Semantic Similarity Matching matches queries to information in the Vector Database to produce Hybrid Retrieved Info.",
+      "keywords": "info,matching",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643598
+    },
+    {
+      "src_id": "Context from Surrounding Content",
+      "tgt_id": "Table Analysis Prompt Template (image)",
+      "description": "Entity Context from Surrounding Content belongs to Table Analysis Prompt Template (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643604
+    },
+    {
+      "src_id": "RAG-Anything Framework Architecture Diagram (image)",
+      "tgt_id": "Vector Database",
+      "description": "Entity Vector Database belongs to RAG-Anything Framework Architecture Diagram (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643601
+    },
+    {
+      "src_id": "Unified Embedding Table (equation)",
+      "tgt_id": "\\(\\mathcal{T}\\)",
+      "description": "Entity \\(\\mathcal{T}\\) belongs to Unified Embedding Table (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643618
+    },
+    {
+      "src_id": "Context-Aware Multimodal Prompting",
+      "tgt_id": "DocBench Document Type Distribution Table (table)",
+      "description": "Entity Context-Aware Multimodal Prompting belongs to DocBench Document Type Distribution Table (table)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-19c485068d1b3af6c308fbeb4976b40e",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643586
+    },
+    {
+      "src_id": "Response Generation Equation (equation)",
+      "tgt_id": "q",
+      "description": "Entity q belongs to Response Generation Equation (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643616
+    },
+    {
+      "src_id": "Comparison of RAG system responses to a multimodal document query (image)",
+      "tgt_id": "GPT-4o-mini",
+      "description": "Entity GPT-4o-mini belongs to Comparison of RAG system responses to a multimodal document query (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643632
+    },
+    {
+      "src_id": "Unified Knowledge Graph",
+      "tgt_id": "\\(\\mathcal{T}\\)",
+      "description": "\\(\\mathcal{T}\\) stores the dense vector representations of all elements in the unified knowledge graph.",
+      "keywords": "embedding table,representation",
+      "weight": 1.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643618
+    },
+    {
+      "src_id": "RAG-Anything Framework Architecture Diagram (image)",
+      "tgt_id": "Semantic Similarity Matching",
+      "description": "Entity Semantic Similarity Matching belongs to RAG-Anything Framework Architecture Diagram (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643602
+    },
+    {
+      "src_id": "Unified Embedding Table (equation)",
+      "tgt_id": "\\(\\mathrm{emb}(\\cdot)\\)",
+      "description": "Entity \\(\\mathrm{emb}(\\cdot)\\) belongs to Unified Embedding Table (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643619
+    },
+    {
+      "src_id": "Equation",
+      "tgt_id": "Unified Embedding Table (equation)",
+      "description": "Entity Equation belongs to Unified Embedding Table (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643618
+    },
+    {
+      "src_id": "Multimodal Entity Node Set Construction (equation)",
+      "tgt_id": "v",
+      "description": "Entity v belongs to Multimodal Entity Node Set Construction (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-9f0dae3e849332dc4c4fecee687039a4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643591
+    },
+    {
+      "src_id": "Deep Learning Models",
+      "tgt_id": "Response Generation Equation (equation)",
+      "description": "Entity Deep Learning Models belongs to Response Generation Equation (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643617
+    },
+    {
+      "src_id": "Embedding Table",
+      "tgt_id": "\\(\\mathcal{T}\\)",
+      "description": "\\(\\mathcal{T}\\) is the embedding table that stores the dense vector representations.",
+      "keywords": "embedding table,representation",
+      "weight": 1.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643618
+    },
+    {
+      "src_id": "RAG-Anything Framework",
+      "tgt_id": "Unified Embedding Table (equation)",
+      "description": "Entity RAG-Anything Framework belongs to Unified Embedding Table (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643619
+    },
+    {
+      "src_id": "Multimodal Knowledge Unification",
+      "tgt_id": "text",
+      "description": "Multimodal Knowledge Unification ensures that text is segmented into coherent paragraphs or list items.",
+      "keywords": "content representation,modality",
+      "weight": 1.0,
+      "source_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642325
+    },
+    {
+      "src_id": "Comparison of RAG system responses to a multimodal document query (image)",
+      "tgt_id": "Multimodal Document",
+      "description": "Entity Multimodal Document belongs to Comparison of RAG system responses to a multimodal document query (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643632
+    },
+    {
+      "src_id": "Table Analysis Prompt Template",
+      "tgt_id": "Table Information",
+      "description": "Table Information is a section in the Table Analysis Prompt Template.",
+      "keywords": "details,information",
+      "weight": 1.0,
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643602
+    },
+    {
+      "src_id": "Semantic Similarity Matching",
+      "tgt_id": "Unified Knowledge Graph",
+      "description": "Semantic Similarity Matching uses the Unified Knowledge Graph for dense vector similarity search.",
+      "keywords": "graph,matching",
+      "weight": 1.0,
+      "source_id": "chunk-ea106f7be2831088c0a1118ecb40eee8",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642326
+    },
+    {
+      "src_id": "Multimodal Knowledge Unification",
+      "tgt_id": "figure",
+      "description": "Multimodal Knowledge Unification extracts figures with associated metadata such as captions and cross-references.",
+      "keywords": "content representation,modality",
+      "weight": 1.0,
+      "source_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642325
+    },
+    {
+      "src_id": "Experimental Datasets Statistics Table (table)",
+      "tgt_id": "RAG-Anything Framework",
+      "description": "Entity RAG-Anything Framework belongs to Experimental Datasets Statistics Table (table)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-a534f8987f70ae30ffc6f998509f96a7",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643637
+    },
+    {
+      "src_id": "Multimodal Knowledge Unification",
+      "tgt_id": "table",
+      "description": "Multimodal Knowledge Unification parses tables into structured cells with headers and values.",
+      "keywords": "content representation,modality",
+      "weight": 1.0,
+      "source_id": "chunk-dded67fd8182de2201aa35ccbb4c8cd9",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642326
+    },
+    {
+      "src_id": "MMLongBench Document Type Distribution Table (table)",
+      "tgt_id": "Research",
+      "description": "Entity Research belongs to MMLongBench Document Type Distribution Table (table)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-6489e2fb8e8849e9fba34fe5f95e4a0f",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643563
+    },
+    {
+      "src_id": "\\(\\mathcal{T}\\)",
+      "tgt_id": "\\(\\mathrm{emb}(\\cdot)\\)",
+      "description": "\\(\\mathcal{T}\\) is the result of applying the embedding function \\(\\mathrm{emb}(\\cdot)\\) to the elements.",
+      "keywords": "embedding function,mapping",
+      "weight": 1.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643617
+    },
+    {
+      "src_id": "Response Generation Equation (equation)",
+      "tgt_id": "Scientific Papers",
+      "description": "Entity Scientific Papers belongs to Response Generation Equation (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643617
+    },
+    {
+      "src_id": "Graph Embedding",
+      "tgt_id": "\\(\\mathcal{T}\\)",
+      "description": "\\(\\mathcal{T}\\) is related to the concept of graph embedding, mapping graph elements into a high-dimensional vector space.",
+      "keywords": "embedding,graph elements",
+      "weight": 1.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643618
+    },
+    {
+      "src_id": "GraphRAG",
+      "tgt_id": "VideoRAG",
+      "description": "GraphRAG integrates with VideoRAG, a dual-channel architecture for video understanding.",
+      "keywords": "integration,method",
+      "weight": 2.0,
+      "source_id": "chunk-f5f0a5a74b5a4eac43772c74649ca651",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642315
+    },
+    {
+      "src_id": "Multimodal Knowledge Representation and Retrieval",
+      "tgt_id": "\\(\\mathcal{T}\\)",
+      "description": "\\(\\mathcal{T}\\) is used for cross-modal retrieval in the broader field of multimodal knowledge representation.",
+      "keywords": "cross-modal retrieval,representation",
+      "weight": 1.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643618
+    },
+    {
+      "src_id": "ALL-IN-ONE RAG FRAMEWORK",
+      "tgt_id": "Comparison of RAG system responses to a multimodal document query (image)",
+      "description": "Entity ALL-IN-ONE RAG FRAMEWORK belongs to Comparison of RAG system responses to a multimodal document query (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-26f9e861c68e93709074930b8e53d41c",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643632
+    },
+    {
+      "src_id": "JSON Object Structure",
+      "tgt_id": "Table Analysis Prompt Template",
+      "description": "The Table Analysis Prompt Template defines the JSON Object Structure.",
+      "keywords": "structure,template",
+      "weight": 1.0,
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643602
+    },
+    {
+      "src_id": "-S-A",
+      "tgt_id": "RAG-Anything",
+      "description": "RAG-Anything evaluates the -S-A model configuration.",
+      "keywords": "evaluation,model configuration",
+      "weight": 1.0,
+      "source_id": "chunk-7aefd567d430c404aab77872282400eb",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791642322
+    },
+    {
+      "src_id": "V",
+      "tgt_id": "v",
+      "description": "The set V includes the multimodal entity nodes v.",
+      "keywords": "node association,set membership",
+      "weight": 1.0,
+      "source_id": "chunk-9f0dae3e849332dc4c4fecee687039a4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643590
+    },
+    {
+      "src_id": "Embedding Table",
+      "tgt_id": "Unified Embedding Table (equation)",
+      "description": "Entity Embedding Table belongs to Unified Embedding Table (equation)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-77ff6101b55afb188a8b2aba9f83cd92",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643619
+    },
+    {
+      "src_id": "VLM",
+      "tgt_id": "q",
+      "description": "The VLM processes the query (q) as one of its inputs.",
+      "keywords": "input,query processing",
+      "weight": 1.0,
+      "source_id": "chunk-9cf50ce7fb3ca592afa7f4959b496cfe",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643615
+    },
+    {
+      "src_id": "Accuracy Evaluation Prompt for RAG System (image)",
+      "tgt_id": "Multimodal RAG",
+      "description": "Entity Multimodal RAG belongs to Accuracy Evaluation Prompt for RAG System (image)",
+      "keywords": "belongs_to,contained_in,part_of",
+      "weight": 10.0,
+      "source_id": "chunk-63a71b30187cb0788470f7a4ef8b5a7a",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643568
+    },
+    {
+      "src_id": "Text Info, Developer, Bee, Observe",
+      "tgt_id": "Text-Based Knowledge Graph",
+      "description": "The Text-Based Knowledge Graph contains nodes such as Developer, Bee, and Observe.",
+      "keywords": "entity,knowledge,relation",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643596
+    },
+    {
+      "src_id": "Context from Surrounding Content",
+      "tgt_id": "Table Analysis Prompt Template",
+      "description": "Context from Surrounding Content is a placeholder in the Table Analysis Prompt Template.",
+      "keywords": "context,surrounding content",
+      "weight": 1.0,
+      "source_id": "chunk-d68c9b009fe16eb1ecc9d4a748e081f2",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643602
+    },
+    {
+      "src_id": "Cross-Modal Knowledge Graph",
+      "tgt_id": "Image Info, Equation Info, Table Info, Parent Node: Multi-modal Instance, Child Node",
+      "description": "The Cross-Modal Knowledge Graph contains nodes such as Parent Node: Multi-modal Instance and Child Node.",
+      "keywords": "entity,knowledge,relation",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643597
+    },
+    {
+      "src_id": "j",
+      "tgt_id": "v",
+      "description": "The index j identifies the multimodal entity node v.",
+      "keywords": "indexing,node identification",
+      "weight": 1.0,
+      "source_id": "chunk-9f0dae3e849332dc4c4fecee687039a4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643590
+    },
+    {
+      "src_id": "mm",
+      "tgt_id": "v",
+      "description": "The attribute mm denotes the multimodal nature of the entity node v.",
+      "keywords": "attribute,node type",
+      "weight": 1.0,
+      "source_id": "chunk-9f0dae3e849332dc4c4fecee687039a4",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643590
+    },
+    {
+      "src_id": "Knowledge Graph, Hybrid Retrieved Info",
+      "tgt_id": "Structural Knowledge Navigation",
+      "description": "Structural Knowledge Navigation navigates the Knowledge Graph to produce Hybrid Retrieved Info.",
+      "keywords": "info,navigation",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643598
+    },
+    {
+      "src_id": "Hybrid Retrieved Info, Response",
+      "tgt_id": "LLM",
+      "description": "The LLM processes Hybrid Retrieved Info to generate the Response.",
+      "keywords": "processing,response",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643598
+    },
+    {
+      "src_id": "Hybrid Retrieved Info",
+      "tgt_id": "Semantic Similarity Matching, LLM, Response",
+      "description": "Hybrid Retrieved Info is input to the LLM to generate the Response.",
+      "keywords": "info,response",
+      "weight": 1.0,
+      "source_id": "chunk-1025c419093621f01b9bd6bda58a4d8b",
+      "file_path": "/Users/drw/PycharmProjects/rag-anything-reproduction/data/RAG-Anything_arXiv_2025.pdf",
+      "created_at": 1791643598
+    }
+  ],
+  "result_fields": [
+    "status",
+    "question",
+    "mode",
+    "context_only",
+    "vlm_requested",
+    "images_in_generation_adapter",
+    "retrieval",
+    "answer",
+    "events",
+    "reported_usage",
+    "elapsed_seconds",
+    "diagnostic_retrieval_is_separate_from_generation",
+    "rerank_enabled",
+    "rerank_calls",
+    "rerank_elapsed_seconds",
+    "question_id"
+  ],
+  "raw_prompt_characters": 102136,
+  "events": {
+    "text_request": 2,
+    "rerank_request": 2,
+    "actual_retrieval_prompt": 1,
+    "vision_request": 1
+  },
+  "source_hashes": {
+    "storage/handson-qwen4096-v1/graph_chunk_entity_relation.graphml": "f8f053374bbd57bdb2f62819cc948d065cca7e5b5dffdb3ff75d7b61e194b12d",
+    "storage/handson-qwen4096-v1/kv_store_text_chunks.json": "0d461a3e1deeca9066b3805dee260cee204cabe813b4fb6d4004dabde154c445",
+    "storage/handson-qwen4096-v1/pilot_manifest.json": "29c517cd32dcbaa83584c3ad1783bc2ff403571be4ac4924a42a7cddc198d2e9",
+    "runs/20261011_110345_7173b7cc/cv1-q01-result.json": "73b815d6163cf86a9686a08a79491d5415bf12ea9bd49f0b1e185eafd3dfe086",
+    "reproduce.py": "9b9819a32c4365a175a116afbd3771216f27389b5cb549a99db797b753dfe47d"
+  },
+  "token_budget_replay": {
+    "system_prompt_overhead": 559,
+    "graph_context": 5402,
+    "query": 43,
+    "reserved": 200,
+    "max_total_tokens": 24000,
+    "available_chunk_tokens": 17796,
+    "verified_final_chunk_ids": true,
+    "kept_chunk_tokens": 16797,
+    "first_rejected_rank": 16,
+    "first_rejected_cumulative_tokens": 17944,
+    "raw_prompt_tokens": 21860
+  }
+}
