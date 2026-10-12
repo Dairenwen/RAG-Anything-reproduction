@@ -591,53 +591,56 @@ def query_options(settings):
 
 
 async def run_query(runtime, question, mode, *, context_only=False, vlm=False):
-    """Capture structured diagnostic retrieval plus the actual generation prompt."""
+    """Record the official query's retrieval without an extra diagnostic query."""
     from lightrag import QueryParam
     rag = runtime.rag
     runtime.events.clear()
     runtime.tracker.reset()
     opts = query_options(runtime.settings)
     started = time.perf_counter()
-    retrieval = await rag.lightrag.aquery_data(question, param=QueryParam(mode=mode, **opts))
-    data = retrieval.get("data") or {}
-    rerank_audit = audit_reranking(runtime.settings, runtime.events, require_call=bool(data.get("chunks")))
-    if retrieval.get("status") != "success" or not any(data.get(k) for k in ("entities", "relationships", "chunks")):
-        return {
-            "status": "empty_retrieval", "question": question, "mode": mode,
-            "context_only": context_only, "vlm_requested": vlm,
-            "images_in_generation_adapter": 0, "retrieval": retrieval,
-            "answer": None if context_only else "根据当前检索结果，证据不足，无法回答。",
-            "events": runtime.events, "reported_usage": runtime.tracker.get_usage(),
-            "elapsed_seconds": time.perf_counter() - started,
-            "diagnostic_retrieval_is_separate_from_generation": False,
-            **rerank_audit,
-        }
     if context_only:
+        retrieval = await rag.lightrag.aquery_data(question, param=QueryParam(mode=mode, **opts))
         output = None
     else:
-        original_query = rag.lightrag.aquery
+        retrieval = None
+        original_query = rag.lightrag.aquery_llm
 
-        async def observed_query(query, param=None, system_prompt=None, **kwargs):
-            result = await original_query(query, param=param, system_prompt=system_prompt, **kwargs)
+        async def observed_query(query, *args, **kwargs):
+            nonlocal retrieval
+            result = await original_query(query, *args, **kwargs)
+            # aquery() already delegates to aquery_llm(). Observe its structured
+            # result, returning it unchanged so the official generation continues.
+            # On the official no-image fallback, retain the final query's evidence.
+            retrieval = {key: value for key, value in result.items() if key != "llm_response"}
+            param = kwargs.get("param", args[0] if args else None)
             if param is not None and getattr(param, "only_need_prompt", False):
-                runtime.events.append({"kind": "actual_retrieval_prompt", "prompt": result})
+                runtime.events.append({"kind": "actual_retrieval_prompt",
+                                       "prompt": (result.get("llm_response") or {}).get("content")})
             return result
 
-        rag.lightrag.aquery = observed_query
+        rag.lightrag.aquery_llm = observed_query
         try:
             vlm_options = {"extra_safe_dirs": runtime.image_safe_dirs} if vlm else {}
             output = await rag.aquery(question, mode=mode, vlm_enhanced=vlm, **opts, **vlm_options)
         finally:
-            rag.lightrag.aquery = original_query
-    rerank_audit = audit_reranking(runtime.settings, runtime.events)
+            rag.lightrag.aquery_llm = original_query
+        if retrieval is None:
+            raise RuntimeError("The official query returned no structured retrieval record.")
+    data = retrieval.get("data") or {}
+    rerank_audit = audit_reranking(runtime.settings, runtime.events, require_call=bool(data.get("chunks")))
+    if (retrieval.get("status") != "success"
+            and (retrieval.get("metadata") or {}).get("failure_reason") != "no_results"):
+        raise RuntimeError(retrieval.get("message") or "The official query failed.")
+    empty_retrieval = not any(data.get(key) for key in ("entities", "relationships", "chunks"))
     return {
-        "status": "success", "question": question, "mode": mode, "context_only": context_only,
+        "status": "empty_retrieval" if empty_retrieval else "success",
+        "question": question, "mode": mode, "context_only": context_only,
         "vlm_requested": vlm,
         "images_in_generation_adapter": sum(e.get("image_count", 0) for e in runtime.events),
         "retrieval": retrieval, "answer": output, "events": runtime.events,
         "reported_usage": runtime.tracker.get_usage(),
         "elapsed_seconds": time.perf_counter() - started,
-        "diagnostic_retrieval_is_separate_from_generation": not context_only,
+        "diagnostic_retrieval_is_separate_from_generation": False,
         **rerank_audit,
     }
 
