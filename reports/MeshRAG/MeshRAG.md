@@ -787,13 +787,13 @@ $$
 把签名看作定长二进制向量，逐位比较两个签名。一个自然的归一化形式为：
 
 $$
-\operatorname{Sim}_H(s_q,p_{C_j})=\frac1k\sum_{l=1}^{k}\mathbb I[s_q[l]=p_{C_j}[l]]
+\mathrm{Sim}_H(s_q,p_{C_j})=\frac1k\sum_{l=1}^{k}\mathbb I[s_q[l]=p_{C_j}[l]]
 $$
 
 也可写为：
 
 $$
-\operatorname{Sim}_H(s_q,p_{C_j})=1-\frac{d_H(s_q,p_{C_j})}{k}
+\mathrm{Sim}_H(s_q,p_{C_j})=1-\frac{d_H(s_q,p_{C_j})}{k}
 $$
 
 
@@ -831,7 +831,7 @@ $$
 根据论文描述，可整理为：
 
 $$
-\boxed{A_q=\operatorname{Top}_{20}\{c_i,\widehat J(q,c_i)\}}
+\boxed{A_q=\mathrm{Top}_{20}\{c_i,\widehat J(q,c_i)\}}
 $$
 
 
@@ -896,7 +896,7 @@ $$
 可以用通用的重排符号表示：
 
 $$
-R_q=\operatorname{Top}_5(P_q,\operatorname{Score}(q,c))
+R_q=\mathrm{Top}_5(P_q,\mathrm{Score}(q,c))
 $$
 
 Score表示重排所用的评分方法。
@@ -949,7 +949,6 @@ Top-5 Communities                │
                    ↓
                 问题答案
 ```
-
 
 
 
