@@ -57,54 +57,79 @@ Sentence S2：Frederick Barbarossa ... King of Germany ...
 
 按照真实的数据依赖，可整理为：
 
-```text
-【建图】
-原始语料 Corpus
-    ↓
-切分为多个 Passage（文本段落/Chunk）
-    ↓
-Passage 按标点拆为 Sentence
-    ↓
-使用 spaCy 等轻量 NER 抽取 Entity，并做实体关联
-    ↓
-生成 Tri-Graph（3 种节点，2 类边）
-    ├── Passage–Entity → 包含矩阵 C
-    └── Sentence–Entity → 提及矩阵 M
-    ↓
-稀疏保存 C、M；准备实体/句子/段落的语义表示
-    ↓
-索引完成（无需 LLM 三元组抽取）
+```mermaid
 
-【检索：Stage 1，局部语义桥接】
-用户问题 q
-    ↓
-NER 得到查询实体 Eq
-    ↓
-逐个匹配图中的实体 → 初始激活向量 a⁽⁰⁾
-    │
-    ├── 计算 q 与所有 Sentence 的相似度 → σq
-    │
-    └── 迭代实体传播：
-         a⁽ᵗ⁾ = MAX[Mᵀ(σq ⊙ (M a⁽ᵗ⁻¹⁾)), a⁽ᵗ⁻¹⁾]
-                      ↓
-                 动态阈值剪枝
-                      ↓
-              激活实体 Ea 及其分数
+flowchart TB
+    subgraph BUILD["① 离线建图 · Tri-Graph Construction"]
+        direction TB
+        A1["原始语料 Corpus"]
+        A2["文本处理<br/>分块 Passage → 分句 Sentence"]
+        A3["NER 实体提取与关联<br/>识别共享 Entity 节点"]
+        A4["构建 Tri-Graph<br/>Passage / Sentence / Entity"]
+        A5["生成并稀疏存储邻接矩阵<br/>C：Passage–Entity<br/>M：Sentence–Entity"]
+        A6["准备语义向量<br/>完成图索引"]
 
-【检索：Stage 2，全局重要性聚合】
-查询 q、激活实体 Ea、Passage–Entity 矩阵 C
-    ↓
-Passage 初始分数：语义相似度 + 实体证据贡献
-Entity 初始分数：上一阶段得到的激活分数
-    ↓
-在 Passage–Entity 二部图上运行 PPR / 重要性传播
-    ↓
-按最终 Passage 分数排序
-    ↓
-选 Top-5 Passage 原文（实验设置）
-    ↓
-GPT-4o-mini 生成答案（实验设置）
+        A1 --> A2 --> A3 --> A4 --> A5 --> A6
+    end
+
+    subgraph STAGE1["② Stage 1 · 局部语义桥接"]
+        direction TB
+        B1["用户问题 Query"]
+        B2["NER 提取查询实体<br/>逐个匹配图中 Top-1 Entity"]
+        B3["初始化实体激活分数"]
+        B4["计算 Query–Sentence 相似度"]
+
+        B5["实体 → 句子<br/>矩阵 M 汇总实体激活分数"]
+        B6["句子相关性加权<br/>抑制无关句子"]
+        B7["句子 → 实体<br/>矩阵 Mᵀ 聚合新实体分数"]
+        B8["更新实体分数<br/>新旧分数保留较大值"]
+        B9{"动态剪枝<br/>是否仍有新实体通过阈值？"}
+        B10["输出激活 Entity<br/>及最终激活分数"]
+
+        B1 --> B2 --> B3 --> B5
+        B1 --> B4 --> B6
+        B5 --> B6 --> B7 --> B8 --> B9
+        B9 -->|"继续传播"| B5
+        B9 -->|"结束"| B10
+    end
+
+    subgraph STAGE2["③ Stage 2 · 全局重要性聚合"]
+        direction TB
+        C1["切换至 Passage–Entity 图<br/>使用矩阵 C"]
+        C2["Passage 初始评分<br/>Query 语义相似度 + 激活实体证据"]
+        C3["Entity 初始评分<br/>继承 Stage 1 激活分数"]
+        C4["PPR 全局重要性传播<br/>Entity ↔ Passage"]
+        C5["按 Passage 最终分数排序"]
+        C6["提取 Top-5 Passage 原文"]
+        C7["GPT-4o-mini 生成答案"]
+
+        C1 --> C2
+        C1 --> C3
+        C2 --> C4
+        C3 --> C4
+        C4 --> C5 --> C6 --> C7
+    end
+
+    A6 -.->|"提供矩阵 M 和图中实体"| B2
+    A6 -.->|"提供矩阵 C 和 Passage"| C1
+    B10 -->|"激活实体与分数"| C1
+    B1 -.->|"完整 Query"| C2
+
+    classDef build fill:#e7efff,stroke:#5685c2,color:#173e71
+    classDef bridge fill:#e5f5eb,stroke:#46966a,color:#20573a
+    classDef retrieval fill:#fff0d9,stroke:#c58d40,color:#704815
+    classDef focus fill:#d5e7fa,stroke:#2873b7,stroke-width:2px,color:#153e69
+    classDef output fill:#deeee5,stroke:#348c61,stroke-width:2px,color:#1d5839
+
+    class A1,A2,A3,A4,A5,A6 build
+    class B1,B2,B3,B4,B5,B6,B7,B8 bridge
+    class B9,B10 focus
+    class C1,C2,C3,C4,C5 retrieval
+    class C6,C7 output
+
 ```
+
+
 
 ---
 
@@ -430,4 +455,4 @@ $$
 
 **本步输出：** 用户问题的最终回答。
 
-**核心区别：第一阶段使用 Sentence–Entity 图寻找相关实体；第二阶段使用 Passage–Entity 图，结合语义相似度、实体证据及 PPR 找到最重要的原文。**
+**第一阶段使用 Sentence–Entity 图寻找相关实体；第二阶段使用 Passage–Entity 图，结合语义相似度、实体证据及 PPR 找到最重要的原文。**
